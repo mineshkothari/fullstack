@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # MY APPS
     'home',
     'accounts',
+    'blog',
 
     # THIRD PARTY APPS
     'django_forms_bootstrap',
