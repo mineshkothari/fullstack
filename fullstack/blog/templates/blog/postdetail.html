@@ -12,13 +12,14 @@
                 <div class="row">
                     <div class="col-sm-9">
                         {% if post.image %}
-                            <img src="/media/{{ post.image}}">
+                            <img src="/media/{{ post.image }}" style="width:100%; height: auto;">
                         {% endif %}
 
                         <p>{{ post.published_date }} | Views <strong>{{ post.views }}</strong> | Tag <strong>{{ post.tag }}</strong></p>
 
                         <p>{{ post.content }}</p>
                         <p><button class="btn btn-default" onclick="location.href='{% url 'blog' %}'">Back To Blog</button>
+                        <button class="btn btn-default" onclick="location.href='{% url 'edit' post.id %}'">Edit</button></p>
                         {% load disqus_tags %}
                         {% set_disqus_title post.title %}
                         {% disqus_show_comments %}
