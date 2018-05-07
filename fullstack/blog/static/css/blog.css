@@ -1,0 +1,35 @@
+.blog-shortlinks {
+    padding: 1em 0;
+}
+
+.blog-link-lists {
+    display: inline-block;
+    margin: .5em;
+}
+
+.blog-links {
+    display: block;
+    padding: .5em .75em;
+    border: 2px solid rgba(69, 199, 232,0.4);
+    height: 100%;
+    width: 100%;
+    transition: all ease-in-out 350ms;
+}
+
+.blog-links:hover {
+    border: 2px solid rgba(69, 199, 232,1);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.post-container {
+    padding: 4em 0;
+    box-shadow: 0 30px 40px -20px rgba(0,0,0,0.1);
+    transition: all ease-in-out 350ms;
+}
+
+.post-container:hover {
+    box-shadow: 0 40px 60px -25px rgba(0,0,0,0.3);
+}

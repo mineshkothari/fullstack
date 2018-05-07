@@ -25,4 +25,7 @@ urlpatterns = [
 
     # ACCOUNTS
     url(r'^account/', include('accounts.urls')),
+
+    # BLOG
+    url(r'^blog/', include('blog.urls')),
 ]
