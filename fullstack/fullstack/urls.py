@@ -25,6 +25,9 @@ urlpatterns = [
     # HOME
     url(r'^', include('home.urls')),
 
+    # ABOUT
+    url(r'^about/', include('django.contrib.flatpages.urls')),
+
     # ACCOUNTS
     url(r'^account/', include('accounts.urls')),
 
