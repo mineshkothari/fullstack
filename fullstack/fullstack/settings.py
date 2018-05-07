@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SITE_ID = 2
+DISQUS_WEBSITE_SHORTNAME = 'fullstack'
 
 # Application definition
 
@@ -38,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 
     # MY APPS
     'home',
@@ -46,6 +49,7 @@ INSTALLED_APPS = [
 
     # THIRD PARTY APPS
     'django_forms_bootstrap',
+    'disqus',
 ]
 
 MIDDLEWARE = [
