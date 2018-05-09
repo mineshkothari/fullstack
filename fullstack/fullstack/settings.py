@@ -46,11 +46,17 @@ INSTALLED_APPS = [
     'home',
     'accounts',
     'blog',
+    'forum',
 
     # THIRD PARTY APPS
     'django_forms_bootstrap',
     'disqus',
+    'debug_toolbar',
+    'tinymce',
+    'emoticons',
 ]
+
+INTERNAL_IPS = ('127.0.0.1',)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -61,6 +67,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'fullstack.urls'
@@ -137,6 +144,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (
    os.path.join(BASE_DIR, "static"),
 )
+
+#tinymce settings
+TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", "js", "tinymce", "tinymce.min.js")
 
 # Use this User model
 AUTH_USER_MODEL = 'accounts.User'
