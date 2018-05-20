@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'accounts',
     'blog',
     'forum',
+    'polls',
 
     # THIRD PARTY APPS
     'django_forms_bootstrap',
