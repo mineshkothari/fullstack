@@ -35,6 +35,9 @@ urlpatterns = [
     # BLOG
     url(r'^blog/', include('blog.urls')),
 
+    # FORUM
+    url(r'^forum/', include('forum.urls')),
+
     # MEDIA
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
 ]

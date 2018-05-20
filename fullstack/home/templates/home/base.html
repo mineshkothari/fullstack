@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="stylesheet" href="{% static "css/fontawesome/css/fontawesome-all.css" %}">
     <link rel="stylesheet" href="{% static "css/style.css" %}">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,200i,400,400i,800,800i" rel="stylesheet">
     {% block head_css %}{% endblock %}
@@ -35,7 +36,7 @@
                 <a class="nav-link" href="{% url 'blog' %}">Blog</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Forum</a>
+                <a class="nav-link" href="{% url 'forum' %}">Forum</a>
               </li>
             </ul>
             <ul class="nav justify-content-end">
