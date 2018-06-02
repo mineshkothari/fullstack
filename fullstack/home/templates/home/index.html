@@ -1,6 +1,13 @@
 {% extends "home/base.html" %}
+{% load staticfiles %}
+{% block head_css %}
+    <link rel="stylesheet" href="{% static "css/pages/index.css" %}">
+{% endblock %}
 {% block body %}
+    <div class="jumbotron text-center">
+      <h1 class="display-4"><span class="fullstack-brand rounded-right brand-border border border-left-0 border-primary">Fullstack</span> Home</h1>
+    </div>
     <div class="container-fluid">
-        <h1>Welcome to the Homepage!</h1>
+        <h1><span class="fullstack-brand">Fullstack</span></h1>
     </div>
 {% endblock %}

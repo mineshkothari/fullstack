@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'blog',
     'forum',
     'polls',
+    'about',
 
     # THIRD PARTY APPS
     'django_forms_bootstrap',
@@ -158,7 +159,11 @@ AUTHENTICATION_BACKENDS = (
     'accounts.backends.EmailAuth',
 )
 
-DISQUS_WEBSITE_SHORTNAME = 'fullstack'
-
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+DISQUS_WEBSITE_SHORTNAME = 'fullstack'
+
+#Stripe environvent variables
+STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_dPHGIP1ehMeOzgFgGjunQsbo')
+STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_82qdxVXbCBbjobxDBjTQQuRk')

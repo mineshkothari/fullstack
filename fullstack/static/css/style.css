@@ -9449,11 +9449,21 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+.jumbotron {
+  padding: 5rem;
+  margin-bottom: 0;
+}
+
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 10rem 5rem;
+  }
+}
+
 .navbar {
   -webkit-box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4);
   box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4);
   padding-left: 0;
-  z-index: 99999999 !important;
 }
 
 .navbar-brand {
@@ -9464,6 +9474,10 @@ a.text-dark:hover, a.text-dark:focus {
   -webkit-transition: all ease-in-out 300ms;
   -o-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
+}
+
+.navbar-brand:hover {
+  color: #17a2b8;
 }
 
 html {

@@ -1,0 +1,10 @@
+.fullstack-brand {
+  padding: .5rem 1rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.jumbotron span.border {
+  border: 2px solid #FF0000 !important;
+  border-left: 0 !important;
+}
