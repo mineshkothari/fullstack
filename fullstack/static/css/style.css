@@ -7702,3 +7702,9 @@ body {
 .page-content {
   padding-bottom: 8%;
 }
+
+@media (max-width: 576px) {
+  .display-4 {
+    font-size: 2.25rem;
+  }
+}
