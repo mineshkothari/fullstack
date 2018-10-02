@@ -7703,7 +7703,13 @@ body {
   padding-bottom: 8%;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 650px) {
+  .display-4 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 420px) {
   .display-4 {
     font-size: 2.25rem;
   }
