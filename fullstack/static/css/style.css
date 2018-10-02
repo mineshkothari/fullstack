@@ -7624,13 +7624,13 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .jumbotron {
-  padding: 5rem;
+  padding: 5rem 1.5rem;
   margin-bottom: 0;
 }
 
 @media (min-width: 576px) {
   .jumbotron {
-    padding: 10rem 5rem;
+    padding: 10rem 2rem;
   }
 }
 
