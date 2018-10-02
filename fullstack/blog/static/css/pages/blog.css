@@ -27,7 +27,6 @@ a:hover {
 }
 
 .post-container {
-  padding: 4em 0;
   margin: 4em 0;
   background: #ffffff;
   border-radius: 10px;
@@ -36,6 +35,7 @@ a:hover {
   -webkit-transition: all ease-in-out 350ms;
   -o-transition: all ease-in-out 350ms;
   transition: all ease-in-out 350ms;
+  overflow: hidden;
 }
 
 .post-container:hover {
@@ -48,17 +48,18 @@ a:hover {
 
 .post-image-container {
   border-right: .5px solid #aaaab3;
-}
-
-.post-detail-container {
-  padding-left: 3em;
+  overflow: hidden !important;
 }
 
 .post-thumbnail {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 400px;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.post-detail-container {
+  padding-left: 3em !important;
 }
 
 .post-title {

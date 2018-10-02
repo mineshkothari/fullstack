@@ -25,12 +25,12 @@ a:hover
 
 
 .post-container
-  padding: 4em 0
   margin: 4em 0
   background: #ffffff
   border-radius: 10px
   box-shadow: 0 30px 40px -20px rgba(0,0,0,0.1)
   transition: all ease-in-out 350ms
+  overflow: hidden
 
 .post-container:hover
   box-shadow: 0 40px 60px -25px rgba(0,0,0,0.3)
@@ -38,14 +38,15 @@ a:hover
 
 .post-image-container
   border-right: .5px solid #aaaab3
-
-.post-detail-container
-  padding-left: 3em
+  overflow: hidden !important
 
 .post-thumbnail
-  width: 100%
-  height: auto
+  width: auto
+  height: 400px
   object-fit: cover
+
+.post-detail-container
+  padding-left: 3em !important
 
 .post-title
   color: #333333 !important
