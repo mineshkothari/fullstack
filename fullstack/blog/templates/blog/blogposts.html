@@ -2,12 +2,14 @@
 {% block blogs %}
     {% for post in posts %}
         <div class="row post-container">
-            <div class="col-lg-3 col-md-2 text-center">
+            <div class="col-lg-3 col-md-2 text-center post-image-container">
                 <a class="story-img" href="#">
-                    <img src="http://placehold.it/100" style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff;" class="rounded-circle">
+                    {% if post.image %}
+                            <img class="post-thumbnail" src="/media/{{ post.image }}">
+                        {% endif %}
                 </a>
             </div>
-            <div class="col-lg-9 col-md-10">
+            <div class="col-lg-9 col-md-10 post-detail-container">
                 <h3 class="post-title">{{ post.title }}</h3>
                 <div class="row">
                     <div class="col-sm-9">

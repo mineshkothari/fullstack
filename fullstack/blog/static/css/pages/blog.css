@@ -46,8 +46,28 @@ a:hover {
   transform: translateY(-4px);
 }
 
+.post-image-container {
+  border-right: .5px solid #aaaab3;
+}
+
+.post-detail-container {
+  padding-left: 3em;
+}
+
+.post-thumbnail {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.post-title {
+  color: #333333 !important;
+}
+
 .post-details {
   font-size: 12px;
+  color: #63636E;
 }
 
 .post-snippet {
@@ -63,4 +83,11 @@ a:hover {
 .jumbotron span.border {
   border: 2px solid #FFFF00 !important;
   border-left: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .post-image-container {
+    border-right: none;
+    margin-bottom: 50px;
+  }
 }
