@@ -28,6 +28,9 @@ a:hover {
 
 .post-container {
   padding: 4em 0;
+  margin: 4em 0;
+  background: #ffffff;
+  border-radius: 10px;
   -webkit-box-shadow: 0 30px 40px -20px rgba(0, 0, 0, 0.1);
   box-shadow: 0 30px 40px -20px rgba(0, 0, 0, 0.1);
   -webkit-transition: all ease-in-out 350ms;
@@ -38,6 +41,17 @@ a:hover {
 .post-container:hover {
   -webkit-box-shadow: 0 40px 60px -25px rgba(0, 0, 0, 0.3);
   box-shadow: 0 40px 60px -25px rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  transform: translateY(-4px);
+}
+
+.post-details {
+  font-size: 12px;
+}
+
+.post-snippet {
+  font-size: 14px;
 }
 
 .fullstack-brand {

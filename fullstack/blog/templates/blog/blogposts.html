@@ -8,11 +8,11 @@
                 </a>
             </div>
             <div class="col-lg-9 col-md-10">
-                <h3>{{ post.title }}</h3>
+                <h3 class="post-title">{{ post.title }}</h3>
                 <div class="row">
                     <div class="col-sm-9">
-                        <p>{{ post.published_date }} | Views <strong>{{ post.views }}</strong> | Tag <strong>{{ post.tag }}</strong></p>
-                        <p>{{ post.content|truncatewords:30 }}</p>
+                        <p class="post-details">{{ post.published_date }} | Views <strong>{{ post.views }}</strong> | Tag <strong>{{ post.tag }}</strong></p>
+                        <p class="post-snippet">{{ post.content|truncatewords:30 }}</p>
                         <p><button class="btn btn-default" onclick="location.href='{{ post.id }}'">Read More</button></p>
                     </div>
                 </div>
