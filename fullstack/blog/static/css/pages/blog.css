@@ -28,7 +28,6 @@ a:hover {
 
 .post-container {
   margin: 4em 0;
-  background: #ffffff;
   border-radius: 10px;
   -webkit-box-shadow: 0 30px 40px -20px rgba(0, 0, 0, 0.1);
   box-shadow: 0 30px 40px -20px rgba(0, 0, 0, 0.1);
@@ -36,6 +35,10 @@ a:hover {
   -o-transition: all ease-in-out 350ms;
   transition: all ease-in-out 350ms;
   overflow: hidden;
+}
+
+.post-container:hover {
+  background: #ffffff;
 }
 
 .post-container:hover {
@@ -49,17 +52,16 @@ a:hover {
 .post-image-container {
   border-right: .5px solid #aaaab3;
   overflow: hidden !important;
+  height: 300px;
 }
 
 .post-thumbnail {
   width: auto;
-  height: 400px;
-  -o-object-fit: cover;
-  object-fit: cover;
+  height: 100%;
 }
 
 .post-detail-container {
-  padding-left: 3em !important;
+  padding: 1.5em 3em !important;
 }
 
 .post-title {
@@ -86,9 +88,13 @@ a:hover {
   border-left: 0 !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .post-image-container {
     border-right: none;
-    margin-bottom: 50px;
+    height: auto;
+  }
+  .post-thumbnail {
+    width: 100%;
+    height: auto;
   }
 }
