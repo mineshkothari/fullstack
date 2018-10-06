@@ -22,12 +22,13 @@
   background: #63636e
   color: #aaaaa3
 
-// REGISTER FORM
+// PAGE SECTIONS
 .account-section
   background: #eaeaea
   padding: 8%
 
-.register-form-container
+// FORMS
+.form-container
   padding: 3em
   max-width: 500px
   margin: auto
@@ -90,6 +91,9 @@
     transform: translateY(-3px)
     box-shadow: 0 10px 50px -7px rgba(0,0,0,0.25)
 
+input:-webkit-autofill
+  -webkit-box-shadow: inset 0 0 0 1000px #4e555b !important
+  -webkit-text-fill-color: #aaaaa3
 
 // REGISTER FORM MEDIA QUERY
 @media (max-width: 500px)
