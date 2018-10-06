@@ -5,14 +5,18 @@ from django.core.exceptions import ValidationError
 
 
 class UserRegistrationForm(UserCreationForm):
+    email = forms.CharField(
+        widget=forms.EmailInput(attrs={'placeholder': 'email address'})
+    )
+
     password1 = forms.CharField(
         label='Password',
-        widget=forms.PasswordInput
+        widget=forms.PasswordInput(attrs={'placeholder': 'password'})
     )
 
     password2 = forms.CharField(
         label='Password Confirmation',
-        widget=forms.PasswordInput
+        widget=forms.PasswordInput(attrs={'placeholder': 'password confirmation'})
     )
 
     class Meta:
