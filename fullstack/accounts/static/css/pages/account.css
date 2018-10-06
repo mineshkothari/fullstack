@@ -20,13 +20,13 @@
   border-left: 0 !important;
 }
 
-.register-title {
+.account-page-title {
   height: 200px;
   background: #63636e;
   color: #aaaaa3;
 }
 
-.register-section {
+.account-section {
   background: #eaeaea;
   padding: 8%;
 }
@@ -123,7 +123,7 @@
 }
 
 @media (max-width: 500px) {
-  .register-section {
+  .account-section {
     padding: 0;
   }
 }
