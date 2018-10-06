@@ -63,6 +63,12 @@
   color: #FFFFFF;
 }
 
+.register-form-container span.error-msg {
+  color: red;
+  position: relative;
+  top: -233px;
+}
+
 .register-form-container .form-control {
   font-style: italic;
   font-weight: 200;
