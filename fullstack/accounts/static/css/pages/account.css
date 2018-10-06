@@ -128,6 +128,12 @@ input:-webkit-autofill {
   -webkit-text-fill-color: #aaaaa3;
 }
 
+.form-container .alert-danger {
+  color: red;
+  position: relative;
+  top: -25px;
+}
+
 @media (max-width: 500px) {
   .account-section {
     padding: 0;
