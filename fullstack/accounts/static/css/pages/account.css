@@ -115,6 +115,7 @@
 .form-submit-btn:hover {
   background-color: #f2f2f2;
   color: #404854;
+  border: .5px solid #f2f2f2;
   -webkit-transform: translateY(-3px);
   -ms-transform: translateY(-3px);
   transform: translateY(-3px);
