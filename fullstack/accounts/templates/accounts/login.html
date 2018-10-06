@@ -1,13 +1,20 @@
 {% extends "accounts/account.html" %}
 {% load bootstrap_tags %}
 {% block account %}
-    <form role="form" method="post" action="{% url 'login' %}">
-        <legend>Login</legend>
-        {% csrf_token %}
-        {{ form| as_bootstrap }}
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary">Login</button>
+    <section class="account-page-title login-title">
+        <h2>Log in below</h2>
+    </section>
+    <section class="account-section login-section">
+        <div class="form-container login-form-container">
+            <form role="form" method="post" action="{% url 'login' %}">
+                <legend>Login</legend>
+                {% csrf_token %}
+                {{ form| as_bootstrap }}
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+                <p><a href="#">Forgotten Password?</a></p>
+            </form>
         </div>
-        <p><a href="#">Forgotten Password?</a></p>
-    </form>
+    </section>
 {% endblock %}

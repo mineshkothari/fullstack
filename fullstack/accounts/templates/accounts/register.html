@@ -1,11 +1,11 @@
 {% extends "accounts/account.html" %}
 {% load bootstrap_tags %}
 {% block account %}
-    <section class="register-title">
+    <section class="account-page-title register-title">
         <h2>Sign up today for free to access our courses</h2>
     </section>
-    <section class="register-section">
-        <div class="register-form-container">
+    <section class="account-section register-section">
+        <div class="form-container register-form-container">
             <form role="form" method="post" action="{% url 'register' %}">
                 <legend>Create <span>your</span> new account</legend>
                 {% csrf_token %}
