@@ -19,10 +19,11 @@ $display-line-height: $headings-line-height
 
 $jumbotron-padding-small: 5rem 1.5rem
 $jumbotron-padding:  2rem
-
+$border-radius-none: 0
 
 .jumbotron
   padding: $jumbotron-padding-small
   margin-bottom: 0
+  @include border-radius($border-radius-none)
   @include media-breakpoint-up(sm)
     padding: ($jumbotron-padding * 5) $jumbotron-padding
