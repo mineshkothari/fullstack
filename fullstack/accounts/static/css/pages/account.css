@@ -41,6 +41,17 @@
   box-shadow: 0 17px 25px rgba(0, 0, 0, 0.13);
 }
 
+.register-form-container legend {
+  margin-bottom: 2em;
+  font-weight: 200;
+}
+
+.register-form-container legend span {
+  font-style: italic;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
 .register-form-container .form-control {
   font-style: italic;
   font-weight: 200;
