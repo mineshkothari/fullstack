@@ -1,0 +1,14 @@
+{% extends "home/base.html" %}
+{% load staticfiles %}
+{% block head_css %}
+    <link rel="stylesheet" href="{% static "css/pages/account.css" %}">
+{% endblock %}
+{% block body %}
+    <div class="jumbotron text-center">
+        <h1 class="display-4"><span class="fullstack-brand rounded-right brand-border border border-left-0 border-primary">Fullstack</span> Account</h1>
+    </div>
+    <div class="container">
+        {% block account %}
+        {% endblock %}
+    </div>
+{% endblock %}
