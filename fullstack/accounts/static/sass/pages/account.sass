@@ -37,6 +37,15 @@
   legend
     margin-bottom: 2em
     font-weight: 200
+    &::before
+      content: ''
+      display: block
+      position: relative
+      height: 35px
+      width: 10px
+      background: red
+      top: 35px
+      left: -48px
     span
       font-style: italic
       font-weight: 400
@@ -49,7 +58,7 @@
     border: .5px solid #aaaaa3
     color: #aaaaa3
   .form-group
-    margin-bottom: 1.5rem
+    margin-bottom: 1.75rem
 
 // ENFORCING COLOUR OF PLACEHOLDER TEXT
 ::-webkit-input-placeholder

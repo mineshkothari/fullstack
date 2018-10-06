@@ -46,6 +46,17 @@
   font-weight: 200;
 }
 
+.register-form-container legend::before {
+  content: '';
+  display: block;
+  position: relative;
+  height: 35px;
+  width: 10px;
+  background: red;
+  top: 35px;
+  left: -48px;
+}
+
 .register-form-container legend span {
   font-style: italic;
   font-weight: 400;
@@ -62,7 +73,7 @@
 }
 
 .register-form-container .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 ::-webkit-input-placeholder {
