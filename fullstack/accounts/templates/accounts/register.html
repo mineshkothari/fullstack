@@ -1,14 +1,19 @@
-{% extends "home/base.html" %}
+{% extends "accounts/account.html" %}
 {% load bootstrap_tags %}
-{% block body %}
-    <div class="container">
-        <form role="form" method="post" action="{% url 'register' %}">
-            <legend>Create a new account</legend>
-            {% csrf_token %}
-            {{ form | as_bootstrap }}
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary">Create account</button>
-            </div>
-        </form>
-    </div>
+{% block account %}
+    <section class="register-title">
+        <h2>Sign up today for free to access our courses</h2>
+    </section>
+    <section class="register-section">
+        <div class="register-form-container">
+            <form role="form" method="post" action="{% url 'register' %}">
+                <legend>Create <span>your</span> new account</legend>
+                {% csrf_token %}
+                {{ form | as_bootstrap }}
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Create account</button>
+                </div>
+            </form>
+        </div>
+    </section>
 {% endblock %}
