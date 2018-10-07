@@ -1,23 +1,20 @@
 {% extends "forum/forum.html" %}
 {% load thread_extras %}
 {% block forum %}
+    <section class="forum-intro">
+        <h2>Welcome to the Fullstack Forum</h2>
+    </section>
     {% load bootstrap_tags %}
     {% for subject in subjects %}
         <section class="subject-section">
-            <h2><a href="{% url "threads" subject.id %}">{{ subject.name }}</a></h2>
-            <p>
-                    {% autoescape off %} {{ subject.description }} {% endautoescape %}
-            </p>
-            <table>
-                <tr>
-                    <th style="padding-right: 15px;">THREADS</th>
-                    <th>POSTS</th>
-                </tr>
-                <tr>
-                    <td>{{ subject.threads.count }}</td>
-                    <td>{{ subject|get_total_subject_posts }}</td>
-                </tr>
-            </table>
+            <div class="container subject-container">
+                <h2><a href="{% url "threads" subject.id %}">{{ subject.name }}</a></h2>
+                <p>{% autoescape off %} {{ subject.description }} {% endautoescape %}</p>
+                <div class="activity-counter">
+                    <div class="threads-counter">Threads: <span>{{ subject.threads.count }}</span> </div>
+                    <div class="posts-counter">Posts: <span>{{ subject|get_total_subject_posts }}</span> </div>
+                </div>
+            </div>
         </section>
     {% endfor %}
 {% endblock %}
