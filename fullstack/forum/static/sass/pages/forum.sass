@@ -6,7 +6,7 @@
   font-weight: 400
 
 .jumbotron
-  background: linear-gradient(rgba(52,58,64,1),rgba(52,58,64,0.6)), url("https://source.unsplash.com/collection/3320773/")
+  background: linear-gradient(rgba(52,58,64,1),rgba(52,58,64,0.6)), url("https://source.unsplash.com/collection/3320800/")
   background-repeat: no-repeat
   background-position: center
   background-size: cover
@@ -22,38 +22,34 @@
   color: #aaaaa3
   padding: 8%
 
-// SUBJECT SECTIONS
-
-//.subject-section
-//  padding: 5%
-
-.subject-section:nth-child(2n+1)
-  background: #e1e4ea
-
-.subject-section:nth-child(2n)
-  background: #eaeaea
-
+// FORUM SUBJECTS
 .subject-container
   margin: auto
-  padding: 5%
-
-.subject-title
-  color: #aaaaa3
-
-.subject-link
-  color: #aaaaa3
+  padding: 3em 0
   transition: all 350ms ease-in-out
   &:hover
-    text-decoration: none
+    box-shadow: 0 10px 40px -25px rgba(0,0,0,0.25)
+  .subject-title
+    color: #aaaaa3
+    .subject-link
+      color: #aaaaa3
+      transition: all 350ms ease-in-out
+      &:hover
+        text-decoration: none
+        color: #63636E
+  .subject-desc p
     color: #63636E
+    margin-bottom: 0
+    font-style: italic
+  .activity-counter
+    text-transform: uppercase
+    letter-spacing: 1px
+    color: #63636E
+    font-size: 12px
+    span
+      font-weight: 800
 
-.subject-desc p
-  color: #63636E
-  font-weight: 200
-
-.activity-counter
-  text-transform: uppercase
-  letter-spacing: 1px
-  color: #63636E
-  span
-    font-weight: 800
+// FORCE TEXT ALIGN RIGHT WHEN COLUMNS ARE SIDE BY SIDE
+@media (min-width: 768px)
+  .activity-counter
+    text-align: right
