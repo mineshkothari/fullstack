@@ -9,11 +9,7 @@
             </p>
         {% endif %}
     </section>
-    <section class="thread-section">
-        <div class="thread-container">
-            {% for thread in subject.threads.all %}
-                {% include "forum/thread_item.html" %}
-            {% endfor %}
-        </div>
-    </section>
+    {% for thread in subject.threads.all %}
+        {% include "forum/thread_item.html" %}
+    {% endfor %}
 {% endblock %}
