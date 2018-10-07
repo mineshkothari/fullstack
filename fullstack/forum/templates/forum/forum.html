@@ -1,6 +1,5 @@
 {% extends "home/base.html" %}
 {% load staticfiles %}
-{% load thread_extras %}
 {% block head_css %}
     <link rel="stylesheet" href="{% static "css/pages/forum.css" %}">
 {% endblock %}
@@ -8,23 +7,6 @@
     <div class="jumbotron text-center">
       <h1 class="display-4"><span class="fullstack-brand rounded-right brand-border border border-left-0 border-primary">Fullstack</span> Forum</h1>
     </div>
-    {% load bootstrap_tags %}
-    {% for subject in subjects %}
-        <section class="subject" style="background-color: #CCCCCC; border-bottom: 1px solid aquamarine;">
-            <h2><a href="{% url "threads" subject.id %}">{{ subject.name }}</a></h2>
-            <p>
-                    {% autoescape off %} {{ subject.description }} {% endautoescape %}
-            </p>
-            <table>
-                <tr>
-                    <th style="padding-right: 15px;">THREADS</th>
-                    <th>POSTS</th>
-                </tr>
-                <tr>
-                    <td>{{ subject.threads.count }}</td>
-                    <td>{{ subject|get_total_subject_posts }}</td>
-                </tr>
-            </table>
-        </section>
-    {% endfor %}
+    {% block forum %}
+    {% endblock %}
 {% endblock %}
