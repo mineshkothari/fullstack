@@ -1,7 +1,11 @@
 {% extends "accounts/account.html" %}
 {% block account %}
-    <h2>Success!</h2>
-    <p>You are logged in as {{ user.email }}</p>
-    <p>You last logged in on {{ user.last_login }}</p>
-    <p><a href="#">Password reset link</a></p>
+    <section class="account-page-title profile-title">
+        <h2>View and manage your profile</h2>
+    </section>
+    <section class="account-section profile-section">
+        <p>You are logged in as {{ user.email }}</p>
+        <p>You last logged in on {{ user.last_login }}</p>
+        <p><a href="#">Password reset link</a></p>
+    </section>
 {% endblock %}
