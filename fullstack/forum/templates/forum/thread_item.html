@@ -1,11 +1,13 @@
-<section class="thread">
-    <header>
-        <table>
-            <tr>
-                <td>
-                    <a href="{% url 'thread' thread.id %}"><h4>{{ thread.name }}</h4></a>
-                </td>
-            </tr>
-        </table>
-    </header>
+<section class="thread-item">
+    <div class="row no-gutters">
+        <div class="col thread-name">
+            <a href="{% url 'thread' thread.id %}"><h4>{{ thread.name }}</h4></a>
+        </div>
+        <div class="col thread-created-by">
+            <span>{{ thread.user }}</span>
+        </div>
+        <div class="col thread-created-at">
+            <span>{{ thread.created_at }}</span>
+        </div>
+    </div>
 </section>
