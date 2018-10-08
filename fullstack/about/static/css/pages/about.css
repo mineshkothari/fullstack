@@ -19,3 +19,47 @@
   border: 2px solid #FF0000 !important;
   border-left: 0 !important;
 }
+
+.sub-hero {
+  background: #4e555b;
+  color: #aaaaa3;
+  padding: 3em;
+}
+
+.about-section {
+  height: 500px;
+  width: 100%;
+}
+
+.about-section .row {
+  height: 100%;
+}
+
+.about-section:nth-child(2n) {
+  background: #e0e0e0;
+}
+
+.about-image-background {
+  background-image: url("https://source.unsplash.com/collection/3320800/");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.about-text-container {
+  padding: 2em !important;
+}
+
+.about-text-container .about-title {
+  letter-spacing: 1px;
+  margin-bottom: 1em;
+}
+
+.about-text-container .about-title h3 {
+  font-weight: 200;
+}
+
+.about-text-container .about-text {
+  line-height: 1.75;
+}
