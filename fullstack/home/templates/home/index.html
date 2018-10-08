@@ -10,7 +10,12 @@
     <section class="sub-hero container-fluid">
         <div class="row no-gutters">
             <div class="col">
-                <h2>Join the community today and make amazing happen!</h2>
+                {% if user.is_authenticated %}
+                    <h2>Welcome, {{ user.username }}</h2>
+                {% else %}
+                    <h2>Join the community today and make amazing happen!</h2>
+                {% endif %}
+
             </div>
             <div class="col">
                 Become a Patreon
