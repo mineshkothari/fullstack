@@ -77,6 +77,12 @@
   font-size: 12px;
 }
 
+.singular-post-container {
+  background: #ffffff;
+  padding: 1em 0;
+  margin: 2em 0;
+}
+
 .contributor-profile {
   font-size: 14px;
   font-weight: 200;

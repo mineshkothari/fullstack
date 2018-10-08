@@ -14,7 +14,6 @@
             </div>
         </div>
     </section>
-
     {% if thread.poll %}
         <section class="poll-section">
             <div class="container">
@@ -43,7 +42,6 @@
             </div>
         </section>
     {% endif %}
-
     <section class="posts-section-container">
         <div class="container">
             {% for post in thread.posts.all %}
@@ -56,10 +54,4 @@
             <a href="{% url 'new_post' thread.id %}" class="btn btn-primary">New Post</a>
         {% endif %}
     </section>
-    <div class="row no-gutters">
-
-
-
-        </div>
-    </div>
 {% endblock %}
