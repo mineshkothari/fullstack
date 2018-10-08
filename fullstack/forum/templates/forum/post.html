@@ -1,17 +1,16 @@
 {% load staticfiles %}
 {% load emoticons_tags %}
-
-<section class="row comment col-md-9" style="padding-top: 50px;">
-    <div class="col-md-3 comment-profile">
-        <p>{{ post.user.username }}</p>
-        <p>{{ post.user.posts.count }} POSTS</p>
-    </div>
-    <div class="col-md-9">
-        <div class="comment-content" style="padding-top: 50px;">
+<div class="singular-post-container">
+    <div class="row no-gutters">
+        <div class="col-3 contributor-profile">
+            <span class="profile-info contributor-username">{{ post.user.username }}</span>
+            <span class="profile-info contributor-popularity">{{ post.user.posts.count }} POSTS</span>
+        </div>
+        <div class="col-9 post-content">
             {% autoescape off %}
                 {{ post.comment | emoticons }}
             {% endautoescape %}
         </div>
-        {% include "forum/comment_details.html" %}
     </div>
-</section>
+    {% include "forum/comment_details.html" %}
+</div>

@@ -77,6 +77,16 @@
   font-size: 12px;
 }
 
+.contributor-profile {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.contributor-profile .profile-info {
+  display: block;
+  text-align: center;
+}
+
 @media (min-width: 768px) {
   .activity-counter {
     text-align: right;
