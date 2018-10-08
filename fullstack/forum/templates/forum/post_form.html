@@ -1,11 +1,9 @@
-{% extends "home/base.html" %}
+{% extends "forum/forum.html" %}
 {% load bootstrap_tags %}
 {% load staticfiles %}
-
-{% block head_css %}
-    <link rel="stylesheet" href="{% static "css/fontawesome/css/fontawesome-all.css" %}">
-{% endblock %}
-
+{#{% block head_css %}#}
+{#    <link rel="stylesheet" href="{% static "css/fontawesome/css/fontawesome-all.css" %}">#}
+{#{% endblock %}#}
 {% block head_js %}
     <script src="{% static 'js/tinymce/tinymce.min.js' %}"></script>
     <script>
@@ -17,8 +15,7 @@
         });
     </script>
 {% endblock %}
-
-{% block body %}
+{% block forum %}
     <section>
         <div class="col-md-9">
             <form method="POST" action="{{ form_action }}">
