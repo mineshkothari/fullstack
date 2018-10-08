@@ -1,11 +1,9 @@
-{% extends "home/base.html" %}
+{% extends "forum/forum.html" %}
 {% load bootstrap_tags %}
 {% load staticfiles %}
-
-{% block head_css %}
-    <link rel="stylesheet" href="{% static "css/fontawesome/css/fontawesome-all.css" %}">
-{% endblock %}
-
+{#{% block head_css %}#}
+{#    <link rel="stylesheet" href="{% static "css/fontawesome/css/fontawesome-all.css" %}">#}
+{#{% endblock %}#}
 {% block head_js %}
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="{% static 'js/tinymce/tinymce.min.js' %}"></script>
@@ -18,8 +16,7 @@
         })
     </script>
 {% endblock %}
-
-{% block body %}
+{% block forum %}
     <section>
         <div class="row no-gutters justify-content-center">
             <div class="col-md-9">
