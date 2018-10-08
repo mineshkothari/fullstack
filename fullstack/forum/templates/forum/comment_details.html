@@ -1,14 +1,5 @@
-{% load thread_extras %}
-
-<div class="details">
-    <div class="col-md-6">
-        <div class="fa-pull-left">
-            <time datetime="{{ post.created_at }}">
-                Posted: {{ post.created_at | started_time }}
-            </time>
-        </div>
-    </div>
-    <div class="col-md-6">
+<div class="details row no-gutters">
+    <div class="col">
         <div class="fa-pull-right">
             {% if post.user == user or user.is_staff %}
                 <a href="{% url 'edit_post' thread.id post.id %}"><i class="far fa-edit"></i></a>

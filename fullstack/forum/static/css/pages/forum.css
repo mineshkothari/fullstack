@@ -87,6 +87,13 @@
   text-align: center;
 }
 
+.post-timer {
+  font-size: 12px;
+  font-weight: 200;
+  font-style: italic;
+  display: block;
+}
+
 @media (min-width: 768px) {
   .activity-counter {
     text-align: right;

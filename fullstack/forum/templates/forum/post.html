@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load thread_extras %}
 {% load emoticons_tags %}
 <div class="singular-post-container">
     <div class="row no-gutters">
@@ -6,11 +7,20 @@
             <span class="profile-info contributor-username">{{ post.user.username }}</span>
             <span class="profile-info contributor-popularity">{{ post.user.posts.count }} POSTS</span>
         </div>
-        <div class="col-9 post-content">
+        <div class="col-7 post-content">
+            <time class="post-timer" datetime="{{ post.created_at }}">
+                Posted: {{ post.created_at | started_time }}
+            </time>
             {% autoescape off %}
                 {{ post.comment | emoticons }}
             {% endautoescape %}
         </div>
+        {% if post.user == user or user.is_staff %}
+            <div class="col-2">
+                <a href="{% url 'edit_post' thread.id post.id %}"><i class="far fa-edit"></i></a>
+                <a href="{% url 'delete_post' thread.id post.id %}"><i class="far fa-trash-alt"></i></a>
+            </div>
+        {% endif %}
     </div>
-    {% include "forum/comment_details.html" %}
+{#    {% include "forum/comment_details.html" %}#}
 </div>
