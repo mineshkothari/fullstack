@@ -7723,10 +7723,6 @@ body {
   }
 }
 
-.page-content {
-  padding-bottom: 8%;
-}
-
 @media (max-width: 650px) {
   .display-4 {
     font-size: 3rem;
