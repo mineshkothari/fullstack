@@ -50,7 +50,8 @@ a:hover
   transform: translateY(-4px)
 
 .post-image-container
-  border-right: .5px solid #aaaab3
+  border-right: .5px solid rgba(0,0,0,.20)
+  //border-right: .5px solid #aaaab3
   overflow: hidden !important
   height: 300px
 
@@ -72,7 +73,24 @@ a:hover
   color: #63636E
 
 .post-snippet
+  color: #333333
   font-size: 14px
+  line-height: 1.75em
+
+.blog-read-more
+  border-left: .5px solid rgba(0,0,0,.20)
+  height: 100%
+
+.blog-read-more-icon
+  color: #aaaaa3
+  padding: 1.25em
+  font-size: 2.25em
+  transition: all 350ms ease-in-out
+  &:hover
+    color: #63636E
+    cursor: pointer
+    transform: scale(1.25)
+    text-shadow: 0 3px 10px rgba(0,0,0,.35)
 
 @media (max-width: 767px)
   .post-image-container
@@ -82,3 +100,7 @@ a:hover
   .post-thumbnail
     width: 100%
     height: auto
+
+  .blog-read-more
+    border-left: none
+    border-top: .5px solid rgba(0,0,0,.20)

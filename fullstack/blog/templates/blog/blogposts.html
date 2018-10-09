@@ -9,15 +9,17 @@
                     {% endif %}
                 </a>
             </div>
-            <div class="col-md-9 post-detail-container">
+            <div class="col-md-7 post-detail-container">
                 <h3 class="post-title">{{ post.title }}</h3>
                 <div class="row">
-                    <div class="col-sm-9">
+                    <div class="col-sm-10">
                         <p class="post-details">{{ post.published_date }} | Views <strong>{{ post.views }}</strong> | Tag <strong>{{ post.tag }}</strong></p>
                         <p class="post-snippet">{{ post.content|truncatewords:20 }}</p>
-                        <p><button class="btn btn-default" onclick="location.href='{{ post.id }}'">Read More</button></p>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-2 blog-read-more d-flex justify-content-center align-items-center">
+                <i class="fas fa-angle-right btn blog-read-more-icon" onclick="location.href='{{ post.id }}'"></i>
             </div>
         </div>
     {% endfor %}
