@@ -7664,6 +7664,10 @@ nav .brand-border:hover {
   border-color: #FFFFFF !important;
 }
 
+nav .active a {
+  color: #17a2b8 !important;
+}
+
 .footer {
   background: #343a40;
 }
