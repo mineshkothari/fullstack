@@ -26,15 +26,6 @@
   padding: 3em;
 }
 
-.about-section {
-  height: 500px;
-  width: 100%;
-}
-
-.about-section .row {
-  height: 100%;
-}
-
 .about-section:nth-child(2n) {
   background: #e0e0e0;
 }
@@ -44,20 +35,23 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100%;
+  min-height: 200px;
+  width: auto;
 }
 
 .about-text-container {
-  padding: 2em !important;
+  margin: 8% !important;
+  max-width: 500px;
 }
 
 .about-text-container .about-title {
   letter-spacing: 1px;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 .about-text-container .about-title h3 {
   font-weight: 200;
+  font-size: 2.25rem;
 }
 
 .about-text-container .about-text {
