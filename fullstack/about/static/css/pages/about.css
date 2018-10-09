@@ -40,7 +40,7 @@
 }
 
 .about-text-container {
-  margin: 8% !important;
+  margin: 8%;
   max-width: 500px;
 }
 
@@ -56,4 +56,5 @@
 
 .about-text-container .about-text {
   line-height: 1.75;
+  font-size: 14px;
 }
