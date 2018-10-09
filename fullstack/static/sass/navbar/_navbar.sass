@@ -20,3 +20,9 @@ nav
 // OVERRIDE BOOTSTRAP ACTIVE CLASS ON NAVBAR LINKS
 nav .active a
   color: #17a2b8 !important
+
+// ADD PADDING TO MOBILE MENU
+@media (max-width: 768px)
+  .navbar-collapse.collapse.show
+    li.nav-item
+        padding-left: 1em

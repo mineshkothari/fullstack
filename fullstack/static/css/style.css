@@ -7668,6 +7668,12 @@ nav .active a {
   color: #17a2b8 !important;
 }
 
+@media (max-width: 768px) {
+  .navbar-collapse.collapse.show li.nav-item {
+    padding-left: 1em;
+  }
+}
+
 .footer {
   background: #343a40;
 }
