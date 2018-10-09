@@ -14,7 +14,7 @@
                 <div class="row">
                     <div class="col-sm-9">
                         <p class="post-details">{{ post.published_date }} | Views <strong>{{ post.views }}</strong> | Tag <strong>{{ post.tag }}</strong></p>
-                        <p class="post-snippet">{{ post.content|truncatewords:30 }}</p>
+                        <p class="post-snippet">{{ post.content|truncatewords:20 }}</p>
                         <p><button class="btn btn-default" onclick="location.href='{{ post.id }}'">Read More</button></p>
                     </div>
                 </div>
