@@ -7641,7 +7641,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding-left: 0;
 }
 
-.navbar-brand {
+nav .navbar-brand {
   padding: .5rem 1rem;
   font-size: 1.5rem;
   letter-spacing: 1.5px;
@@ -7649,6 +7649,19 @@ a.text-dark:hover, a.text-dark:focus {
   -webkit-transition: all ease-in-out 300ms;
   -o-transition: all ease-in-out 300ms;
   transition: all ease-in-out 300ms;
+  color: #17a2b8 !important;
+}
+
+nav .navbar-brand:hover {
+  color: #FFFFFF !important;
+}
+
+nav .brand-border {
+  border-color: #17a2b8 !important;
+}
+
+nav .brand-border:hover {
+  border-color: #FFFFFF !important;
 }
 
 .footer {
@@ -7664,7 +7677,13 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .footer .footer-content .footer-logo a {
+  padding: .5rem 1rem;
   font-size: 200%;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
   color: #dee2e6;
   border-color: #dee2e6 !important;
 }
@@ -7672,6 +7691,7 @@ a.text-dark:hover, a.text-dark:focus {
 .footer .footer-content .footer-logo a:hover {
   color: #17a2b8;
   border-color: #17a2b8 !important;
+  text-decoration: none;
 }
 
 .footer .footer-content .footer-title {
