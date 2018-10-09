@@ -74,7 +74,41 @@
    </main>
     <footer class="footer">
         <div class="container">
-            <span class="text-muted">Place sticky footer content here.</span>
+            <div class="row footer-content">
+                <div class="col-sm-12 col-md-6 footer-logo">
+                    <a class="navbar-brand rounded-right brand-border border border-left-0 border-primary" href="{% url 'index' %}">Fullstack</a>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <span class="footer-title">Menu</span>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/forum/">Forum</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="/account/profile/">Account</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <span class="footer-title">External Links</span>
+                    <ul>
+                        <li><a href="#" target="_blank">Code Institute</a></li>
+                        <li><a href="#" target="_blank">W3C Schools</a></li>
+                        <li><a href="#" target="_blank">Link 1</a></li>
+                        <li><a href="#" target="_blank">Link 2</a></li>
+                        <li><a href="#" target="_blank">Link 3</a></li>
+                        <li><a href="#" target="_blank">Link 4</a></li>
+                        <li><a href="#" target="_blank">Link 5</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row no-gutters sub-footer-content">
+            <div class="col-12">
+                <p class="small sub-footer-text"><em>As part of my <a href="https://www.codeinstitute.net/" target="_blank">Code Institute</a> Stream 3 project</em></p>
+                <p class="small sub-footer-text">&copy; 2018 Fullstack, All rights reserved | Designed and Developed by <a href="http://www.mineshkothari.eu5.net/" target="_blank">Minesh Kothari</a>.</p>
+            </div>
         </div>
     </footer>
 </body>

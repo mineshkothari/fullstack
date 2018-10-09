@@ -1,0 +1,72 @@
+.footer
+  background: #343a40
+  .footer-content
+    padding: 3em 0
+    .footer-logo
+      margin-bottom: 3em
+      a
+        font-size: 200%
+        color: #dee2e6
+        border-color: #dee2e6 !important
+        &:hover
+          color: $primary
+          border-color: $primary !important
+    .footer-title
+      text-transform: uppercase
+      font-weight: 200
+      letter-spacing: 2px
+      color: #e5e5e5
+    ul
+      margin-top: 1em
+      li
+        list-style-type: none
+        text-transform: uppercase
+        line-height: 2
+        a
+          color: #aaaaa3
+          font-weight: 200
+          padding: .125em 0
+          transition: all 350ms ease-in-out
+          // NEEDED FOR THE HOVER EFFECT
+          position: relative
+          display: inline-block
+          // FOOTER LINK HOVER EFFECTS
+          &::before,
+          &::after
+            content: ''
+            position: absolute
+            top: 100%
+            width: 0
+            right: 0
+            height: .5px
+          &::before
+            background: #ffffff
+            transition: width 350ms ease-in-out 200ms
+          &::after
+            background: #aaaaa3
+            transition: width 350ms ease-in-out
+          &:hover
+            color: #ffffff
+            text-decoration: none
+            &::before,
+            &::after
+              width: 100%
+              left: 0
+  // STYLE FOR SUB-FOOTER
+  .sub-footer-content
+    padding: 3em 1em
+    background-color: #44484C
+    color: #aaaaa3
+    p
+      margin-bottom: 0
+      line-height: 2em
+      font-weight: 200
+      letter-spacing: 1px
+      a
+        color: #aaaaa3
+        font-weight: 800
+        transition: all 350ms ease-in-out
+        &:hover
+          color: #ffffff
+          text-decoration: none
+
