@@ -9,7 +9,7 @@
     </div>
     <section class="sub-hero container-fluid">
         <div class="row no-gutters">
-            <div class="col">
+            <div class="col-6">
                 <div class="blog-shortlinks">
                     <ul>
                         <li class="blog-link-lists"><a class="blog-links" href="{% url 'blog' %}">All posts</a></li>
@@ -17,15 +17,15 @@
                     </ul>
                 </div>
             </div>
-            <div class="col">
-                <div class="blog-shortlinks">
-                    <ul>
-                        {% if user.is_authenticated and user.is_staff %}
+            {% if user.is_authenticated and user.is_staff %}
+                <div class="col-6">
+                    <div class="blog-shortlinks">
+                        <ul>
                             <li class="blog-link-lists"><a class="blog-links" href="{% url 'new_post' %}">Create New</a></li>
-                        {% endif %}
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            {% endif %}
         </div>
     </section>
     <section class="">
