@@ -7742,14 +7742,14 @@ nav .active a {
 }
 
 .footer .footer-content ul li a::before {
-  background: #ffffff;
+  background: #aaaaa3;
   -webkit-transition: width 350ms ease-in-out 200ms;
   -o-transition: width 350ms ease-in-out 200ms;
   transition: width 350ms ease-in-out 200ms;
 }
 
 .footer .footer-content ul li a::after {
-  background: #aaaaa3;
+  background: #ffffff;
   -webkit-transition: width 350ms ease-in-out;
   -o-transition: width 350ms ease-in-out;
   transition: width 350ms ease-in-out;
@@ -7766,7 +7766,7 @@ nav .active a {
 }
 
 .footer .sub-footer-content {
-  padding: 3em 1em;
+  padding: 1.25em 1em;
   background-color: #44484C;
   color: #aaaaa3;
 }
