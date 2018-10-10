@@ -14,12 +14,6 @@
   border-color: #c50000 !important;
 }
 
-.sub-hero {
-  background: #4e555b;
-  color: #aaaaa3;
-  padding: 3em;
-}
-
 .about-section:nth-child(2n) {
   background: #e0e0e0;
 }

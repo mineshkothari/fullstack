@@ -7861,3 +7861,9 @@ body {
     font-size: 2.25rem;
   }
 }
+
+.sub-hero {
+  background: #4e555b;
+  color: #aaaaa3;
+  padding: 3em;
+}

@@ -6,14 +6,26 @@
 {% block body %}
     <div class="jumbotron text-center">
         <h1 class="display-4"><span class="fullstack-brand rounded-right brand-border border border-left-0 border-primary">Fullstack</span> Blog</h1>
-        <div class="blog-shortlinks">
-            <ul>
-                <li class="blog-link-lists"><a class="blog-links" href="{% url 'blog' %}">All posts</a></li>
-                <li class="blog-link-lists"><a class="blog-links" href="{% url 'top_posts' %}">Top posts</a></li>
-                <li class="blog-link-lists"><a class="blog-links" href="{% url 'new_post' %}">Create New</a></li>
-            </ul>
-        </div>
     </div>
+    <section class="sub-hero container-fluid">
+        <div class="row no-gutters">
+            <div class="col">
+                <div class="blog-shortlinks">
+                    <ul>
+                        <li class="blog-link-lists"><a class="blog-links" href="{% url 'blog' %}">All posts</a></li>
+                        <li class="blog-link-lists"><a class="blog-links" href="{% url 'top_posts' %}">Top posts</a></li>
+                        <li class="blog-link-lists"><a class="blog-links" href="{% url 'new_post' %}">Create New</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                Become a Patreon
+            </div>
+        </div>
+    </section>
+    <section class="">
+
+    </section>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

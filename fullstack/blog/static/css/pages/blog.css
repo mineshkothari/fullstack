@@ -18,6 +18,10 @@
   padding: 1em 0;
 }
 
+.blog-shortlinks ul {
+  margin-bottom: 0;
+}
+
 .blog-link-lists {
   display: inline-block;
   margin: .5em;
