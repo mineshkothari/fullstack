@@ -14,7 +14,9 @@
                     <ul>
                         <li class="blog-link-lists"><a class="blog-links" href="{% url 'blog' %}">All posts</a></li>
                         <li class="blog-link-lists"><a class="blog-links" href="{% url 'top_posts' %}">Top posts</a></li>
-                        <li class="blog-link-lists"><a class="blog-links" href="{% url 'new_post' %}">Create New</a></li>
+                        {% if user.is_authenticated and user.is_staff %}
+                            <li class="blog-link-lists"><a class="blog-links" href="{% url 'new_post' %}">Create New</a></li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
