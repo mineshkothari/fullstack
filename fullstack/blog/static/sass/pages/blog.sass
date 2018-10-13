@@ -96,7 +96,10 @@ a:hover
 
 // BLOG SINGLE POSTS
 
-// POST IMAGE
+.blog-main-content-container
+  margin: 4% auto
+
+// POST HEADER
 .blog-header-container
   background: #FFFFFF
   max-width: 960px
@@ -112,37 +115,44 @@ a:hover
   object-fit: cover
   object-position: center
 
-.blog-details-container
-  padding: 1em 0
-
-.blog-details
-  font-size: 12px
+.blog-header-title h3
   color: #63636E
-  font-style: italic
 
-.blog-main-content-container
-  margin: 4% auto
-
-.blog-section
-  background: #FFFFFF
-  padding: 2em
-  max-width: 960px
-  margin: auto
-  border: .5px solid rgba(0,0,0,.15)
-  border-radius: 10px
-  box-shadow: 0 15px 38px -12px rgba(0, 0, 0, .095)
-
+// ADMIN EDIT CONTAINER
 .blog-section-admin
   background: rgba(255, 0, 0, 0.25)
   padding: 2em
+  color: #343a40
   max-width: 960px
   margin: auto
   border: .5px solid #ff0000
   border-radius: 10px
   box-shadow: 0 15px 38px -12px rgba(0, 0, 0, .095)
 
+// BLOG DETAILS
+.blog-details
+  font-size: 12px
+  color: #63636E
+  font-style: italic
+
+// BLOG SECTION ROWS
 .blog-section-row
   margin-top: 2em
+
+// BLOG SECTIONS
+.blog-section
+  background: #FFFFFF
+  padding: 2em
+  color: #63636E
+  max-width: 960px
+  margin: auto
+  border: .5px solid rgba(0,0,0,.15)
+  border-radius: 10px
+  box-shadow: 0 15px 38px -12px rgba(0, 0, 0, .095)
+
+// INCREASE LINE HEIGHT ON BLOG MAIN CONTENT FOR BETTER READABILITY
+.blog-main-content
+  line-height: 1.75
 
 @media (max-width: 767px)
   .post-image-container
