@@ -197,12 +197,7 @@ a:hover {
 }
 
 .edit-post-btn {
-  position: absolute;
-  right: 3em;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  float: right;
   color: #343a40;
   background-color: #FFFFFF;
 }
@@ -210,9 +205,6 @@ a:hover {
 .edit-post-btn:hover {
   color: #343a40;
   background-color: #FFFFFF;
-  -webkit-transform: translateY(-51%);
-  -ms-transform: translateY(-51%);
-  transform: translateY(-51%);
 }
 
 @media (max-width: 767px) {
@@ -227,5 +219,11 @@ a:hover {
   .blog-read-more {
     border-left: none;
     border-top: 0.5px solid rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 577px) {
+  .edit-post-btn {
+    float: none;
   }
 }

@@ -161,16 +161,12 @@ a:hover
 
 // BUTTONS
 .edit-post-btn
-  position: absolute
-  right: 3em
-  top: 50%
-  transform: translateY(-50%)
+  float: right
   color: #343a40
   background-color: #FFFFFF
   &:hover
     color: #343a40
     background-color: #FFFFFF
-    transform: translateY(-51%)
 
 @media (max-width: 767px)
   .post-image-container
@@ -184,3 +180,7 @@ a:hover
   .blog-read-more
     border-left: none
     border-top: .5px solid rgba(0,0,0,.20)
+
+@media (max-width: 577px)
+  .edit-post-btn
+    float: none

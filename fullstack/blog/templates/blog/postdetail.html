@@ -20,8 +20,10 @@
             <div class="row no-gutters blog-section-row justify-content-center">
                 <div class="col-sm-12">
                     <div class="blog-section-admin">
-                        <span>You're logged in as {{ user.username }} </span>
-                        <button class="btn fullstack-btn edit-post-btn" onclick="location.href='{% url 'edit' post.id %}'">Edit Post</button>
+                        <div class="row align-items-center">
+                            <div class="col-sm-8 py-1"><span>You're logged in as {{ user.username }} </span></div>
+                            <div class="col-sm-4 py-1"><button class="btn fullstack-btn edit-post-btn fa-pull-right" onclick="location.href='{% url 'edit' post.id %}'">Edit Post</button></div>
+                        </div>
                     </div>
                 </div>
             </div>
