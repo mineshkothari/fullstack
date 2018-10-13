@@ -1,30 +1,15 @@
 {% extends "blog/blog.html" %}
 {% block blogs %}
-        <div class="row">
-            <hr>
-            <div class="col-lg-3 col-md-2 text-center">
-                <a class="story-img" href="#">
-                    <img src="http://placehold.it/100" style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff;" class="rounded-circle">
-                </a>
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col">
+                <button class="btn btn-default" onclick="location.href='{% url 'blog' %}'">Back To Blogs</button>
             </div>
-            <div class="col-lg-9 col-md-10">
-                <h3>{{ post.title }}</h3>
-                <div class="row">
-                    <div class="col-sm-9">
-                        {% if post.image %}
-                            <img src="/media/{{ post.image }}" style="width:100%; height: auto;">
-                        {% endif %}
-
-                        <p>{{ post.published_date }} | Views <strong>{{ post.views }}</strong> | Tag <strong>{{ post.tag }}</strong></p>
-
-                        <p>{{ post.content }}</p>
-                        <p><button class="btn btn-default" onclick="location.href='{% url 'blog' %}'">Back To Blog</button>
-                        <button class="btn btn-default" onclick="location.href='{% url 'edit' post.id %}'">Edit</button></p>
-                        {% load disqus_tags %}
-                        {% set_disqus_title post.title %}
-                        {% disqus_show_comments %}
-                    </div>
+            {% if user.is_authenticated and user.is_staff %}
+                <div class="col">
+                    <button class="btn btn-default" onclick="location.href='{% url 'edit' post.id %}'">Edit</button>
                 </div>
-            </div>
+            {% endif %}
         </div>
+    </div>
 {% endblock %}
