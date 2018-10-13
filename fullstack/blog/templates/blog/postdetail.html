@@ -20,5 +20,14 @@
                 </div>
             </div>
         </div>
+        <div class="row no-gutters disqus-row justify-content-center">
+            <div class="col-sm-12 col-md-8">
+                <div class="disqus-block">
+                    {% load disqus_tags %}
+                    {% set_disqus_title post.title %}
+                    {% disqus_show_comments %}
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}

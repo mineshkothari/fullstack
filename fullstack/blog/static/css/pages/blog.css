@@ -129,7 +129,8 @@ a:hover {
   margin: 4% auto;
 }
 
-.blog-main-content {
+.blog-main-content,
+.disqus-block {
   background: #FFFFFF;
   padding: 2em;
   max-width: 960px;
@@ -137,6 +138,10 @@ a:hover {
   border: 0.5px solid rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: 0 15px 38px -12px rgba(0, 0, 0, 0.095);
   box-shadow: 0 15px 38px -12px rgba(0, 0, 0, 0.095);
+}
+
+.disqus-row {
+  margin-top: 2em;
 }
 
 @media (max-width: 767px) {
