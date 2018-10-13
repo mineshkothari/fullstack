@@ -95,9 +95,24 @@ a:hover
     text-shadow: 0 3px 10px rgba(0,0,0,.35)
 
 // BLOG SINGLE POSTS
-
+// -----------------
 .blog-main-content-container
   margin: 4% auto
+
+// BLOG SECTION ROWS
+.blog-section-row
+  margin-top: 2em
+
+// BLOG SECTIONS
+.blog-section
+  background: #FFFFFF
+  padding: 2em
+  color: #63636E
+  max-width: 960px
+  margin: auto
+  border: .5px solid rgba(0,0,0,.15)
+  border-radius: 10px
+  box-shadow: 0 15px 38px -12px rgba(0, 0, 0, .095)
 
 // POST HEADER
 .blog-header-container
@@ -120,6 +135,7 @@ a:hover
 
 // ADMIN EDIT CONTAINER
 .blog-section-admin
+  position: relative
   background: rgba(255, 0, 0, 0.25)
   padding: 2em
   color: #343a40
@@ -135,24 +151,26 @@ a:hover
   color: #63636E
   font-style: italic
 
-// BLOG SECTION ROWS
-.blog-section-row
-  margin-top: 2em
-
-// BLOG SECTIONS
-.blog-section
-  background: #FFFFFF
-  padding: 2em
-  color: #63636E
-  max-width: 960px
-  margin: auto
-  border: .5px solid rgba(0,0,0,.15)
-  border-radius: 10px
-  box-shadow: 0 15px 38px -12px rgba(0, 0, 0, .095)
+// BLOG BUTTONS
+.blog-buttons
+  background: #63636E
 
 // INCREASE LINE HEIGHT ON BLOG MAIN CONTENT FOR BETTER READABILITY
 .blog-main-content
   line-height: 1.75
+
+// BUTTONS
+.edit-post-btn
+  position: absolute
+  right: 3em
+  top: 50%
+  transform: translateY(-50%)
+  color: #343a40
+  background-color: #FFFFFF
+  &:hover
+    color: #343a40
+    background-color: #FFFFFF
+    transform: translateY(-51%)
 
 @media (max-width: 767px)
   .post-image-container

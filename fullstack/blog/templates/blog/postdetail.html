@@ -19,8 +19,9 @@
         {% if user.is_authenticated and user.is_staff %}
             <div class="row no-gutters blog-section-row justify-content-center">
                 <div class="col-sm-12">
-                    <div class="blog-section-admin blog-buttons">
-                        <span>You're logged in as {{ user.username }} </span><button class="btn btn-default" onclick="location.href='{% url 'edit' post.id %}'">Edit</button>
+                    <div class="blog-section-admin">
+                        <span>You're logged in as {{ user.username }} </span>
+                        <button class="btn fullstack-btn edit-post-btn" onclick="location.href='{% url 'edit' post.id %}'">Edit Post</button>
                     </div>
                 </div>
             </div>
@@ -42,7 +43,7 @@
         <div class="row no-gutters blog-section-row justify-content-center">
             <div class="col-sm-12">
                 <div class="blog-section blog-buttons">
-                    <button class="btn btn-default" onclick="location.href='{% url 'blog' %}'">Back To Blogs</button>
+                    <button class="btn fullstack-btn" onclick="location.href='{% url 'blog' %}'">Back To Blogs</button>
                 </div>
             </div>
         </div>
