@@ -1,10 +1,14 @@
 {% extends "blog/blog.html" %}
 {% block blogs %}
     {% load bootstrap_tags %}
-    <h2>Add A Post</h2>
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form|as_bootstrap }}
-        <button type="submit" class="btn btn-info">Save</button>
-    </form>
+    <div class="container-fluid blog-main-content-container">
+        <div class="form-container">
+            <h3 class="display-4">Add/Edit A Post</h3>
+            <form method="POST" enctype="multipart/form-data" class="blog-post-form">
+                {% csrf_token %}
+                {{ form | as_bootstrap }}
+                <button type="submit" class="btn fullstack-btn">Save</button>
+            </form>
+        </div>
+    </div>
 {% endblock %}

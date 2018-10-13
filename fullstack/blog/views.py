@@ -6,6 +6,7 @@ from .models import Post
 from .forms import BlogPostForm
 from django.contrib.auth.decorators import login_required
 
+
 # Create your views here.
 def post_list(request):
 
@@ -42,6 +43,7 @@ def new_post(request):
     return render(request, 'blog/blogpostform.html', {'form': form})
 
 
+@login_required(login_url='/account/login/')
 def edit_post(request, id):
     post = get_object_or_404(Post, pk=id)
     if request.method == "POST":
