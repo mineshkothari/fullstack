@@ -2,9 +2,23 @@
 {% block blogs %}
 
     <div class="container-fluid blog-main-content-container">
+        <div class="row no-gutters blog-section-row justify-content-center">
+            <div class="col-sm-12">
+                <div class="blog-header-container">
+                    {% if post.image %}
+                        <div class="blog-header-image">
+                            <img class="blog-img-main" alt="{{ post.title }} Image" src="/media/{{ post.image }}"/>
+                        </div>
+                    {% endif %}
+                    <div class="blog-header-title text-center">
+                        <h3 class="display-4">{{ post.title }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
         {% if user.is_authenticated and user.is_staff %}
             <div class="row no-gutters blog-section-row justify-content-center">
-                <div class="col-sm-12 col-md-8">
+                <div class="col-sm-12">
                     <div class="blog-section-admin blog-buttons">
                         <span>You're logged in as {{ user.username }} </span><button class="btn btn-default" onclick="location.href='{% url 'edit' post.id %}'">Edit</button>
                     </div>
@@ -12,28 +26,28 @@
             </div>
         {% endif %}
         <div class="row no-gutters blog-section-row justify-content-center">
-            <div class="col-sm-12 col-md-8">
+            <div class="col-sm-12">
                 <div class="blog-section blog-details-container">
                     <span class="blog-details">{{ post.published_date }} | Views <strong>{{ post.views }}</strong> | Tag <strong>{{ post.tag }}</strong></span>
                 </div>
             </div>
         </div>
         <div class="row no-gutters blog-section-row justify-content-center">
-            <div class="col-sm-12 col-md-8">
+            <div class="col-sm-12">
                 <div class="blog-section blog-main-content">
                     {{ post.content }}
                 </div>
             </div>
         </div>
         <div class="row no-gutters blog-section-row justify-content-center">
-            <div class="col-sm-12 col-md-8">
+            <div class="col-sm-12">
                 <div class="blog-section blog-buttons">
                     <button class="btn btn-default" onclick="location.href='{% url 'blog' %}'">Back To Blogs</button>
                 </div>
             </div>
         </div>
         <div class="row no-gutters blog-section-row justify-content-center">
-            <div class="col-sm-12 col-md-8">
+            <div class="col-sm-12">
                 <div class="blog-section disqus-block">
                     {% load disqus_tags %}
                     {% set_disqus_title post.title %}
