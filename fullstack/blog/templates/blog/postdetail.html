@@ -1,28 +1,40 @@
 {% extends "blog/blog.html" %}
 {% block blogs %}
-    <div class="container">
-        <div class="row no-gutters">
-            <div class="col">
-                <button class="btn btn-default" onclick="location.href='{% url 'blog' %}'">Back To Blogs</button>
-            </div>
-            {% if user.is_authenticated and user.is_staff %}
-                <div class="col">
-                    <button class="btn btn-default" onclick="location.href='{% url 'edit' post.id %}'">Edit</button>
-                </div>
-            {% endif %}
-        </div>
-    </div>
+
     <div class="container-fluid blog-main-content-container">
-        <div class="row no-gutters justify-content-center">
+        {% if user.is_authenticated and user.is_staff %}
+            <div class="row no-gutters blog-section-row justify-content-center">
+                <div class="col-sm-12 col-md-8">
+                    <div class="blog-section-admin blog-buttons">
+                        <span>You're logged in as {{ user.username }} </span><button class="btn btn-default" onclick="location.href='{% url 'edit' post.id %}'">Edit</button>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        <div class="row no-gutters blog-section-row justify-content-center">
             <div class="col-sm-12 col-md-8">
-                <div class="blog-main-content">
+                <div class="blog-section blog-details-container">
+                    <span class="blog-details">{{ post.published_date }} | Views <strong>{{ post.views }}</strong> | Tag <strong>{{ post.tag }}</strong></span>
+                </div>
+            </div>
+        </div>
+        <div class="row no-gutters blog-section-row justify-content-center">
+            <div class="col-sm-12 col-md-8">
+                <div class="blog-section blog-main-content">
                     {{ post.content }}
                 </div>
             </div>
         </div>
-        <div class="row no-gutters disqus-row justify-content-center">
+        <div class="row no-gutters blog-section-row justify-content-center">
             <div class="col-sm-12 col-md-8">
-                <div class="disqus-block">
+                <div class="blog-section blog-buttons">
+                    <button class="btn btn-default" onclick="location.href='{% url 'blog' %}'">Back To Blogs</button>
+                </div>
+            </div>
+        </div>
+        <div class="row no-gutters blog-section-row justify-content-center">
+            <div class="col-sm-12 col-md-8">
+                <div class="blog-section disqus-block">
                     {% load disqus_tags %}
                     {% set_disqus_title post.title %}
                     {% disqus_show_comments %}

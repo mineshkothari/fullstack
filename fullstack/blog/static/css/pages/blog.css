@@ -125,12 +125,21 @@ a:hover {
   text-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
 }
 
+.blog-details-container {
+  padding: 1em 0;
+}
+
+.blog-details {
+  font-size: 12px;
+  color: #63636E;
+  font-style: italic;
+}
+
 .blog-main-content-container {
   margin: 4% auto;
 }
 
-.blog-main-content,
-.disqus-block {
+.blog-section {
   background: #FFFFFF;
   padding: 2em;
   max-width: 960px;
@@ -140,7 +149,17 @@ a:hover {
   box-shadow: 0 15px 38px -12px rgba(0, 0, 0, 0.095);
 }
 
-.disqus-row {
+.blog-section-admin {
+  background: rgba(255, 0, 0, 0.25);
+  padding: 2em;
+  max-width: 960px;
+  margin: auto;
+  border: .5px solid #ff0000;
+  -webkit-box-shadow: 0 15px 38px -12px rgba(0, 0, 0, 0.095);
+  box-shadow: 0 15px 38px -12px rgba(0, 0, 0, 0.095);
+}
+
+.blog-section-row {
   margin-top: 2em;
 }
 
