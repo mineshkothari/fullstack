@@ -7,7 +7,7 @@
     {% load bootstrap_tags %}
     {% for subject in subjects %}
         <section class="subject-section">
-            <div class="container subject-container forum-container row no-gutters align-items-center">
+            <div class="container subject-container row no-gutters align-items-center">
                 <div class="subject-title-col col-12 col-md-4">
                     <h2 class="subject-title forum-title"><a class="subject-link forum-title-link" href="{% url "threads" subject.id %}">{{ subject.name }}</a></h2>
                 </div>
