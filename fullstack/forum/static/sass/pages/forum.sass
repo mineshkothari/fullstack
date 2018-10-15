@@ -19,7 +19,7 @@
 
 // FORUM SUBJECTS
 .subject-container
-  margin: 4em auto
+  margin: 3em auto
   padding: 3em 1em
   max-width: 960px
   border-radius: 10px
@@ -32,6 +32,7 @@
     transform: translateY(-4px)
   .forum-title
     color: #aaaaa3
+    letter-spacing: 1px
     .forum-title-link
       color: #aaaaa3
       transition: all 350ms ease-in-out
@@ -79,3 +80,14 @@
 @media (min-width: 768px)
   .activity-counter
     text-align: right
+
+// CENTRE TEXT ON SMALL SCREENS
+@media (max-width: 767px)
+  .forum-title,
+  .subject-desc,
+  .activity-counter
+    text-align: center
+    padding-bottom: .5em
+
+  .subject-desc p
+    padding-bottom: 1em

@@ -21,7 +21,7 @@
 }
 
 .subject-container {
-  margin: 4em auto;
+  margin: 3em auto;
   padding: 3em 1em;
   max-width: 960px;
   border-radius: 10px;
@@ -44,6 +44,7 @@
 
 .subject-container .forum-title {
   color: #aaaaa3;
+  letter-spacing: 1px;
 }
 
 .subject-container .forum-title .forum-title-link {
@@ -106,5 +107,17 @@
 @media (min-width: 768px) {
   .activity-counter {
     text-align: right;
+  }
+}
+
+@media (max-width: 767px) {
+  .forum-title,
+  .subject-desc,
+  .activity-counter {
+    text-align: center;
+    padding-bottom: .5em;
+  }
+  .subject-desc p {
+    padding-bottom: 1em;
   }
 }
