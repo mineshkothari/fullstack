@@ -22,7 +22,7 @@
 
 .subject-container {
   margin: 3em auto;
-  padding: 3em 1em;
+  padding: 3em 1.5em;
   max-width: 960px;
   border-radius: 10px;
   border: 0.5px solid rgba(0, 0, 0, 0.08);
@@ -45,34 +45,35 @@
 .subject-container .forum-title {
   color: #aaaaa3;
   letter-spacing: 1px;
+  margin-bottom: 0;
 }
 
-.subject-container .forum-title .forum-title-link {
+.forum-title-link {
   color: #aaaaa3;
   -webkit-transition: all 350ms ease-in-out;
   -o-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
 }
 
-.subject-container .forum-title .forum-title-link:hover {
+.forum-title-link:hover {
   text-decoration: none;
   color: #63636E;
 }
 
-.subject-container .subject-desc p {
+.forum-title-link .subject-desc p {
   color: #63636E;
   margin-bottom: 0;
   font-style: italic;
 }
 
-.subject-container .activity-counter {
+.forum-title-link .activity-counter {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #63636E;
   font-size: 12px;
 }
 
-.subject-container .activity-counter span {
+.forum-title-link .activity-counter span {
   font-weight: 800;
 }
 
