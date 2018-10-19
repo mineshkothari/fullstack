@@ -17,6 +17,10 @@
   color: #aaaaa3
   padding: 8%
 
+// CONTAINER
+// NEED TO USE THE STYLES OF CONTAINERS IN BOTH FORUM SUBJECTS AND THREADS
+// UNIFORM DRY CODE MANNNNNN
+
 // FORUM SUBJECTS
 .subject-container
   margin: 3em auto
@@ -34,12 +38,6 @@
     color: #aaaaa3
     letter-spacing: 1px
     margin-bottom: 0
-.forum-title-link
-  color: #aaaaa3
-  transition: all 350ms ease-in-out
-  &:hover
-    text-decoration: none
-    color: #63636E
   .subject-desc p
     color: #63636E
     margin-bottom: 0
@@ -52,7 +50,27 @@
     span
       font-weight: 800
 
+.forum-title-link
+  color: #aaaaa3
+  transition: all 350ms ease-in-out
+  &:hover
+    text-decoration: none
+    color: #63636E
+
 // FORUM THREADS
+.thread-container
+  margin: 3em auto
+  padding: 3em 1.5em
+  max-width: 960px
+  border-radius: 10px
+  border: .5px solid rgba(0,0,0,0.08)
+  box-shadow: 0 10px 40px -25px rgba(0,0,0,0.25)
+  transition: all 350ms ease-in-out
+  &:hover
+    background: #FFFFFF
+    box-shadow: 0 40px 60px -25px rgba(0,0,0,0.3)
+    transform: translateY(-4px)
+
 .thread-created-by,
 .thread-created-at
   font-size: 12px

@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'forum',
     'polls',
     'about',
+    'courses',
 
     # THIRD PARTY APPS
     'django_forms_bootstrap',
