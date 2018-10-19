@@ -23,4 +23,5 @@ class AccountUserManager(UserManager):
 
 class User(AbstractUser):
 
+    display_name = models.CharField(max_length=40, default='Anonymous')
     objects = AccountUserManager()
