@@ -56,3 +56,21 @@ class UserLoginForm(forms.Form):
         widget=forms.PasswordInput(attrs={'placeholder': 'password'})
     )
 
+
+class UserAccountForm(forms.Form):
+
+    MONTH_CHOICES = [(i, i) for i in range(1, 13)]
+    YEAR_CHOICES = [(i, i) for i in range(2018, 2040)]
+
+    email = forms.EmailField(widget=forms.EmailInput)
+    display_name = forms.CharField(label='Display Name')
+    card_number = forms.CharField(label='Card Number')
+    cvv = forms.CharField(label='CVV')
+    expiry_month = forms.ChoiceField(label="Expiry Month", choices=MONTH_CHOICES)
+    expiry_year = forms.ChoiceField(label="Expiry Year", choices=YEAR_CHOICES)
+    stripe_id = forms.CharField(widget=forms.HiddenInput)
+
+    class Meta:
+        model = User
+        fields = ['email',  'stripe_id']
+        # exclude = ['username']
