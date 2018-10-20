@@ -1,11 +1,28 @@
 {% extends "accounts/account.html" %}
+{% load bootstrap_tags %}
 {% block account %}
     <section class="account-page-title profile-title">
         <h2>View and manage your profile</h2>
+        <span>You are logged in as {{ user.email }}</span>
+        <span>You last logged in on {{ user.last_login }}</span>
     </section>
-    <section class="account-section profile-section">
-        <p>You are logged in as {{ user.email }}</p>
-        <p>You last logged in on {{ user.last_login }}</p>
-        <p><a href="#">Password reset link</a></p>
+    <section class="profile-section account-section">
+        <div class="row no-gutters">
+            <div class="col-12 col-md-6 col-xl-3 manage-account-form">
+                <div class="form-container manage-form-container">
+                    <form role="form" method="post" action="{% url 'register' %}">
+                        <legend> Manage <span>your</span> account</legend>
+                        {% csrf_token %}
+                        {{ form | as_bootstrap }}
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-lg fullstack-btn form-submit-btn">Update</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-9" style="padding: 2em;">
+                <p><a href="#">Password reset link</a></p>
+            </div>
+        </div>
     </section>
 {% endblock %}

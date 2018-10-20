@@ -23,7 +23,6 @@
 
 .account-section {
   background: #eaeaea;
-  padding: 8%;
 }
 
 .form-container {
@@ -88,6 +87,10 @@
 
 .form-container .form-group {
   margin-bottom: 1.75rem;
+}
+
+.manage-form-container {
+  max-width: none;
 }
 
 ::-webkit-input-placeholder {
