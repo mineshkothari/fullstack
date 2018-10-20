@@ -2,7 +2,7 @@ from django.contrib import messages, auth
 from django.core.urlresolvers import reverse
 from django.shortcuts import render, redirect
 from django.template.context_processors import csrf
-from accounts.forms import UserRegistrationForm, UserLoginForm
+from accounts.forms import UserRegistrationForm, UserLoginForm, UserAccountForm
 from django.contrib.auth.decorators import login_required
 
 
@@ -33,7 +33,12 @@ def register(request):
 
 @login_required(login_url='/account/login/')
 def profile(request):
-    return render(request, 'accounts/profile.html')
+
+    form = UserAccountForm()
+
+    args = {'form': form}
+    args.update(csrf(request))
+    return render(request, 'accounts/profile.html', args)
 
 
 def login(request):
@@ -62,4 +67,3 @@ def logout(request):
     auth.logout(request)
     messages.success(request, 'You have successfully logged out')
     return redirect(reverse('index'))
-
