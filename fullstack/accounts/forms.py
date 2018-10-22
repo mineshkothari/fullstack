@@ -72,5 +72,6 @@ class UserAccountForm(forms.Form):
 
     class Meta:
         model = User
+        # User Editable Fields
         fields = ['email',  'stripe_id']
         # exclude = ['username']
