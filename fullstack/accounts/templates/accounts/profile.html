@@ -10,7 +10,7 @@
         <div class="row no-gutters">
             <div class="col-12 col-md-6 col-xl-3 manage-account-form">
                 <div class="form-container manage-form-container">
-                    <form role="form" method="post" action="{% url 'register' %}">
+                    <form role="form" method="post" action="{% url 'profile' %}">
                         <legend> Manage <span>your</span> account</legend>
                         {% csrf_token %}
                         {{ form | as_bootstrap }}
