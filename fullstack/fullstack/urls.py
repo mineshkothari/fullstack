@@ -39,6 +39,9 @@ urlpatterns = [
     # FORUM
     url(r'^forum/', include('forum.urls')),
 
+    # Courses
+    url(r'^courses/', include('courses.urls')),
+
     # MEDIA
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
 ]
