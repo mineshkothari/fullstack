@@ -44,32 +44,26 @@
     </section>
     <section class="home-section home-blog">
         <div class="row no-gutters">
-            <div class="col">
-                    <div class="container">
-                        <div class="row post-container no-gutters d-flex align-items-center">
-                            <div class="col-md-3 text-center post-image-container">
-                                <a class="story-img" href="#">
-                                    {% if post.image %}
-                                        <img class="post-thumbnail" src="/media/{{ post.image }}">
-                                    {% endif %}
-                                </a>
-                            </div>
-                            <div class="col-md-7 post-detail-container">
-                                <h3 class="post-title">{{ post.title }}</h3>
-                                <div class="row">
-                                    <div class="col-sm-10">
-                                        <p class="post-details">{{ post.published_date }} | Views <strong>{{ post.views }}</strong> | Tag <strong>{{ post.tag }}</strong></p>
-                                        <p class="post-snippet">{{ post.content|truncatewords:20 }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2 blog-read-more d-flex justify-content-center align-items-center">
-                                <i class="fas fa-angle-right btn blog-read-more-icon" onclick="location.href='{{ post.id }}'"></i>
-                            </div>
+            <div class="col-12 col-sm-6 post-container-col">
+                <div class="row no-gutters d-flex justify-content-center">
+                    <div class="post-container-home">
+                        {% if post.image %}
+                            <a class="post-thumbnail-container-home" href="#">
+                                <img class="post-thumbnail-home" src="/media/{{ post.image }}" />
+                            </a>
+                        {% endif %}
+                        <div class="post-detail-container-home">
+                            <h3 class="post-title">{{ post.title }}</h3>
+                            <p class="post-details">{{ post.published_date }} | Views <strong>{{ post.views }}</strong> | Tag <strong>{{ post.tag }}</strong></p>
+                            <p class="post-snippet">{{ post.content|truncatewords:20 }}</p>
+                        </div>
+                        <div class="blog-read-more d-flex justify-content-center align-items-center">
+                            <i class="fas fa-angle-right btn blog-read-more-icon" onclick="location.href='{{ post.id }}'"></i>
                         </div>
                     </div>
+                </div>
             </div>
-            <div class="col">
+            <div class="col-12 col-sm-6">
                 <span>Check out all our blogs</span>
                 <a class="btn fullstack-btn"  onclick="location.href='{% url 'blog' %}'">View Blogs</a>
             </div>
