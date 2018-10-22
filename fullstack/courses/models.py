@@ -22,6 +22,8 @@ class Language(models.Model):
     framework = models.ForeignKey(Framework, related_name='languages')
     created_at = models.DateTimeField(default=timezone.now)
 
+    def __unicode__(self):
+        return self.title
 
 class Module(models.Model):
     title = models.CharField(max_length=255)
@@ -29,3 +31,6 @@ class Module(models.Model):
     price = models.DecimalField(max_digits=19, decimal_places=2)
     content = HTMLField(blank=True)
     created_at = models.DateTimeField(default=timezone.now)
+
+    def __unicode__(self):
+        return self.title

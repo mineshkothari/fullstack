@@ -10,4 +10,4 @@ from django.template.context_processors import csrf
 
 # Create your views here.
 def courses(request):
-    return render(request, 'courses/courses.html', {'framework': Framework.objects.all()})
+    return render(request, 'courses/courses.html', {'frameworks': Framework.objects.all()})

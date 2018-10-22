@@ -1,12 +1,18 @@
-{% extends "home/base.html" %}
-{% load staticfiles %}
-{% block head_css %}
-    <link rel="stylesheet" href="{% static "css/pages/courses.css" %}">
-{% endblock %}
-{% block body %}
-    <div class="jumbotron text-center">
-      <h1 class="display-4"><span class="fullstack-brand rounded-right brand-border border border-left-0 border-primary">Fullstack</span> Courses</h1>
-    </div>
-    {% block courses %}
-    {% endblock %}
+{% extends "courses/courses_home.html" %}
+{% load thread_extras %}
+{% block courses %}
+    <section class="forum-intro">
+        <h2>Welcome to the our Courses</h2>
+    </section>
+    {% load bootstrap_tags %}
+    {% for framework in frameworks %}
+        <div class="container subject-container row no-gutters align-items-center">
+            <div class="subject-title-col col-12 col-md-4">
+                <h2 class="subject-title forum-title">{{ framework.title }}</h2>
+            </div>
+            <div class="subject-desc-col col-12 col-md-5">
+                <span class="subject-desc">{% autoescape off %}{{ framework.description }}{% endautoescape %}</span>
+            </div>
+        </div>
+    {% endfor %}
 {% endblock %}
