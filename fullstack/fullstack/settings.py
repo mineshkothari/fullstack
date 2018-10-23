@@ -29,6 +29,11 @@ ALLOWED_HOSTS = []
 
 SITE_ID = 2
 
+# PayPal Settings
+SITE_URL = 'http://127.0.0.1:8000'
+PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-very-hard-to-guess-url/'
+PAYPAL_RECEIVER_EMAIL = 'minesh_mk@hotmail.co.uk'
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -57,6 +62,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'tinymce',
     'emoticons',
+    'paypal.standard.ipn',
 ]
 
 INTERNAL_IPS = ('127.0.0.1',)
