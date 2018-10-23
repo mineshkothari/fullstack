@@ -34,25 +34,20 @@ def register(request):
 @login_required(login_url='/account/login/')
 def profile(request):
     if request.method == 'POST':
-        form = UserAccountForm(request.POST)
+        form = UserAccountForm(request.POST, instance=request.user)
         if form.is_valid():
             form.save()
             user = auth.authenticate(email=request.POST.get('email'))
-
             if user:
                 messages.success(request, "Your details have been updated")
                 return redirect(reverse('profile'))
-
             else:
                 messages.error(request, "We've been unable to update your details")
-
     else:
-        form = UserAccountForm()
-
-    args = {'form': form}
-    args.update(csrf(request))
-
-    return render(request, 'accounts/profile.html', args)
+        form = UserAccountForm(instance=request.user)
+        args = {'form': form}
+        args.update(csrf(request))
+        return render(request, 'accounts/profile.html', args)
 
 
 def login(request):

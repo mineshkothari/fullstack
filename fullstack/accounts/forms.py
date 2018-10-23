@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from accounts.models import User
 from django.core.exceptions import ValidationError
 
@@ -57,7 +57,7 @@ class UserLoginForm(forms.Form):
     )
 
 
-class UserAccountForm(forms.Form):
+class UserAccountForm(UserChangeForm):
 
     MONTH_CHOICES = [(i, i) for i in range(1, 13)]
     YEAR_CHOICES = [(i, i) for i in range(2018, 2040)]
@@ -73,5 +73,15 @@ class UserAccountForm(forms.Form):
     class Meta:
         model = User
         # User Editable Fields
-        fields = ['email',  'stripe_id']
-        # exclude = ['username']
+        fields = [
+            'first_name',
+            'last_name',
+            'display_name',
+            'email',
+            'card_number',
+            'cvv',
+            'expiry_month',
+            'expiry_year'
+            ]
+
+        exclude = ['username', 'password']
