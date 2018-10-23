@@ -16,3 +16,13 @@ def courses(request):
 def languages(request, framework_id):
     framework = get_object_or_404(Framework, pk=framework_id)
     return render(request, 'courses/languages.html', {'framework': framework})
+
+
+def modules(request, language_id):
+    language = get_object_or_404(Language, pk=language_id)
+    return render(request, 'courses/modules.html', {'language': language})
+
+
+def module_item(request, module_id):
+    module = get_object_or_404(Module, pk=module_id)
+    return render(request, 'courses/module_item.html', {'module': module})

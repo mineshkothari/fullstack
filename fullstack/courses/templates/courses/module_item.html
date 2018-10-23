@@ -2,9 +2,7 @@
 {% load thread_extras %}
 {% block courses %}
     <section class="forum-intro">
-        <h2>{{ language.title }}</h2>
+        <h2>{{ module.title }}</h2>
     </section>
-    {% for module in language.modules.all %}
-        {% include "courses/module.html" %}
-    {% endfor %}
+    <p>{{ module.content }}</p>
 {% endblock %}
