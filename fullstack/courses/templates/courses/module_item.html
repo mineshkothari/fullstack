@@ -4,5 +4,5 @@
     <section class="forum-intro">
         <h2>{{ module.title }}</h2>
     </section>
-    <p>{{ module.content }}</p>
+    <p>{% autoescape off %}{{ module.content }}{% endautoescape %}</p>
 {% endblock %}
