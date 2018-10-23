@@ -1,0 +1,10 @@
+{% extends "courses/courses.html" %}
+{% load thread_extras %}
+{% block courses %}
+    <section class="forum-intro">
+        <h2>{{ framework.title }}</h2>
+    </section>
+    {% for language in framework.languages.all %}
+        {% include "courses/language.html" %}
+    {% endfor %}
+{% endblock %}

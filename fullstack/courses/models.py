@@ -25,6 +25,7 @@ class Language(models.Model):
     def __unicode__(self):
         return self.title
 
+
 class Module(models.Model):
     title = models.CharField(max_length=255)
     language = models.ForeignKey(Language, related_name='modules')
