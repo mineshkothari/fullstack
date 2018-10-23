@@ -37,17 +37,15 @@ def profile(request):
         form = UserAccountForm(request.POST, instance=request.user)
         if form.is_valid():
             form.save()
-            user = auth.authenticate(email=request.POST.get('email'))
-            if user:
-                messages.success(request, "Your details have been updated")
-                return redirect(reverse('profile'))
-            else:
-                messages.error(request, "We've been unable to update your details")
+            messages.success(request, "Your details have been updated")
+            return redirect(reverse('profile'))
+        else:
+            messages.error(request, "We've been unable to update your details")
     else:
         form = UserAccountForm(instance=request.user)
-        args = {'form': form}
-        args.update(csrf(request))
-        return render(request, 'accounts/profile.html', args)
+    args = {'form': form}
+    args.update(csrf(request))
+    return render(request, 'accounts/profile.html', args)
 
 
 def login(request):

@@ -4,9 +4,11 @@ from django.db import models
 from django.utils import timezone
 from tinymce.models import HTMLField
 from django.conf import settings
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
 
 
-# Create your models here.
 class Framework(models.Model):
     title = models.CharField(max_length=255)
     image = models.ImageField(upload_to="images/courses", blank=True, null=True)
@@ -29,9 +31,10 @@ class Language(models.Model):
 class Module(models.Model):
     title = models.CharField(max_length=255)
     language = models.ForeignKey(Language, related_name='modules')
-    price = models.DecimalField(max_digits=19, decimal_places=2)
+    price = models.PositiveIntegerField()
     content = HTMLField(blank=True)
     created_at = models.DateTimeField(default=timezone.now)
+    enrolled_users = models.ManyToManyField(User)
 
     def __unicode__(self):
         return self.title
