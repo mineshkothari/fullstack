@@ -168,3 +168,8 @@ DISQUS_WEBSITE_SHORTNAME = 'fullstack'
 #Stripe environvent variables
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_dPHGIP1ehMeOzgFgGjunQsbo')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_82qdxVXbCBbjobxDBjTQQuRk')
+
+
+#EMAIL BACKEND
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
