@@ -30,7 +30,7 @@
         <div class="row no-gutters blog-section-row justify-content-center">
             <div class="col-sm-12">
                 <div class="blog-section blog-details-container">
-                    <span class="blog-details">{{ post.published_date }} | Views <strong>{{ post.views }}</strong> | Tag <strong>{{ post.tag }}</strong></span>
+                    <span class="blog-details">{{ post.published_date|date:"D d M Y" }}, {{ post.published_date|time:"H:i A" }} | Views <strong>{{ post.views }}</strong> | Tag <strong>{{ post.tag }}</strong></span>
                 </div>
             </div>
         </div>
