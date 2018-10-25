@@ -181,3 +181,16 @@ STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_82qdxVXbCBbjobxDBjTQQuRk')
 #EMAIL BACKEND
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+#SUMMERNOTE WYSIWYG SETTINGS
+SUMMERNOTE_THEME = 'bs4'  # Show summernote with Bootstrap4
+
+SUMMERNOTE_CONFIG = {
+    # You can put custom Summernote settings
+    'summernote': {
+        # Change editor size
+        'width': '100%',
+        'height': '480',
+    },
+}
