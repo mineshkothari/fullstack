@@ -37,7 +37,7 @@
         <div class="row no-gutters blog-section-row justify-content-center">
             <div class="col-sm-12">
                 <div class="blog-section blog-main-content">
-                    {{ post.content }}
+                    {% autoescape off %}{{ post.content }}{% endautoescape %}
                 </div>
             </div>
         </div>
