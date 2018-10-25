@@ -64,6 +64,7 @@ INSTALLED_APPS = [
     'tinymce',
     'emoticons',
     'paypal.standard.ipn',
+    'django_summernote',
 ]
 
 INTERNAL_IPS = ('127.0.0.1',)
