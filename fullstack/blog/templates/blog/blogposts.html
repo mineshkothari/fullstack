@@ -15,8 +15,8 @@
                     <h3 class="post-title">{{ post.title }}</h3>
                     <div class="row">
                         <div class="col-sm-10">
-                            <p class="post-details">{{ post.published_date }} | Views <strong>{{ post.views }}</strong> | Tag <strong>{{ post.tag }}</strong></p>
-                            <p class="post-snippet">{{ post.content|truncatewords:20 }}</p>
+                            <p class="post-details"><span class="blog-details">{{ post.published_date|date:"D d M Y" }}, {{ post.published_date|time:"H:i A" }} | Views <strong>{{ post.views }}</strong> | Tag <strong>{{ post.tag }}</strong></span></p>
+                            <p class="post-snippet">{% autoescape off %}{{ post.content|truncatewords:20 }}{% endautoescape %}</p>
                         </div>
                     </div>
                 </div>
