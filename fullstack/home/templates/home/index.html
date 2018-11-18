@@ -1,8 +1,7 @@
 {% extends "home/base.html" %}
 {% load staticfiles %}
-{% block head_css %}
-    <link rel="stylesheet" href="{% static "css/pages/index.css" %}">
-{% endblock %}
+{% block page_title %}Fullstack | Learn Web Development | Minesh Kothari{% endblock page_title %}
+{% block head_css %}<link rel="stylesheet" href="{% static "css/pages/index.css" %}">{% endblock head_css %}
 {% block body %}
     <div class="jumbotron text-center">
       <h1 class="display-4"><span class="fullstack-brand rounded-right border border-left-0">Fullstack</span> Home</h1>

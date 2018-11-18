@@ -1,8 +1,7 @@
 {% extends "home/base.html" %}
 {% load staticfiles %}
-{% block head_css %}
-    <link rel="stylesheet" href="{% static "css/pages/about.css" %}">
-{% endblock %}
+{% block page_title %}About Fullstack | Learn Web Development{% endblock page_title %}
+{% block head_css %}<link rel="stylesheet" href="{% static "css/pages/about.css" %}">{% endblock %}
 {% block body %}
     <div class="jumbotron text-center">
       <h1 class="display-4"><span class="fullstack-brand rounded-right brand-border border border-left-0 border-primary">Fullstack</span> About</h1>
