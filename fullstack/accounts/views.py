@@ -70,6 +70,7 @@ def login(request):
     return render(request, 'accounts/login.html', args)
 
 
+@login_required(login_url='/account/login/')
 def logout(request):
     auth.logout(request)
     messages.success(request, 'You have successfully logged out')
