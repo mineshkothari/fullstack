@@ -7,6 +7,8 @@ from django.contrib.auth.decorators import login_required
 
 
 def register(request):
+    if request.user.is_authenticated:
+        return redirect(reverse('profile'))
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
@@ -49,6 +51,8 @@ def profile(request):
 
 
 def login(request):
+    if request.user.is_authenticated:
+        return redirect(reverse('profile'))
     if request.method == 'POST':
         form = UserLoginForm(request.POST)
         if form.is_valid():
