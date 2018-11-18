@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import env
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -174,8 +175,8 @@ MEDIA_URL = '/media/'
 DISQUS_WEBSITE_SHORTNAME = 'fullstack'
 
 #Stripe environvent variables
-STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_dPHGIP1ehMeOzgFgGjunQsbo')
-STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_82qdxVXbCBbjobxDBjTQQuRk')
+STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
+STRIPE_SECRET = os.getenv('STRIPE_SECRET')
 
 
 #EMAIL BACKEND
@@ -184,7 +185,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
 #SUMMERNOTE WYSIWYG SETTINGS
-SUMMERNOTE_THEME = 'bs4'  # Show summernote with Bootstrap4
+# SUMMERNOTE_THEME = 'bs4'  # Show summernote with Bootstrap4
 
 SUMMERNOTE_CONFIG = {
     # You can put custom Summernote settings
