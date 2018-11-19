@@ -7,7 +7,7 @@
     {% load bootstrap_tags %}
     <section class="subject-list container-fluid">
     {% for subject in subjects %}
-    <div class="subject-item container row no-gutters">
+    <a class="subject-item container row no-gutters" href="#">
         <div class="subject-title-col col-12 col-md-4">
             <h3 class="subject-title">{{ subject.name }}</h3>
         </div>
@@ -18,7 +18,7 @@
             <div class="thread-counter">Threads: <span>{{ subject.threads.count }}</span></div>
             <div class="posts-counter">Posts: <span>{{ subject|get_total_subject_posts }}</span></div>
         </div>
-    </div>
+    </a>
     {% endfor %}
 
     </section>
