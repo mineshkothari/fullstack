@@ -23,17 +23,11 @@
 
 // FORUM SUBJECTS
 //.subject-container
-//  margin: 3em auto
-//  padding: 3em 1.5em
+
 //  max-width: 960px
-//  border-radius: 10px
-//  border: .5px solid rgba(0,0,0,0.08)
-//  box-shadow: 0 10px 40px -25px rgba(0,0,0,0.25)
-//  transition: all 350ms ease-in-out
+
 //  &:hover
-//    background: #FFFFFF
-//    box-shadow: 0 40px 60px -25px rgba(0,0,0,0.3)
-//    transform: translateY(-4px)
+
 //  .forum-title
 //    color: #aaaaa3
 //    letter-spacing: 1px
@@ -42,14 +36,8 @@
 //    color: #63636E
 //    margin-bottom: 0
 //    font-style: italic
-//  .activity-counter
-//    text-transform: uppercase
-//    letter-spacing: 1px
-//    color: #63636E
-//    font-size: 12px
-//    span
-//      font-weight: 800
-//
+
+
 //.forum-title-link
 //  color: #aaaaa3
 //  transition: all 350ms ease-in-out
@@ -62,16 +50,23 @@
 .subject-list
   padding: 8% 1em
 
-.subject-title::before
-  content: '\f07c'
-  font-family: 'Font Awesome 5 Free'
-  font-weight: 400
-  margin-right: .35em
-  font-size: 150%
+.subject-title
+  margin-bottom: 0
+  position: absolute
+  &::before
+    content: '\f07c'
+    font-family: 'Font Awesome 5 Free'
+    font-weight: 400
+    margin-right: .35em
+    font-size: 150%
+    position: relative
+    top: 5px
+
 
 .subject-item
   margin: 1em auto
-  padding: 2%
+  max-width: 960px
+  min-height: 150px
   text-decoration: none
   color: #aaaaa3
   border-radius: 10px
@@ -90,6 +85,21 @@
   width: 100%
   height: 100%
 
+.subject-desc p
+  margin-bottom: 0
+
+.activity-counter
+  text-transform: uppercase
+  letter-spacing: 1px
+  color: #63636E
+  font-size: 12px
+  span
+    font-weight: 800
+
+.subject-title-col,
+.subject-desc-col,
+.activity-counter
+  padding: 0 1em !important
 
 // FORUM THREADS
 //.thread-container
@@ -130,9 +140,9 @@
 //  display: block
 
 // FORCE TEXT ALIGN RIGHT WHEN COLUMNS ARE SIDE BY SIDE
-//@media (min-width: 768px)
-//  .activity-counter
-//    text-align: right
+@media (min-width: 768px)
+  .activity-counter
+    text-align: right
 
 // CENTRE TEXT ON SMALL SCREENS
 //@media (max-width: 767px)
