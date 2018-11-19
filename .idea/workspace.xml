@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49079c82-689c-4a06-838e-f3bc49bf21e3" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/fullstack/forum/static/css/pages/forum.css" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/forum/static/css/pages/forum.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fullstack/forum/static/sass/pages/forum.sass" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/forum/static/sass/pages/forum.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fullstack/forum/templates/forum/subjects.html" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/forum/templates/forum/subjects.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,20 +21,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="subjects.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="subjects.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/subjects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+            <state relative-caret-position="220">
+              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forum.sass" pinned="false" current-in-tab="false">
+      <file leaf-file-name="forum.sass" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fullstack/forum/static/sass/pages/forum.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="400">
+              <caret line="62" column="12" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -69,7 +71,6 @@
         <option value="$PROJECT_DIR$/fullstack/static/sass/pages/base.sass" />
         <option value="$PROJECT_DIR$/fullstack/blog/views.py" />
         <option value="$PROJECT_DIR$/fullstack/forum/templates/forum/thread_item.html" />
-        <option value="$PROJECT_DIR$/fullstack/forum/static/sass/pages/forum.sass" />
         <option value="$PROJECT_DIR$/fullstack/home/apps.py" />
         <option value="$PROJECT_DIR$/fullstack/home/views.py" />
         <option value="$PROJECT_DIR$/fullstack/accounts/static/sass/pages/account.sass" />
@@ -116,6 +117,7 @@
         <option value="$PROJECT_DIR$/fullstack/home/templates/home/index.html" />
         <option value="$PROJECT_DIR$/fullstack/home/static/sass/pages/index.sass" />
         <option value="$PROJECT_DIR$/fullstack/forum/templates/forum/subjects.html" />
+        <option value="$PROJECT_DIR$/fullstack/forum/static/sass/pages/forum.sass" />
       </list>
     </option>
   </component>
@@ -268,7 +270,7 @@
     <property name="list.type.of.created.stylesheet" value="Sass" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -384,7 +386,7 @@
     <frame x="-6" y="0" width="1110" height="1201" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24809887" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24809887" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32929105" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.13390313" side_tool="true" weight="0.21388368" />
@@ -393,7 +395,7 @@
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.80651164" weight="0.2431925" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32976744" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.8659696" visible="true" weight="0.21877934" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.8659696" visible="true" weight="0.21877934" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -784,13 +786,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fullstack/forum/static/sass/pages/forum.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fullstack/forum/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -810,8 +805,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/subjects.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        <state relative-caret-position="220">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullstack/forum/static/sass/pages/forum.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="62" column="12" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
         </state>
       </provider>
     </entry>
