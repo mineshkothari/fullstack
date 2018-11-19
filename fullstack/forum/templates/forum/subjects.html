@@ -5,24 +5,29 @@
         <h2>Welcome to the Fullstack Forum</h2>
     </section>
     {% load bootstrap_tags %}
+    <section class="subject-list container-fluid">
     {% for subject in subjects %}
-        <section class="subject-section">
-            <div class="container-fluid">
-                <a class="subject-link forum-title-link" href="{% url "threads" subject.id %}">
-                    <div class="container subject-container row no-gutters align-items-center">
-                        <div class="subject-title-col col-12 col-md-4">
-                            <h2 class="subject-title forum-title">{{ subject.name }}</h2>
-                        </div>
-                        <div class="subject-desc-col col-12 col-md-5">
-                            <span class="subject-desc">{% autoescape off %}{{ subject.description }}{% endautoescape %}</span>
-                        </div>
-                        <div class="activity-counter col-12 col-md-3">
-                            <div class="threads-counter">Threads: <span>{{ subject.threads.count }}</span></div>
-                            <div class="posts-counter">Posts: <span>{{ subject|get_total_subject_posts }}</span></div>
-                        </div>
-                    </div>
-                </a>
+    <div class="subject-item container row no-gutters">
+        <a class="subject-link">
+            <div class="subject-icon-col col-6 col-md-2">
+
             </div>
-        </section>
+            <div class="subject-title-col col">
+                <h3 class="subject-title">{{ subject.name }}</h3>
+            </div>
+            <div class="subject-desc-col col">
+                <div class="subject-desc">{% autoescape off %}{{ subject.description }}{% endautoescape %}</div>
+            </div>
+            <div class="activity-counter col">
+                <div class="thread-counter">Threads: <span>{{ subject.threads.count }}</span></div>
+                <div class="posts-counter">Posts: <span>{{ subject|get_total_subject_posts }}</span></div>
+            </div>
+        </a>
+    </div>
     {% endfor %}
+
+    </section>
 {% endblock %}
+
+
+
