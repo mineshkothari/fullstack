@@ -14,8 +14,9 @@
             </div>
         </div>
     </section>
-    {% if thread.poll %}
-        <section class="poll-section">
+    <section class="forum-section--main post-list">
+        {% if thread.poll %}
+        <div class="poll-section">
             <div class="container">
                 <div class="col-md-6">
                     <h2>Poll</h2>
@@ -40,20 +41,19 @@
                     {% endfor %}
                 </div>
             </div>
-        </section>
-    {% endif %}
-    <section class="posts-section-container">
+        </div>
+        {% endif %}
         <div class="container">
             {% for post in thread.posts.all %}
-                {% include "forum/post.html" %}
+            {% include "forum/post.html" %}
             {% endfor %}
         </div>
-    </section>
-    <section class="new-post-section">
-        {% if user.is_authenticated %}
-            <a href="{% url 'new_post' thread.id %}" class="btn btn-primary">New Post</a>
-        {% else %}
-            <div>you must be logged in to reply to this thread</div>
-        {% endif %}
+        <div class="new-post-section">
+            {% if user.is_authenticated %}
+                <a href="{% url 'new_post' thread.id %}" class="btn btn-primary">New Post</a>
+            {% else %}
+                <div>you must be logged in to reply to this thread</div>
+            {% endif %}
+        </div>
     </section>
 {% endblock %}

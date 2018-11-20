@@ -1,26 +1,54 @@
 {% load staticfiles %}
 {% load thread_extras %}
 {% load emoticons_tags %}
-<div class="singular-post-container">
-    <div class="row no-gutters">
-        <div class="col-3 contributor-profile">
-            <span class="profile-info contributor-username">{{ post.user.username }}</span>
+<div class="mk--post-item post-item row no-gutters">
+    <div class="mk--col-item contributor-col col-12 col-md-3 d-flex flex-column justify-content-center justify-content-md-start align-items-center">
+            <span class="profile-info contributor-username">{{ post.user.display_name }}</span>
             <span class="profile-info contributor-popularity">{{ post.user.posts.count }} POSTS</span>
-        </div>
-        <div class="col-7 post-content">
-            <time class="post-timer" datetime="{{ post.created_at }}">
-                Posted: {{ post.created_at | started_time }}
-            </time>
-            {% autoescape off %}
-                {{ post.comment | emoticons }}
-            {% endautoescape %}
-        </div>
-        {% if post.user == user or user.is_staff %}
-            <div class="col-2">
-                <a href="{% url 'edit_post' thread.id post.id %}"><i class="far fa-edit"></i></a>
-                <a href="{% url 'delete_post' thread.id post.id %}"><i class="far fa-trash-alt"></i></a>
-            </div>
-        {% endif %}
     </div>
-{#    {% include "forum/comment_details.html" %}#}
+    <div class="mk--col-item thread-created-by col-12 col-md-7 d-flex flex-column">
+        <time class="post-timer" datetime="{{ post.created_at }}">
+            Posted: {{ post.created_at | started_time }}
+        </time>
+        {% autoescape off %}{{ post.comment | emoticons }}{% endautoescape %}
+    </div>
+    {% if post.user == user or user.is_staff %}
+    <div class="mk--col-item thread-created-at col-12 col-md-2 d-flex justify-content-center justify-content-center justify-content-md-end">
+        <a href="{% url 'edit_post' thread.id post.id %}"><i class="far fa-edit"></i></a>
+        <a href="{% url 'delete_post' thread.id post.id %}"><i class="far fa-trash-alt"></i></a>
+    </div>
+    {% endif %}
 </div>
+
+
+
+
+
+
+
+
+
+
+{#<div class="singular-post-container">#}
+{#    <div class="row no-gutters">#}
+{#        <div class="col-3 contributor-profile">#}
+{#            <span class="profile-info contributor-username">{{ post.user.username }}</span>#}
+{#            <span class="profile-info contributor-popularity">{{ post.user.posts.count }} POSTS</span>#}
+{#        </div>#}
+{#        <div class="col-7 post-content">#}
+{#            <time class="post-timer" datetime="{{ post.created_at }}">#}
+{#                Posted: {{ post.created_at | started_time }}#}
+{#            </time>#}
+{#            {% autoescape off %}#}
+{#                {{ post.comment | emoticons }}#}
+{#            {% endautoescape %}#}
+{#        </div>#}
+{#        {% if post.user == user or user.is_staff %}#}
+{#            <div class="col-2">#}
+{#                <a href="{% url 'edit_post' thread.id post.id %}"><i class="far fa-edit"></i></a>#}
+{#                <a href="{% url 'delete_post' thread.id post.id %}"><i class="far fa-trash-alt"></i></a>#}
+{#            </div>#}
+{#        {% endif %}#}
+{#    </div>#}
+{#    {% include "forum/comment_details.html" %}#}
+{#</div>#}
