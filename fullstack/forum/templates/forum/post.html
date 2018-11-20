@@ -8,38 +8,14 @@
     </div>
     <div class="mk--col-item post-content col-12 col-md-7 d-flex flex-column">
         <time class="post-timer" datetime="{{ post.created_at }}">
-            Posted: {{ post.created_at | started_time }}
+            Posted: {{ post.created_at|date:"D d M Y" }}, {{ post.created_at|time:"H:i A" }}
         </time>
         {% autoescape off %}{{ post.comment | emoticons }}{% endautoescape %}
     </div>
     {% if post.user == user or user.is_staff %}
     <div class="mk--col-item post-actions col-12 col-md-2 d-flex justify-content-center justify-content-md-end">
-        <a class="post-user-action" href="{% url 'edit_post' thread.id post.id %}"><i class="far fa-edit fa-lg"></i></a>
-        <a class="post-user-action" href="{% url 'delete_post' thread.id post.id %}"><i class="far fa-trash-alt fa-lg"></i></a>
+        <a class="post-user-action d-flex justify-content-center align-items-center" href="{% url 'edit_post' thread.id post.id %}"><i class="far fa-edit fa-lg"></i></a>
+        <a class="post-user-action d-flex justify-content-center align-items-center" href="{% url 'delete_post' thread.id post.id %}"><i class="far fa-trash-alt fa-lg"></i></a>
     </div>
     {% endif %}
 </div>
-
-{#<div class="singular-post-container">#}
-{#    <div class="row no-gutters">#}
-{#        <div class="col-3 contributor-profile">#}
-{#            <span class="profile-info contributor-username">{{ post.user.username }}</span>#}
-{#            <span class="profile-info contributor-popularity">{{ post.user.posts.count }} POSTS</span>#}
-{#        </div>#}
-{#        <div class="col-7 post-content">#}
-{#            <time class="post-timer" datetime="{{ post.created_at }}">#}
-{#                Posted: {{ post.created_at | started_time }}#}
-{#            </time>#}
-{#            {% autoescape off %}#}
-{#                {{ post.comment | emoticons }}#}
-{#            {% endautoescape %}#}
-{#        </div>#}
-{#        {% if post.user == user or user.is_staff %}#}
-{#            <div class="col-2">#}
-{#                <a href="{% url 'edit_post' thread.id post.id %}"><i class="far fa-edit"></i></a>#}
-{#                <a href="{% url 'delete_post' thread.id post.id %}"><i class="far fa-trash-alt"></i></a>#}
-{#            </div>#}
-{#        {% endif %}#}
-{#    </div>#}
-{#    {% include "forum/comment_details.html" %} COMMENT OUT THIS LINE#}
-{#</div>#}
