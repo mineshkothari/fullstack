@@ -9,20 +9,10 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 
-class Framework(models.Model):
-    title = models.CharField(max_length=255)
-    image = models.ImageField(upload_to="images/courses", blank=True, null=True)
-    description = HTMLField()
-
-    def __unicode__(self):
-        return self.title
-
-
 class Language(models.Model):
     title = models.CharField(max_length=255)
     image = models.ImageField(upload_to="images/courses/languages", blank=True, null=True)
-    framework = models.ForeignKey(Framework, related_name='languages')
-    created_at = models.DateTimeField(default=timezone.now)
+    description = HTMLField(blank=True)
 
     def __unicode__(self):
         return self.title
@@ -31,7 +21,8 @@ class Language(models.Model):
 class Module(models.Model):
     title = models.CharField(max_length=255)
     language = models.ForeignKey(Language, related_name='modules')
-    price = models.PositiveIntegerField()
+    description = HTMLField(blank=True)
+    price = models.DecimalField(max_digits=6,decimal_places=2)
     content = HTMLField(blank=True)
     created_at = models.DateTimeField(default=timezone.now)
     enrolled_users = models.ManyToManyField(User)
