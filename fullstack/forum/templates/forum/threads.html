@@ -3,6 +3,7 @@
 {% block forum %}
     <section class="forum-intro">
         <h2>{{ subject.name }}</h2>
+        <div>Back to All forum, click <a href="{% url 'forum' %}">here</a> </div>
         {% if user.is_authenticated %}
             <p>
                 <a href="{% url 'new_thread' subject.id %}" class="btn btn-primary">New Thread</a>

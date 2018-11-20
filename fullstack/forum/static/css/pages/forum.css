@@ -68,6 +68,10 @@
   content: '\f07c';
 }
 
+.thread-title::before {
+  content: '\f15b';
+}
+
 .activity-counter {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -76,6 +80,14 @@
 
 .activity-counter span {
   font-weight: 800;
+}
+
+.thread-created-at {
+  font-size: 14px;
+}
+
+.thread-created-at .thread-created-time {
+  font-weight: 200;
 }
 
 .subject-desc p {
