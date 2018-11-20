@@ -9,7 +9,9 @@
             </p>
         {% endif %}
     </section>
-    {% for thread in subject.threads.all %}
+    <section class="forum-section--main subject-list">
+        {% for thread in subject.threads.all %}
         {% include "forum/thread_item.html" %}
-    {% endfor %}
+        {% endfor %}
+    </section>
 {% endblock %}

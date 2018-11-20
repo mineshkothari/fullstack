@@ -1,28 +1,24 @@
 {% extends "forum/forum.html" %}
 {% load thread_extras %}
 {% block forum %}
+    {% load bootstrap_tags %}
     <section class="forum-intro">
         <h2>Welcome to the Fullstack Forum</h2>
     </section>
-    {% load bootstrap_tags %}
-    <section class="subject-list container-fluid">
-    {% for subject in subjects %}
-    <a class="subject-item row no-gutters" href="#">
-        <div class="subject-title-col col-12 col-md-4 d-flex align-items-center">
-            <h3 class="subject-title">{{ subject.name }}</h3>
-        </div>
-        <div class="subject-desc-col col-12 col-md-5 d-flex align-items-center">
-            <div class="subject-desc">{% autoescape off %}{{ subject.description }}{% endautoescape %}</div>
-        </div>
-        <div class="activity-counter col-12 col-md-3 d-flex flex-column justify-content-center">
-            <div class="thread-counter">Threads: <span>{{ subject.threads.count }}</span></div>
-            <div class="posts-counter">Posts: <span>{{ subject|get_total_subject_posts }}</span></div>
-        </div>
-    </a>
-    {% endfor %}
-
+    <section class="forum-section--main subject-list">
+        {% for subject in subjects %}
+        <a href="{% url 'threads' subject.id %}" class="mk--row-item subject-item row no-gutters">
+            <div class="mk--col-item subject-title-col col-12 col-md-4 d-flex justify-content-center justify-content-md-start align-items-center">
+                <h3 class="mk--item-title subject-title">{{ subject.name }}</h3>
+            </div>
+            <div class="mk--col-item subject-desc-col col-12 col-md-5 d-flex justify-content-center justify-content-md-start align-items-center">
+                <div class="subject-desc">{% autoescape off %}{{ subject.description }}{% endautoescape %}</div>
+            </div>
+            <div class="mk--col-item activity-counter col-12 col-md-3 d-flex flex-column justify-content-center align-items-center align-items-md-end">
+                <div class="thread-counter">Threads: <span>{{ subject.threads.count }}</span></div>
+                <div class="posts-counter">Posts: <span>{{ subject|get_total_subject_posts }}</span></div>
+            </div>
+        </a>
+        {% endfor %}
     </section>
 {% endblock %}
-
-
-

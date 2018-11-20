@@ -17,62 +17,19 @@
   color: #aaaaa3
   padding: 8%
 
-// CONTAINER
-// NEED TO USE THE STYLES OF CONTAINERS IN BOTH FORUM SUBJECTS AND THREADS
-// UNIFORM DRY CODE MANNNNNN
-
-// FORUM SUBJECTS
-//.subject-container
-
-//  max-width: 960px
-
-//  &:hover
-
-//  .forum-title
-//    color: #aaaaa3
-//    letter-spacing: 1px
-//    margin-bottom: 0
-//  .subject-desc p
-//    color: #63636E
-//    margin-bottom: 0
-//    font-style: italic
-
-
-//.forum-title-link
-//  color: #aaaaa3
-//  transition: all 350ms ease-in-out
-//  &:hover
-//    text-decoration: none
-//    color: #63636E
-
-// SUBJECTS LIST
-
-.subject-list
+// GLOBAL FORUM STYLES
+.forum-section--main
   padding: 8% 1em
 
-.subject-title
-  margin-bottom: 0
-  position: absolute
-  &::before
-    content: '\f07c'
-    font-family: 'Font Awesome 5 Free'
-    font-weight: 400
-    margin-right: .35em
-    font-size: 150%
-    position: relative
-    top: 5px
-
-
-.subject-item
-  margin: 1em auto
+.mk--row-item
+  margin: 2em auto
+  padding: 1em
   max-width: 960px
-  min-height: 150px
-  text-decoration: none
-  color: #aaaaa3
   border-radius: 10px
   border: .5px solid rgba(0,0,0,0.08)
   box-shadow: 0 10px 40px -25px rgba(0,0,0,0.25)
   transition: all 350ms ease-in-out
+  color: #aaaaa3
   &:hover
     text-decoration: none
     color: #63636E
@@ -80,77 +37,36 @@
     box-shadow: 0 40px 60px -25px rgba(0,0,0,0.3)
     transform: translateY(-4px)
 
-.subject-link
-  display: inline-block
-  width: 100%
-  height: 100%
+.mk--col-item
+  padding: .5em !important
 
-.subject-desc p
+.mk--item-title
   margin-bottom: 0
+  &::before
+    font-family: 'Font Awesome 5 Free'
+    font-weight: 400
+    font-size: 150%
+    margin-right: .35em
 
+// ITEM TITLE STYLE
+.subject-title
+  &::before
+    content: '\f07c'
+
+// ACTIVITY COUNTER
 .activity-counter
   text-transform: uppercase
   letter-spacing: 1px
-  color: #63636E
+  //color: #63636E
   font-size: 12px
   span
     font-weight: 800
 
-.subject-title-col,
-.subject-desc-col,
-.activity-counter
-  padding: 0 1em !important
+.subject-desc p
+  margin-bottom: 0
 
-// FORUM THREADS
-//.thread-container
-//  margin: 3em auto
-//  padding: 3em 1.5em
-//  max-width: 960px
-//  border-radius: 10px
-//  border: .5px solid rgba(0,0,0,0.08)
-//  box-shadow: 0 10px 40px -25px rgba(0,0,0,0.25)
-//  transition: all 350ms ease-in-out
-//  &:hover
-//    background: #FFFFFF
-//    box-shadow: 0 40px 60px -25px rgba(0,0,0,0.3)
-//    transform: translateY(-4px)
-//
-//.thread-created-by,
-//.thread-created-at
-//  font-size: 12px
-//
-//// POSTS
-//
-//.singular-post-container
-//  background: #ffffff
-//  padding: 1em 0
-//  margin: 2em 0
-//
-//.contributor-profile
-//  font-size: 14px
-//  font-weight: 200
-//  .profile-info
-//    display: block
-//    text-align: center
-//
-//.post-timer
-//  font-size: 12px
-//  font-weight: 200
-//  font-style: italic
-//  display: block
 
-// FORCE TEXT ALIGN RIGHT WHEN COLUMNS ARE SIDE BY SIDE
+
 @media (min-width: 768px)
-  .activity-counter
-    text-align: right
-
-// CENTRE TEXT ON SMALL SCREENS
-//@media (max-width: 767px)
-//  .forum-title,
-//  .subject-desc,
-//  .activity-counter
-//    text-align: center
-//    padding-bottom: .5em
-//
-//  .subject-desc p
-//    padding-bottom: 1em
+  .mk--col-item
+    padding: 1em !important
