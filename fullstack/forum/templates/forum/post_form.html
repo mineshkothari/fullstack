@@ -12,19 +12,25 @@
             theme: 'modern',
             plugins: 'paste',
             branding: false,
+            height: 400,
         });
     </script>
 {% endblock %}
 {% block forum %}
-    <section>
-        <div class="col-md-9">
-            <form method="POST" action="{{ form_action }}">
-                {% csrf_token %}
-                {{ form | as_bootstrap }}
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary">{{ button_text }}</button>
-                </div>
-            </form>
-        </div>
-    </section>
+<section class="forum-intro">
+    <h2>Post Form</h2>
+    <div>Back to All forum, click <a href="{% url 'forum' %}">here</a></div>
+</section>
+<section class="forum-section--main post-form--forum">
+    <div class="">
+        <form method="POST" action="{{ form_action }}">
+            {% csrf_token %}
+            {{ form | as_bootstrap }}
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">{{ button_text }}</button>
+            </div>
+
+        </form>
+    </div>
+</section>
 {% endblock %}
