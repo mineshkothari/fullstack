@@ -9,12 +9,7 @@ from django.template.context_processors import csrf
 
 
 def courses(request):
-    return render(request, 'courses/languages.html', {'frameworks': Framework.objects.all()})
-
-
-def languages(request, framework_id):
-    framework = get_object_or_404(Framework, pk=framework_id)
-    return render(request, 'courses/languages.html', {'framework': framework})
+    return render(request, 'courses/languages.html', {'languages': Language.objects.all()})
 
 
 def modules(request, language_id):

@@ -4,7 +4,10 @@
     <section class="forum-intro">
         <h2>{{ framework.title }}</h2>
     </section>
-    {% for language in framework.languages.all %}
-        {% include "courses/language.html" %}
+    {% for language in languages %}
+        {{ language.title }}
     {% endfor %}
+{#    {% for language in framework.languages.all %}#}
+{#        {% include "courses/language.html" %}#}
+{#    {% endfor %}#}
 {% endblock %}
