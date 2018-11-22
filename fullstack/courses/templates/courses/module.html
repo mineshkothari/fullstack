@@ -1,9 +1,9 @@
 <div class="mk--module-item-container col-12 col-md-6 col-xl-3">
-    <div class="mk--module-item">
-        <p>{{ module.title }}</p>
+    <a href="{% url 'module_item' module.id %}" class="mk--module-item d-flex flex-column justify-content-center align-items-center">
+        <h3>{{ module.title }}</h3>
         <p>£{{ module.price }}</p>
-        <p>{{ module.created_at }}</p>
-    </div>
+        <p>Released: {{ module.created_at|date:"D d M Y" }}</p>
+    </a>
 </div>
 
 {#<section class="thread-section forum-section">#}
