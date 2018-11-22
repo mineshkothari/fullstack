@@ -4,7 +4,13 @@
     <section class="forum-intro">
         <h2>{{ language.title }}</h2>
     </section>
-    {% for module in language.modules.all %}
-        {% include "courses/module.html" %}
-    {% endfor %}
+    <section class="courses-section--main">
+        <div class="mk--row-module-list row no-gutters">
+            {% for module in language.modules.all %}
+            {% include "courses/module.html" %}
+            {% empty %}
+                <span>Sorry, there are no courses available at this time.</span>
+            {% endfor %}
+        </div>
+    </section>
 {% endblock %}

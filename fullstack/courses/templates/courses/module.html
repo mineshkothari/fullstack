@@ -1,9 +1,17 @@
-<section class="thread-section forum-section">
-    <div class="thread-container forum-container container row no-gutters align-items-center">
-        <div class="thread-name col-12 col-md-6">
-            <a href="{% url 'module_item' module.id %}"><h2 class="forum-title thread-title">{{ module.title }}</h2></a>
-            <p>£{{ module.price }}</p>
-            <p>{{ module.created_at }}</p>
-        </div>
-     </div>
-</section>
+<div class="mk--module-item-container col-12 col-md-6 col-xl-3">
+    <div class="mk--module-item">
+        <p>{{ module.title }}</p>
+        <p>£{{ module.price }}</p>
+        <p>{{ module.created_at }}</p>
+    </div>
+</div>
+
+{#<section class="thread-section forum-section">#}
+{#    <div class="thread-container forum-container container row no-gutters align-items-center">#}
+{#        <div class="thread-name col-12 col-md-6">#}
+{#            <a href="{% url 'module_item' module.id %}"><h2 class="forum-title thread-title">{{ module.title }}</h2></a>#}
+{#            <p>£{{ module.price }}</p>#}
+{#            <p>{{ module.created_at }}</p>#}
+{#        </div>#}
+{#     </div>#}
+{#</section>#}

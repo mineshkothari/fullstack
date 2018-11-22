@@ -1,13 +1,13 @@
 {% extends "courses/courses.html" %}
 {% load thread_extras %}
 {% block courses %}
-    <section class="forum-intro">
+    <section class="course-intro">
         <h2>Choose from the list of languages below:</h2>
     </section>
     <section class="courses-section--main">
         {% for language in languages %}
         <a href="{% url 'modules' language.id %}" class="mk--row-item language-item row no-gutters">
-            <div class="mk--col-item language-image-col col-12 col-md-3 d-flex justify-content-center justify-content-md-start align-items-center">
+            <div class="mk--col-item language-image-col col-12 col-md-3 d-flex justify-content-center align-items-center">
                 {% if language.image %}
                 <img class="mk--item-image language-image" src="/media/{{ language.image }}" />
                 {% else %}
@@ -17,7 +17,7 @@
             <div class="mk--col-item language-title-col col-12 col-md-4 d-flex justify-content-center justify-content-md-start align-items-center">
                 <h3 class="mk--item-title language-title">{{ language.title }}</h3>
             </div>
-            <div class="mk--col-item language-desc-col col-12 col-md-5 d-flex justify-content-center justify-content-md-start align-items-center">
+            <div class="mk--col-item language-desc-col col-12 col-md-5 d-flex justify-content-start align-items-center">
                 <div class="language-desc">{% autoescape off %}{{ language.description }}{% endautoescape %}</div>
             </div>
         </a>
