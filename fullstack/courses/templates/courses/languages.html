@@ -8,7 +8,11 @@
         {% for language in languages %}
         <a href="{% url 'modules' language.id %}" class="mk--row-item language-item row no-gutters">
             <div class="mk--col-item language-image-col col-12 col-md-3 d-flex justify-content-center justify-content-md-start align-items-center">
+                {% if language.image %}
                 <img class="mk--item-image language-image" src="/media/{{ language.image }}" />
+                {% else %}
+                <img class="mk--item-image language-image" src="/media/images/courses/languages/placeholder.png" />
+                {% endif %}
             </div>
             <div class="mk--col-item language-title-col col-12 col-md-4 d-flex justify-content-center justify-content-md-start align-items-center">
                 <h3 class="mk--item-title language-title">{{ language.title }}</h3>
@@ -19,7 +23,4 @@
         </a>
         {% endfor %}
     </section>
-{#    {% for language in framework.languages.all %}#}
-{#        {% include "courses/language.html" %}#}
-{#    {% endfor %}#}
 {% endblock %}
