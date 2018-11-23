@@ -70,7 +70,7 @@
 }
 
 .mk--module-item {
-  padding: 1em !important;
+  padding: 1.5em !important;
   border-radius: 10px;
   border: 0.5px solid rgba(0, 0, 0, 0.08);
   -webkit-box-shadow: 0 10px 40px -25px rgba(0, 0, 0, 0.25);
@@ -91,6 +91,33 @@
   -webkit-transform: translateY(-4px);
   -ms-transform: translateY(-4px);
   transform: translateY(-4px);
+}
+
+.module-item--title {
+  letter-spacing: .5px;
+}
+
+.module-item--price {
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+
+.module-item--release {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.enrol-btn {
+  background-color: #0cd29a;
+  color: #f2f2f2;
+  font-size: 1.25em;
+  font-weight: 400;
+  border: .5px solid #0cd29a;
+  padding: .5em 1em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
 }
 
 @media (min-width: 768px) {
