@@ -4,5 +4,9 @@
     <section class="forum-intro">
         <h2>{{ module.title }}</h2>
     </section>
-    <p>{% autoescape off %}{{ module.content }}{% endautoescape %}</p>
+    <section class="courses-section--main">
+        <div class="module-item--container module-item--release">Release Date: <strong>{{ module.created_at|date:"D d M Y" }}</strong> | Last Updated: <strong>{{ module.created_at|date:"D d M Y" }}</strong></div>
+        <div class="module-item--container module-item--description">{% autoescape off %}{{ module.description }}{% endautoescape %}</div>
+        <div class="module-item--container">{% autoescape off %}{{ module.content }}{% endautoescape %}</div>
+    </section>
 {% endblock %}

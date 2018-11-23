@@ -3,6 +3,7 @@
         <h3 class="module-item--title">{{ module.title }}</h3>
         <p class="module-item--price"><span>£</span>{{ module.price }}</p>
         <p class="module-item--release">Released: {{ module.created_at|date:"D d M Y" }}</p>
-        <div class="enrol-btn"><i class="fas fa-graduation-cap"></i> Enrol Today</div>
+        <div class="module-item--description">{% autoescape off %}{{ module.description }}{% endautoescape %}</div>
+        <div class="enrol-btn mt-auto"><i class="fas fa-graduation-cap"></i> Enrol Today</div>
     </a>
 </div>
