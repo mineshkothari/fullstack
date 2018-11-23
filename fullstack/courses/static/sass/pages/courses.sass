@@ -115,10 +115,28 @@
   padding: 2em
   color: #63636E
   max-width: 960px
-  border: .5px solid rgba(0,0,0,.15)
+  border: .5px solid rgba(12, 210, 154,.15)
   border-radius: 10px
   box-shadow: 0 15px 38px -12px rgba(0, 0, 0, .095)
+  transition: all 350ms ease-in-out
+  &:hover
+    box-shadow: 0 15px 38px -12px rgba(12, 210, 154, .095)
 
+.module-item--release__full
+  font-style: italic
+  font-size: 14px
+  margin-bottom: 0
+
+.module-item--description__full
+  .module-item--description__title
+    margin-bottom: 1em
+    letter-spacing: .5px
+  p
+    margin-bottom: 0
+
+.module-item--content__full
+  p
+    margin-bottom: 0
 
 @media (min-width: 768px)
   .mk--col-item

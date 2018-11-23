@@ -5,8 +5,11 @@
         <h2>{{ module.title }}</h2>
     </section>
     <section class="courses-section--main">
-        <div class="module-item--container module-item--release">Release Date: <strong>{{ module.created_at|date:"D d M Y" }}</strong> | Last Updated: <strong>{{ module.created_at|date:"D d M Y" }}</strong></div>
-        <div class="module-item--container module-item--description">{% autoescape off %}{{ module.description }}{% endautoescape %}</div>
-        <div class="module-item--container">{% autoescape off %}{{ module.content }}{% endautoescape %}</div>
+        <div class="module-item--container module-item--release__full">Release Date: <strong>{{ module.created_at|date:"D d M Y" }}</strong> | Last Updated: <strong>{{ module.created_at|date:"D d M Y" }}</strong></div>
+        <div class="module-item--container module-item--description__full">
+            <div class="module-item--description__title"><strong>Module Description</strong></div>
+            {% autoescape off %}{{ module.description }}{% endautoescape %}
+        </div>
+        <div class="module-item--container module-item--content__full">{% autoescape off %}{{ module.content }}{% endautoescape %}</div>
     </section>
 {% endblock %}
