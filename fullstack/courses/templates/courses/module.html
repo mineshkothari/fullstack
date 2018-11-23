@@ -1,7 +1,7 @@
 <div class="mk--module-item-container col-12 col-md-6 col-xl-3">
     <a href="{% url 'module_item' module.id %}" class="mk--module-item d-flex flex-column justify-content-center align-items-center">
         <h3 class="module-item--title">{{ module.title }}</h3>
-        <p class="module-item--price">£{{ module.price }}</p>
+        <p class="module-item--price"><span>£</span>{{ module.price }}</p>
         <p class="module-item--release">Released: {{ module.created_at|date:"D d M Y" }}</p>
         <div class="enrol-btn"><i class="fas fa-graduation-cap"></i> Enrol Today</div>
     </a>
