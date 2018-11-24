@@ -18,13 +18,13 @@
                 </div>
             </div>
             {% if user.is_authenticated and user.is_staff %}
-                <div class="col-6">
-                    <div class="blog-shortlinks">
-                        <ul>
-                            <li class="blog-link-lists"><a class="blog-links" href="{% url 'new_post' %}">Create New</a></li>
-                        </ul>
-                    </div>
+            <div class="col-6">
+                <div class="blog-shortlinks">
+                    <ul>
+                        <li class="blog-link-lists"><a class="blog-links" href="{% url 'new_post' %}">Create New</a></li>
+                    </ul>
                 </div>
+            </div>
             {% endif %}
         </div>
     </section>
