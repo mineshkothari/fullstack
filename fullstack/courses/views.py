@@ -22,6 +22,12 @@ def module_item(request, module_id):
     module = get_object_or_404(Module, pk=module_id)
     return render(request, 'courses/module_item.html', {'module': module})
 
+
 def new_module(request):
     form = NewModuleForm
     return render(request, 'courses/new_module.html', {'form': form})
+
+
+def new_language(request):
+    form = NewLanguageForm
+    return render(request, 'courses/new_language.html', {'form': form})

@@ -1,0 +1,13 @@
+{% extends "courses/courses.html" %}
+{% load thread_extras %}
+{% load bootstrap_tags %}
+{% block courses_subtitle %}
+    <h2>New Language</h2>
+{% endblock %}
+{% block courses %}
+    <section class="courses-section--main">
+        <div class="row no-gutters d-flex flex-column">
+            {{ form | as_bootstrap }}
+        </div>
+    </section>
+{% endblock %}
