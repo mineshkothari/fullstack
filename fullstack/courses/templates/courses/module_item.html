@@ -1,9 +1,9 @@
 {% extends "courses/courses.html" %}
 {% load thread_extras %}
+{% block courses_subtitle %}
+    <h2>{{ module.title }}</h2>
+{% endblock %}
 {% block courses %}
-    <section class="forum-intro">
-        <h2>{{ module.title }}</h2>
-    </section>
     <section class="courses-section--main">
         <div class="module-item--container module-item--release__full">Release Date: <strong>{{ module.created_at|date:"D d M Y" }}</strong> | Last Updated: <strong>{{ module.created_at|date:"D d M Y" }}</strong></div>
         <div class="module-item--container module-item--description__full">
