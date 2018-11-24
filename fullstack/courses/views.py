@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 from django.shortcuts import render, redirect, get_object_or_404
 from models import Language, Module
+from forms import NewLanguageForm, NewModuleForm
 from django.contrib import messages, auth
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
@@ -20,3 +21,7 @@ def modules(request, language_id):
 def module_item(request, module_id):
     module = get_object_or_404(Module, pk=module_id)
     return render(request, 'courses/module_item.html', {'module': module})
+
+def new_module(request):
+    form = NewModuleForm
+    return render(request, 'courses/new_module.html', {'form': form})
