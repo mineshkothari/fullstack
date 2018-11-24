@@ -7865,6 +7865,9 @@ body {
 .sub-hero {
   background: #4e555b;
   color: #aaaaa3;
+}
+
+.sub-hero .col {
   padding: 3em;
 }
 
@@ -7890,4 +7893,8 @@ body {
   transform: translateY(-3px);
   -webkit-box-shadow: 0 10px 50px -7px rgba(0, 0, 0, 0.25);
   box-shadow: 0 10px 50px -7px rgba(0, 0, 0, 0.25);
+}
+
+.admin-panel {
+  background: #f2f2f2;
 }

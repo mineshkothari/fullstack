@@ -4,9 +4,22 @@
     <link rel="stylesheet" href="{% static "css/pages/courses.css" %}">
 {% endblock %}
 {% block body %}
-    <div class="jumbotron text-center">
-      <h1 class="display-4"><span class="fullstack-brand rounded-right brand-border border border-left-0 border-primary">Fullstack</span> Courses</h1>
+<div class="jumbotron text-center">
+    <h1 class="display-4"><span class="fullstack-brand rounded-right brand-border border border-left-0 border-primary">Fullstack</span> Courses</h1>
+</div>
+<section class="sub-hero">
+    <div class="row no-gutters">
+        <div class="col col-12 col-md-6">
+        {% block courses_subtitle %}{% endblock %}
+        </div>
+        {% if user.is_authenticated and user.is_staff %}
+        <div class="col col-12 col-md-6 admin-panel admin-panel--courses">
+            <a href="">Add a course</a>
+            <a href="">Add a module</a>
+        </div>
+        {% endif %}
     </div>
-    {% block courses %}
-    {% endblock %}
+</section>
+{% block courses %}
+{% endblock %}
 {% endblock %}

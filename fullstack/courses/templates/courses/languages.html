@@ -1,9 +1,9 @@
 {% extends "courses/courses.html" %}
 {% load thread_extras %}
+{% block courses_subtitle %}
+    <h2>Choose from the list of languages below</h2>
+{% endblock %}
 {% block courses %}
-    <section class="course-intro">
-        <h2>Choose from the list of languages below:</h2>
-    </section>
     <section class="courses-section--main">
         {% for language in languages %}
         <a href="{% url 'modules' language.id %}" class="mk--row-item language-item row no-gutters">
