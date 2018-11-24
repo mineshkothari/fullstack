@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.shortcuts import render, redirect, get_object_or_404
+from django.utils import timezone
 from models import Language, Module
 from forms import NewLanguageForm, NewModuleForm
 from django.contrib import messages, auth
@@ -24,8 +25,19 @@ def module_item(request, module_id):
 
 
 def new_module(request):
-    form = NewModuleForm
-    return render(request, 'courses/new_module.html', {'form': form})
+    if request.user.is_authenticated and request.user.is_staff:
+        if request.method == 'POST':
+            form = NewModuleForm(request.POST)
+            if form.is_valid():
+                module = form.save(commit=False)
+                module.release_date = timezone.now()
+                module.save()
+                return redirect(module_item, module.pk)
+        else:
+            form = NewModuleForm
+            return render(request, 'courses/new_module.html', {'form': form})
+    else:
+        return redirect(reverse('courses'))
 
 
 def new_language(request):
