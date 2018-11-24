@@ -1,9 +1,9 @@
 {% extends "courses/courses.html" %}
 {% load thread_extras %}
+{% block courses_subtitle %}
+    <h2>{{ language.title }} Courses</h2>
+{% endblock %}
 {% block courses %}
-    <section class="forum-intro">
-        <h2>{{ language.title }}</h2>
-    </section>
     <section class="courses-section--main">
         <div class="mk--row-module-list row no-gutters">
             {% for module in language.modules.all %}

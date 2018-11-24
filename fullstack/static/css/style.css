@@ -7898,3 +7898,20 @@ body {
 .admin-panel {
   background: #f2f2f2;
 }
+
+.admin-panel-btn {
+  color: #63636E;
+  border: .5px solid;
+  padding: .5em 1em;
+  font-weight: 200;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-transition: all 350ms ease-in-out;
+  -o-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.admin-panel-btn:hover {
+  color: #ff0000;
+  border: .5px solid;
+}
