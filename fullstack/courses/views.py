@@ -24,20 +24,42 @@ def module_item(request, module_id):
     return render(request, 'courses/module_item.html', {'module': module})
 
 
+@login_required
 def new_module(request):
     if request.user.is_authenticated and request.user.is_staff:
         if request.method == 'POST':
             form = NewModuleForm(request.POST)
             if form.is_valid():
-                module = form.save(commit=False)
+                module = form.save(False)
                 module.release_date = timezone.now()
                 module.save()
+                messages.success(request, "New module successfully added")
                 return redirect(module_item, module.pk)
         else:
             form = NewModuleForm
             return render(request, 'courses/new_module.html', {'form': form})
     else:
         return redirect(reverse('courses'))
+
+
+# def new_module(request, language_id):
+#     language = get_object_or_404(Language, pk=language_id)
+#
+#     if request.user.is_authenticated and request.user.is_staff:
+#         if request.method == 'POST':
+#             form = NewModuleForm(request.POST)
+#             if form.is_valid():
+#                 module = form.save(False)
+#                 module.language = language
+#                 module.release_date = timezone.now()
+#                 module.save()
+#                 messages.success(request, "New module successfully added")
+#                 return redirect(module_item, language.pk)
+#         else:
+#             form = NewModuleForm
+#             return render(request, 'courses/new_module.html', {'form': form})
+#     else:
+#         return redirect(reverse('courses'))
 
 
 def new_language(request):
