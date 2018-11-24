@@ -7,11 +7,13 @@
 {% block courses %}
     <section class="courses-section--main">
         <div class="row no-gutters d-flex flex-column">
-            <form class="courses-form courses--new-module" method="POST" action="{% url 'courses' %}">
-                {% csrf_token %}
-                {{ form | as_bootstrap }}
-                <button type="submit" class="btn fullstack-btn">Save</button>
-            </form>
+            <div class="container">
+                <form class="courses-form courses--new-module" method="POST" action="{% url 'courses' %}">
+                    {% csrf_token %}
+                    {{ form | as_bootstrap }}
+                    <button type="submit" class="btn admin-btn">Save</button>
+                </form>
+            </div>
         </div>
     </section>
 {% endblock %}

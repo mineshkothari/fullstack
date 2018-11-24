@@ -61,7 +61,19 @@ def new_module(request):
 #     else:
 #         return redirect(reverse('courses'))
 
-
+@login_required
 def new_language(request):
-    form = NewLanguageForm
-    return render(request, 'courses/new_language.html', {'form': form})
+    if request.user.is_authenticated and request.user.is_staff:
+        if request.method == 'POST':
+            form = NewLanguageForm(request.POST)
+            if form.is_valid():
+                language = form.save(False)
+                language.release_date = timezone.now()
+                language.save()
+                messages.success(request, "New language successfully created")
+                return redirect(module_item, language.pk)
+        else:
+            form = NewLanguageForm
+            return render(request, 'courses/new_language.html', {'form': form})
+    else:
+        return redirect(reverse('courses'))

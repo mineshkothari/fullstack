@@ -7916,3 +7916,21 @@ body {
   color: #ff0000;
   border: .5px solid;
 }
+
+.admin-btn {
+  margin: .25em;
+  background: #0cd29a;
+  color: #f2f2f2;
+  border: 1px solid #0cd29a;
+  padding: 1em 2em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-transition: all 350ms ease-in-out;
+  -o-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.admin-btn:hover {
+  background: transparent;
+  color: #0cd29a;
+}
