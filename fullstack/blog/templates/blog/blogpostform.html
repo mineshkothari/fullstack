@@ -4,11 +4,11 @@
     {% load bootstrap_tags %}
     <div class="container-fluid blog-main-content-container">
         <div class="form-container">
-            <h3 class="display-4">Add/Edit A Post</h3>
+            <h2>{{ form_title }}</h2>
             <form method="POST" enctype="multipart/form-data" class="blog-post-form">
                 {% csrf_token %}
                 {{ form | as_bootstrap }}
-                <button type="submit" class="btn fullstack-btn">Save</button>
+                <button type="submit" class="btn admin-btn admin-btn--blog">Save</button>
             </form>
         </div>
     </div>

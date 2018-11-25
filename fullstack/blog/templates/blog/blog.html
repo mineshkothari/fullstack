@@ -1,35 +1,27 @@
 {% extends "home/base.html" %}
 {% load staticfiles %}
 {% block head_css %}
-    <link rel="stylesheet" href="{% static "css/pages/blog.css" %}">
+<link rel="stylesheet" href="{% static "css/pages/blog.css" %}">
 {% endblock %}
 {% block body %}
-    <div class="jumbotron text-center">
-        <h1 class="display-4"><span class="fullstack-brand rounded-right brand-border border border-left-0 border-primary">Fullstack</span> Blog</h1>
-    </div>
-    <section class="sub-hero container-fluid">
-        <div class="row no-gutters">
-            <div class="col-6">
-                <div class="blog-shortlinks">
-                    <ul>
-                        <li class="blog-link-lists"><a class="blog-links" href="{% url 'blog' %}">All posts</a></li>
-                        <li class="blog-link-lists"><a class="blog-links" href="{% url 'top_posts' %}">Top posts</a></li>
-                    </ul>
-                </div>
-            </div>
-            {% if user.is_authenticated and user.is_staff %}
-            <div class="col-6">
-                <div class="blog-shortlinks">
-                    <ul>
-                        <li class="blog-link-lists"><a class="blog-links" href="{% url 'new_post' %}">Create New</a></li>
-                    </ul>
-                </div>
-            </div>
-            {% endif %}
+<div class="jumbotron text-center">
+    <h1 class="display-4"><span class="fullstack-brand rounded-right brand-border border border-left-0 border-primary">Fullstack</span> Blog</h1>
+</div>
+<section class="sub-hero">
+    <div class="row no-gutters">
+        <div class="col col-12 col-md-6">
+            <a class="btn btn-subhero btn-subhero--blog" href="{% url 'blog' %}">All posts</a>
+            <a class="btn btn-subhero btn-subhero--blog" href="{% url 'top_posts' %}">Top posts</a>
         </div>
-    </section>
-    <section class="blog-main-body">
-        {% block blogs %}
-        {% endblock %}
-    </section>
+        {% if user.is_authenticated and user.is_staff %}
+        <div class="col col-12 col-md-6 admin-panel admin-panel--blog">
+            <a class="btn admin-panel-btn" href="{% url 'new_post' %}">New Blog</a>
+        </div>
+        {% endif %}
+    </div>
+</section>
+<section class="blog-main-body">
+    {% block blogs %}
+    {% endblock %}
+</section>
 {% endblock %}

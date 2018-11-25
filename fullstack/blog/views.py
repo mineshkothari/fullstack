@@ -40,7 +40,13 @@ def new_post(request):
             return redirect(post_detail, post.pk)
     else:
         form = BlogPostForm()
-    return render(request, 'blog/blogpostform.html', {'form': form})
+
+    args = {
+        'form': form,
+        'form_title': 'Add New Blog'
+    }
+
+    return render(request, 'blog/blogpostform.html', args)
 
 
 @login_required(login_url='/account/login/')
@@ -56,4 +62,12 @@ def edit_post(request, id):
             return redirect(post_detail, post.pk)
     else:
         form = BlogPostForm(instance=post)
-    return render(request, 'blog/blogpostform.html', {'form': form})
+        # form_title = Post.title
+
+    args = {
+        'form': form,
+        # 'form_title': form_title
+        'form_title': 'Edit Blog'
+    }
+
+    return render(request, 'blog/blogpostform.html', args)
