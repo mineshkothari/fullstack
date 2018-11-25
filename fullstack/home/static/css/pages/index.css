@@ -28,18 +28,16 @@
   padding-bottom: 1.5em;
 }
 
-.home-about--row {
-  text-align: center;
-  max-width: 960px;
+.cta--home {
+  padding-top: 8%;
 }
 
-.courses-cta--home {
+.btn-cta--home {
   margin-top: 2em;
-  background-color: #0cd29a;
+  background-color: #17a2b8;
   color: #f2f2f2;
   font-size: 1.25em;
   font-weight: 400;
-  border: .5px solid #0cd29a;
   padding: .5em 1em;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -50,7 +48,7 @@
   transition: all 350ms ease-in-out;
 }
 
-.courses-cta--home:hover {
+.btn-cta--home:hover {
   text-decoration: none;
   color: #F2F2F2;
   -webkit-transform: translateY(-4px);
@@ -58,6 +56,11 @@
   transform: translateY(-4px);
   -webkit-box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6);
   box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6);
+}
+
+.home-about--row {
+  text-align: center;
+  max-width: 960px;
 }
 
 .language-row-container--home {

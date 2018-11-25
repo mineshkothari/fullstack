@@ -20,7 +20,7 @@
         </div>
     </div>
 </section>
-<section class="home-section home-about d-flex justify-content-center align-items-center">
+<section class="home-section home-about d-flex flex-column justify-content-center align-items-center">
     <div class="row no-gutters justify-content-center align-items-center home-about--row">
         <div class="section-title--home about-title--home text-center"><h3 class="display-4">What is Fullstack?</h3></div>
         <div class="about-text--home text-justify">
@@ -34,11 +34,17 @@
             deserunt mollit anim id est laborum.
         </div>
     </div>
+    <div class="row no-gutters cta--home flex-column align-items-center justify-content-center">
+        <div class="text-center">
+            Click on the link below to check out all our courses
+        </div>
+        <a class="btn-cta--home text-center" href="{% url 'about'%}"><i class="fas fa-info-circle"></i> Learn More</a>
+    </div>
 </section>
 <section class="home-section home-courses">
     <div class="row no-gutters flex-column align-items-center">
         <div class="section-title--home courses-title--home text-center"><h3 class="display-4">Improve your skills</h3></div>
-        <div class="courses-text--home text-center">
+        <div class="text-center">
             From front-end web UI design, to back-end database integration,
             we have the courses for everyone.
         </div>
@@ -59,14 +65,21 @@
         </div>
         {% endfor %}
     </div>
-    <div class="row no-gutters flex-column align-items-center justify-content-center">
-        <div class="courses-text--home text-center">
+    <div class="row no-gutters cta--home flex-column align-items-center justify-content-center">
+        <div class="text-center">
             Click on the link below to check out all our courses
         </div>
-        <a class="courses-cta--home text-center" href="{% url 'courses'%}"><i class="fas fa-graduation-cap"></i> More Courses</a>
+        <a class="btn-cta--home text-center" href="{% url 'courses'%}"><i class="fas fa-graduation-cap"></i> More Courses</a>
     </div>
 </section>
 <section class="home-section home-blog">
+    <div class="row no-gutters flex-column align-items-center">
+        <div class="section-title--home blog-title--home text-center"><h3 class="display-4">Be Inspired</h3></div>
+        <div class="text-center">
+            Keep up-to-date with everything web related, from new frameworks
+            to deprecated technologies and everything in between.
+        </div>
+    </div>
     <div class="row no-gutters">
         <div class="col-12 col-sm-6 post-container-col">
             <div class="row no-gutters d-flex justify-content-center">
@@ -92,8 +105,21 @@
             <a class="btn fullstack-btn"  onclick="location.href='{% url 'blog' %}'">View Blogs</a>
         </div>
     </div>
+    <div class="row no-gutters cta--home flex-column align-items-center justify-content-center">
+        <div class="text-center">
+            Click on the link below to check out all our courses
+        </div>
+        <a class="btn-cta--home text-center" href="{% url 'blog'%}"><i class="fas fa-pen"></i> View All Blogs</a>
+    </div>
 </section>
 <section class="home-section home-forum">
+    <div class="row no-gutters flex-column align-items-center">
+        <div class="section-title--home forum-title--home text-center"><h3 class="display-4">Join the Conversation</h3></div>
+        <div class="text-center">
+            Keep up-to-date with everything web related, from new frameworks
+            to deprecated technologies and everything in between.
+        </div>
+    </div>
     <div class="row no-gutters">
         <div class="col col-12 col-md-6">
 
@@ -101,6 +127,12 @@
         <div class="col col-12 col-md-6">
 
         </div>
+    </div>
+    <div class="row no-gutters cta--home flex-column align-items-center justify-content-center">
+        <div class="text-center">
+            Click on the link below to check out all our courses
+        </div>
+        <a class="btn-cta--home text-center" href="{% url 'forum'%}"><i class="fas fa-comments"></i> Join In</a>
     </div>
 </section>
 {% endblock %}
