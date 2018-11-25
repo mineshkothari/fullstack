@@ -109,6 +109,22 @@
   margin: auto;
 }
 
+.thread-info-container {
+  margin: 2em 0;
+  padding: 1em;
+  border-radius: 10px;
+  border: 0.5px solid rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.25);
+  background: #63636E;
+  color: #f2f2f2;
+}
+
+.thread-info {
+  text-align: center;
+  padding: .5em;
+}
+
 .post-list,
 .thread-form--forum,
 .post-form--forum {
