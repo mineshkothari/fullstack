@@ -10,7 +10,7 @@
     <div class="row no-gutters">
         <div class="col col-12 col-md-6">
             {% if user.is_authenticated %}
-            <h2>Welcome, {{ user.username }}</h2>
+            <h2>Welcome, {{ user.display_name }}</h2>
             {% else %}
             <h2>Join the community today and make amazing happen!</h2>
             {% endif %}
@@ -20,25 +20,22 @@
         </div>
     </div>
 </section>
-<section class="home-section home-about">
-    <div class="row no-gutters">
-        <div class="ccol col-12 col-md-6">
-
+<section class="home-section home-about d-flex justify-content-center align-items-center">
+    <div class="row no-gutters justify-content-center align-items-center home-about--row">
+        <div class="section-title--home about-title--home"><h3>What is Fullstack?</h3></div>
+        <div class="about-text--home">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+            occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt mollit anim id est laborum.
         </div>
-        <div class="col col-12 col-md-6">
-
-        </div>
-    </div>
 </section>
 <section class="home-section home-courses">
-    <div class="row no-gutters">
-        <div class="col col-12 col-md-6">
 
-        </div>
-        <div class="col col-12 col-md-6">
-
-        </div>
-    </div>
 </section>
 <section class="home-section home-blog">
     <div class="row no-gutters">
