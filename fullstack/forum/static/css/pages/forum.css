@@ -20,6 +20,10 @@
   padding: 8%;
 }
 
+.btn-subhero--forum:hover {
+  color: #0cd29a;
+}
+
 .forum-section--main {
   padding: 8% 1em;
 }
