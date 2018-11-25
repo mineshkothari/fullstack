@@ -13,20 +13,23 @@
         });
     </script>
 {% endblock %}
+{% block forum_subtitle %}
+    <div class="row no-gutters">
+        <h2>{{ subtitle }} {{ thread.name }}</h2>
+    </div>
+    <div class="row no-gutters">
+        <a class="btn btn-subhero btn-subhero--forum" href="{% url 'forum' %}">All Forums</a>
+    </div>
+{% endblock %}
 {% block forum %}
-<section class="forum-intro">
-    <h2>Post Form</h2>
-    <div>Back to All forum, click <a href="{% url 'forum' %}">here</a></div>
-</section>
 <section class="forum-section--main post-form--forum">
     <div class="">
         <form method="POST" action="{{ form_action }}">
             {% csrf_token %}
             {{ form | as_bootstrap }}
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">{{ button_text }}</button>
+                <button type="submit" class="btn admin-btn">{{ button_text }}</button>
             </div>
-
         </form>
     </div>
 </section>

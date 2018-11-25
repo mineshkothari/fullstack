@@ -14,11 +14,15 @@
         })
     </script>
 {% endblock %}
+{% block forum_subtitle %}
+    <div class="row no-gutters">
+        <h2>Create a new thread</h2>
+    </div>
+    <div class="row no-gutters">
+        <a class="btn btn-subhero btn-subhero--forum" href="{% url 'forum' %}">All Forums</a>
+    </div>
+{% endblock %}
 {% block forum %}
-<section class="forum-intro">
-    <h2>Create a new thread</h2>
-    <div>Back to All forum, click <a href="{% url 'forum' %}">here</a></div>
-</section>
 <section class="forum-section--main thread-form--forum">
     <form method="POST" action="{% url 'new_thread' subject.id %}">
         {% csrf_token %}
@@ -36,7 +40,7 @@
             {{ post_form | as_bootstrap }}
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary">Post New Thread</button>
+            <button type="submit" class="btn admin-btn">Post New Thread</button>
         </div>
     </form>
 </section>
