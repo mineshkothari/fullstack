@@ -1,57 +1,65 @@
 {% extends 'forum/forum.html' %}
 {% load thread_extras %}
 {% load staticfiles %}
+{% block forum_subtitle %}
+    <div class="row no-gutters">
+        <h2>{{ thread.name }}</h2>
+    </div>
+    <div class="row no-gutters">
+        <a class="btn btn-subhero btn-subhero--forum" href="{% url 'forum' %}">All Forums</a>
+        {% if user.is_authenticated %}
+        <a class="btn btn-subhero btn-subhero--forum" href="{% url 'new_post' thread.id %}">New Post</a>
+        {% endif %}
+    </div>
+{% endblock %}
 {% block forum %}
-    <section class="forum-intro">
-        <div class="row no-gutters align-items-center">
-            <div class="col">
-                <h2>{{ thread.name }}</h2>
-            </div>
-            <div class="col">
-                <div class="post-created">Created: <span><time datetime="{{ thread.created_at }}"> {{ thread.created_at | started_time }} </time></span></div>
-                <div class="post-owner">Created by: <span>{{ thread.user.username }}</span></div>
-                <div class="last-post">Last Post: {% last_posted_user_name thread %}</div>
-            </div>
+<section class="forum-intro">
+    <div class="row no-gutters align-items-center">
+        <div class="col">
+            <div class="post-created">Created: <span><time datetime="{{ thread.created_at }}"> {{ thread.created_at | started_time }} </time></span></div>
+            <div class="post-owner">Created by: <span>{{ thread.user.username }}</span></div>
+            <div class="last-post">Last Post: {% last_posted_user_name thread %}</div>
         </div>
-    </section>
-    <section class="forum-section--main post-list">
-        {% if thread.poll %}
-        <div class="poll-section">
-            <div class="container">
-                <div class="col-md-6">
-                    <h2>Poll</h2>
-                    <strong>{{ thread.poll.question }}</strong><br /><br />
-                    <p>Here's how the votes are so far:</p>
-                    {% for subject in thread.poll.subjects.all %}
-                        <div class="col-md-10">
-                            <strong>{{ subject.name }}</strong>
-                            <span class="fa-pull-right">{{ subject | vote_percentage }}%</span>
-                        </div>
-                        {% autoescape off %}
-                            {% user_vote_button thread subject user %}
-                        {% endautoescape %}
-                        <div class="col-md-10">
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-info" role="progressbar"
-                                     aria-value="{{ subject | vote_percentage }}" aria-valuemin="0"
-                                     aria-valuemax="100" style="width: {{ subject | vote_percentage }}%;">
-                                </div>
+    </div>
+</section>
+<section class="forum-section--main post-list">
+    {% if thread.poll %}
+    <div class="poll-section">
+        <div class="container">
+            <div class="col-md-6">
+                <h2>Poll</h2>
+                <strong>{{ thread.poll.question }}</strong><br /><br />
+                <p>Here's how the votes are so far:</p>
+                {% for subject in thread.poll.subjects.all %}
+                    <div class="col-md-10">
+                        <strong>{{ subject.name }}</strong>
+                        <span class="fa-pull-right">{{ subject | vote_percentage }}%</span>
+                    </div>
+                    {% autoescape off %}
+                        {% user_vote_button thread subject user %}
+                    {% endautoescape %}
+                    <div class="col-md-10">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info" role="progressbar"
+                                 aria-value="{{ subject | vote_percentage }}" aria-valuemin="0"
+                                 aria-valuemax="100" style="width: {{ subject | vote_percentage }}%;">
                             </div>
                         </div>
-                    {% endfor %}
-                </div>
+                    </div>
+                {% endfor %}
             </div>
         </div>
+    </div>
+    {% endif %}
+    {% for post in thread.posts.all %}
+    {% include "forum/post.html" %}
+    {% endfor %}
+    <div class="new-post-section">
+        {% if user.is_authenticated %}
+            <a href="{% url 'new_post' thread.id %}" class="btn btn-primary">New Post</a>
+        {% else %}
+            <div>you must be logged in to reply to this thread</div>
         {% endif %}
-        {% for post in thread.posts.all %}
-        {% include "forum/post.html" %}
-        {% endfor %}
-        <div class="new-post-section">
-            {% if user.is_authenticated %}
-                <a href="{% url 'new_post' thread.id %}" class="btn btn-primary">New Post</a>
-            {% else %}
-                <div>you must be logged in to reply to this thread</div>
-            {% endif %}
-        </div>
-    </section>
+    </div>
+</section>
 {% endblock %}
