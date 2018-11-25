@@ -14,14 +14,8 @@
   border-color: #17a2b8 !important;
 }
 
-.sub-hero {
-  background: #4e555b;
-  color: #aaaaa3;
-  padding: 3em;
-}
-
 .home-section {
-  height: 700px;
+  min-height: 400px;
   width: 100%;
 }
 

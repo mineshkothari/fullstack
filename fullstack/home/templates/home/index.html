@@ -6,36 +6,36 @@
 <div class="jumbotron text-center">
     <h1 class="display-4"><span class="fullstack-brand rounded-right border border-left-0">Fullstack</span> Home</h1>
 </div>
-<section class="sub-hero container-fluid">
+<section class="sub-hero">
     <div class="row no-gutters">
-        <div class="col">
+        <div class="col col-12 col-md-6">
             {% if user.is_authenticated %}
-                <h2>Welcome, {{ user.username }}</h2>
+            <h2>Welcome, {{ user.username }}</h2>
             {% else %}
-                <h2>Join the community today and make amazing happen!</h2>
+            <h2>Join the community today and make amazing happen!</h2>
             {% endif %}
         </div>
-        <div class="col">
+        <div class="col col-12 col-md-6">
             Become a Patreon
         </div>
     </div>
 </section>
 <section class="home-section home-about">
     <div class="row no-gutters">
-        <div class="col">
+        <div class="ccol col-12 col-md-6">
 
         </div>
-        <div class="col">
+        <div class="col col-12 col-md-6">
 
         </div>
     </div>
 </section>
 <section class="home-section home-courses">
     <div class="row no-gutters">
-        <div class="col">
+        <div class="col col-12 col-md-6">
 
         </div>
-        <div class="col">
+        <div class="col col-12 col-md-6">
 
         </div>
     </div>
@@ -46,9 +46,9 @@
             <div class="row no-gutters d-flex justify-content-center">
                 <div class="post-container-home">
                     {% if post.image %}
-                        <a class="post-thumbnail-container-home" href="#">
-                            <img class="post-thumbnail-home" src="/media/{{ post.image }}" />
-                        </a>
+                    <a class="post-thumbnail-container-home" href="#">
+                        <img class="post-thumbnail-home" src="/media/{{ post.image }}" />
+                    </a>
                     {% endif %}
                     <div class="post-detail-container-home">
                         <h3 class="post-title">{{ post.title }}</h3>
@@ -68,11 +68,11 @@
     </div>
 </section>
 <section class="home-section home-forum">
-<div class="row no-gutters">
-        <div class="col">
+    <div class="row no-gutters">
+        <div class="col col-12 col-md-6">
 
         </div>
-        <div class="col">
+        <div class="col col-12 col-md-6">
 
         </div>
     </div>
