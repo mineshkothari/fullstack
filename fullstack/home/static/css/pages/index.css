@@ -17,7 +17,7 @@
 .home-section {
   min-height: 400px;
   width: 100%;
-  padding: 8%;
+  padding: 12%;
 }
 
 .home-section:nth-child(2n) {
@@ -31,6 +31,84 @@
 .home-about--row {
   text-align: center;
   max-width: 960px;
+}
+
+.courses-cta--home {
+  margin-top: 2em;
+  background-color: #0cd29a;
+  color: #f2f2f2;
+  font-size: 1.25em;
+  font-weight: 400;
+  border: .5px solid #0cd29a;
+  padding: .5em 1em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 350ms ease-in-out;
+  -o-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.courses-cta--home:hover {
+  text-decoration: none;
+  color: #F2F2F2;
+  -webkit-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  transform: translateY(-4px);
+  -webkit-box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6);
+}
+
+.language-row-container--home {
+  padding: 4% !important;
+}
+
+.language-col-container--home {
+  padding: .5em !important;
+}
+
+.language-link--home {
+  background: #F2F2F2;
+  padding: 5% 1.5em !important;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 40px -25px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 40px -25px rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 350ms ease-in-out;
+  -o-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+  color: #aaaaa3;
+}
+
+.language-link--home:hover {
+  text-decoration: none;
+  color: #63636E;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 40px 60px -25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 40px 60px -25px rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  transform: translateY(-4px);
+}
+
+.language-image-container--home {
+  width: 50%;
+  max-width: 300px;
+  margin: 1em;
+}
+
+.language-image--home {
+  width: 100%;
+}
+
+.language-title--home {
+  margin-bottom: 0;
+}
+
+@media (min-width: 576px) {
+  .language-image-container--home {
+    width: 100%;
+  }
 }
 
 .post-container-col {

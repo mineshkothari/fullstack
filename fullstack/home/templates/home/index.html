@@ -22,8 +22,8 @@
 </section>
 <section class="home-section home-about d-flex justify-content-center align-items-center">
     <div class="row no-gutters justify-content-center align-items-center home-about--row">
-        <div class="section-title--home about-title--home"><h3>What is Fullstack?</h3></div>
-        <div class="about-text--home">
+        <div class="section-title--home about-title--home text-center"><h3 class="display-4">What is Fullstack?</h3></div>
+        <div class="about-text--home text-justify">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna
             aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -33,9 +33,38 @@
             occaecat cupidatat non proident, sunt in culpa qui officia
             deserunt mollit anim id est laborum.
         </div>
+    </div>
 </section>
 <section class="home-section home-courses">
-
+    <div class="row no-gutters flex-column align-items-center">
+        <div class="section-title--home courses-title--home text-center"><h3 class="display-4">Improve your skills</h3></div>
+        <div class="courses-text--home text-center">
+            From front-end web UI design, to back-end database integration,
+            we have the courses for everyone.
+        </div>
+    </div>
+    <div class="language-row-container--home row no-gutters">
+        {% for language in languages %}
+        <div class="col col-12 col-lg-4 language-col-container--home">
+            <a href="{% url 'modules' language.id %}" class="language-link--home d-flex flex-row flex-sm-column justify-content-center align-items-center">
+                <div class="language-image-container--home">
+                    {% if language.image %}
+                    <img class="language-image--home" src="/media/{{ language.image }}" alt="{{ language.title }} Image" />
+                    {% else %}
+                    <img class="language-image--home" src="/media/images/courses/languages/placeholder.png" alt="Placeholder Coding Image" />
+                    {% endif %}
+                </div>
+                <h4 class="language-title--home text-center">{{ language.title }}</h4>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="row no-gutters flex-column align-items-center justify-content-center">
+        <div class="courses-text--home text-center">
+            Click on the link below to check out all our courses
+        </div>
+        <a class="courses-cta--home text-center" href="{% url 'courses'%}"><i class="fas fa-graduation-cap"></i> More Courses</a>
+    </div>
 </section>
 <section class="home-section home-blog">
     <div class="row no-gutters">
