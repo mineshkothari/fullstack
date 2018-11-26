@@ -18,13 +18,13 @@ def modules(request, language_id):
     language = get_object_or_404(Language, pk=language_id)
     return render(request, 'courses/modules.html', {'language': language})
 
-
+@login_required(login_url='/account/login/')
 def module_item(request, module_id):
     module = get_object_or_404(Module, pk=module_id)
     return render(request, 'courses/module_item.html', {'module': module})
 
 
-@login_required
+@login_required(login_url='/account/login/')
 def new_module(request):
     if request.user.is_authenticated and request.user.is_staff:
         if request.method == 'POST':
@@ -61,7 +61,7 @@ def new_module(request):
 #     else:
 #         return redirect(reverse('courses'))
 
-@login_required
+@login_required(login_url='/account/login/')
 def new_language(request):
     if request.user.is_authenticated and request.user.is_staff:
         if request.method == 'POST':
