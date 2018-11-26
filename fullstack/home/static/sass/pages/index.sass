@@ -16,6 +16,7 @@
   min-height: 400px
   width: 100%
   padding: 12%
+  color: #63636E
 
 .home-section:nth-child(2n)
   background: #e0e0e0
@@ -25,7 +26,7 @@
 
 // CTA SECTION
 .cta--home
-  padding-top: 8%
+  padding-top: 2em
 
 // CTA BUTTON
 .btn-cta--home
@@ -34,7 +35,7 @@
   color: #f2f2f2
   font-size: 1.25em
   font-weight: 400
-  padding: .5em 1em
+  padding: 1em 1.5em
   letter-spacing: 1px
   text-transform: uppercase
   box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4)
@@ -61,10 +62,7 @@
   background: #F2F2F2
   padding: 5% 1.5em !important
   border-radius: 10px
-  //border: .5px solid rgba(0,0,0,0.08)
   box-shadow: 0 10px 40px -25px rgba(0,0,0,0.25)
-  //height: 100%
-  //min-height: 200px
   transition: all 350ms ease-in-out
   color: #aaaaa3
   &:hover
@@ -90,14 +88,20 @@
     width: 100%
 
 // BLOG
+.blog-row--home
+  padding: 8% 0
 
 .post-container-col
-  padding: 4%
+  margin-bottom: 2em
+
+.blog-col--home
+  padding: 4% !important
+  div
+    margin: 1em auto
 
 .post-container-home
   width: 100%
-  max-width: 400px
-  //margin: 4%
+  max-width: 600px
   border: .5px solid rgba(0,0,0,.1)
   border-radius: 10px
   overflow: hidden
@@ -139,7 +143,6 @@
   border-top: .5px solid rgba(0,0,0,.1)
 
 .blog-read-more-icon
-  //text-align: center
   width: 100%
   color: #aaaaa3
   padding: 1.25em
@@ -151,13 +154,9 @@
     transform: scale(1.25)
     text-shadow: 0 3px 10px rgba(0,0,0,.35)
 
-
-//.post-thumbnail-container-home
-//  max-width: 400px
-//  overflow: hidden
-//
-//.post-thumbnail-home
-
+@media (min-width: 768px)
+  .post-container-col
+    margin-bottom: 0
 
 // FORUM
 
