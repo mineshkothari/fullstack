@@ -1,6 +1,7 @@
 {% extends "forum/forum.html" %}
 {% load bootstrap_tags %}
 {% load staticfiles %}
+{% block page_title %}{{ subtitle }} {{ thread.name }} | Fullstack Forums | Learn Web Development{% endblock %}
 {% block head_js %}
     <script src="{% static 'js/tinymce/tinymce.min.js' %}"></script>
     <script>

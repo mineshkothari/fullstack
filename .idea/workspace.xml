@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49079c82-689c-4a06-838e-f3bc49bf21e3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/fullstack/courses/templates/courses/languages.html" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/courses/templates/courses/languages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fullstack/courses/templates/courses/modules.html" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/courses/templates/courses/modules.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fullstack/courses/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/courses/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fullstack/forum/templates/forum/post_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/forum/templates/forum/post_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fullstack/forum/templates/forum/subjects.html" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/forum/templates/forum/subjects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fullstack/forum/templates/forum/thread.html" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/forum/templates/forum/thread.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fullstack/forum/templates/forum/thread_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/forum/templates/forum/thread_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fullstack/forum/templates/forum/threads.html" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/forum/templates/forum/threads.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,20 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fullstack/home/templates/home/index.html">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fullstack/forum/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fullstack/courses/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="-140">
+              <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
               </folding>
@@ -42,32 +35,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fullstack/courses/urls.py">
+      <file leaf-file-name="post_form.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/post_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="61">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modules.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fullstack/courses/templates/courses/modules.html">
+      <file leaf-file-name="thread.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/thread.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+            <state relative-caret-position="60">
+              <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="languages.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fullstack/courses/templates/courses/languages.html">
+      <file leaf-file-name="thread_form.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/thread_form.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="threads.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/threads.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="40">
               <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="subjects.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/subjects.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -119,15 +127,12 @@
         <option value="$PROJECT_DIR$/fullstack/home/templates/home/base.html" />
         <option value="$PROJECT_DIR$/fullstack/courses/templates/courses/language.html" />
         <option value="$PROJECT_DIR$/fullstack/courses/static/sass/pages/courses.sass" />
-        <option value="$PROJECT_DIR$/fullstack/courses/templates/courses/module_item.html" />
         <option value="$PROJECT_DIR$/fullstack/blog/models.py" />
         <option value="$PROJECT_DIR$/fullstack/courses/models.py" />
         <option value="$PROJECT_DIR$/fullstack/blog/forms.py" />
         <option value="$PROJECT_DIR$/fullstack/courses/forms.py" />
         <option value="$PROJECT_DIR$/fullstack/courses/admin.py" />
         <option value="$PROJECT_DIR$/fullstack/accounts/admin.py" />
-        <option value="$PROJECT_DIR$/fullstack/courses/templates/courses/new_module.html" />
-        <option value="$PROJECT_DIR$/fullstack/courses/templates/courses/new_language.html" />
         <option value="$PROJECT_DIR$/fullstack/blog/templates/blog/blogposts.html" />
         <option value="$PROJECT_DIR$/fullstack/courses/templates/courses/courses.html" />
         <option value="$PROJECT_DIR$/fullstack/static/sass/pages/base.sass" />
@@ -136,12 +141,7 @@
         <option value="$PROJECT_DIR$/fullstack/blog/templates/blog/blogpostform.html" />
         <option value="$PROJECT_DIR$/fullstack/blog/views.py" />
         <option value="$PROJECT_DIR$/fullstack/forum/templates/forum/forum.html" />
-        <option value="$PROJECT_DIR$/fullstack/forum/templates/forum/subjects.html" />
-        <option value="$PROJECT_DIR$/fullstack/forum/templates/forum/thread_form.html" />
         <option value="$PROJECT_DIR$/fullstack/forum/views.py" />
-        <option value="$PROJECT_DIR$/fullstack/forum/templates/forum/post_form.html" />
-        <option value="$PROJECT_DIR$/fullstack/forum/templates/forum/threads.html" />
-        <option value="$PROJECT_DIR$/fullstack/forum/templates/forum/thread.html" />
         <option value="$PROJECT_DIR$/fullstack/forum/static/sass/pages/forum.sass" />
         <option value="$PROJECT_DIR$/fullstack/home/views.py" />
         <option value="$PROJECT_DIR$/fullstack/home/static/sass/pages/index.sass" />
@@ -151,6 +151,14 @@
         <option value="$PROJECT_DIR$/fullstack/courses/templates/courses/languages.html" />
         <option value="$PROJECT_DIR$/fullstack/courses/templates/courses/modules.html" />
         <option value="$PROJECT_DIR$/fullstack/courses/urls.py" />
+        <option value="$PROJECT_DIR$/fullstack/courses/templates/courses/module_item.html" />
+        <option value="$PROJECT_DIR$/fullstack/courses/templates/courses/new_module.html" />
+        <option value="$PROJECT_DIR$/fullstack/courses/templates/courses/new_language.html" />
+        <option value="$PROJECT_DIR$/fullstack/forum/templates/forum/subjects.html" />
+        <option value="$PROJECT_DIR$/fullstack/forum/templates/forum/threads.html" />
+        <option value="$PROJECT_DIR$/fullstack/forum/templates/forum/thread_form.html" />
+        <option value="$PROJECT_DIR$/fullstack/forum/templates/forum/thread.html" />
+        <option value="$PROJECT_DIR$/fullstack/forum/templates/forum/post_form.html" />
       </list>
     </option>
   </component>
@@ -236,6 +244,27 @@
               <item name="courses" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="courses" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fullstack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fullstack" type="462c0819:PsiDirectoryNode" />
+              <item name="fullstack" type="462c0819:PsiDirectoryNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fullstack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fullstack" type="462c0819:PsiDirectoryNode" />
+              <item name="fullstack" type="462c0819:PsiDirectoryNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fullstack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fullstack" type="462c0819:PsiDirectoryNode" />
+              <item name="fullstack" type="462c0819:PsiDirectoryNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fullstack" type="b2602c69:ProjectViewProjectNode" />
@@ -546,20 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fullstack/courses/templates/courses/new_module.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fullstack/courses/templates/courses/new_language.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fullstack/blog/templates/blog/blogposts.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
@@ -630,45 +645,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/post_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/thread_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/forum.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="15" column="74" lean-forward="true" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fullstack/forum/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="137" column="41" lean-forward="true" selection-start-line="137" selection-start-column="41" selection-end-line="137" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fullstack/courses/templates/courses/module_item.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/subjects.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -683,20 +663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2520">
           <caret line="126" column="25" lean-forward="true" selection-start-line="126" selection-start-column="25" selection-end-line="126" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/threads.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="29" column="50" lean-forward="true" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/thread.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
@@ -770,10 +736,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fullstack/home/templates/home/index.html">
+    <entry file="file://$PROJECT_DIR$/fullstack/courses/templates/courses/module_item.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="55" />
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullstack/courses/templates/courses/new_module.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullstack/courses/templates/courses/new_language.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
@@ -784,22 +764,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fullstack/courses/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fullstack/courses/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullstack/courses/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullstack/home/templates/home/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/subjects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/threads.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/thread_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/thread.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/post_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullstack/forum/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-140">
+          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
           </folding>
         </state>
       </provider>

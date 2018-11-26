@@ -1,5 +1,6 @@
 {% extends "forum/forum.html" %}
 {% load thread_extras %}
+{% block page_title %}{{ subject.name }} Threads | Fullstack Forums | Learn Web Development{% endblock %}
 {% block forum_subtitle %}
     <div class="row no-gutters">
         <h2>{{ subject.name }}</h2>

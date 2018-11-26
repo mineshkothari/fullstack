@@ -1,6 +1,7 @@
 {% extends 'forum/forum.html' %}
 {% load thread_extras %}
 {% load staticfiles %}
+{% block page_title %}{{ thread.name }} | Fullstack Forums | Learn Web Development{% endblock %}
 {% block forum_subtitle %}
     <div class="row no-gutters">
         <h2>{{ thread.name }}</h2>
@@ -13,15 +14,6 @@
     </div>
 {% endblock %}
 {% block forum %}
-{#<section class="forum-intro">#}
-{#    <div class="row no-gutters align-items-center">#}
-{#        <div class="col">#}
-{#            <div class="post-created">Created: <span><time datetime="{{ thread.created_at }}"> {{ thread.created_at | started_time }} </time></span></div>#}
-{#            <div class="post-owner">Created by: <span>{{ thread.user.username }}</span></div>#}
-{#            <div class="last-post">Last Post: {% last_posted_user_name thread %}</div>#}
-{#        </div>#}
-{#    </div>#}
-{#</section>#}
 <section class="forum-section--main post-list">
     <div class="thread-info-container flex-column flex-lg-row row no-gutters justify-content-center align-items-center">
         <div class="thread-info post-created">Thread Created: <strong><span><time datetime="{{ thread.created_at }}"> {{ thread.created_at | started_time }} </time></span></strong></div>
