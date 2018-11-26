@@ -80,8 +80,9 @@
 .language-image--home
   width: 100%
 
-.language-title--home
-  margin-bottom: 0
+@media (max-width: 576px)
+  .language-title--home
+    margin-bottom: 0
 
 @media (min-width: 576px)
   .language-image-container--home
@@ -94,10 +95,12 @@
 .post-container-col
   margin-bottom: 2em
 
-.blog-col--home
-  padding: 4% !important
-  div
-    margin: 1em auto
+.blog-col--home div
+  margin: 1em auto
+
+@media (min-width: 768px)
+  .blog-col--home
+    padding: 4% 0 4% 8% !important
 
 .post-container-home
   width: 100%
