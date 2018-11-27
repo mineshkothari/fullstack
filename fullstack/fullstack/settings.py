@@ -82,6 +82,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'cart.contexts.cart_contents',
 ]
 
 ROOT_URLCONF = 'fullstack.urls'

@@ -1,6 +1,22 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+from django.shortcuts import render, redirect, reverse
 
-from django.shortcuts import render
 
-# Create your views here.
+def view_cart(request):
+    """
+    Render the cart
+    """
+    return render(request, "cart.html")
+
+
+def add_to_cart(request):
+    """
+    Add a Module to cart
+    """
+
+    cart = request.session.get('cart', {})
+    cart[id] = cart.get(id)
+
+    request.session['cart'] = cart
+    return redirect(reverse('courses'))
