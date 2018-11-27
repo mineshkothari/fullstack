@@ -7,7 +7,7 @@ def view_cart(request):
     """
     Render the cart
     """
-    return render(request, "cart.html")
+    return render(request, "cart/cart.html")
 
 
 def add_to_cart(request):

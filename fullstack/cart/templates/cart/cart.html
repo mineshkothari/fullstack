@@ -1,0 +1,13 @@
+{% extends 'home/base.html' %}
+{% load staticfiles %}
+{% load bootstrap_tags %}
+
+{% block body %}
+{% for item in cart_items %}
+    <p>{{ item.module.title }}</p>
+    <p>{{ item.module.price }}</p>
+    <hr />
+{% empty %}
+    <p>You have no items in your cart!</p>
+{% endfor %}
+{% endblock %}
