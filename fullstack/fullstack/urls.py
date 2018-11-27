@@ -39,8 +39,11 @@ urlpatterns = [
     # FORUM
     url(r'^forum/', include('forum.urls')),
 
-    # Courses
+    # COURSES
     url(r'^courses/', include('courses.urls')),
+
+    # CART
+    url(r'^cart/', include('cart.urls')),
 
     # MEDIA
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
