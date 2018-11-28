@@ -10,7 +10,7 @@ def view_cart(request):
     return render(request, "cart/cart.html")
 
 
-def add_to_cart(request):
+def add_to_cart(request, id):
     """
     Add a Module to cart
     """
