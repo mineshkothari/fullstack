@@ -11,9 +11,9 @@ def cart_contents(request):
 
     cart_items = []
     total = 0
-    for id in cart.items():
-        module = get_object_or_404(Module, pk=id)
+    for module_id in cart.items():
+        module = get_object_or_404(Module, pk=module_id)
         total += module.price
-        cart_items.append({'id': id, 'module': module})
+        cart_items.append({'module_id': module_id, 'module': module})
 
     return {'cart_items': cart_items, 'total': total}

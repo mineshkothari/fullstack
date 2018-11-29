@@ -10,13 +10,13 @@ def view_cart(request):
     return render(request, "cart/cart.html")
 
 
-def add_to_cart(request, id):
+def add_to_cart(request, module_id):
     """
     Add a Module to cart
     """
 
     cart = request.session.get('cart', {})
-    cart[id] = cart.get(id)
+    cart[module_id] = cart.get(module_id)
 
     request.session['cart'] = cart
     return redirect(reverse('index'))
