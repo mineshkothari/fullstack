@@ -24,12 +24,15 @@
 <section class="cart-section--main">
     <div class="container">
         {% for item in cart_items %}
-        <div class="row no-gutters">
-            <div class="col-12 col-md-6">
+        <div class="row no-gutters cart-items--row">
+            <div class="col-12 col-md-4">
                 <p>{{ item.module.title }}</p>
             </div>
-            <div class="col-12 col-md-6">
-                <p>{{ item.module.price }}</p>
+            <div class="col-12 col-md-3">
+                <p>£ {{ item.module.price }}</p>
+            </div>
+            <div class="col-12 col-md-3">
+                <p>X Remove?</p>
             </div>
         </div>
         {% empty %}
