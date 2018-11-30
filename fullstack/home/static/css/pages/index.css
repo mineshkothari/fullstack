@@ -30,7 +30,7 @@
 }
 
 .cart-main {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   padding: 1em;
   border: 1px solid;
   height: 25px;

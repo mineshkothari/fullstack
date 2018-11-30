@@ -1,13 +1,40 @@
 {% extends 'home/base.html' %}
 {% load staticfiles %}
 {% load bootstrap_tags %}
-
+{% block page_title %}Fullstack | Learn Web Development | Minesh Kothari{% endblock page_title %}
+{% block head_css %}<link rel="stylesheet" href="{% static "css/pages/cart.css" %}">{% endblock head_css %}
 {% block body %}
-{% for item in cart_items %}
-    <p>{{ item.module.title }}</p>
-    <p>{{ item.module.price }}</p>
-    <hr />
-{% empty %}
-    <p>You have no items in your cart!</p>
-{% endfor %}
+<div class="jumbotron text-center">
+    <h1 class="display-4"><span class="fullstack-brand rounded-right border border-left-0">Fullstack</span> Cart</h1>
+</div>
+<section class="sub-hero">
+    <div class="row no-gutters">
+        <div class="col col-12 col-md-6">
+            {% if user.is_authenticated %}
+            <h2>Welcome, {{ user.display_name }}</h2>
+            {% else %}
+            <h2>Join the community today and make amazing happen!</h2>
+            {% endif %}
+        </div>
+        <div class="col col-12 col-md-6">
+            Become a Patreon
+        </div>
+    </div>
+</section>
+<section class="cart-section--main">
+    <div class="container">
+        {% for item in cart_items %}
+        <div class="row no-gutters">
+            <div class="col-12 col-md-6">
+                <p>{{ item.module.title }}</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <p>{{ item.module.price }}</p>
+            </div>
+        </div>
+        {% empty %}
+        <p>You have no items in your cart!</p>
+        {% endfor %}
+    </div>
+</section>
 {% endblock %}
