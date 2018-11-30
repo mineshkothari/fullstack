@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.shortcuts import render, redirect, reverse
+from courses.models import Module
 
 
 def view_cart(request):
@@ -16,7 +17,9 @@ def add_to_cart(request, module_id):
     """
 
     cart = request.session.get('cart', {})
-    cart[module_id] = cart.get(module_id)
+    if module_id not in cart.keys():
+        cart[module_id] = module_id
 
     request.session['cart'] = cart
-    return redirect(reverse('index'))
+
+    return render(request, "cart/cart.html")

@@ -7,17 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,200i,400,400i,800,800i" rel="stylesheet">
     {% block head_css %}{% endblock %}
-    <link rel="shortcut icon" type="image/png" href="{% static "assets/favicon.png" %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'assets/favicon.png' %}">
     {% block head_js %}{% endblock %}
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
           <a class="navbar-brand rounded-right border border-left-0 border-primary brand-border" href="{% url 'index' %}">Fullstack</a>
+          <!-- <div class="cart-main"><i class="fas fa-shopping-cart fa-md"></i></div> -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavBar" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>

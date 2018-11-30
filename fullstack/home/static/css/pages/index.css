@@ -29,6 +29,15 @@
   padding-bottom: 1.5em;
 }
 
+.cart-main {
+  color: #FFFFFF;
+  padding: 1em;
+  border: 1px solid;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
 .cta--home {
   padding-top: 2em;
 }
