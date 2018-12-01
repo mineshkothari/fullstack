@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'courses',
     'paypal_store',
     'cart',
+    'checkout',
 
     # THIRD PARTY APPS
     'django_forms_bootstrap',
