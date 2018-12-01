@@ -24,20 +24,24 @@
 <section class="cart-section--main">
     <div class="container">
         {% for item in cart_items %}
-        <div class="row no-gutters cart-items--row">
-            <div class="col-12 col-md-4">
-                <p>{{ item.module.title }}</p>
+        <div class="row no-gutters cart-items--row d-flex align-items-center">
+            <div class="col-12 col-md-4 cart-items--col">
+                <div class="cart-items--title">{{ item.module.title }}</div>
+                <p class="cart-items--remove">remove</p>
             </div>
-            <div class="col-12 col-md-3">
+            <div class="col-12 col-md-6 cart-items--col d-flex align-items-center">
+                <div>{% autoescape off %}{{ item.module.description|truncatewords:10 }}{% endautoescape %}</div>
+            </div>
+            <div class="col-12 col-md-2 cart-items--col d-flex align-items-center justify-content-end">
                 <p>£ {{ item.module.price }}</p>
-            </div>
-            <div class="col-12 col-md-3">
-                <p>X Remove?</p>
             </div>
         </div>
         {% empty %}
         <p>You have no items in your cart!</p>
         {% endfor %}
+        <div class="row no-gutters cart-items--row d-flex justify-content-end">
+            <p class="cart-items--total"><strong>Total</strong> <span>£{{ total }}</span></p>
+        </div>
     </div>
 </section>
 {% endblock %}
