@@ -39,8 +39,13 @@
         {% empty %}
         <p>You have no items in your cart!</p>
         {% endfor %}
-        <div class="row no-gutters cart-items--row d-flex justify-content-end">
-            <p class="cart-items--total"><strong>Total</strong> <span>£{{ total }}</span></p>
+        <div class="row no-gutters cart-total--row">
+            <div class="col-12 col-sm-6 cart-total--col d-flex justify-content-center justify-content-sm-start align-items-center">
+                <p class="cart-items--total"><strong>Total</strong> <span>£{{ total }}</span></p>
+            </div>
+            <div class="col-12 col-sm-6 cart-total--col d-flex justify-content-center justify-content-sm-end align-items-center">
+                <a href="#" class="cart-items--pay" role="button"><i class="fas fa-credit-card"></i> Enrol Now</a>
+            </div>
         </div>
     </div>
 </section>

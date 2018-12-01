@@ -27,7 +27,6 @@
     margin-bottom: 0
 
 .cart-items--col
-  //border: 1px solid red
   padding: 1em !important
 
 .cart-items--title
@@ -39,8 +38,41 @@
   font-style: italic
   color: #aaaaa3
 
+.cart-total--row
+  margin: 2em auto
+  padding: 2em
+  background: rgba(255,255,255,1)
+  border-top: 1px solid #0cd29a
+  border-bottom: 1px solid #0cd29a
+  box-shadow: 0 10px 40px -25px rgba(0,0,0,0.25)
+  color: #63636E
+  p
+    margin-bottom: 0
+
+.cart-total--col
+  padding: 1em 0 !important
+
 .cart-items--total
   text-transform: uppercase
   letter-spacing: .5px
+  font-size: 1.25em
   span
     margin-left: 1em
+
+.cart-items--pay
+  //margin-top: 2em
+  background-color: #0cd29a
+  color: #f2f2f2
+  font-size: 1.25em
+  font-weight: 400
+  border: .5px solid #0cd29a
+  padding: .5em 1em
+  letter-spacing: 1px
+  text-transform: uppercase
+  //box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4)
+  transition: all 350ms ease-in-out
+  &:hover
+    text-decoration: none
+    color: #F2F2F2
+    box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6)
+    transform: translateY(-4px)
