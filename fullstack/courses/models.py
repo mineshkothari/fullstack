@@ -22,7 +22,7 @@ class Module(models.Model):
     title = models.CharField(max_length=255)
     language = models.ForeignKey(Language, related_name='modules')
     description = HTMLField(blank=True)
-    price = models.DecimalField(max_digits=6,decimal_places=2)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
     content = HTMLField(blank=True)
     created_at = models.DateTimeField(default=timezone.now)
     release_date = models.DateTimeField(blank=True, null=True)
