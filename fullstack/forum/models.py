@@ -21,9 +21,15 @@ class Thread(models.Model):
     subject = models.ForeignKey(Subject, related_name='threads')
     created_at = models.DateTimeField(default=timezone.now)
 
+    def __unicode__(self):
+        return self.name
+
 
 class Post(models.Model):
     thread = models.ForeignKey(Thread, related_name='posts')
     comment = HTMLField(blank=True)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='posts')
     created_at = models.DateTimeField(default=timezone.now)
+
+    def __unicode__(self):
+        return 'Post: {0}, Thread: {1}, User: {2}'.format(self.id, self.thread, self.user)
