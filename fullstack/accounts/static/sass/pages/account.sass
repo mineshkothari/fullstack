@@ -51,7 +51,7 @@
       position: relative
       height: 35px
       width: 10px
-      background: red
+      background: #ea6823
       top: 35px
       left: -48px
     span
@@ -73,14 +73,23 @@
     &:hover
       box-shadow: 0 10px 50px -7px rgba(0,0,0,0.25)
     &:focus
-      border: .5px solid red
-      background-color: rgba(255,0,0,0.15)
+      //border: .5px solid #ea6823
+      //background-color: rgba(255,0,0,0.15)
   .form-group
     margin-bottom: 1.75rem
 
 .manage-form-container
   max-width: none
   box-shadow: none
+
+.account-switcher
+  a
+    color: #f2f2f2
+    transition: all 350ms ease-in-out
+    &:hover
+      color: #ea6823
+      text-decoration: none
+
 
 //#div_id_password
 //  display: none
@@ -98,7 +107,7 @@ input:-webkit-autofill
 
 // ALERT
 .form-container .alert-danger
-  color: red
+  color: #ea6823
   position: relative
   top: -25px
 
