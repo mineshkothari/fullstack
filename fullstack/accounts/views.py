@@ -1,8 +1,9 @@
 from django.contrib import messages, auth
 from django.core.urlresolvers import reverse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.template.context_processors import csrf
 from accounts.forms import UserRegistrationForm, UserLoginForm, UserAccountForm
+from courses.models import Module
 from django.contrib.auth.decorators import login_required
 
 
@@ -45,7 +46,12 @@ def profile(request):
             messages.error(request, "We've been unable to update your details")
     else:
         form = UserAccountForm(instance=request.user)
-    args = {'form': form}
+
+    args = {
+        'form': form,
+        # 'my_courses': Module.enrolled_users(instance=request.user),
+    }
+
     args.update(csrf(request))
     return render(request, 'accounts/profile.html', args)
 
