@@ -3,16 +3,16 @@
 {% load staticfiles %}
 {% block page_title %}{{ subtitle }} {{ thread.name }} | Fullstack Forums | Learn Web Development{% endblock %}
 {% block head_js %}
-    <script src="{% static 'js/tinymce/tinymce.min.js' %}"></script>
-    <script>
-        tinyMCE.init({
-            mode: "textareas",
-            theme: 'modern',
-            plugins: 'paste',
-            branding: false,
-            height: 400,
-        });
-    </script>
+<script src="{% static 'js/tinymce/tinymce.min.js' %}"></script>
+<script>
+    tinyMCE.init({
+        mode: "textareas",
+        theme: 'modern',
+        plugins: 'paste',
+        branding: false,
+        height: 400,
+    });
+</script>
 {% endblock %}
 {% block forum_subtitle %}
     <div class="row no-gutters">

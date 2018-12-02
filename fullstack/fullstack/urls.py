@@ -48,8 +48,8 @@ urlpatterns = [
     # MEDIA
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
 
-    # DJANGO-SUMMERNOTE
-    url(r'^summernote/', include('django_summernote.urls')),
+    # # DJANGO-SUMMERNOTE
+    # url(r'^summernote/', include('django_summernote.urls')),
 ]
 
 

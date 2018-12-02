@@ -1,6 +1,19 @@
 {% extends "courses/courses.html" %}
 {% load thread_extras %}
 {% load bootstrap_tags %}
+{% load staticfiles %}
+{% block head_js %}
+<script src="{% static 'js/tinymce/tinymce.min.js' %}"></script>
+<script>
+    tinyMCE.init({
+        mode: "textareas",
+        theme: 'modern',
+        plugins: 'paste',
+        branding: false,
+        height: 400,
+    });
+</script>
+{% endblock %}
 {% block page_title %}Add a New Module | Fullstack Admin Area{% endblock %}
 {% block courses_subtitle %}
     <h2>New Module</h2>

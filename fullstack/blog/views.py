@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
+from django.template.context_processors import csrf
 from .models import Post
 from .forms import BlogPostForm
 from django.contrib.auth.decorators import login_required
@@ -45,6 +46,8 @@ def new_post(request):
         'form': form,
         'form_title': 'Add New Blog'
     }
+
+    args.update(csrf(request))
 
     return render(request, 'blog/blogpostform.html', args)
 
