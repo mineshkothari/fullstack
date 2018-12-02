@@ -139,6 +139,7 @@
   text-transform: uppercase;
   -webkit-box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
   box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
 }
 
 .module-item--container {
