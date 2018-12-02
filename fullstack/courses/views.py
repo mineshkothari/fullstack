@@ -18,6 +18,7 @@ def modules(request, language_id):
     language = get_object_or_404(Language, pk=language_id)
     return render(request, 'courses/modules.html', {'language': language})
 
+
 @login_required(login_url='/account/login/')
 def module_item(request, module_id):
     module = get_object_or_404(Module, pk=module_id)
