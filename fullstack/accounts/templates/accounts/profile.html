@@ -1,32 +1,36 @@
 {% extends "accounts/account.html" %}
 {% load bootstrap_tags %}
 {% block page_title %}My Profile | Fullstack{% endblock page_title %}
-{% block account %}
-    <section class="account-page-title profile-title">
+{% block accounts_subtitle %}
+    <div class="row no-gutters">
         <h2>View and manage your profile</h2>
-        <span>You are logged in as {{ user.email }}</span>
-        <span>You last logged in on {{ user.last_login }}</span>
-    </section>
-    <section class="profile-section account-section">
-        <div class="row no-gutters">
-            <div class="col-12 col-md-6 col-xl-3 manage-account-form">
-                <div class="form-container manage-form-container">
-                    <form role="form" method="post" action="{% url 'profile' %}">
-                        <legend> Manage <span>your</span> account</legend>
-                        {% csrf_token %}
-                        {{ form | as_bootstrap }}
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-lg fullstack-btn form-submit-btn">Update</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-xl-9" style="padding: 2em;">
-{#                <p><a href="#">Password reset link</a></p>#}
-
-                <h3>My Courses</h3>
-
+    </div>
+    <div class="row no-gutters user-details--accounts">
+        <div class="col-12">You are logged in as <strong>{{ user.email }}</strong></div>
+        <div class="col-12">You last logged in on <strong>{{ user.last_login|date:"d M Y" }}</strong> at <strong>{{ user.last_login|time:"H:i A" }}</strong></div>
+    </div>
+{% endblock %}
+{% block account %}
+<section class="profile-section account-section">
+    <div class="row no-gutters">
+        <div class="col-12 col-md-6 col-xl-3 manage-account-form">
+            <div class="form-container manage-form-container">
+                <form role="form" method="post" action="{% url 'profile' %}">
+                    <legend> Manage <span>your</span> account</legend>
+                    {% csrf_token %}
+                    {{ form | as_bootstrap }}
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-lg fullstack-btn form-submit-btn">Update</button>
+                    </div>
+                </form>
             </div>
         </div>
-    </section>
+        <div class="col-12 col-md-6 col-xl-9" style="padding: 2em;">
+{#                <p><a href="#">Password reset link</a></p>#}
+
+            <h3>My Courses</h3>
+
+        </div>
+    </div>
+</section>
 {% endblock %}
