@@ -32,8 +32,22 @@
 
             {% for courses in my_courses %}
             <p>courses.module.title</p>
+            {% empty %}
+            <div class="empty-my-module-container d-flex flex-column justify-content-center align-items-center align-self-center">
+                <div class="empty-my-module-title">
+                    <strong>You haven't enrolled on any courses yet!</strong>
+                </div>
+                <div class="empty-my-module-info">
+                    You're currently not enrolled on any of our courses. Don't worry, once you've enrolled they will show up here.
+                </div>
+                <div class="empty-my-module-cta d-flex flex-column justify-content-center align-items-center">
+                    <div class="empty-my-module-cta--text">
+                        Get started by checking out our courses by clicking the link below?
+                    </div>
+                    <a class="empty-my-module-cta--button" href="{% url 'courses'%}"><i class="fas fa-graduation-cap"></i> Courses</a>
+                </div>
+            </div>
             {% endfor %}
-
         </div>
     </div>
 </section>
