@@ -8,14 +8,14 @@
 </div>
 <section class="sub-hero">
     <div class="row no-gutters">
-        <div class="col col-12 col-md-6">
+        <div class="col col-12 col-md-6 d-flex align-items-center">
             {% if user.is_authenticated %}
             <h2>Welcome, {{ user.display_name }}</h2>
             {% else %}
             <h2>Join the community today and make amazing happen!</h2>
             {% endif %}
         </div>
-        <div class="col col-12 col-md-6">
+        <div class="col col-12 col-md-6 d-flex align-items-center">
             Become a Patreon
         </div>
     </div>
