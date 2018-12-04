@@ -45,6 +45,9 @@ urlpatterns = [
     # CART
     url(r'^cart/', include('cart.urls')),
 
+    # CHECKOUT
+    url(r'^checkout/', include('checkout.urls')),
+
     # MEDIA
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
 
