@@ -65,12 +65,10 @@ def edit_post(request, id):
             return redirect(post_detail, post.pk)
     else:
         form = BlogPostForm(instance=post)
-        # form_title = Post.title
 
     args = {
         'form': form,
-        # 'form_title': form_title
-        'form_title': 'Edit Blog'
+        'form_title': 'Edit ' + post.title
     }
 
     return render(request, 'blog/blogpostform.html', args)

@@ -1,7 +1,7 @@
 {% extends "blog/blog.html" %}
 {% load bootstrap_tags %}
 {% load staticfiles %}
-{% block page_title %}Add/Edit a Post{% endblock page_title %}
+{% block page_title %}{{ form_title }} | Fullstack Blog | Fullstack{% endblock page_title %}
 {% block head_js %}
 <script src="{% static 'js/tinymce/tinymce.min.js' %}"></script>
 <script>
@@ -16,9 +16,9 @@
 {% endblock %}
 {% block blogs %}
     {% load bootstrap_tags %}
-    <div class="container-fluid blog-main-content-container">
+    <div class="blog-main-content-container">
         <div class="form-container">
-            <h2>{{ form_title }}</h2>
+            <h2 class="blog-post-form--title">{{ form_title }}</h2>
             <form method="POST" enctype="multipart/form-data" class="blog-post-form">
                 {% csrf_token %}
                 {{ form | as_bootstrap }}
