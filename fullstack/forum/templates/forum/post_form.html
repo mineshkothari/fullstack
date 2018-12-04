@@ -25,7 +25,7 @@
 {% block forum %}
 <section class="forum-section--main post-form--forum">
     <div class="">
-        <form method="POST" action="{{ form_action }}">
+        <form method="POST" action="{{ form_action }}" class="mk--forms post-form">
             {% csrf_token %}
             {{ form | as_bootstrap }}
             <div class="form-group">

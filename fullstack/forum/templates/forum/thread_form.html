@@ -25,7 +25,7 @@
 {% endblock %}
 {% block forum %}
 <section class="forum-section--main thread-form--forum">
-    <form method="POST" action="{% url 'new_thread' subject.id %}">
+    <form method="POST" action="{% url 'new_thread' subject.id %}" class="mk--forms thread-form">
         {% csrf_token %}
         <div class="mk--field-row">
             {{ thread_form | as_bootstrap }}

@@ -7956,6 +7956,29 @@ body {
   text-decoration: none;
 }
 
+.mk--forms input {
+  background: #f5f5f5;
+  padding: 1em;
+  line-height: 1.5;
+}
+
+.mk--forms .mce-tinymce.mce-container.mce-panel {
+  background: #f5f5f5;
+}
+
+.mk--forms .mce-panel {
+  background: #f5f5f5;
+}
+
+.mk--forms label.control-label {
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 1em 0;
+  font-size: 18px;
+  line-height: 1.75em;
+}
+
 .blog-post-form #div_id_title,
 .blog-post-form #div_id_content,
 .blog-post-form #div_id_tag,
@@ -7968,25 +7991,41 @@ body {
   box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.05);
 }
 
-.blog-post-form input {
-  background: #f5f5f5;
-  padding: 1em;
-  line-height: 1.5;
+.thread-form #div_id_name,
+.thread-form #div_id_is_a_poll,
+.thread-form #div_id_comment {
+  background: #fff;
+  margin: 2em 0;
+  padding: 2%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.05);
 }
 
-.blog-post-form .mce-tinymce.mce-container.mce-panel {
-  background: #f5f5f5;
+#poll_form {
+  background: #fff;
+  margin: 2em 0;
+  padding: 2%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.05);
 }
 
-.blog-post-form .mce-panel {
-  background: #f5f5f5;
+@media (min-width: 768px) {
+  #poll_form #div_id_form-0-name,
+  #poll_form #div_id_form-1-name,
+  #poll_form #div_id_form-2-name,
+  #poll_form #div_id_form-3-name {
+    width: 32.93%;
+    display: inline-block;
+  }
 }
 
-.blog-post-form label.control-label {
-  font-weight: 400;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 1em 0;
-  font-size: 18px;
-  line-height: 1.75em;
+.post-form--forum #div_id_comment {
+  background: #fff;
+  margin: 2em 0;
+  padding: 2%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.05);
 }

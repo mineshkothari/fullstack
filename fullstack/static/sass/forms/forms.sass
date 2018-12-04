@@ -1,15 +1,5 @@
-// BlogPostForm
-
-.blog-post-form
-  #div_id_title,
-  #div_id_content,
-  #div_id_tag,
-  #div_id_image
-    background: #fff
-    margin: 2em 0
-    padding: 2%
-    border-radius: 10px
-    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.05)
+// ALL FORMS
+.mk--forms
   input
     background: #f5f5f5
     padding: 1em
@@ -26,3 +16,53 @@
     font-size: 18px
     line-height: 1.75em
 
+// BLOG
+// BlogPostForm
+.blog-post-form
+  #div_id_title,
+  #div_id_content,
+  #div_id_tag,
+  #div_id_image
+    background: #fff
+    margin: 2em 0
+    padding: 2%
+    border-radius: 10px
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.05)
+
+// FORUM
+// ThreadForm
+.thread-form
+  #div_id_name,
+  #div_id_is_a_poll,
+  #div_id_comment
+    background: #fff
+    margin: 2em 0
+    padding: 2%
+    border-radius: 10px
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.05)
+
+// POLLS
+#poll_form
+  background: #fff
+  margin: 2em 0
+  padding: 2%
+  border-radius: 10px
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.05)
+
+@media (min-width: 768px)
+  #poll_form
+    #div_id_form-0-name,
+    #div_id_form-1-name,
+    #div_id_form-2-name,
+    #div_id_form-3-name
+      width: 32.93%
+      display: inline-block
+
+// PostForm
+.post-form--forum
+  #div_id_comment
+    background: #fff
+    margin: 2em 0
+    padding: 2%
+    border-radius: 10px
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.05)
