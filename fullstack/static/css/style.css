@@ -8021,7 +8021,7 @@ body {
   }
 }
 
-.post-form--forum #div_id_comment {
+.post-form #div_id_comment {
   background: #fff;
   margin: 2em 0;
   padding: 2%;
