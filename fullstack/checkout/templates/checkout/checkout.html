@@ -1,0 +1,51 @@
+{% extends 'home/base.html' %}
+{% load staticfiles %}
+{% load bootstrap_tags %}
+{% block page_title %}Fullstack Checkout | Learn Web Development | Minesh Kothari{% endblock page_title %}
+{% block head_js %}
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript">
+    //<![CDATA[
+    Stripe.publishableKey = '{{ publishable }}';
+    //]]>
+</script>
+
+{% endblock %}
+{% block head_css %}<link rel="stylesheet" href="{% static "css/pages/cart.css" %}">{% endblock head_css %}
+{% block body %}
+<div class="jumbotron text-center">
+    <h1 class="display-4"><span class="fullstack-brand rounded-right border border-left-0">Fullstack</span> Cart</h1>
+</div>
+<section class="sub-hero">
+    <div class="row no-gutters">
+        <div class="col col-12">
+            <h2>Proceed with checkout</h2>
+        </div>
+    </div>
+</section>
+<section class="cart-section--main">
+{#<p>checkout</p>#}
+    <div class="container">
+
+        <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
+            <legend>Payment Details</legend>
+            <div id="credit-card-errors" style="display:none">
+
+                <div class="alert-message block-message error" id="stripe-error-message"></div>
+            </div>
+
+            <div class="form-group col-md-6">
+                {{ payment_form|as_bootstrap }}
+            </div>
+
+            {% csrf_token %}
+            <div class="form-group col-md-12">
+                <input class="btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}
+{% block page_specific_js %}
+<script type="text/javascript" src="{% static 'js/fullstack/stripe.js' %}"></script>
+{% endblock %}
