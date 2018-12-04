@@ -15,7 +15,6 @@ stripe.api_key = settings.STRIPE_SECRET
 @login_required(login_url='/account/login/')
 def checkout(request):
     if request.method == 'POST':
-        # order_form = OrderForm(request.POST)    # NON-EDITABLE FORM (ONLY TO CAPTURE USER DATA)??
         payment_form = MakePaymentForm(request.POST)
 
         if payment_form.is_valid():
@@ -43,12 +42,15 @@ def checkout(request):
                     description=request.user.email,
                     card=payment_form.cleaned_data['stripe_id'],
                 )
+
                 if customer.paid:
+                    order.enrol()
                     order.is_ordered = True
                     order.save()
                     messages.success(request, 'You have successfully paid')
                     request.session['cart'] = {}
                     return redirect(reverse('profile'))
+
                 else:
                     messages.error(request, 'Unable to take payment')
 

@@ -12,6 +12,11 @@ class Order(models.Model):
     is_ordered = models.BooleanField(default=False)
     date_ordered = models.DateTimeField(auto_now=True)
 
+    def enrol(self):
+        for item in self.orderitem_set.all():
+            item.module.enrolled_users.add(self.user)
+            item.module.save()
+
     def __unicode__(self):
         return '{0}-{1}'.format(self.id, self.user)
 
