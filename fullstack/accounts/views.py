@@ -49,7 +49,7 @@ def profile(request):
 
     args = {
         'form': form,
-        # 'my_courses': Module.enrolled_users(instance=request.user),
+        'my_courses': Module.enrolled_users.all()
     }
 
     args.update(csrf(request))
