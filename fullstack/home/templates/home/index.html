@@ -50,7 +50,7 @@
         </div>
     </div>
     <div class="language-row-container--home row no-gutters">
-        {% for language in languages %}
+        {% for language in languages|slice:"3" %}
         <div class="col col-12 col-lg-4 language-col-container--home">
             <a href="{% url 'modules' language.id %}" class="language-link--home d-flex flex-row flex-sm-column justify-content-center align-items-center">
                 <div class="language-image-container--home">
