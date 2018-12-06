@@ -16,14 +16,14 @@
 {% endblock %}
 {% block forum_subtitle %}
     <div class="row no-gutters">
-        <h2>{{ subtitle }} {{ thread.name }}</h2>
-    </div>
-    <div class="row no-gutters">
         <a class="btn btn-subhero btn-subhero--forum" href="{% url 'forum' %}">All Forums</a>
     </div>
 {% endblock %}
 {% block forum %}
 <section class="forum-section--main post-form--forum">
+    <div class="row no-gutters">
+        <h2>{{ subtitle }} {{ thread.name }}</h2>
+    </div>
     <div class="">
         <form method="POST" action="{{ form_action }}" class="mk--forms post-form">
             {% csrf_token %}

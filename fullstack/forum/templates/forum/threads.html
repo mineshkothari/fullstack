@@ -3,9 +3,6 @@
 {% block page_title %}{{ subject.name }} Threads | Fullstack Forums | Learn Web Development{% endblock %}
 {% block forum_subtitle %}
     <div class="row no-gutters">
-        <h2>{{ subject.name }}</h2>
-    </div>
-    <div class="row no-gutters">
         <a class="btn btn-subhero btn-subhero--forum" href="{% url 'forum' %}">All Forums</a>
         {% if user.is_authenticated %}
         <a class="btn btn-subhero btn-subhero--forum" href="{% url 'new_thread' subject.id %}">New Thread</a>
@@ -14,6 +11,9 @@
 {% endblock %}
 {% block forum %}
 <section class="forum-section--main threads-list">
+    <div class="row no-gutters">
+        <h2>{{ subject.name }}</h2>
+    </div>
     {% for thread in subject.threads.all %}
     {% include "forum/thread_item.html" %}
     {% endfor %}
