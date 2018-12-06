@@ -27,24 +27,32 @@
         </div>
         <div class="col-12 col-md-6 col-xl-9 my-courses--accounts">
             <h3>My Courses</h3>
-            {% for module in my_courses %}
-                <p>{{ module.title }}</p>
-            {% empty %}
-            <div class="empty-my-module-container d-flex flex-column justify-content-center align-items-center">
-                <div class="empty-my-module-title">
-                    <strong>You haven't enrolled on any courses yet!</strong>
-                </div>
-                <div class="empty-my-module-info">
-                    You're currently not enrolled on any of our courses. Don't worry, once you've enrolled they will show up here.
-                </div>
-                <div class="empty-my-module-cta d-flex flex-column justify-content-center align-items-center">
-                    <div class="empty-my-module-cta--text">
-                        Get started by checking out our courses by clicking the link below?
+            <div class=".mk--row-module-list row">
+                {% for module in my_courses %}
+                <div class="mk--module-item-container col-12 col-xl-6">
+                    <div class="mk--module-item d-flex flex-column justify-content-center">
+                        <h3 class="module-item--title text-center">{{ module.title }}</h3>
+                        <div class="module-item--description mt-auto text-center">{% autoescape off %}{{ module.description }}{% endautoescape %}</div>
+                        <a class="text-center" href="{% url 'module_item' module.id %}">Go to course</a>
                     </div>
-                    <a class="empty-my-module-cta--button" href="{% url 'courses'%}"><i class="fas fa-graduation-cap"></i> Courses</a>
                 </div>
+                {% empty %}
+                <div class="empty-my-module-container d-flex flex-column justify-content-center align-items-center">
+                    <div class="empty-my-module-title">
+                        <strong>You haven't enrolled on any courses yet!</strong>
+                    </div>
+                    <div class="empty-my-module-info">
+                        You're currently not enrolled on any of our courses. Don't worry, once you've enrolled they will show up here.
+                    </div>
+                    <div class="empty-my-module-cta d-flex flex-column justify-content-center align-items-center">
+                        <div class="empty-my-module-cta--text">
+                            Get started by checking out our courses by clicking the link below?
+                        </div>
+                        <a class="empty-my-module-cta--button" href="{% url 'courses'%}"><i class="fas fa-graduation-cap"></i> Courses</a>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
 </section>
