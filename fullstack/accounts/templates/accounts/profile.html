@@ -26,12 +26,9 @@
             </div>
         </div>
         <div class="col-12 col-md-6 col-xl-9 my-courses--accounts">
-{#                <p><a href="#">Password reset link</a></p>#}
-
             <h3>My Courses</h3>
-
-            {% for courses in my_courses %}
-            <p>courses.module.title</p>
+            {% for module in my_courses %}
+                <p>{{ module.title }}</p>
             {% empty %}
             <div class="empty-my-module-container d-flex flex-column justify-content-center align-items-center">
                 <div class="empty-my-module-title">
