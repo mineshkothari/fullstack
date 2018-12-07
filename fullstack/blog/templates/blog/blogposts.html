@@ -5,9 +5,9 @@
         <div class="container">
             <div class="row post-container no-gutters d-flex align-items-center">
                 <div class="col-md-3 text-center post-image-container">
-                    <a class="story-img" href="#">
+                    <a class="story-img" href="{% url 'post_detail' post.id %}">
                         {% if post.image %}
-                            <img class="post-thumbnail" src="/media/{{ post.image }}">
+                            <img class="post-thumbnail" src="/media/{{ post.image }}" alt="{{ post.title }}">
                         {% endif %}
                     </a>
                 </div>
