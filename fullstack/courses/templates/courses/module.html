@@ -6,6 +6,8 @@
         <div class="module-item--description">{% autoescape off %}{{ module.description }}{% endautoescape %}</div>
         {% if module in my_courses %}
             <a class="enrol-btn text-center" href="{% url 'module_item' module.id %}"><i class="fas fa-code"></i> Go to course</a>
+        {% elif module in cart_items %}
+            <p>go to cart</p>
         {% else %}
         <form class="mt-auto" method="post" action="{% url 'add_to_cart' module.id %}">
             {% csrf_token %}
