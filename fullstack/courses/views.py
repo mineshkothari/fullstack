@@ -16,7 +16,13 @@ def courses(request):
 
 def modules(request, language_id):
     language = get_object_or_404(Language, pk=language_id)
-    return render(request, 'courses/modules.html', {'language': language})
+
+    args = {
+        'my_courses': request.user.module_set.all(),
+        'language': language
+    }
+
+    return render(request, 'courses/modules.html', args)
 
 
 @login_required(login_url='/account/login/')
