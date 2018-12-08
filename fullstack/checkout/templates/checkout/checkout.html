@@ -13,7 +13,7 @@
 {% block head_css %}<link rel="stylesheet" href="{% static "css/pages/checkout.css" %}">{% endblock head_css %}
 {% block body %}
 <div class="jumbotron text-center">
-    <h1 class="display-4"><span class="fullstack-brand rounded-right border border-left-0">Fullstack</span> Cart</h1>
+    <h1 class="display-4"><span class="fullstack-brand rounded-right border border-left-0">Fullstack</span> Checkout</h1>
 </div>
 <section class="sub-hero">
     <div class="row no-gutters">
@@ -22,21 +22,27 @@
         </div>
     </div>
 </section>
-<section class="cart-section--main">
-    <div class="row no-gutters">
-        <div class="col-12 col-md-6">
-        {% for item in cart_items %}
-        <div class="row no-gutters cart-items--row d-flex align-items-center">
-            <div class="col-12 col-md-8 cart-items--col">
-                <div class="cart-items--title">{{ item.module.title }}</div>
+<section class="checkout-section--main">
+    <div class="row no-gutters checkout-section--row">
+        <div class="col-12 col-md-6 cart-list--col">
+            <h3 class="cart-item-list-title">Cart Items</h3>
+            {% for item in cart_items %}
+            <div class="row no-gutters cart-items--row d-flex align-items-center">
+                <div class="col-12 col-sm-8 cart-items--col">
+                    <div class="cart-items--title text-center text-sm-left">{{ item.module.title }}</div>
+                </div>
+                <div class="col-12 col-sm-4 cart-items--col d-flex align-items-center justify-content-center justify-content-sm-end">
+                    <p>£ {{ item.module.price }}</p>
+                </div>
             </div>
-            <div class="col-12 col-md-4 cart-items--col d-flex align-items-center justify-content-end">
-                <p>£ {{ item.module.price }}</p>
+            {% endfor %}
+            <div class="row no-gutters cart-total--row">
+                <div class="col-12 cart-total--col d-flex justify-content-center justify-content-sm-end align-items-center">
+                    <p class="cart-items--total"><strong>Total</strong> <span>£{{ total }}</span></p>
+                </div>
             </div>
         </div>
-        {% endfor %}
-        </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 payment-col">
             <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
                 <legend>Payment Details</legend>
                 <div id="credit-card-errors" style="display:none">
