@@ -5,7 +5,7 @@
         <p class="module-item--release">Released: {{ module.created_at|date:"D d M Y" }}</p>
         <div class="module-item--description">{% autoescape off %}{{ module.description }}{% endautoescape %}</div>
         {% if module in my_courses %}
-            <a class="enrol-btn text-center" href="{% url 'module_item' module.id %}"><i class="fas fa-code"></i> Go to course</a>
+            <a class="go-to-course-btn text-center" href="{% url 'module_item' module.id %}"><i class="fas fa-code"></i> Go to course</a>
         {% elif module in cart_items %}
             <p>go to cart</p>
         {% else %}
