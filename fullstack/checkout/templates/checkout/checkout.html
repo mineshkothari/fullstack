@@ -24,7 +24,7 @@
 </section>
 <section class="checkout-section--main">
     <div class="row no-gutters checkout-section--row">
-        <div class="col-12 col-md-6 cart-list--col">
+        <div class="col-12 col-md-6 checkout-section-col cart-list--col">
             <h3 class="cart-item-list-title">Cart Items</h3>
             {% for item in cart_items %}
             <div class="row no-gutters cart-items--row d-flex align-items-center">
@@ -42,19 +42,19 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-6 payment-col">
-            <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
-                <legend>Payment Details</legend>
-                <div id="credit-card-errors" style="display:none">
-                    <div class="alert-message block-message error" id="stripe-error-message"></div>
-                </div>
+        <div class="col-12 col-md-6 checkout-section-col payment-col">
+            <form role="form" method="post" id="payment-form" class="payment-form" action="{% url 'checkout' %}">
+                <legend class="payment-form--legend">Payment Details</legend>
                 <div class="form-group">
                     {{ payment_form|as_bootstrap }}
                 </div>
-                {% csrf_token %}
-                <div class="form-group col-md-12">
-                    <input class="btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
+                <div id="credit-card-errors" style="display:none">
+                    <div class="alert-message block-message error" id="stripe-error-message"></div>
                 </div>
+                {% csrf_token %}
+                <button type="submit" class="payment-button"><i class="fas fa-credit-card"></i> Make Payment</button>
+{#                <input class="payment-button" id="submit_payment_btn" name="commit" type="submit" value="Make Payment" />#}
+
             </form>
         </div>
     </div>
