@@ -98,6 +98,7 @@
   letter-spacing: .5px;
   font-weight: 800;
   margin-bottom: 1em;
+  min-height: 70px;
 }
 
 .module-item--price {
@@ -126,20 +127,6 @@
 
 .module-item--description p {
   margin-bottom: 0;
-}
-
-.enrol-btn {
-  background-color: #0cd29a;
-  color: #f2f2f2;
-  font-size: 1.25em;
-  font-weight: 400;
-  border: .5px solid #0cd29a;
-  padding: .5em 1em;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  -webkit-box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
 }
 
 .module-item--container {
