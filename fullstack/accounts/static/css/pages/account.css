@@ -31,6 +31,10 @@
   font-weight: 200;
 }
 
+.manage-account-form {
+  background: #404854;
+}
+
 .form-container {
   padding: 3em;
   max-width: 500px;
@@ -118,7 +122,29 @@ input:-webkit-autofill {
 }
 
 .my-courses--accounts {
-  padding: 4% !important;
+  padding: 8% 4% !important;
+}
+
+.my-courses--title {
+  margin-bottom: 2em;
+}
+
+.mk--module-item-container {
+  padding: 0 0 1em 0;
+}
+
+.mk--module-item {
+  padding: 8%;
+  background: #ffffff;
+  color: #63636E;
+}
+
+.module-item--title {
+  padding-bottom: 1em;
+}
+
+.module-item--description {
+  padding-bottom: 1em;
 }
 
 .empty-my-module-container {
@@ -185,6 +211,21 @@ input:-webkit-autofill {
   transform: translateY(-4px);
   -webkit-box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6);
   box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 1200px) {
+  .mk--module-item-container {
+    padding: 1em !important;
+  }
+  .mk--module-item {
+    height: 100%;
+  }
+  .module-item--title {
+    padding-bottom: 1em;
+  }
+  .module-item--description {
+    padding-bottom: 1em;
+  }
 }
 
 .form-container .alert-danger {

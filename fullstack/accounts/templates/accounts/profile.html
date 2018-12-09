@@ -26,14 +26,14 @@
             </div>
         </div>
         <div class="col-12 col-md-6 col-xl-9 my-courses--accounts">
-            <h3>My Courses</h3>
-            <div class=".mk--row-module-list row">
+            <h3 class="my-courses--title">My Courses</h3>
+            <div class="row no-gutters">
                 {% for module in my_courses %}
                 <div class="mk--module-item-container col-12 col-xl-6">
-                    <div class="mk--module-item d-flex flex-column justify-content-center">
-                        <h3 class="module-item--title text-center">{{ module.title }}</h3>
+                    <div class="mk--module-item d-flex flex-column align-items-center justify-content-center">
+                        <h4 class="module-item--title text-center">{{ module.title }}</h4>
                         <div class="module-item--description mt-auto text-center">{% autoescape off %}{{ module.description }}{% endautoescape %}</div>
-                        <a class="text-center" href="{% url 'module_item' module.id %}">Go to course</a>
+                        <a class="go-to-course-btn text-center" href="{% url 'module_item' module.id %}"><i class="fas fa-code"></i> Go to course</a>
                     </div>
                 </div>
                 {% empty %}
