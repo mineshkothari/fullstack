@@ -32,8 +32,10 @@
                 <div class="mk--module-item-container col-12 col-xl-6">
                     <div class="mk--module-item d-flex flex-column align-items-center justify-content-center">
                         <h4 class="module-item--title text-center">{{ module.title }}</h4>
-                        <div class="module-item--description mt-auto text-center">{% autoescape off %}{{ module.description }}{% endautoescape %}</div>
-                        <a class="go-to-course-btn text-center" href="{% url 'module_item' module.id %}"><i class="fas fa-code"></i> Go to course</a>
+                        <div class="module-item--description mt-auto text-center d-xl-none">{% autoescape off %}{{ module.description }}{% endautoescape %}</div>
+                        <a class="go-to-course-btn text-center d-xl-none" href="{% url 'module_item' module.id %}"><i class="fas fa-code"></i> Go to course</a>
+                        <a class="mk--module-hover d-none d-xl-block" href="{% url 'module_item' module.id %}"></a>
+                        <div class="xl-module-item--description text-center d-none d-xl-block">{% autoescape off %}{{ module.description }}{% endautoescape %}</div>
                     </div>
                 </div>
                 {% empty %}
