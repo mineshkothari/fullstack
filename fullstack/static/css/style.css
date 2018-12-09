@@ -7669,8 +7669,12 @@ nav .active a {
 }
 
 @media (max-width: 768px) {
-  .navbar-collapse.collapse.show li.nav-item {
+  #mainNavBar li.nav-item {
     padding-left: 1em;
+    text-align: center;
+  }
+  #mainNavBar li.nav-item a {
+    padding: 1em 0;
   }
 }
 
