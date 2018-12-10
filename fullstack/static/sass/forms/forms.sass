@@ -1,68 +1,119 @@
+//// ALL FORMS
+//.mk--forms
+//  input
+//    background: #f5f5f5
+//    padding: 1em
+//    line-height: 1.5
+//  .mce-tinymce.mce-container.mce-panel
+//    background: #f5f5f5
+//  .mce-panel
+//    background: #f5f5f5
+//  label.control-label
+//    font-weight: 400
+//    letter-spacing: 1px
+//    text-transform: uppercase
+//    padding: 1em 0
+//    font-size: 18px
+//    line-height: 1.75em
+//
+//// BLOG
+//// BlogPostForm
+//.blog-post-form
+//  #div_id_title,
+//  #div_id_content,
+//  #div_id_tag,
+//  #div_id_image
+//    background: #fff
+//    margin: 2em 0
+//    padding: 2%
+//    border-radius: 10px
+//    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.05)
+//
+//// FORUM
+//// ThreadForm
+//.thread-form
+//  #div_id_name,
+//  #div_id_is_a_poll,
+//  #div_id_comment
+//    background: #fff
+//    margin: 2em 0
+//    padding: 2%
+//    border-radius: 10px
+//    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.05)
+//
+//// POLLS
+//#poll_form
+//  background: #fff
+//  margin: 2em 0
+//  padding: 2%
+//  border-radius: 10px
+//  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.05)
+//
+//@media (min-width: 768px)
+//  #poll_form
+//    #div_id_form-0-name,
+//    #div_id_form-1-name,
+//    #div_id_form-2-name,
+//    #div_id_form-3-name
+//      width: 32.93%
+//      display: inline-block
+//
+//// PostForm
+//.post-form
+//  #div_id_comment
+//    background: #fff
+//    margin: 2em 0
+//    padding: 2%
+//    border-radius: 10px
+//    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.05)
+
 // ALL FORMS
 .mk--forms
-  input
-    background: #f5f5f5
+  .form-control
     padding: 1em
-    line-height: 1.5
-  .mce-tinymce.mce-container.mce-panel
-    background: #f5f5f5
-  .mce-panel
-    background: #f5f5f5
-  label.control-label
-    font-weight: 400
-    letter-spacing: 1px
-    text-transform: uppercase
-    padding: 1em 0
-    font-size: 18px
-    line-height: 1.75em
-
-// BLOG
-// BlogPostForm
-.blog-post-form
-  #div_id_title,
-  #div_id_content,
-  #div_id_tag,
-  #div_id_image
     background: #fff
-    margin: 2em 0
-    padding: 2%
-    border-radius: 10px
-    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.05)
+    border-top: 2px solid #fff
+    border-left: 2px solid #fff
+    border-right: 2px solid #fff
+    border-bottom: 2px solid #fff
+    border-radius: 0
+    color: #63636E
+    transition: all 350ms ease-in-out
+    &:focus
+      -webkit-box-shadow: none
+      box-shadow: none
+      border: 2px solid #fff
+  select
+    height: auto !important
 
-// FORUM
-// ThreadForm
-.thread-form
-  #div_id_name,
-  #div_id_is_a_poll,
-  #div_id_comment
-    background: #fff
-    margin: 2em 0
-    padding: 2%
-    border-radius: 10px
-    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.05)
+// PAYMENT FORM SECTION
+.payment-form--legend
+  margin: 1em 0
+  font-size: 2rem
+  font-weight: 300
 
-// POLLS
-#poll_form
-  background: #fff
-  margin: 2em 0
-  padding: 2%
-  border-radius: 10px
-  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.05)
+.payment-form
+  position: relative
+  .form-control
+    border-bottom: 2px solid #0cd29a
+    &:focus
+      border: 2px solid #0cd29a
 
-@media (min-width: 768px)
-  #poll_form
-    #div_id_form-0-name,
-    #div_id_form-1-name,
-    #div_id_form-2-name,
-    #div_id_form-3-name
-      width: 32.93%
-      display: inline-block
+#credit-card-errors
+  position: absolute
+  width: 100%
+  .alert-message.block-message.error
+    padding: .5em 2.5em
+    color: #ff0000
+    border: 1px solid
+    text-align: center
+    background: #ffffff
 
-// PostForm
-.post-form
-  #div_id_comment
-    background: #fff
-    margin: 2em 0
-    padding: 2%
-    border-radius: 10px
-    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.05)
+.courses--new-module,
+.courses--new-lang
+  .form-control
+      border-bottom: 2px solid #0cd29a
+      &:focus
+        border: 2px solid #0cd29a
+
+

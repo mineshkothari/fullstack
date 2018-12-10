@@ -43,7 +43,7 @@
             </div>
         </div>
         <div class="col-12 col-md-6 checkout-section-col payment-col">
-            <form role="form" method="post" id="payment-form" class="payment-form" action="{% url 'checkout' %}">
+            <form role="form" method="post" id="payment-form" class="mk--forms payment-form" action="{% url 'checkout' %}">
                 <legend class="payment-form--legend">Payment Details</legend>
                 <div class="form-group">
                     {{ payment_form|as_bootstrap }}
