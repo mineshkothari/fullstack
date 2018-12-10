@@ -1,30 +1,29 @@
 {% extends "courses/courses.html" %}
 {% load thread_extras %}
 {% block page_title %}{{ language.title }} Courses | Learn Web Development{% endblock %}
-{% block courses_subtitle %}
-    <h2>{{ language.title }} Courses</h2>
-{% endblock %}
+{% block courses_subtitle %}<h2>{{ language.title }} Courses</h2>{% endblock %}
 {% block courses %}
-    <section class="courses-section--main">
-        <div class="mk--row-module-list row no-gutters">
-            {% for module in language.modules.all %}
-            {% include "courses/module.html" %}
-            {% empty %}
-            <div class="empty-module-container d-flex flex-column justify-content-center align-items-center">
-                <div class="empty-module-title">
-                    <strong>Well, isn't this is embarrassing!</strong>
-                </div>
-                <div class="empty-module-info">
-                    We don't have any courses here at the moment. But please do come back soon for some really cool awesomeness.
-                </div>
-                <div class="empty-module-cta d-flex flex-column justify-content-center align-items-center">
-                    <div class="empty-module-cta--text">
-                        In the meantime, why not check out our other courses by clicking the link below?
-                    </div>
-                    <a class="empty-module-cta--button" href="{% url 'courses'%}"><i class="fas fa-graduation-cap"></i> More Courses</a>
-                </div>
+<section class="courses-section--main">
+    <div class="mk--row-module-list row no-gutters">
+{#            {% for module in language.modules.all %}#}
+        {% for module in module %}
+        {% include "courses/module.html" %}
+        {% empty %}
+        <div class="empty-module-container d-flex flex-column justify-content-center align-items-center">
+            <div class="empty-module-title">
+                <strong>Well, isn't this is embarrassing!</strong>
             </div>
-            {% endfor %}
+            <div class="empty-module-info">
+                We don't have any courses here at the moment. But please do come back soon for some really cool awesomeness.
+            </div>
+            <div class="empty-module-cta d-flex flex-column justify-content-center align-items-center">
+                <div class="empty-module-cta--text">
+                    In the meantime, why not check out our other courses by clicking the link below?
+                </div>
+                <a class="empty-module-cta--button" href="{% url 'courses'%}"><i class="fas fa-graduation-cap"></i> More Courses</a>
+            </div>
         </div>
-    </section>
+        {% endfor %}
+    </div>
+</section>
 {% endblock %}

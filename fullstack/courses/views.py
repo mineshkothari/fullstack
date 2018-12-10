@@ -16,10 +16,13 @@ def courses(request):
 
 def modules(request, language_id):
     language = get_object_or_404(Language, pk=language_id)
+    module = Module.objects.filter(release_date__lte=timezone.now()
+                                   ).order_by('-release_date')
 
     args = {
         'my_courses': request.user.module_set.all(),
-        'language': language
+        'language': language,
+        'module': module
     }
 
     return render(request, 'courses/modules.html', args)
@@ -28,7 +31,12 @@ def modules(request, language_id):
 @login_required(login_url='/account/login/')
 def module_item(request, module_id):
     module = get_object_or_404(Module, pk=module_id)
-    return render(request, 'courses/module_item.html', {'module': module})
+
+    if module in request.user.module_set.all():
+        return render(request, 'courses/module_item.html', {'module': module})
+
+    else:
+        return redirect(reverse('courses'))
 
 
 @login_required(login_url='/account/login/')

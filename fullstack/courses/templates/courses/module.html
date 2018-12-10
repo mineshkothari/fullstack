@@ -2,11 +2,11 @@
     <div class="mk--module-item d-flex flex-column justify-content-center align-items-center">
         <h3 class="module-item--title text-center">{{ module.title }}</h3>
         <p class="module-item--price"><span>£</span>{{ module.price }}</p>
-        <p class="module-item--release">Released: {{ module.created_at|date:"D d M Y" }}</p>
+        <p class="module-item--release">Released: {{ module.release_date|date:"D d M Y" }}</p>
         <div class="module-item--description">{% autoescape off %}{{ module.description }}{% endautoescape %}</div>
         {% if module in my_courses %}
             <a class="go-to-course-btn text-center mt-auto" href="{% url 'module_item' module.id %}"><i class="fas fa-code"></i> Go to course</a>
-        {% elif module in cart_items %}
+        {% elif module in cart %}
             <p>go to cart</p>
         {% else %}
         <form class="mt-auto" method="post" action="{% url 'add_to_cart' module.id %}">
