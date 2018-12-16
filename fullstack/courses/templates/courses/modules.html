@@ -5,8 +5,8 @@
 {% block courses %}
 <section class="courses-section--main">
     <div class="mk--row-module-list row no-gutters">
-{#            {% for module in language.modules.all %}#}
-        {% for module in module %}
+{#        {% for module in language.modules.all %}#}
+        {% for module in modules %}
         {% include "courses/module.html" %}
         {% empty %}
         <div class="empty-module-container d-flex flex-column justify-content-center align-items-center">

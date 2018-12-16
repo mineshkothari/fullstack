@@ -5,9 +5,9 @@
         <p class="module-item--release">Released: {{ module.release_date|date:"D d M Y" }}</p>
         <div class="module-item--description">{% autoescape off %}{{ module.description }}{% endautoescape %}</div>
         {% if module in my_courses %}
-            <a class="go-to-course-btn text-center mt-auto" href="{% url 'module_item' module.id %}"><i class="fas fa-code"></i> Go to course</a>
-        {% elif module in cart %}
-            <p>go to cart</p>
+        <a class="go-to-course-btn text-center mt-auto" href="{% url 'module_item' module.id %}"><i class="fas fa-code"></i> Go to course</a>
+        {% elif module in cart_items %}
+        <a class="go-to-course-btn text-center mt-auto" href="{% url 'view_cart' %}"><i class="fas fa-code"></i> Go to cart</a>
         {% else %}
         <form class="mt-auto" method="post" action="{% url 'add_to_cart' module.id %}">
             {% csrf_token %}
