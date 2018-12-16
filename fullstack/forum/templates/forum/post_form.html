@@ -21,17 +21,15 @@
 {% endblock %}
 {% block forum %}
 <section class="forum-section--main post-form--forum">
-    <div class="row no-gutters">
+    <div class="forum-section--title row no-gutters">
         <h2>{{ subtitle }} {{ thread.name }}</h2>
     </div>
-    <div class="">
-        <form method="POST" action="{{ form_action }}" class="mk--forms post-form">
-            {% csrf_token %}
-            {{ form | as_bootstrap }}
-            <div class="form-group">
-                <button type="submit" class="btn admin-btn">{{ button_text }}</button>
-            </div>
-        </form>
-    </div>
+    <form method="POST" action="{{ form_action }}" class="mk--forms post-form">
+        {% csrf_token %}
+        {{ form | as_bootstrap }}
+        <div class="form-group">
+            <button type="submit" class="btn admin-btn">{{ button_text }}</button>
+        </div>
+    </form>
 </section>
 {% endblock %}

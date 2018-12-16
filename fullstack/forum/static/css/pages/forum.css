@@ -255,3 +255,7 @@
     padding: 1em !important;
   }
 }
+
+.forum-section--title {
+  padding-bottom: 8%;
+}
