@@ -7,10 +7,11 @@
 <section class="forum-section--main subject-list">
     {% for subject in subjects %}
     <a href="{% url 'threads' subject.id %}" class="mk--row-item subject-item row no-gutters">
-        <div class="mk--col-item subject-title-col col-12 col-md-4 d-flex justify-content-center justify-content-md-start align-items-center">
-            <h3 class="mk--item-title subject-title">{{ subject.name }}</h3>
+        <div class="mk--col-item subject-icon col-12 col-md-2 d-flex justify-content-center align-items-center">
+            <i class="far fa-folder-open fa-3x"></i>
         </div>
-        <div class="mk--col-item subject-desc-col col-12 col-md-5 d-flex justify-content-center justify-content-md-start align-items-center">
+        <div class="mk--col-item subject-title-col col-12 col-md-7 d-flex flex-column justify-content-center text-center text-md-left justify-content-md-start">
+            <h3 class="mk--item-title subject-title">{{ subject.name }}</h3>
             <div class="subject-desc">{% autoescape off %}{{ subject.description }}{% endautoescape %}</div>
         </div>
         <div class="mk--col-item activity-counter col-12 col-md-3 d-flex flex-column justify-content-center align-items-center align-items-md-end">

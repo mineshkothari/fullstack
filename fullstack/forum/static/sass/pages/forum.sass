@@ -29,11 +29,11 @@
   margin: 2em auto
   padding: 1em
   max-width: 960px
-  border-radius: 10px
-  border: .5px solid rgba(0,0,0,0.08)
+  border-bottom: 2px solid #0cd29a
   box-shadow: 0 10px 40px -25px rgba(0,0,0,0.25)
   transition: all 350ms ease-in-out
-  color: #aaaaa3
+  color: #63636E
+  background: #FFFFFF
   &:hover
     text-decoration: none
     color: #63636E
@@ -46,11 +46,7 @@
 
 .mk--item-title
   margin-bottom: 0
-  &::before
-    font-family: 'Font Awesome 5 Free'
-    font-weight: 400
-    font-size: 150%
-    margin-right: .35em
+  font-size: 2rem
 
 .mk--field-row
   margin: 2em auto
@@ -59,18 +55,12 @@
 
 // ITEM TITLE STYLE
 .subject-title
-  &::before
-    content: '\f07c'
-
-.thread-title
-  &::before
-    content: '\f15b'
+  margin-bottom: .75em
 
 // ACTIVITY COUNTER
 .activity-counter
   text-transform: uppercase
   letter-spacing: 1px
-  //color: #63636E
   font-size: 12px
   span
     font-weight: 800
@@ -82,6 +72,8 @@
 
 .subject-desc p
   margin-bottom: 0
+  font-size: 14px
+  font-style: italic
 
 // THREADS
 .threads-list
