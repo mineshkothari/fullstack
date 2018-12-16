@@ -29,13 +29,13 @@
   -webkit-transition: all 350ms ease-in-out;
   -o-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
-  color: #aaaaa3;
+  color: #63636E;
+  background: #FFFFFF;
 }
 
 .mk--row-item:hover {
-  text-decoration: none;
   color: #63636E;
-  background: #FFFFFF;
+  text-decoration: none;
   -webkit-box-shadow: 0 40px 60px -25px rgba(0, 0, 0, 0.3);
   box-shadow: 0 40px 60px -25px rgba(0, 0, 0, 0.3);
   -webkit-transform: translateY(-4px);
@@ -80,13 +80,13 @@
   -webkit-transition: all 350ms ease-in-out;
   -o-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
-  color: #aaaaa3;
+  color: #63636E;
+  background: #FFFFFF;
 }
 
 .mk--module-item:hover {
   text-decoration: none;
   color: #63636E;
-  background: #FFFFFF;
   -webkit-box-shadow: 0 40px 60px -25px rgba(0, 0, 0, 0.3);
   box-shadow: 0 40px 60px -25px rgba(0, 0, 0, 0.3);
   -webkit-transform: translateY(-4px);
