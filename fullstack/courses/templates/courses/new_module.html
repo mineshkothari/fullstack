@@ -22,7 +22,7 @@
     <section class="courses-section--main">
         <div class="row no-gutters d-flex flex-column">
             <div class="container">
-                <form class="mk--forms courses--new-module" method="POST" action="{% url 'courses' %}">
+                <form class="mk--forms courses--new-module" method="POST">
                     {% csrf_token %}
                     {{ form | as_bootstrap }}
                     <button type="submit" class="btn admin-btn">Save</button>
