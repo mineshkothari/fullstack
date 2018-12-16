@@ -26,13 +26,13 @@
     <div class="row no-gutters checkout-section--row">
         <div class="col-12 col-md-6 checkout-section-col cart-list--col">
             <h3 class="cart-item-list-title">Cart Items</h3>
-            {% for item in cart_items %}
+            {% for module in cart_items %}
             <div class="row no-gutters cart-items--row d-flex align-items-center">
                 <div class="col-12 col-sm-8 cart-items--col">
-                    <div class="cart-items--title text-center text-sm-left">{{ item.module.title }}</div>
+                    <div class="cart-items--title text-center text-sm-left">{{ module.title }}</div>
                 </div>
                 <div class="col-12 col-sm-4 cart-items--col d-flex align-items-center justify-content-center justify-content-sm-end">
-                    <p>£ {{ item.module.price }}</p>
+                    <p>£ {{ module.price }}</p>
                 </div>
             </div>
             {% endfor %}
@@ -53,8 +53,6 @@
                 </div>
                 {% csrf_token %}
                 <button type="submit" class="payment-button"><i class="fas fa-credit-card"></i> Make Payment</button>
-{#                <input class="payment-button" id="submit_payment_btn" name="commit" type="submit" value="Make Payment" />#}
-
             </form>
         </div>
     </div>
