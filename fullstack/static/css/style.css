@@ -7965,7 +7965,7 @@ nav .active a {
   border-top: 2px solid #fff;
   border-left: 2px solid #fff;
   border-right: 2px solid #fff;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #0cd29a;
   border-radius: 0;
   color: #63636E;
   -webkit-transition: all 350ms ease-in-out;
@@ -7976,7 +7976,7 @@ nav .active a {
 .mk--forms .form-control:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
-  border: 2px solid #fff;
+  border: 2px solid #0cd29a;
 }
 
 .mk--forms select {
@@ -7993,14 +7993,6 @@ nav .active a {
   position: relative;
 }
 
-.payment-form .form-control {
-  border-bottom: 2px solid #0cd29a;
-}
-
-.payment-form .form-control:focus {
-  border: 2px solid #0cd29a;
-}
-
 #credit-card-errors {
   position: absolute;
   width: 100%;
@@ -8014,14 +8006,19 @@ nav .active a {
   background: #ffffff;
 }
 
-.courses--new-module .form-control,
-.courses--new-lang .form-control {
-  border-bottom: 2px solid #0cd29a;
+#poll_form {
+  margin: 2em 0;
+  padding: 2%;
 }
 
-.courses--new-module .form-control:focus,
-.courses--new-lang .form-control:focus {
-  border: 2px solid #0cd29a;
+@media (min-width: 768px) {
+  #poll_form #div_id_form-0-name,
+  #poll_form #div_id_form-1-name,
+  #poll_form #div_id_form-2-name,
+  #poll_form #div_id_form-3-name {
+    width: 32.93%;
+    display: inline-block;
+  }
 }
 
 * {
