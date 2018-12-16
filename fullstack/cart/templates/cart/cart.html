@@ -17,17 +17,17 @@
 </section>
 <section class="cart-section--main">
     <div class="container">
-        {% for item in cart_items %}
+        {% for module in cart_items %}
         <div class="row no-gutters cart-items--row d-flex align-items-center">
             <div class="col-12 col-md-4 cart-items--col">
-                <div class="cart-items--title">{{ item.module.title }}</div>
+                <div class="cart-items--title">{{ module.title }}</div>
 {#                <p class="cart-items--remove"><a href="{% url 'remove_from_cart' module.id %}">remove</a></p>#}
             </div>
             <div class="col-12 col-md-6 cart-items--col d-flex align-items-center">
-                <div>{% autoescape off %}{{ item.module.description|truncatewords:10 }}{% endautoescape %}</div>
+                <div>{% autoescape off %}{{ module.description|truncatewords:10 }}{% endautoescape %}</div>
             </div>
             <div class="col-12 col-md-2 cart-items--col d-flex align-items-center justify-content-end">
-                <p>£ {{ item.module.price }}</p>
+                <p>£ {{ module.price }}</p>
             </div>
         </div>
         {% empty %}

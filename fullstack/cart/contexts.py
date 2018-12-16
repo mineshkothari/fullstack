@@ -8,13 +8,13 @@ def cart_contents(request):
     """
 
     cart = request.session.get('cart', {})
-    
-    cart_items = []
+
+    cart_items = set()
     total = 0
 
     for module_id in cart.keys():
         module = get_object_or_404(Module, pk=module_id)
         total += module.price
-        cart_items.append({'id': module_id, 'module': module})
+        cart_items.add(module)
 
     return {'cart_items': cart_items, 'total': total}
