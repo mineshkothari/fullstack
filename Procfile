@@ -1,1 +1,1 @@
-web: gunicorn fullstack.fullstack.wsgi:application
+web: cd fullstack && gunicorn fullstack.wsgi:application
