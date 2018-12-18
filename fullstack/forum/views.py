@@ -173,5 +173,3 @@ def thread_vote(request, thread_id, subject_id):
     messages.success(request, "We've registered your vote!")
 
     return redirect(reverse('thread', args={thread_id}))
-
-
