@@ -1,0 +1,175 @@
+.jumbotron {
+  background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6))), url("https://source.unsplash.com/collection/3320800/");
+  background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("https://source.unsplash.com/collection/3320800/");
+  background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("https://source.unsplash.com/collection/3320800/");
+  background: linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("https://source.unsplash.com/collection/3320800/");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #dee2e6;
+}
+
+.fullstack-brand {
+  color: #0cd29a;
+  border-color: #0cd29a !important;
+}
+
+.btn-subhero--cart {
+  display: inline-block;
+  color: #0cd29a;
+}
+
+.btn-subhero--cart:hover {
+  color: #FFFFFF;
+}
+
+.cart-section--main {
+  padding: 8% 1em;
+}
+
+.cart-items--row {
+  margin: 2em auto;
+  padding: 2em;
+  background: #FFFFFF;
+  border: 0.5px solid rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 10px 40px -25px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 40px -25px rgba(0, 0, 0, 0.25);
+  color: #63636E;
+}
+
+.cart-items--row p {
+  margin-bottom: 0;
+}
+
+.cart-items--col {
+  padding: 1em !important;
+}
+
+.cart-items--title {
+  font-size: 1.5em;
+}
+
+.cart-items--remove {
+  font-size: 14px;
+  font-style: italic;
+  color: #aaaaa3;
+}
+
+.cart-total--row {
+  margin: 2em auto;
+  padding: 2em;
+  background: white;
+  border-top: 1px solid #0cd29a;
+  border-bottom: 1px solid #0cd29a;
+  -webkit-box-shadow: 0 10px 40px -25px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 40px -25px rgba(0, 0, 0, 0.25);
+  color: #63636E;
+}
+
+.cart-total--row p {
+  margin-bottom: 0;
+}
+
+.cart-total--col {
+  padding: 1em 0 !important;
+}
+
+.cart-items--total {
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-size: 1.25em;
+}
+
+.cart-items--total span {
+  margin-left: 1em;
+}
+
+.cart-items--pay {
+  background-color: #0cd29a;
+  color: #f2f2f2;
+  font-size: 1.25em;
+  font-weight: 400;
+  border: .5px solid #0cd29a;
+  padding: .5em 1em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-transition: all 350ms ease-in-out;
+  -o-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.cart-items--pay:hover {
+  text-decoration: none;
+  color: #F2F2F2;
+  -webkit-box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6);
+  -webkit-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  transform: translateY(-4px);
+}
+
+.empty-cart-container {
+  background: #FFFFFF;
+  padding: 2em;
+  margin: 2em auto;
+  color: #63636E;
+  max-width: 960px;
+  text-align: center;
+  border: 0.5px solid rgba(12, 210, 154, 0.15);
+  border-radius: 10px;
+  -webkit-box-shadow: 0 15px 38px -12px rgba(12, 210, 154, 0.095);
+  box-shadow: 0 15px 38px -12px rgba(12, 210, 154, 0.095);
+}
+
+.empty-cart-container .empty-cart-title {
+  position: relative;
+  font-size: 1.25em;
+}
+
+.empty-cart-container .empty-cart-title::after {
+  position: absolute;
+  content: '';
+  background: #0cd29a;
+  height: 1px;
+  width: 66%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: .85em;
+}
+
+.empty-cart-container > div {
+  padding-bottom: 2em;
+}
+
+.empty-cart-container > div:last-of-type {
+  padding-bottom: 0;
+}
+
+.empty-cart-cta--button {
+  margin-top: 2em;
+  background-color: #0cd29a;
+  color: #f2f2f2;
+  font-size: 1.25em;
+  font-weight: 400;
+  border: .5px solid #0cd29a;
+  padding: .5em 1em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 350ms ease-in-out;
+  -o-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.empty-cart-cta--button:hover {
+  text-decoration: none;
+  color: #F2F2F2;
+  -webkit-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  transform: translateY(-4px);
+  -webkit-box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6);
+}

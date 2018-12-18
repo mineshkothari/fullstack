@@ -1,0 +1,132 @@
+// JUMBOTRON
+
+.jumbotron
+  background: linear-gradient(rgba(52,58,64,1),rgba(52,58,64,0.6)), url("https://source.unsplash.com/collection/3320800/")
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  color: #dee2e6
+
+.fullstack-brand
+  color: #0cd29a
+  border-color: #0cd29a !important
+
+// CART STYLES
+
+.btn-subhero--cart
+  display: inline-block
+  color: #0cd29a
+  &:hover
+    color: #FFFFFF
+
+.cart-section--main
+  padding: 8% 1em
+
+.cart-items--row
+  margin: 2em auto
+  padding: 2em
+  background: #FFFFFF
+  border: .5px solid rgba(0,0,0,0.08)
+  box-shadow: 0 10px 40px -25px rgba(0,0,0,0.25)
+  color: #63636E
+  p
+    margin-bottom: 0
+
+.cart-items--col
+  padding: 1em !important
+
+.cart-items--title
+  font-size: 1.5em
+
+
+.cart-items--remove
+  font-size: 14px
+  font-style: italic
+  color: #aaaaa3
+
+.cart-total--row
+  margin: 2em auto
+  padding: 2em
+  background: rgba(255,255,255,1)
+  border-top: 1px solid #0cd29a
+  border-bottom: 1px solid #0cd29a
+  box-shadow: 0 10px 40px -25px rgba(0,0,0,0.25)
+  color: #63636E
+  p
+    margin-bottom: 0
+
+.cart-total--col
+  padding: 1em 0 !important
+
+.cart-items--total
+  text-transform: uppercase
+  letter-spacing: .5px
+  font-size: 1.25em
+  span
+    margin-left: 1em
+
+.cart-items--pay
+  //margin-top: 2em
+  background-color: #0cd29a
+  color: #f2f2f2
+  font-size: 1.25em
+  font-weight: 400
+  border: .5px solid #0cd29a
+  padding: .5em 1em
+  letter-spacing: 1px
+  text-transform: uppercase
+  //box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4)
+  transition: all 350ms ease-in-out
+  &:hover
+    text-decoration: none
+    color: #F2F2F2
+    box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6)
+    transform: translateY(-4px)
+
+
+.empty-cart-container
+  background: #FFFFFF
+  padding: 2em
+  margin: 2em auto
+  color: #63636E
+  max-width: 960px
+  text-align: center
+  border: .5px solid rgba(12, 210, 154,.15)
+  border-radius: 10px
+  box-shadow: 0 15px 38px -12px rgba(12, 210, 154, .095)
+  .empty-cart-title
+    position: relative
+    font-size: 1.25em
+    &::after
+      position: absolute
+      content: ''
+      background: #0cd29a
+      height: 1px
+      width: 66%
+      left: 50%
+      transform: translateX(-50%)
+      bottom: .85em
+
+.empty-cart-container > div
+  padding-bottom: 2em
+
+.empty-cart-container > div:last-of-type
+  padding-bottom: 0
+
+.empty-cart-cta--button
+  margin-top: 2em
+  background-color: #0cd29a
+  color: #f2f2f2
+  font-size: 1.25em
+  font-weight: 400
+  border: .5px solid #0cd29a
+  padding: .5em 1em
+  letter-spacing: 1px
+  text-transform: uppercase
+  box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4)
+  transition: all 350ms ease-in-out
+  &:hover
+    text-decoration: none
+    color: #F2F2F2
+    transform: translateY(-4px)
+    box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6)
