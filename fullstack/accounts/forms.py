@@ -57,7 +57,7 @@ class UserLoginForm(forms.Form):
     )
 
 
-class UserAccountForm(UserChangeForm):
+class UserAccountForm(forms.ModelForm):
 
     display_name = forms.CharField(label='Display Name')
 
