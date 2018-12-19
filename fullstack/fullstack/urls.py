@@ -55,6 +55,8 @@ urlpatterns = [
     # url(r'^summernote/', include('django_summernote.urls')),
 ]
 
+# CUSTOM 404 HANDLER
+handler404 = 'home.views.my_custom_page_not_found_view'
 
 if settings.DEBUG:
     import debug_toolbar

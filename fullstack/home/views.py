@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from blog.models import Post
 from courses.models import Language
 from django.utils import timezone
@@ -17,3 +17,7 @@ def index(request):
     }
 
     return render(request, 'home/index.html', args)
+
+
+def my_custom_page_not_found_view(request):
+    return redirect('index')
