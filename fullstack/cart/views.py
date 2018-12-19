@@ -17,7 +17,7 @@ def add_to_cart(request, module_id):
     """
 
     cart = request.session.get('cart', {})
-    if module_id not in cart.keys():
+    if module_id not in cart:
         cart[module_id] = module_id
 
     request.session['cart'] = cart
@@ -25,19 +25,15 @@ def add_to_cart(request, module_id):
     return render(request, "cart/cart.html")
 
 
-# def remove_from_cart(request, module_id):
-#     """
-#     Delete item from cart
-#     """
-#     cart = request.session.get('cart', {})
-#     if module_id in cart.keys():
-#         cart[module_id] = module_id
-#
-#     request.session['cart'] = cart
-#
-#     item_to_delete = cart.objects.filter(pk=module_id)
-#     if item_to_delete.exists():
-#         item_to_delete[0].delete()
-#         messages.info(request, "Item has been deleted")
-#
-#     return redirect(reverse('view_cart'))
+def remove_from_cart(request, module_id):
+    """
+    Delete item from cart
+    """
+    cart = request.session.get('cart', {})
+    if module_id in cart:
+        del cart[module_id]
+        messages.info(request, "Item has been deleted")
+
+    request.session['cart'] = cart
+
+    return redirect(reverse('view_cart'))
