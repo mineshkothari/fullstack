@@ -19,6 +19,15 @@
             <div class="posts-counter">Posts: <span>{{ subject|get_total_subject_posts }}</span></div>
         </div>
     </a>
+    {% empty %}
+    <div class="empty-container d-flex flex-column justify-content-center align-items-center">
+        <div class="empty-title">
+            <strong>Our forum is currently empty</strong>
+        </div>
+        <div class="empty-info">
+            <p>Stay tuned as we are continuously adding new topics to our forum.</p>
+        </div>
+    </div>
     {% endfor %}
 </section>
 {% endblock %}

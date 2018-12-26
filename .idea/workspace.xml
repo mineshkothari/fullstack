@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49079c82-689c-4a06-838e-f3bc49bf21e3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/fullstack/blog/templates/blog/blogposts.html" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/blog/templates/blog/blogposts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fullstack/forum/templates/forum/subjects.html" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/forum/templates/forum/subjects.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,19 +31,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fullstack/blog/templates/blog/blog.html">
+        <entry file="file://$PROJECT_DIR$/fullstack/blog/templates/blog/blogposts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+            <state relative-caret-position="622">
+              <caret line="35" column="6" lean-forward="true" selection-start-line="28" selection-end-line="35" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fullstack/blog/templates/blog/blogposts.html">
+        <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/subjects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+            <state relative-caret-position="660">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -110,7 +110,6 @@
         <option value="$PROJECT_DIR$/fullstack/checkout/templates/checkout/checkout.html" />
         <option value="$PROJECT_DIR$/fullstack/courses/static/sass/pages/courses.sass" />
         <option value="$PROJECT_DIR$/fullstack/static/sass/buttons/buttons.sass" />
-        <option value="$PROJECT_DIR$/fullstack/forum/templates/forum/subjects.html" />
         <option value="$PROJECT_DIR$/fullstack/forum/views.py" />
         <option value="$PROJECT_DIR$/fullstack/static/sass/bootstrap/bootstrap.sass" />
         <option value="$PROJECT_DIR$/fullstack/forum/static/sass/pages/forum.sass" />
@@ -137,6 +136,7 @@
         <option value="$PROJECT_DIR$/fullstack/home/templates/home/index.html" />
         <option value="$PROJECT_DIR$/fullstack/courses/templates/courses/languages.html" />
         <option value="$PROJECT_DIR$/fullstack/blog/templates/blog/blogposts.html" />
+        <option value="$PROJECT_DIR$/fullstack/forum/templates/forum/subjects.html" />
       </list>
     </option>
   </component>
@@ -169,22 +169,22 @@
               <item name="fullstack" type="b2602c69:ProjectViewProjectNode" />
               <item name="fullstack" type="462c0819:PsiDirectoryNode" />
               <item name="fullstack" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fullstack" type="b2602c69:ProjectViewProjectNode" />
               <item name="fullstack" type="462c0819:PsiDirectoryNode" />
               <item name="fullstack" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fullstack" type="b2602c69:ProjectViewProjectNode" />
               <item name="fullstack" type="462c0819:PsiDirectoryNode" />
               <item name="fullstack" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -329,7 +329,7 @@
       <workItem from="1545245162585" duration="3371000" />
       <workItem from="1545591056800" duration="41000" />
       <workItem from="1545759449762" duration="13973000" />
-      <workItem from="1545829534132" duration="4098000" />
+      <workItem from="1545829534132" duration="4632000" />
     </task>
     <servers />
   </component>
@@ -339,7 +339,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="321285000" />
+    <option name="totallyTimeSpent" value="321819000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -381,16 +381,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fullstack/polls/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/django/forms/formsets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
@@ -751,13 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fullstack/static/sass/pages/base.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fullstack/home/templates/home/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="436">
@@ -772,10 +755,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fullstack/static/sass/pages/base.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fullstack/blog/templates/blog/blogposts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        <state relative-caret-position="622">
+          <caret line="35" column="6" lean-forward="true" selection-start-line="28" selection-end-line="35" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/subjects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
