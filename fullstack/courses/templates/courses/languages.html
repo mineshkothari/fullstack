@@ -22,6 +22,16 @@
                 <div class="language-desc">{% autoescape off %}{{ language.description }}{% endautoescape %}</div>
             </div>
         </a>
+        {% empty %}
+        <div class="empty-container d-flex flex-column justify-content-center align-items-center">
+            <div class="empty-title">
+                <strong>There are no courses here at the moment!</strong>
+            </div>
+            <div class="empty-info">
+                <p>Thank you for visiting, but we don't have any available courses at the moment.</p>
+                <p>We are in the process of adding new courses. Please come back soon when we'll have some courses available.</p>
+            </div>
+        </div>
         {% endfor %}
     </section>
 {% endblock %}
