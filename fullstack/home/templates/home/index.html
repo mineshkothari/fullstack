@@ -63,14 +63,26 @@
                 <h4 class="language-title--home text-center">{{ language.title }}</h4>
             </a>
         </div>
+        {% empty %}
+        <div class="empty-container d-flex flex-column justify-content-center align-items-center">
+            <div class="empty-title">
+                <strong>There are no courses here at the moment!</strong>
+            </div>
+            <div class="empty-info">
+                <p>Thank you for visiting, but we don't have any available courses at the moment.</p>
+                <p>We are in the process of adding new courses. Please come back soon when we'll have some courses available.</p>
+            </div>
+        </div>
         {% endfor %}
     </div>
+    {% if language in languages %}
     <div class="row no-gutters cta--home flex-column align-items-center justify-content-center">
         <div class="text-center">
             Click on the link below to check out all our courses
         </div>
         <a class="btn-cta--home text-center" href="{% url 'courses'%}"><i class="fas fa-graduation-cap"></i> More Courses</a>
     </div>
+    {% endif %}
 </section>
 <section class="home-section home-blog">
     <div class="row no-gutters flex-column align-items-center">
@@ -83,6 +95,7 @@
     <div class="blog-row--home row no-gutters">
         <div class="col col-12 col-md-6 post-container-col">
             <div class="row no-gutters d-flex justify-content-center">
+                {% if post %}
                 <div class="post-container-home">
                     {% if post.image %}
                     <a class="post-thumbnail-container-home" href="{% url 'post_detail' post.id %}">
@@ -98,6 +111,16 @@
                         <i class="fas fa-angle-right btn blog-read-more-icon" onclick="location.href='blog/{{ post.id }}'"></i>
                     </div>
                 </div>
+                {% else %}
+                <div class="empty-container d-flex flex-column justify-content-center align-items-center">
+                    <div class="empty-title">
+                        <strong>Our blog is currently empty</strong>
+                    </div>
+                    <div class="empty-info">
+                        <p>Stay tuned as we are continuously adding new blog posts to our website.</p>
+                    </div>
+                </div>
+                {% endif %}
             </div>
         </div>
         <div class="col col-12 col-md-6 blog-col--home d-flex flex-column align-items-center justify-content-center text-center">
@@ -117,12 +140,14 @@
             </div>
         </div>
     </div>
+    {% if post %}
     <div class="row no-gutters cta--home flex-column align-items-center justify-content-center">
         <div class="text-center">
             Check out all our latest blogs by clicking the button below
         </div>
         <a class="btn-cta--home text-center" href="{% url 'blog'%}"><i class="fas fa-pen"></i> View Blogs</a>
     </div>
+    {% endif %}
 </section>
 <section class="home-section home-forum">
     <div class="row no-gutters flex-column align-items-center">

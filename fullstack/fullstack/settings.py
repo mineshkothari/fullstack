@@ -57,7 +57,6 @@ INSTALLED_APPS = [
     'polls',
     'about',
     'courses',
-    'paypal_store',
     'cart',
     'checkout',
 
@@ -67,7 +66,6 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'tinymce',
     'emoticons',
-    'paypal.standard.ipn',
     'storages',
 ]
 
