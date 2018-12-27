@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49079c82-689c-4a06-838e-f3bc49bf21e3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/fullstack/courses/templates/courses/languages.html" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/courses/templates/courses/languages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fullstack/home/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/home/templates/home/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fullstack/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/settings/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +33,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fullstack/home/templates/home/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1660">
-              <caret line="83" selection-start-line="83" selection-end-line="83" />
+            <state relative-caret-position="160">
+              <caret line="101" column="62" lean-forward="true" selection-start-line="101" selection-start-column="62" selection-end-line="101" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -335,7 +333,7 @@
       <workItem from="1545591056800" duration="41000" />
       <workItem from="1545759449762" duration="13973000" />
       <workItem from="1545829534132" duration="20146000" />
-      <workItem from="1545902265203" duration="10288000" />
+      <workItem from="1545902265203" duration="12425000" />
     </task>
     <servers />
   </component>
@@ -345,7 +343,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="347621000" />
+    <option name="totallyTimeSpent" value="349758000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -358,6 +356,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="0" width="1110" height="1201" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4982857" visible="true" weight="0.24809887" />
       <window_info id="Structure" order="1" sideWeight="0.5017143" side_tool="true" weight="0.22243346" />
@@ -763,8 +762,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fullstack/home/templates/home/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1660">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        <state relative-caret-position="160">
+          <caret line="101" column="62" lean-forward="true" selection-start-line="101" selection-start-column="62" selection-end-line="101" selection-end-column="62" />
         </state>
       </provider>
     </entry>

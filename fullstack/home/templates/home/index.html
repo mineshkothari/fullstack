@@ -99,7 +99,7 @@
                 <div class="post-container-home">
                     {% if post.image %}
                     <a class="post-thumbnail-container-home" href="{% url 'post_detail' post.id %}">
-                        <img class="post-thumbnail-home" src="/media/{{ post.image }}" alt="{{ post.title }} Image" />
+                        <img class="post-thumbnail-home" src="{{ MEDIA_URL }}{{ post.image }}" alt="{{ post.title }} Image" />
                     </a>
                     {% endif %}
                     <div class="post-detail-container-home">
