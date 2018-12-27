@@ -55,7 +55,7 @@
             <a href="{% url 'modules' language.id %}" class="language-link--home d-flex flex-row flex-sm-column justify-content-center align-items-center">
                 <div class="language-image-container--home">
                     {% if language.image %}
-                    <img class="language-image--home" src="/media/{{ language.image }}" alt="{{ language.title }} Image" />
+                    <img class="language-image--home" src="{{ MEDIA_URL }}{{ language.image }}" alt="{{ language.title }} Image" />
                     {% else %}
                     <img class="language-image--home" src="/media/images/courses/languages/placeholder.png" alt="Placeholder Coding Image" />
                     {% endif %}
@@ -75,7 +75,7 @@
         </div>
         {% endfor %}
     </div>
-    {% if language in languages %}
+    {% if languages %}
     <div class="row no-gutters cta--home flex-column align-items-center justify-content-center">
         <div class="text-center">
             Click on the link below to check out all our courses
