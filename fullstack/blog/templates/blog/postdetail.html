@@ -7,7 +7,7 @@
                 <div class="blog-header-container">
                     {% if post.image %}
                         <div class="blog-header-image">
-                            <img class="blog-img-main" alt="{{ post.title }} Image" src="/media/{{ post.image }}"/>
+                            <img class="blog-img-main" alt="{{ post.title }} Image" src="{{ MEDIA_URL }}{{ post.image }}"/>
                         </div>
                     {% endif %}
                     <div class="blog-header-title text-center">
