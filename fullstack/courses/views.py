@@ -65,7 +65,7 @@ def new_module(request):
 def new_language(request):
     if request.user.is_staff:
         if request.method == 'POST':
-            form = NewLanguageForm(request.POST)
+            form = NewLanguageForm(request.POST, request.FILES)
             print form.data
             if form.is_valid():
                 language = form.save()
