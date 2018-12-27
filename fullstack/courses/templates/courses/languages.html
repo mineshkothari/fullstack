@@ -10,7 +10,7 @@
         <a href="{% url 'modules' language.id %}" class="mk--row-item language-item row no-gutters">
             <div class="mk--col-item language-image-col col-12 col-md-3 d-flex justify-content-center align-items-center">
                 {% if language.image %}
-                <img class="mk--item-image language-image" src="/media/{{ language.image }}" alt="{{ language.title }} Image" />
+                <img class="mk--item-image language-image" src="{{ MEDIA_URL }}{{ language.image }}" alt="{{ language.title }} Image" />
                 {% else %}
                 <img class="mk--item-image language-image" src="/media/images/courses/languages/placeholder.png" alt="Placeholder Coding Image" />
                 {% endif %}
