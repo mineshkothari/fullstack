@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49079c82-689c-4a06-838e-f3bc49bf21e3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fullstack/blog/templates/blog/postdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/blog/templates/blog/postdetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fullstack/blog/templates/blog/blogposts.html" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/blog/templates/blog/blogposts.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,11 +30,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fullstack/blog/templates/blog/postdetail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
               <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fullstack/blog/templates/blog/blogposts.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="9" column="113" lean-forward="true" selection-start-line="9" selection-start-column="113" selection-end-line="9" selection-end-column="113" />
             </state>
           </provider>
         </entry>
@@ -113,7 +121,6 @@
         <option value="$PROJECT_DIR$/Procfile.local" />
         <option value="$PROJECT_DIR$/fullstack/settings/dev.py" />
         <option value="$PROJECT_DIR$/fullstack/fullstack/settings.py" />
-        <option value="$PROJECT_DIR$/fullstack/blog/templates/blog/blogposts.html" />
         <option value="$PROJECT_DIR$/fullstack/forum/templates/forum/subjects.html" />
         <option value="$PROJECT_DIR$/fullstack/accounts/templates/accounts/login.html" />
         <option value="$PROJECT_DIR$/fullstack/accounts/templates/resgistration/password_reset_form.html" />
@@ -129,6 +136,7 @@
         <option value="$PROJECT_DIR$/fullstack/courses/templates/courses/languages.html" />
         <option value="$PROJECT_DIR$/fullstack/home/templates/home/index.html" />
         <option value="$PROJECT_DIR$/fullstack/blog/templates/blog/postdetail.html" />
+        <option value="$PROJECT_DIR$/fullstack/blog/templates/blog/blogposts.html" />
       </list>
     </option>
   </component>
@@ -328,7 +336,7 @@
       <workItem from="1545591056800" duration="41000" />
       <workItem from="1545759449762" duration="13973000" />
       <workItem from="1545829534132" duration="20146000" />
-      <workItem from="1545902265203" duration="13232000" />
+      <workItem from="1545902265203" duration="13487000" />
     </task>
     <servers />
   </component>
@@ -338,7 +346,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="350565000" />
+    <option name="totallyTimeSpent" value="350820000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -366,7 +374,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.23026927" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.71768063" weight="0.22990654" />
-      <window_info active="true" anchor="bottom" x="23" y="484" width="1052" height="233" id="Terminal" order="11" sideWeight="0.5455408" visible="true" weight="0.3448598" />
+      <window_info active="true" anchor="bottom" x="23" y="484" width="1052" height="233" id="Terminal" order="11" sideWeight="0.5455408" visible="true" weight="0.2504673" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.2823194" side_tool="true" weight="0.2317757" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -473,13 +481,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
           <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fullstack/blog/templates/blog/blogposts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -755,6 +756,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullstack/blog/templates/blog/blogposts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="113" lean-forward="true" selection-start-line="9" selection-start-column="113" selection-end-line="9" selection-end-column="113" />
         </state>
       </provider>
     </entry>
