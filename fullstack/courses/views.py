@@ -27,6 +27,7 @@ def modules(request, language_id):
     args = {
         'my_courses': my_courses,
         'modules': selected_modules,
+        'language': language,
     }
 
     return render(request, 'courses/modules.html', args)
