@@ -12,7 +12,7 @@
 {% block forum %}
 <section class="forum-section--main threads-list">
     <div class="row no-gutters">
-        <h2>{{ subject.name }}</h2>
+        <h2>{{ subject.name }} Threads</h2>
     </div>
     {% for thread in subject.threads.all %}
     {% include "forum/thread_item.html" %}

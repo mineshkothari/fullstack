@@ -33,10 +33,7 @@ def new_thread(request, subject_id):
         poll_form = PollForm(request.POST)
         poll_subject_formset = poll_subject_formset_class(request.POST)
 
-        if (thread_form.is_valid() and
-                post_form.is_valid() and
-                poll_form.is_valid() and
-                poll_subject_formset.is_valid()):
+        if thread_form.is_valid() and post_form.is_valid():
             thread = thread_form.save(False)
             thread.subject = subject
             thread.user = request.user
@@ -47,14 +44,15 @@ def new_thread(request, subject_id):
             post.thread = thread
             post.save()
 
-            poll = poll_form.save(False)
-            poll.thread = thread
-            poll.save()
+            if poll_form.is_valid() and poll_subject_formset.is_valid():
+                poll = poll_form.save(False)
+                poll.thread = thread
+                poll.save()
 
-            for subject_form in poll_subject_formset:
-                subject = subject_form.save(False)
-                subject.poll = poll
-                subject.save()
+                for subject_form in poll_subject_formset:
+                    subject = subject_form.save(False)
+                    subject.poll = poll
+                    subject.save()
 
             messages.success(request, "You have created a new thread!")
 
