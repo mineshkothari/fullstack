@@ -8037,6 +8037,23 @@ nav .active a {
   cursor: pointer;
 }
 
+.vote-btn {
+  background-color: #f2f2f2;
+  color: #63636E;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 2px solid #f2f2f2;
+  padding: .35em .5em;
+  -webkit-transition: all 350ms ease-in-out;
+  -o-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.vote-btn:hover {
+  background-color: transparent;
+  color: #f2f2f2;
+}
+
 .mk--forms .form-control {
   padding: 1em;
   background: #fff;
