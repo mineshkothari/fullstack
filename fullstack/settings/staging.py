@@ -6,6 +6,7 @@ DEBUG = False
 
 ALLOWED_HOSTS.append('mk-fullstack.herokuapp.com')
 
+SITE_URL = 'https://mk-fullstack.herokuapp.com/'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
