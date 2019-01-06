@@ -135,6 +135,10 @@
   color: #63636E;
 }
 
+.thread-name-container h2 {
+  margin-bottom: 0;
+}
+
 .mk--post-item {
   margin: 2em 0;
   padding: 1em;
