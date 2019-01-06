@@ -20,8 +20,8 @@
         <div class="thread-info post-owner">Created by: <strong><span>{{ thread.user.username }}</span></strong></div>
         <div class="thread-info last-post">Last Post: <strong>{% last_posted_user_name thread %}</strong></div>
     </div>
+    {% if thread.poll %}
     <div class="thread-info-container">
-        {% if thread.poll %}
         <div class="poll-section col-12">
             <h3 class="poll-title">{{ thread.poll.question }}</h3>
             {% for subject in thread.poll.subjects.all %}
@@ -44,8 +44,8 @@
             </div>
             {% endfor %}
         </div>
-        {% endif %}
     </div>
+    {% endif %}
     {% for post in thread.posts.all %}
     {% include "forum/post.html" %}
     {% endfor %}

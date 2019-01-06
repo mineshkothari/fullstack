@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49079c82-689c-4a06-838e-f3bc49bf21e3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fullstack/home/templates/home/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/home/templates/home/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fullstack/home/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/home/templates/home/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fullstack/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fullstack/static/sass/pages/base.sass" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/static/sass/pages/base.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fullstack/forum/templates/forum/thread.html" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/forum/templates/forum/thread.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +20,20 @@
     <favorites_list name="fullstack" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/thread.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
+              <folding>
+                <element signature="e#2181#2229#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -93,7 +102,6 @@
         <option value="$PROJECT_DIR$/fullstack/static/sass/buttons/buttons.sass" />
         <option value="$PROJECT_DIR$/fullstack/forum/templatetags/thread_extras.py" />
         <option value="$PROJECT_DIR$/fullstack/forum/views.py" />
-        <option value="$PROJECT_DIR$/fullstack/forum/templates/forum/thread.html" />
         <option value="$PROJECT_DIR$/fullstack/forum/static/sass/pages/forum.sass" />
         <option value="$PROJECT_DIR$/fullstack/courses/templates/courses/modules.html" />
         <option value="$PROJECT_DIR$/fullstack/forum/templates/forum/threads.html" />
@@ -104,6 +112,7 @@
         <option value="$PROJECT_DIR$/fullstack/home/templates/home/index.html" />
         <option value="$PROJECT_DIR$/fullstack/static/sass/pages/base.sass" />
         <option value="$PROJECT_DIR$/fullstack/home/templates/home/base.html" />
+        <option value="$PROJECT_DIR$/fullstack/forum/templates/forum/thread.html" />
       </list>
     </option>
   </component>
@@ -137,14 +146,28 @@
               <item name="fullstack" type="b2602c69:ProjectViewProjectNode" />
               <item name="fullstack" type="462c0819:PsiDirectoryNode" />
               <item name="fullstack" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fullstack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fullstack" type="462c0819:PsiDirectoryNode" />
+              <item name="fullstack" type="462c0819:PsiDirectoryNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fullstack" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fullstack" type="462c0819:PsiDirectoryNode" />
+              <item name="fullstack" type="462c0819:PsiDirectoryNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fullstack" type="b2602c69:ProjectViewProjectNode" />
               <item name="fullstack" type="462c0819:PsiDirectoryNode" />
               <item name="fullstack" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="sass" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -293,7 +316,7 @@
       <workItem from="1545902265203" duration="41285000" />
       <workItem from="1546091222633" duration="9959000" />
       <workItem from="1546184313179" duration="57000" />
-      <workItem from="1546628887879" duration="2163000" />
+      <workItem from="1546628887879" duration="2496000" />
     </task>
     <servers />
   </component>
@@ -303,7 +326,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="390797000" />
+    <option name="totallyTimeSpent" value="391130000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -331,7 +354,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.23026927" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.71768063" weight="0.22990654" />
-      <window_info active="true" anchor="bottom" x="23" y="484" width="1052" height="233" id="Terminal" order="11" sideWeight="0.5455408" visible="true" weight="0.45008183" />
+      <window_info active="true" anchor="bottom" x="23" y="484" width="1052" height="233" id="Terminal" order="11" sideWeight="0.5455408" visible="true" weight="0.34369886" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.2823194" side_tool="true" weight="0.2317757" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -598,13 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/thread.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fullstack/courses/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="640">
@@ -717,6 +733,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="61" column="9" lean-forward="true" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullstack/forum/templates/forum/thread.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="e#2181#2229#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
