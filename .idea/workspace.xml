@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49079c82-689c-4a06-838e-f3bc49bf21e3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/fullstack/templates/registration/password_reset_email.html" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/templates/registration/password_reset_email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fullstack/home/templates/home/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/home/templates/home/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fullstack/home/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/home/templates/home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fullstack/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fullstack/static/sass/pages/base.sass" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/static/sass/pages/base.sass" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,17 +24,7 @@
     <favorites_list name="fullstack" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fullstack/templates/registration/password_reset_email.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -59,7 +53,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/fullstack/courses/templates/courses/new_language.html" />
         <option value="$PROJECT_DIR$/fullstack/courses/templates/courses/new_module.html" />
         <option value="$PROJECT_DIR$/fullstack/courses/forms.py" />
         <option value="$PROJECT_DIR$/fullstack/cart/contexts.py" />
@@ -88,12 +81,10 @@
         <option value="$PROJECT_DIR$/fullstack/templates/registration/password_reset_complete.html" />
         <option value="$PROJECT_DIR$/fullstack/templates/registration/password_reset_confirm.html" />
         <option value="$PROJECT_DIR$/fullstack/templates/registration/password_reset_done.html" />
-        <option value="$PROJECT_DIR$/fullstack/static/sass/pages/base.sass" />
         <option value="$PROJECT_DIR$/fullstack/accounts/static/sass/pages/account.sass" />
         <option value="$PROJECT_DIR$/fullstack/custom_storages.py" />
         <option value="$PROJECT_DIR$/fullstack/settings/base.py" />
         <option value="$PROJECT_DIR$/fullstack/courses/templates/courses/languages.html" />
-        <option value="$PROJECT_DIR$/fullstack/home/templates/home/index.html" />
         <option value="$PROJECT_DIR$/fullstack/blog/templates/blog/postdetail.html" />
         <option value="$PROJECT_DIR$/fullstack/blog/templates/blog/blogposts.html" />
         <option value="$PROJECT_DIR$/README.md" />
@@ -110,13 +101,17 @@
         <option value="$PROJECT_DIR$/fullstack/templates/registration/password_reset_form.html" />
         <option value="$PROJECT_DIR$/fullstack/settings/staging.py" />
         <option value="$PROJECT_DIR$/fullstack/templates/registration/password_reset_email.html" />
+        <option value="$PROJECT_DIR$/fullstack/home/templates/home/index.html" />
+        <option value="$PROJECT_DIR$/fullstack/static/sass/pages/base.sass" />
+        <option value="$PROJECT_DIR$/fullstack/home/templates/home/base.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-11" />
-    <option name="width" value="1943" />
-    <option name="height" value="2102" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1133" />
+    <option name="y" value="-33" />
+    <option name="width" value="1112" />
+    <option name="height" value="1203" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -142,14 +137,14 @@
               <item name="fullstack" type="b2602c69:ProjectViewProjectNode" />
               <item name="fullstack" type="462c0819:PsiDirectoryNode" />
               <item name="fullstack" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fullstack" type="b2602c69:ProjectViewProjectNode" />
               <item name="fullstack" type="462c0819:PsiDirectoryNode" />
               <item name="fullstack" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="registration" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="sass" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -296,7 +291,9 @@
       <workItem from="1545759449762" duration="13973000" />
       <workItem from="1545829534132" duration="20146000" />
       <workItem from="1545902265203" duration="41285000" />
-      <workItem from="1546091222633" duration="8406000" />
+      <workItem from="1546091222633" duration="9959000" />
+      <workItem from="1546184313179" duration="57000" />
+      <workItem from="1546628887879" duration="2163000" />
     </task>
     <servers />
   </component>
@@ -306,7 +303,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="387024000" />
+    <option name="totallyTimeSpent" value="390797000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -318,10 +315,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="1110" height="1201" extended-state="0" />
-    <editor active="true" />
+    <frame x="-1374" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4982857" visible="true" weight="0.25285172" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4982857" visible="true" weight="0.20877458" />
       <window_info id="Structure" order="1" sideWeight="0.5017143" side_tool="true" weight="0.22243346" />
       <window_info id="Favorites" order="2" sideWeight="0.50179213" side_tool="true" weight="0.22243346" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -335,7 +331,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.23026927" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.71768063" weight="0.22990654" />
-      <window_info active="true" anchor="bottom" x="23" y="484" width="1052" height="233" id="Terminal" order="11" sideWeight="0.5455408" visible="true" weight="0.20654206" />
+      <window_info active="true" anchor="bottom" x="23" y="484" width="1052" height="233" id="Terminal" order="11" sideWeight="0.5455408" visible="true" weight="0.45008183" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.2823194" side_tool="true" weight="0.2317757" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -348,13 +344,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fullstack/accounts/static/css/pages/account.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="873">
-          <caret line="327" column="20" lean-forward="true" selection-start-line="327" selection-start-column="20" selection-end-line="327" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fullstack/static/sass/abstracts/_variables.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="533">
@@ -364,13 +353,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fullstack/static/sass/style.sass">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fullstack/static/sass/pages/base.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fullstack/blog/static/css/pages/blog.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -455,13 +437,6 @@
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fullstack/home/templates/home/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="111" column="20" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -598,13 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fullstack/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="8264" column="13" lean-forward="true" selection-start-line="8264" selection-start-column="13" selection-end-line="8264" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fullstack/courses/templates/courses/language.html" />
     <entry file="file://$PROJECT_DIR$/fullstack/courses/templates/courses/modules.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -719,8 +687,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fullstack/templates/registration/password_reset_email.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        <state relative-caret-position="260">
+          <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullstack/home/templates/home/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullstack/home/templates/home/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="38" lean-forward="true" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullstack/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="8248" column="47" lean-forward="true" selection-start-line="8248" selection-start-column="47" selection-end-line="8248" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullstack/static/sass/pages/base.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="61" column="9" lean-forward="true" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
         </state>
       </provider>
     </entry>
