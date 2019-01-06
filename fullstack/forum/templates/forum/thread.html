@@ -17,7 +17,7 @@
     </div>
     <div class="thread-info-container flex-column flex-lg-row row no-gutters justify-content-center align-items-center">
         <div class="thread-info post-created">Thread Created: <strong><span><time datetime="{{ thread.created_at }}"> {{ thread.created_at | started_time }} </time></span></strong></div>
-        <div class="thread-info post-owner">Created by: <strong><span>{{ thread.user.username }}</span></strong></div>
+        <div class="thread-info post-owner">Created by: <strong><span>{{ thread.user.display_name }}</span></strong></div>
         <div class="thread-info last-post">Last Post: <strong>{% last_posted_user_name thread %}</strong></div>
     </div>
     {% if thread.poll %}
