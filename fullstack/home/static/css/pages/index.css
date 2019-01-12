@@ -37,6 +37,12 @@
   padding-top: 2em;
 }
 
+@media (min-width: 768px) {
+  p.text-home {
+    font-size: 18px;
+  }
+}
+
 .home-about--row {
   text-align: center;
   max-width: 960px;
