@@ -105,12 +105,11 @@
   font-size: 1.2em;
   letter-spacing: 1px;
   margin-bottom: 0;
+  font-weight: 800;
 }
 
 .module-item--price span {
-  font-size: .75em;
   margin-right: .25em;
-  font-weight: 800;
 }
 
 .module-item--release {
