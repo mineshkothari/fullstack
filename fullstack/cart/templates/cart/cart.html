@@ -11,7 +11,6 @@
     <div class="row no-gutters">
         <div class="col col-12">
             <h2>Check out your cart items below</h2>
-            <a href="{% url 'courses' %}" class="btn-subhero btn-subhero--cart">Continue Shopping</a>
         </div>
     </div>
 </section>
@@ -48,10 +47,11 @@
         {% endfor %}
         {% if cart_items %}
         <div class="row no-gutters cart-total--row">
-            <div class="col-12 col-sm-6 cart-total--col d-flex justify-content-center justify-content-sm-start align-items-center">
+            <div class="col-12 col-lg-4 cart-total--col d-flex justify-content-center justify-content-lg-start align-items-center">
                 <p class="cart-items--total"><strong>Total <span>£{{ total }}</span></strong></p>
             </div>
-            <div class="col-12 col-sm-6 cart-total--col d-flex justify-content-center justify-content-sm-end align-items-center">
+            <div class="col-12 col-lg-8 cart-total--col d-flex flex-column flex-lg-row justify-content-center justify-content-lg-end align-items-center">
+                <a href="{% url 'courses' %}" class="btn-subhero btn-subhero--cart">Continue Shopping</a>
                 <a href="{% url 'checkout' %}" class="cart-items--pay" role="button"><i class="fas fa-credit-card"></i> Enrol Now</a>
             </div>
         </div>
