@@ -44,5 +44,10 @@
 
 .about-text-container .about-text {
   line-height: 1.75;
-  font-size: 14px;
+}
+
+@media (min-width: 992px) {
+  .about-text {
+    font-size: 18px;
+  }
 }
