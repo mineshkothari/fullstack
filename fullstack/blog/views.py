@@ -30,7 +30,7 @@ def top_posts(request):
 
 
 @login_required(login_url='/account/login/')
-def new_post(request):
+def new_blog_post(request):
     if request.method == 'POST':
         form = BlogPostForm(request.POST, request.FILES)
         if form.is_valid():

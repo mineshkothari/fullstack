@@ -6,6 +6,6 @@ urlpatterns = [
     url(r'^(?P<id>\d+)/$', views.post_detail, name='post_detail'),
     url(r'^top/(?P<id>\d+)/$', views.post_detail, name='post_detail'),
     url(r'^top/$', views.top_posts, name='top_posts'),
-    url(r'^post/new/$', views.new_post, name='new_post'),
+    url(r'^post/new/$', views.new_blog_post, name='new_blog_post'),
     url(r'^(?P<id>\d+)/edit$', views.edit_post, name='edit'),
 ]
