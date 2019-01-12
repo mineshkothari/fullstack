@@ -15,15 +15,15 @@
 </script>
 {% endblock %}
 {% block blogs %}
-    {% load bootstrap_tags %}
-    <div class="blog-main-content-container">
-        <div class="form-container">
-            <h2 class="blog-post-form--title">{{ form_title }}</h2>
-            <form method="POST" enctype="multipart/form-data" class="mk--forms blog-post-form">
-                {% csrf_token %}
-                {{ form | as_bootstrap }}
-                <button type="submit" class="btn admin-btn admin-btn--blog">Save</button>
-            </form>
-        </div>
+{% load bootstrap_tags %}
+<section class="blog-section--main">
+    <div class="form-container">
+        <h2 class="blog-post-form--title">{{ form_title }}</h2>
+        <form method="POST" enctype="multipart/form-data" class="mk--forms blog-post-form">
+            {% csrf_token %}
+            {{ form | as_bootstrap }}
+            <button type="submit" class="btn admin-btn admin-btn--blog">Save</button>
+        </form>
     </div>
+</section>
 {% endblock %}

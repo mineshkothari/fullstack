@@ -18,6 +18,10 @@
   color: #f7f020;
 }
 
+.blog-section--main {
+  padding: 8% 1em;
+}
+
 .post-container {
   margin: 4em 0;
   border-radius: 10px;
@@ -94,12 +98,12 @@
   text-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
 }
 
-.blog-main-content-container {
-  margin: 4% auto;
+.blog-section-row {
+  margin-bottom: 2em;
 }
 
-.blog-section-row {
-  margin-top: 2em;
+.blog-section-row:last-of-type {
+  margin-bottom: 0;
 }
 
 .blog-section {
@@ -174,10 +178,6 @@
 .edit-post-btn:hover {
   color: #343a40;
   background-color: #FFFFFF;
-}
-
-.blog-main-content-container {
-  padding: 8% 1em;
 }
 
 .form-container {

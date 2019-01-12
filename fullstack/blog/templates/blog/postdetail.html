@@ -1,6 +1,7 @@
 {% extends "blog/blog.html" %}
 {% block page_title %}{{ post.title }} | Blogs | Fullstack{% endblock page_title %}
 {% block blogs %}
+<section class="blog-section--main">
     <div class="container-fluid blog-main-content-container">
         <div class="row no-gutters blog-section-row justify-content-center">
             <div class="col-sm-12">
@@ -59,4 +60,5 @@
             </div>
         </div>
     </div>
+</section>
 {% endblock %}

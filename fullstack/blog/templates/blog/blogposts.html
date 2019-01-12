@@ -1,38 +1,40 @@
 {% extends "blog/blog.html" %}
 {% block page_title %}Blogs | Learn Web Development | Minesh Kothari{% endblock page_title %}
 {% block blogs %}
-{% for post in posts %}
-<div class="container">
-    <div class="row post-container no-gutters d-flex align-items-center">
-        <div class="col-md-3 text-center post-image-container">
-            <a class="story-img" href="{% url 'post_detail' post.id %}">
-                {% if post.image %}
-                <img class="post-thumbnail" src="{{ MEDIA_URL }}{{ post.image }}" alt="{{ post.title }} Image" />
-                {% endif %}
-            </a>
-        </div>
-        <div class="col-md-7 post-detail-container">
-            <h3 class="post-title">{{ post.title }}</h3>
-            <div class="row">
-                <div class="col-sm-10">
-                    <p class="post-details"><span class="blog-details">{{ post.published_date|date:"D d M Y" }}, {{ post.published_date|time:"H:i A" }} | Views <strong>{{ post.views }}</strong> | Tag <strong>{{ post.tag }}</strong></span></p>
-                    <div class="post-snippet">{% autoescape off %}{{ post.content|truncatewords:20 }}{% endautoescape %}</div>
+<section class="blog-section--main">
+    {% for post in posts %}
+    <div class="container">
+        <div class="row post-container no-gutters d-flex align-items-center">
+            <div class="col-md-3 text-center post-image-container">
+                <a class="story-img" href="{% url 'post_detail' post.id %}">
+                    {% if post.image %}
+                    <img class="post-thumbnail" src="{{ MEDIA_URL }}{{ post.image }}" alt="{{ post.title }} Image" />
+                    {% endif %}
+                </a>
+            </div>
+            <div class="col-md-7 post-detail-container">
+                <h3 class="post-title">{{ post.title }}</h3>
+                <div class="row">
+                    <div class="col-sm-10">
+                        <p class="post-details"><span class="blog-details">{{ post.published_date|date:"D d M Y" }}, {{ post.published_date|time:"H:i A" }} | Views <strong>{{ post.views }}</strong> | Tag <strong>{{ post.tag }}</strong></span></p>
+                        <div class="post-snippet">{% autoescape off %}{{ post.content|truncatewords:20 }}{% endautoescape %}</div>
+                    </div>
                 </div>
             </div>
+            <div class="col-md-2 blog-read-more d-flex justify-content-center align-items-center">
+                <i class="fas fa-angle-right btn blog-read-more-icon" onclick="location.href='{{ post.id }}'"></i>
+            </div>
         </div>
-        <div class="col-md-2 blog-read-more d-flex justify-content-center align-items-center">
-            <i class="fas fa-angle-right btn blog-read-more-icon" onclick="location.href='{{ post.id }}'"></i>
+    </div>
+    {% empty %}
+    <div class="empty-container d-flex flex-column justify-content-center align-items-center">
+        <div class="empty-title">
+            <strong>Our blog is currently empty</strong>
+        </div>
+        <div class="empty-info">
+            <p>Stay tuned as we are continuously adding new blog posts to our website.</p>
         </div>
     </div>
-</div>
-{% empty %}
-<div class="empty-container d-flex flex-column justify-content-center align-items-center">
-    <div class="empty-title">
-        <strong>Our blog is currently empty</strong>
-    </div>
-    <div class="empty-info">
-        <p>Stay tuned as we are continuously adding new blog posts to our website.</p>
-    </div>
-</div>
-{% endfor %}
+    {% endfor %}
+</section>
 {% endblock %}
