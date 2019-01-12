@@ -38,11 +38,16 @@
 .cart-items--title
   font-size: 1.5em
 
-
 .cart-items--remove
   font-size: 14px
   font-style: italic
-  color: #aaaaa3
+  a
+    color: #aaaaa3
+    transition: all 100ms ease-in-out
+    &:hover
+      text-decoration: none
+      color: #636363
+
 
 .cart-total--row
   margin: 2em auto

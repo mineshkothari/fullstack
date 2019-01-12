@@ -52,7 +52,18 @@
 .cart-items--remove {
   font-size: 14px;
   font-style: italic;
+}
+
+.cart-items--remove a {
   color: #aaaaa3;
+  -webkit-transition: all 100ms ease-in-out;
+  -o-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+}
+
+.cart-items--remove a:hover {
+  text-decoration: none;
+  color: #636363;
 }
 
 .cart-total--row {
