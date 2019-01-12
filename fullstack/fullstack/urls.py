@@ -27,7 +27,6 @@ urlpatterns = [
     url(r'^', include('home.urls')),
 
     # ABOUT
-    # url(r'^about/', include('django.contrib.flatpages.urls')),
     url(r'^about/', include('about.urls')),
 
     # ACCOUNTS
@@ -50,9 +49,6 @@ urlpatterns = [
 
     # MEDIA
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
-
-    # # DJANGO-SUMMERNOTE
-    # url(r'^summernote/', include('django_summernote.urls')),
 ]
 
 # CUSTOM 404 HANDLER
@@ -60,6 +56,4 @@ handler404 = 'home.views.my_custom_page_not_found_view'
 
 if settings.DEBUG:
     import debug_toolbar
-    from django.conf.urls.static import static
     urlpatterns.append(url(r'^debug/', include(debug_toolbar.urls)))
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
