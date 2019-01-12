@@ -161,6 +161,12 @@
   font-style: italic;
 }
 
+@media (min-width: 768px) {
+  .blog-details {
+    font-size: 14px;
+  }
+}
+
 .blog-buttons {
   background: #63636E;
 }
