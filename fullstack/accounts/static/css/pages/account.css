@@ -74,20 +74,13 @@
 }
 
 .form-container .form-control {
-  font-style: italic;
-  font-weight: 200;
+  padding: .5em 1em;
   line-height: 2;
-  background-color: #4e555b;
-  border: .5px solid #aaaaa3;
-  color: #aaaaa3;
-  -webkit-transition: all 350ms ease-in-out;
-  -o-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
-}
-
-.form-container .form-control:hover {
-  -webkit-box-shadow: 0 10px 50px -7px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 10px 50px -7px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-bottom: 2px solid #ea6823;
+  width: 100%;
+  font-style: italic;
+  border-radius: 0;
 }
 
 .form-container .form-group {
@@ -99,8 +92,10 @@
 }
 
 .password-reset-form input {
-  padding: .5em;
+  padding: .5em 1em;
+  line-height: 2;
   border: none;
+  font-style: italic;
   border-bottom: 2px solid #ea6823;
   width: 100%;
   text-align: center;
@@ -126,15 +121,6 @@
 .account-switcher a:hover {
   color: #ea6823;
   text-decoration: none;
-}
-
-::-webkit-input-placeholder {
-  color: #aaaaa3 !important;
-}
-
-input:-webkit-autofill {
-  -webkit-box-shadow: inset 0 0 0 1000px #4e555b !important;
-  -webkit-text-fill-color: #aaaaa3;
 }
 
 .my-courses--accounts {
