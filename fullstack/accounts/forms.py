@@ -60,6 +60,7 @@ class UserLoginForm(forms.Form):
 class UserAccountForm(forms.ModelForm):
 
     display_name = forms.CharField(label='Display Name')
+    email = forms.EmailField(required=True)
 
     class Meta:
         model = User
