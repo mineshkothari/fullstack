@@ -35,6 +35,16 @@
   background: #404854;
 }
 
+.profile-section--info {
+  padding: 3em;
+  background: #ea6823;
+  color: #f2f2f2;
+}
+
+.profile-disclaimer {
+  margin-bottom: 1em;
+}
+
 .form-container {
   padding: 3em;
   max-width: 500px;
@@ -109,6 +119,9 @@
   max-width: none;
   -webkit-box-shadow: none;
   box-shadow: none;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .account-switcher a {

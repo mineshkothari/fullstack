@@ -2,18 +2,24 @@
 {% load bootstrap_tags %}
 {% block page_title %}My Profile | Fullstack{% endblock page_title %}
 {% block accounts_subtitle %}
-    <div class="row no-gutters">
-        <h2>View and manage your profile</h2>
-    </div>
-    <div class="row no-gutters user-details--accounts">
-        <div class="col-12">You are logged in as <strong>{{ user.email }}</strong></div>
-        <div class="col-12">You last logged in on <strong>{{ user.last_login|date:"d M Y" }}</strong> at <strong>{{ user.last_login|time:"H:i A" }}</strong></div>
-    </div>
+<h2>View and manage your profile</h2>
 {% endblock %}
 {% block account %}
 <section class="profile-section account-section">
     <div class="row no-gutters">
         <div class="col-12 col-md-6 col-xl-3 manage-account-form">
+            <div class="profile-section--info text-center text-md-left">
+                <div class="profile-disclaimer">
+                    <p class="mb-0">
+                        Use the form below to manage your account. Make sure to add your personal display name,
+                        this will be used to identify your posts within the forum.
+                    </p>
+                </div>
+                <div class="user-details--accounts">
+                    <p class="mb-0">You are logged in as <strong>{{ user.email }}</strong></p>
+                    <p class="mb-0">You last logged in on <strong>{{ user.last_login|date:"d M Y" }}</strong> at <strong>{{ user.last_login|time:"H:i A" }}</strong></p>
+                </div>
+            </div>
             <div class="form-container manage-form-container">
                 <form role="form" method="post" action="{% url 'profile' %}">
                     <legend> Manage <span>your</span> account</legend>
