@@ -221,9 +221,6 @@
 
 .forgot-password-info {
   max-width: 500px;
-  margin: auto;
-  text-align: center;
-  padding: 1em;
 }
 
 @media (min-width: 1200px) {
