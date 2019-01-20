@@ -56,8 +56,8 @@
     </div>
     <div class="language-row-container--home row no-gutters">
         {% for language in languages|slice:"3" %}
-        <div class="col col-12 col-lg-4 language-col-container--home">
-            <a href="{% url 'modules' language.id %}" class="language-link--home d-flex flex-row flex-sm-column justify-content-center align-items-center">
+        <div class="col col-12 col-md-4 language-col-container--home">
+            <a href="{% url 'modules' language.id %}" class="language-link--home d-flex flex-column justify-content-center align-items-center">
                 <div class="language-image-container--home">
                     {% if language.image %}
                     <img class="language-image--home" src="{{ MEDIA_URL }}{{ language.image }}" alt="{{ language.title }} Image" />
@@ -65,7 +65,9 @@
                     <img class="language-image--home" src="/media/images/courses/languages/placeholder.png" alt="Placeholder Coding Image" />
                     {% endif %}
                 </div>
-                <h4 class="language-title--home text-center">{{ language.title }}</h4>
+                <div class="language-title-container--home">
+                    <h4 class="language-title--home text-center">{{ language.title }}</h4>
+                </div>
             </a>
         </div>
         {% empty %}
