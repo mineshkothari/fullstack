@@ -8262,12 +8262,16 @@ body {
 }
 
 .sub-hero {
-  background: #63636E;
+  background: #343a40;
   color: #f2f2f2;
 }
 
 .sub-hero .col {
   padding: 3em;
+}
+
+.sub-hero h2 {
+  margin-bottom: 0;
 }
 
 .admin-panel {
