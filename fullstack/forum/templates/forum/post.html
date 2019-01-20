@@ -3,8 +3,15 @@
 {% load emoticons_tags %}
 <div class="mk--post-item post-item row no-gutters">
     <div class="mk--col-item contributor-col col-12 col-md-3 d-flex flex-column justify-content-center justify-content-md-start align-items-center">
-            <span class="profile-info contributor-username">{{ post.user.display_name }}</span>
-            <span class="profile-info contributor-popularity">{{ post.user.posts.count }} POSTS</span>
+        <div class="contributor-icon">
+            {% if post.user.is_staff %}
+                <i class="fas fa-user-tie fa-3x"></i>
+            {% else %}
+                <i class="fas fa-user fa-3x"></i>
+            {% endif %}
+        </div>
+        <p class="profile-info contributor-username text-center">{{ post.user.display_name }}{% if post.user.is_staff %}<br /><strong>Moderator</strong>{% endif %}</p>
+        <p class="profile-info contributor-popularity mb-0">{{ post.user.posts.count }} POSTS</p>
     </div>
     <div class="mk--col-item post-content col-12 col-md-7 d-flex flex-column">
         <time class="post-timer" datetime="{{ post.created_at }}">

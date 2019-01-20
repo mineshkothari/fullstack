@@ -150,6 +150,10 @@
   font-size: 14px;
 }
 
+.contributor-icon {
+  padding: 1em;
+}
+
 .post-timer {
   font-size: 12px;
   font-style: italic;
