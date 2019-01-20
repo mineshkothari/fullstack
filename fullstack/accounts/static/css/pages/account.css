@@ -1,12 +1,8 @@
-@import "https://use.fontawesome.com/releases/v5.3.1/css/all.css";
 .jumbotron {
-  background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6))), url("https://source.unsplash.com/collection/3320800/");
-  background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("https://source.unsplash.com/collection/3320800/");
-  background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("https://source.unsplash.com/collection/3320800/");
-  background: linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("https://source.unsplash.com/collection/3320800/");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6))), url("https://s3.eu-west-2.amazonaws.com/mk-fullstack/static/assets/backgrounds/Image_9.jpg") center no-repeat/cover;
+  background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("https://s3.eu-west-2.amazonaws.com/mk-fullstack/static/assets/backgrounds/Image_9.jpg") center no-repeat/cover;
+  background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("https://s3.eu-west-2.amazonaws.com/mk-fullstack/static/assets/backgrounds/Image_9.jpg") center no-repeat/cover;
+  background: linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("https://s3.eu-west-2.amazonaws.com/mk-fullstack/static/assets/backgrounds/Image_9.jpg") center no-repeat/cover;
   color: #dee2e6;
 }
 
