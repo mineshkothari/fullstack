@@ -95,30 +95,6 @@
   margin-left: 1em;
 }
 
-.cart-items--pay {
-  background-color: #0cd29a;
-  color: #f2f2f2;
-  font-size: 1.25em;
-  font-weight: 400;
-  border: .5px solid #0cd29a;
-  padding: .5em 1em;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  -webkit-transition: all 350ms ease-in-out;
-  -o-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
-}
-
-.cart-items--pay:hover {
-  text-decoration: none;
-  color: #F2F2F2;
-  -webkit-box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6);
-  -webkit-transform: translateY(-4px);
-  -ms-transform: translateY(-4px);
-  transform: translateY(-4px);
-}
-
 .empty-cart-container {
   background: #FFFFFF;
   padding: 2em;

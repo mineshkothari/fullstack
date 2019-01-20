@@ -51,8 +51,8 @@
                 <p class="cart-items--total"><strong>Total <span>£{{ total }}</span></strong></p>
             </div>
             <div class="col-12 col-lg-8 cart-total--col d-flex flex-column flex-lg-row justify-content-center justify-content-lg-end align-items-center">
-                <a href="{% url 'courses' %}" class="btn-subhero btn-subhero--cart">Continue Shopping</a>
-                <a href="{% url 'checkout' %}" class="cart-items--pay" role="button"><i class="fas fa-credit-card"></i> Enrol Now</a>
+                <a href="{% url 'courses' %}" class="cart-btn">Continue Shopping</a>
+                <a href="{% url 'checkout' %}" class="cart-btn" role="button"><i class="fas fa-credit-card"></i> Enrol Now</a>
             </div>
         </div>
         {% endif %}
