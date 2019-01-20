@@ -59,7 +59,7 @@ class UserLoginForm(forms.Form):
 
 class UserAccountForm(forms.ModelForm):
 
-    display_name = forms.CharField(label='Display Name')
+    display_name = forms.CharField(label='Display Name', max_length=16)
     email = forms.EmailField(required=True)
 
     class Meta:
