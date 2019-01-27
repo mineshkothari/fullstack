@@ -3,16 +3,19 @@ from __future__ import unicode_literals
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
-from django.contrib import messages
+from django.contrib import messages, auth
+from django.template.context_processors import csrf
 from .forms import MakePaymentForm
+from accounts.forms import UserLoginForm
 from .models import Order, OrderItem
 from courses.models import Module
 import stripe
 
+
 stripe.api_key = settings.STRIPE_SECRET
 
 
-@login_required(login_url='/account/login/')
+@login_required(login_url='/checkout/login/')
 def checkout(request):
     if request.method == 'POST':
         payment_form = MakePaymentForm(request.POST)
@@ -70,3 +73,30 @@ def checkout(request):
     }
 
     return render(request, "checkout/checkout.html", args)
+
+
+def checkout_login(request):
+    if request.user.is_authenticated:
+        return redirect(reverse('profile'))
+    if request.method == 'POST':
+        form = UserLoginForm(request.POST)
+        if form.is_valid():
+            user = auth.authenticate(email=request.POST.get('email'),
+                                     password=request.POST.get('password'))
+
+            if user is not None:
+                auth.login(request, user)
+                messages.error(request, "You have successfully logged in")
+                return redirect(reverse('checkout'))
+            else:
+                form.add_error(None, "Your email or password was not recognised")
+
+    else:
+        form = UserLoginForm()
+
+    args = {
+        'form': form,
+        'login_required_message': 'Please login below to proceed to checkout'
+    }
+    args.update(csrf(request))
+    return render(request, 'accounts/login.html', args)
