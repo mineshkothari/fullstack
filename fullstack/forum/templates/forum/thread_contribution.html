@@ -1,0 +1,14 @@
+<div class="information-container d-flex flex-column justify-content-center align-items-center">
+    <div class="information-title">
+        <strong>Looking to contribute to this thread?</strong>
+    </div>
+    <div>
+        <p class="mb-0">
+            You must be logged in to reply to this thread. Click on one of the links below to login or register.
+        </p>
+    </div>
+    <div class="d-flex flex-column flex-sm-row justify-content-around align-items-center">
+        <a class="login-required-cta--button" href="{% url 'register'%}"><i class="fas fa-user-plus"></i> Register</a>
+        <a class="login-required-cta--button" href="{% url 'login'%}"><i class="fas fa-sign-in-alt"></i> Log in</a>
+    </div>
+</div>
