@@ -21,8 +21,8 @@
 {% endblock %}
 {% block forum %}
 <section class="forum-section--main post-form--forum">
-    <div class="forum-section--title row no-gutters">
-        <h2>{{ subtitle }} {{ thread.name }}</h2>
+    <div class="thread-name-container row no-gutters justify-content-center align-items-center">
+        <h2 class="display-4">{{ subtitle }} {{ thread.name }}</h2>
     </div>
     <form method="POST" action="{{ form_action }}" class="mk--forms post-form">
         {% csrf_token %}
