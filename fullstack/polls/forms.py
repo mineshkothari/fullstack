@@ -3,7 +3,7 @@ from models import Poll, PollSubject
 
 
 class PollForm(forms.ModelForm):
-    question = forms.CharField(label="What is your poll about?")
+    question = forms.CharField(label="Enter your poll question")
 
     class Meta:
         model = Poll
@@ -11,7 +11,7 @@ class PollForm(forms.ModelForm):
 
 
 class PollSubjectForm(forms.ModelForm):
-    name = forms.CharField(label="Poll subject name", required=True)
+    name = forms.CharField(label="Poll option", required=True)
 
     def __init__(self, *args, **kwargs):
         super(PollSubjectForm, self).__init__(*args, **kwargs)

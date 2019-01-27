@@ -183,45 +183,6 @@
   text-decoration: none;
 }
 
-.login-required-container {
-  background: #FFFFFF;
-  padding: 2em;
-  margin: 3em auto;
-  color: #63636E;
-  max-width: 960px;
-  text-align: center;
-  border: 0.5px solid rgba(12, 210, 154, 0.15);
-  border-radius: 10px;
-  -webkit-box-shadow: 0 15px 38px -12px rgba(12, 210, 154, 0.095);
-  box-shadow: 0 15px 38px -12px rgba(12, 210, 154, 0.095);
-}
-
-.login-required-container .login-required-title {
-  position: relative;
-  font-size: 1.25em;
-}
-
-.login-required-container .login-required-title::after {
-  position: absolute;
-  content: '';
-  background: #0cd29a;
-  height: 1px;
-  width: 66%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  bottom: .85em;
-}
-
-.login-required-container > div {
-  padding-bottom: 2em;
-}
-
-.login-required-container > div:last-of-type {
-  padding-bottom: 0;
-}
-
 @media (min-width: 768px) {
   .mk--col-item {
     padding: 1em !important;
