@@ -22,8 +22,8 @@
 {% endblock %}
 {% block forum %}
 <section class="forum-section--main thread-form--forum">
-    <div class="forum-section--title row no-gutters">
-        <h2>Create a new thread</h2>
+    <div class="thread-name-container row no-gutters justify-content-center align-items-center">
+        <h2 class="display-4">Create a new thread</h2>
     </div>
     <form method="POST" action="{% url 'new_thread' subject.id %}" class="mk--forms thread-form">
         {% csrf_token %}
