@@ -21,18 +21,33 @@ body
 // ERROR/SUCCESS MESSAGE
 
 .alert
-    display: flex
-    justify-content: center
+  display: flex
+  justify-content: center
+  position: fixed
+  z-index: 99
+  width: 100%
+  padding: 1em 0
 
 .messages
-    position: absolute
-    color: #aaaaa3
-    padding: 1em 2.5em
-    border: 1px solid turquoise
-    border-radius: 10px
-    background-color: rgba(0,255,255,0.1)
-    margin: 15px 0
-    box-shadow: 0 20px 50px -15px rgba(0,0,0,0.4)
+  color: #f2f2f2
+  font-size: 24px
+  padding: 1em 2.5em
+  border-radius: 10px
+  background-color: rgba(99,99,110,0.7)
+  box-shadow: 0 20px 50px -15px rgba(0,0,0,0.4)
+  animation: alertMessageAnim 5s ease-in-out forwards
+
+@keyframes alertMessageAnim
+  0%
+    transform: translateX(-100%)
+    opacity: 0
+  20%, 80%
+    opacity: 1
+    transform: translateX(0)
+  100%
+    opacity: 0
+    transform: translateX(100%)
+    display: none
 
 @media (max-width: 380px)
   .messages
