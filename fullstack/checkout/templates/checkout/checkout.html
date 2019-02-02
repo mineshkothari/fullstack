@@ -35,13 +35,18 @@
                     <p>£ {{ module.price }}</p>
                 </div>
             </div>
+            {% empty %}
+            {% include "checkout/cart_empty.html" %}
             {% endfor %}
+            {% if cart_items %}
             <div class="row no-gutters cart-total--row">
                 <div class="col-12 cart-total--col d-flex justify-content-center justify-content-sm-end align-items-center">
                     <p class="cart-items--total"><strong>Total <span>£{{ total }}</span></strong></p>
                 </div>
             </div>
+            {% endif %}
         </div>
+        {% if cart_items %}
         <div class="col-12 col-md-6 checkout-section-col payment-col">
             <form role="form" method="post" id="payment-form" class="mk--forms payment-form" action="{% url 'checkout' %}">
                 <legend class="payment-form--legend">Payment Details</legend>
@@ -55,6 +60,7 @@
                 <button type="submit" class="payment-button"><i class="fas fa-credit-card"></i> Make Payment</button>
             </form>
         </div>
+        {% endif %}
     </div>
 </section>
 {% endblock %}
