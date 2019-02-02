@@ -71,15 +71,7 @@
             </a>
         </div>
         {% empty %}
-        <div class="information-container d-flex flex-column justify-content-center align-items-center">
-            <div class="information-title">
-                <strong>There are no courses here at the moment!</strong>
-            </div>
-            <div>
-                <p>Thank you for visiting, but we don't have any available courses at the moment.</p>
-                <p class="mb-0">We are in the process of adding new courses. Please come back soon when we'll have some courses available.</p>
-            </div>
-        </div>
+        {% include "courses/no_courses.html" %}
         {% endfor %}
     </div>
     {% if languages %}
@@ -123,14 +115,7 @@
                     </div>
                 </div>
                 {% else %}
-                <div class="information-container d-flex flex-column justify-content-center align-items-center">
-                    <div class="information-title">
-                        <strong>Our blog is currently empty</strong>
-                    </div>
-                    <div>
-                        <p class="mb-0">Stay tuned as we are continuously adding new blog posts to our website.</p>
-                    </div>
-                </div>
+                {% include "blog/no_blogs.html" %}
                 {% endif %}
             </div>
         </div>
