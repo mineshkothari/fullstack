@@ -30,20 +30,7 @@
             </div>
         </div>
         {% empty %}
-        <div class="empty-cart-container d-flex flex-column justify-content-center align-items-center">
-            <div class="empty-cart-title">
-                <strong>The cart is currently empty</strong>
-            </div>
-            <div class="empty-cart-info">
-                Modules added to the cart will appear here and it seems you haven't added any yet.
-            </div>
-            <div class="empty-cart-cta d-flex flex-column justify-content-center align-items-center">
-                <div class="empty-cart-cta--text">
-                    To add modules to the cart, please visit the link below to check out our range of courses.
-                </div>
-                <a class="empty-cart-cta--button" href="{% url 'courses'%}"><i class="fas fa-graduation-cap"></i> View Courses</a>
-            </div>
-        </div>
+        {% include "cart/cart_empty.html" %}
         {% endfor %}
         {% if cart_items %}
         <div class="row no-gutters cart-total--row">
