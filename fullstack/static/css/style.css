@@ -8123,6 +8123,7 @@ nav .active a {
 }
 
 .courses-cta--button {
+  display: inline-block;
   margin-top: 2em;
   background-color: #0cd29a;
   color: #f2f2f2;
