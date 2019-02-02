@@ -11,7 +11,9 @@ from django.template.context_processors import csrf
 
 
 def courses(request):
-    return render(request, 'courses/languages.html', {'languages': Language.objects.all()})
+    languages = Language.objects.all().order_by('id')
+
+    return render(request, 'courses/languages.html', {'languages': languages})
 
 
 def modules(request, language_id):
