@@ -8,20 +8,7 @@
         {% for module in modules %}
         {% include "courses/module.html" %}
         {% empty %}
-        <div class="empty-module-container d-flex flex-column justify-content-center align-items-center">
-            <div class="empty-module-title">
-                <strong>Well, isn't this is embarrassing!</strong>
-            </div>
-            <div class="empty-module-info">
-                We don't have any courses here at the moment. But please do come back soon for some really cool awesomeness.
-            </div>
-            <div class="empty-module-cta d-flex flex-column justify-content-center align-items-center">
-                <div class="empty-module-cta--text">
-                    In the meantime, why not check out our other courses by clicking the link below?
-                </div>
-                <a class="empty-module-cta--button" href="{% url 'courses'%}"><i class="fas fa-graduation-cap"></i> More Courses</a>
-            </div>
-        </div>
+        {% include "courses/no_modules.html" %}
         {% endfor %}
     </div>
 </section>
