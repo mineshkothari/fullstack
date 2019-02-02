@@ -17,27 +17,13 @@
     {% for thread in subject.threads.all %}
     {% include "forum/thread_item.html" %}
     {% empty %}
-    <div class="information-container d-flex flex-column justify-content-center align-items-center">
-        <div class="information-title">
-            <strong>There are no {{ subject.name }} threads at the moment!</strong>
-        </div>
-        {% if user.is_authenticated %}
-        <div>
-            <p>Be the first to get the conversation going by clicking on the 'New Thread' button below.</p>
-        </div>
-        {% else %}
-        <div>
-            <p>You could be the first to get the conversation going.</p>
-            <p class="mb-0">Simply log in or register by clicking the button below.</p>
-        </div>
-        {% endif %}
-    </div>
+    {% include "forum/no_threads.html" %}
     {% endfor %}
     <div class="new-post-section">
         {% if user.is_authenticated %}
             <a href="{% url 'new_thread' subject.id %}" class="btn admin-btn">New Thread</a>
         {% else %}
-        {% include "forum/thread_contribution.html" %}
+        {% include "forum/new_thread.html" %}
         {% endif %}
     </div>
 </section>

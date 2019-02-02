@@ -1,0 +1,13 @@
+<div class="information-container d-flex flex-column justify-content-center align-items-center">
+    <div class="information-title"><strong>There are no {{ subject.name }} threads at the moment!</strong></div>
+    {% if user.is_authenticated %}
+    <div>
+        <p class="mb-0">Be the first to get the conversation going by clicking on the 'New Thread' button below.</p>
+    </div>
+    {% else %}
+    <div>
+        <p>You could be the first to get the conversation going.</p>
+        <p class="mb-0">Simply log in or register by clicking the button below.</p>
+    </div>
+    {% endif %}
+</div>
