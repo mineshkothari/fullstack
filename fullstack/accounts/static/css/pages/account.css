@@ -74,9 +74,7 @@
 }
 
 .form-container span.error-msg {
-  color: red;
-  position: relative;
-  top: -233px;
+  color: #ff0000;
 }
 
 .form-container .form-control {

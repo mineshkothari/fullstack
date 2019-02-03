@@ -8431,3 +8431,9 @@ body {
 .information-container > div:last-of-type {
   padding-bottom: 0;
 }
+
+ul.errorlist {
+  text-align: left;
+  margin-bottom: 2em !important;
+  color: #ff0000;
+}
