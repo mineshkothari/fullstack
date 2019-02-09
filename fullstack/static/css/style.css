@@ -7806,6 +7806,7 @@ nav .active a {
 .footer .footer-content ul li {
   list-style-type: none;
   text-transform: uppercase;
+  font-size: .85em;
   line-height: 2;
 }
 
@@ -7857,6 +7858,7 @@ nav .active a {
   padding: 1.25em 1em;
   background-color: #44484C;
   color: #aaaaa3;
+  font-size: 13px;
 }
 
 .footer .sub-footer-content p {
@@ -7877,6 +7879,15 @@ nav .active a {
 .footer .sub-footer-content p a:hover {
   color: #ffffff;
   text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .footer .footer-content ul li {
+    font-size: 1em;
+  }
+  .footer .sub-footer-content {
+    font-size: 1em;
+  }
 }
 
 .fullstack-btn {
