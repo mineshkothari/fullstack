@@ -1,15 +1,20 @@
 from django.contrib import messages, auth
 from django.core.urlresolvers import reverse
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect
 from django.template.context_processors import csrf
 from accounts.forms import UserRegistrationForm, UserLoginForm, UserAccountForm
-from courses.models import Module
 from django.contrib.auth.decorators import login_required
 
 
 def register(request):
+    """
+    Render the registration page
+    """
+    # First check if user is logged in. If True, redirect to the profile page
     if request.user.is_authenticated:
         return redirect(reverse('profile'))
+
+    # If method is POST, register user.
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
@@ -23,8 +28,9 @@ def register(request):
                 return redirect(reverse('profile'))
 
             else:
-                messages.error(request, "unable to log you in at this time")
+                messages.error(request, "unable to sign you up at this time")
 
+    # If method is get, render blank registration page
     else:
         form = UserRegistrationForm()
 
@@ -36,6 +42,9 @@ def register(request):
 
 @login_required(login_url='/account/login/')
 def profile(request):
+    """
+    Render the profile page and load/save UserAccountForm.
+    """
     if request.method == 'POST':
         form = UserAccountForm(request.POST, instance=request.user)
         if form.is_valid():
@@ -57,8 +66,14 @@ def profile(request):
 
 
 def login(request):
+    """
+    Render the login page
+    """
+    # First check if user is logged in. If True, redirect to the profile page
     if request.user.is_authenticated:
         return redirect(reverse('profile'))
+
+    # If method is POST, log user in
     if request.method == 'POST':
         form = UserLoginForm(request.POST)
         if form.is_valid():
@@ -72,6 +87,7 @@ def login(request):
             else:
                 form.add_error(None, "Your email or password was not recognised")
 
+    # If method is GET, render empty Login form
     else:
         form = UserLoginForm()
 
@@ -82,6 +98,9 @@ def login(request):
 
 @login_required(login_url='/account/login/')
 def logout(request):
+    """
+    Log user out and redirect to Homepage
+    """
     auth.logout(request)
     messages.success(request, 'You have successfully logged out')
     return redirect(reverse('index'))
