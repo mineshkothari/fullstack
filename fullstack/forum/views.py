@@ -12,27 +12,37 @@ from polls.forms import PollSubjectForm, PollForm
 from polls.models import PollSubject
 
 
-# Create your views here.
 def forum(request):
+    """
+    Render the forum subject
+    """
     return render(request, 'forum/subjects.html', {'subjects': Subject.objects.all()})
 
 
 def threads(request, subject_id):
+    """
+    View all threads per subject selected
+    """
     subject = get_object_or_404(Subject, pk=subject_id)
     return render(request, 'forum/threads.html', {'subject': subject})
 
 
 @login_required
 def new_thread(request, subject_id):
+    """
+    Add a new thread
+    """
     subject = get_object_or_404(Subject, pk=subject_id)
     poll_subject_formset_class = formset_factory(PollSubjectForm, extra=3)
 
+    # If request is POST, create a new thread
     if request.method == "POST":
         thread_form = ThreadForm(request.POST)
         post_form = PostForm(request.POST)
         poll_form = PollForm(request.POST)
         poll_subject_formset = poll_subject_formset_class(request.POST)
 
+        # Save Thread and Post
         if thread_form.is_valid() and post_form.is_valid():
             thread = thread_form.save(False)
             thread.subject = subject
@@ -44,6 +54,7 @@ def new_thread(request, subject_id):
             post.thread = thread
             post.save()
 
+            # If user creates a Poll then save it too
             if poll_form.is_valid() and poll_subject_formset.is_valid():
                 poll = poll_form.save(False)
                 poll.thread = thread
@@ -58,6 +69,7 @@ def new_thread(request, subject_id):
 
             return redirect(reverse('thread', args=[thread.pk]))
 
+    # If request is GET, render blank form
     else:
         thread_form = ThreadForm()
         post_form = PostForm()
@@ -78,6 +90,9 @@ def new_thread(request, subject_id):
 
 
 def thread(request, thread_id):
+    """
+    View single thread
+    """
     thread_ = get_object_or_404(Thread, pk=thread_id)
     args = {'thread': thread_}
     args.update(csrf(request))
@@ -86,8 +101,12 @@ def thread(request, thread_id):
 
 @login_required
 def new_post(request, thread_id):
+    """
+    Create a new post/ Add a reply to a thread
+    """
     thread = get_object_or_404(Thread, pk=thread_id)
 
+    # If method is POST, save Post/Reply
     if request.method == "POST":
         form = PostForm(request.POST)
         if form.is_valid():
@@ -100,6 +119,7 @@ def new_post(request, thread_id):
 
             return redirect(reverse('thread', args={thread.pk}))
 
+    # If method is GET, render blank form
     else:
         form = PostForm()
 
@@ -118,9 +138,13 @@ def new_post(request, thread_id):
 
 @login_required
 def edit_post(request, thread_id, post_id):
+    """
+    Edit a thread post
+    """
     thread = get_object_or_404(Thread, pk=thread_id)
     post = get_object_or_404(Post, pk=post_id)
 
+    # If method is POST, update and save the Post.
     if request.method == "POST":
         form = PostForm(request.POST, instance=post)
         if form.is_valid():
@@ -128,6 +152,8 @@ def edit_post(request, thread_id, post_id):
             messages.success(request, "You have updated your thread!")
 
             return redirect(reverse('thread', args={thread.pk}))
+
+    # If method is GET, render the existing Post to edit
     else:
         form = PostForm(instance=post)
 
@@ -145,6 +171,9 @@ def edit_post(request, thread_id, post_id):
 
 @login_required
 def delete_post(request, thread_id, post_id):
+    """
+    Delete post
+    """
     post = get_object_or_404(Post, pk=post_id)
     thread_id = post.thread.id
     post.delete()
@@ -156,6 +185,9 @@ def delete_post(request, thread_id, post_id):
 
 @login_required
 def thread_vote(request, thread_id, subject_id):
+    """
+    Allow users to cast vote
+    """
     thread = Thread.objects.get(id=thread_id)
 
     subject = thread.poll.votes.filter(user=request.user)
