@@ -17,6 +17,10 @@ stripe.api_key = settings.STRIPE_SECRET
 
 @login_required(login_url='/checkout/login/')
 def checkout(request):
+    """
+    Render checkout page
+    """
+    # If method is post, process the payment form
     if request.method == 'POST':
         payment_form = MakePaymentForm(request.POST)
 
@@ -64,6 +68,7 @@ def checkout(request):
             print(payment_form.errors)
             messages.error(request, 'We were unable to take a payment with that card!')
 
+    # If method is GET, render blank payment form
     else:
         payment_form = MakePaymentForm()
 
@@ -76,8 +81,14 @@ def checkout(request):
 
 
 def checkout_login(request):
+    """
+    Redirect to login page if user attempts to proceed to checkout without logging in
+    """
+    # If user accesses this page if they are logged in then redirect to profile page
     if request.user.is_authenticated:
         return redirect(reverse('profile'))
+
+    # If method is POST, log user in and redirect them back to checkout
     if request.method == 'POST':
         form = UserLoginForm(request.POST)
         if form.is_valid():
@@ -91,6 +102,7 @@ def checkout_login(request):
             else:
                 form.add_error(None, "Your email or password was not recognised")
 
+    # If  method is GET, render blank login form
     else:
         form = UserLoginForm()
 
