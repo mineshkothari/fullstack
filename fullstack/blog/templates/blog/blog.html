@@ -10,12 +10,12 @@
 <section class="sub-hero">
     <div class="row no-gutters">
         <div class="col col-12 col-md-6 d-flex flex-wrap align-items-center">
-            <a class="btn btn-subhero btn-subhero--blog" href="{% url 'blog' %}">All posts</a>
-            <a class="btn btn-subhero btn-subhero--blog" href="{% url 'top_posts' %}">Top posts</a>
+            <a class="btn btn-transparent btn-accent--blog" href="{% url 'blog' %}">All posts</a>
+            <a class="btn btn-transparent btn-accent--blog" href="{% url 'top_posts' %}">Top posts</a>
         </div>
         {% if user.is_authenticated and user.is_staff %}
         <div class="col col-12 col-md-6 admin-panel admin-panel--blog d-flex flex-wrap align-items-center">
-            <a class="btn admin-panel-btn" href="{% url 'new_blog_post' %}">New Blog</a>
+            <a class="btn btn-transparent btn-admin-panel" href="{% url 'new_blog_post' %}">New Blog</a>
         </div>
         {% endif %}
     </div>
