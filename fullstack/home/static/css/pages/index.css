@@ -97,14 +97,8 @@
   margin-bottom: 2em;
 }
 
-.blog-col--home div {
-  margin: 1em auto;
-}
-
-@media (min-width: 768px) {
-  .blog-col--home {
-    padding: 4% 0 4% 8% !important;
-  }
+.blog-col--home > .information-container {
+  max-width: 600px;
 }
 
 .post-container-home {

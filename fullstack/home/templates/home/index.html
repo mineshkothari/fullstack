@@ -3,9 +3,11 @@
 {% block page_title %}Fullstack | Learn Web Development | Minesh Kothari{% endblock page_title %}
 {% block head_css %}<link rel="stylesheet" href="{% static "css/pages/index.css" %}">{% endblock head_css %}
 {% block body %}
+<!-- HERO SECTION -->
 <div class="jumbotron text-center">
     <h1 class="display-4"><span class="fullstack-brand rounded-right border border-left-0">Fullstack</span> Home</h1>
 </div>
+<!-- SUBHERO SECTION -->
 <section class="sub-hero">
     <div class="row no-gutters">
         <div class="col col-12 col-md-6 d-flex align-items-center">
@@ -17,14 +19,15 @@
         </div>
         <div class="col col-12 col-md-6 d-flex flex-wrap align-items-center">
             {% if user.is_authenticated %}
-            <a class="btn btn-transparent btn-subhero btn-subhero--home" href="{% url 'profile' %}">My Profile</a>
+            <a class="btn btn-transparent btn-subhero--home" href="{% url 'profile' %}">My Profile</a>
             {% else %}
-            <a class="btn btn-transparent btn-subhero btn-subhero--home" href="{% url 'register' %}">Register</a>
-            <a class="btn btn-transparent btn-subhero btn-subhero--home" href="{% url 'login' %}">Login</a>
+            <a class="btn btn-transparent btn-subhero--home" href="{% url 'register' %}">Register</a>
+            <a class="btn btn-transparent btn-subhero--home" href="{% url 'login' %}">Login</a>
             {% endif %}
         </div>
     </div>
 </section>
+<!-- ABOUT SECTION -->
 <section class="home-section home-about d-flex flex-column justify-content-center align-items-center">
     <div class="row no-gutters justify-content-center align-items-center home-about--row">
         <div class="section-title--home about-title--home text-center"><h3 class="display-4">What is Fullstack?</h3></div>
@@ -46,6 +49,7 @@
         <a class="btn-solid btn-cta--home text-center" href="{% url 'about'%}"><i class="fas fa-info-circle"></i> Learn More</a>
     </div>
 </section>
+<!-- COURSES SECTION -->
 <section class="home-section home-courses">
     <div class="row no-gutters flex-column align-items-center">
         <div class="section-title--home courses-title--home text-center"><h3 class="display-4">Improve your skills</h3></div>
@@ -83,6 +87,7 @@
     </div>
     {% endif %}
 </section>
+<!-- BLOG SECTION -->
 <section class="home-section home-blog">
     <div class="row no-gutters flex-column align-items-center">
         <div class="section-title--home blog-title--home text-center"><h3 class="display-4">Be Inspired</h3></div>
@@ -91,7 +96,7 @@
             to deprecated technologies and everything in between.
         </p>
     </div>
-    <div class="blog-row--home row no-gutters">
+    <div class="blog-row--home row">
         <div class="col col-12 col-md-6 post-container-col">
             <div class="row no-gutters d-flex justify-content-center">
                 {% if post %}
@@ -120,20 +125,28 @@
             </div>
         </div>
         <div class="col col-12 col-md-6 blog-col--home d-flex flex-column align-items-center justify-content-center text-center">
-            <p class="text-home">
-                Staying up-to-date can be challenging in the world of Web
-                Development and IT in general. That's why we bring to you
-                weekly blogs to keep you on top of everything you need to
-                know.
-            </p>
-            <p class="text-home">
-                <strong>Be inspired. Be motivated. Be successful.</strong>
-            </p>
-            <p class="text-home">
-                Sit back, relax and enjoy our tips, tricks and news directly
-                from the comfort of your own screen, whether it's on mobile,
-                tablet or desktop.
-            </p>
+            <div class="information-container">
+                <div>
+                    <p class="text-home">
+                        Staying up-to-date can be challenging in the world of Web
+                        Development and IT in general. That's why we bring to you
+                        weekly blogs to keep you on top of everything you need to
+                        know.
+                    </p>
+                </div>
+                <div>
+                    <p class="text-home">
+                        <strong>Be inspired. Be motivated. Be successful.</strong>
+                    </p>
+                </div>
+                <div>
+                    <p class="text-home">
+                        Sit back, relax and enjoy our tips, tricks and news directly
+                        from the comfort of your own screen, whether it's on mobile,
+                        tablet or desktop.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
     {% if post %}
@@ -145,6 +158,7 @@
     </div>
     {% endif %}
 </section>
+<!-- FORUM SECTION -->
 <section class="home-section home-forum">
     <div class="row no-gutters flex-column align-items-center">
         <div class="section-title--home forum-title--home text-center"><h3 class="display-4">Join the Conversation</h3></div>
