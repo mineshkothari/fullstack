@@ -17,13 +17,13 @@
 {% endblock %}
 {% block forum_subtitle %}
 <div class="row no-gutters">
-    <a class="btn btn-subhero btn-subhero--forum" href="{% url 'forum' %}">All Forums</a>
+    <a class="btn btn-transparent btn-accent--forum" href="{% url 'forum' %}">All Forums</a>
 </div>
 {% endblock %}
 {% block forum %}
 <section class="forum-section--main thread-form--forum">
     <div class="thread-name-container row no-gutters justify-content-center align-items-center">
-        <h2 class="display-4">Create a new thread</h2>
+        <h2 class="display-4 text-center">Create a new thread</h2>
     </div>
     <form method="POST" action="{% url 'new_thread' subject.id %}" class="mk--forms thread-form">
         {% csrf_token %}
@@ -41,7 +41,7 @@
             {{ post_form | as_bootstrap }}
         </div>
         <div class="form-group">
-            <button type="submit" class="btn admin-btn">Post New Thread</button>
+            <button type="submit" class="btn btn-solid-alt">Post New Thread</button>
         </div>
     </form>
 </section>

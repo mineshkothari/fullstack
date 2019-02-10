@@ -17,7 +17,11 @@
   padding: 8%;
 }
 
-.btn-subhero--forum:hover {
+.btn-accent--forum {
+  padding: .75em 1em;
+}
+
+.btn-accent--forum:hover {
   color: #0cd29a;
 }
 

@@ -4,9 +4,9 @@
 {% block page_title %}{{ thread.name }} | Fullstack Forums | Learn Web Development{% endblock %}
 {% block forum_subtitle %}
     <div class="row no-gutters">
-        <a class="btn btn-subhero btn-subhero--forum" href="{% url 'forum' %}">All Forums</a>
+        <a class="btn btn-transparent btn-accent--forum" href="{% url 'forum' %}">All Forums</a>
         {% if user.is_authenticated %}
-        <a class="btn btn-subhero btn-subhero--forum" href="{% url 'new_post' thread.id %}">New Post</a>
+        <a class="btn btn-transparent btn-accent--forum" href="{% url 'new_post' thread.id %}">New Post</a>
         {% endif %}
     </div>
 {% endblock %}
@@ -51,7 +51,7 @@
     {% endfor %}
     <div class="new-post-section">
         {% if user.is_authenticated %}
-        <a href="{% url 'new_post' thread.id %}" class="btn admin-btn">New Post</a>
+        <a href="{% url 'new_post' thread.id %}" class="btn btn-solid-alt">New Post</a>
         {% else %}
         {% include "forum/thread_contribution.html" %}
         {% endif %}
