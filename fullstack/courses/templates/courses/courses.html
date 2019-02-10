@@ -14,8 +14,8 @@
         </div>
         {% if user.is_authenticated and user.is_staff %}
         <div class="col col-12 col-md-6 admin-panel admin-panel--courses d-flex flex-wrap align-items-center">
-            <a class="btn admin-panel-btn" href="{% url 'new_language' %}">New language</a>
-            <a class="btn admin-panel-btn" href="{% url 'new_module' %}">New module</a>
+            <a class="btn btn-transparent btn-admin-panel" href="{% url 'new_language' %}">New language</a>
+            <a class="btn btn-transparent btn-admin-panel" href="{% url 'new_module' %}">New module</a>
         </div>
         {% endif %}
     </div>

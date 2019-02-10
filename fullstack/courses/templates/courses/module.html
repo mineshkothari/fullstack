@@ -11,7 +11,7 @@
         {% else %}
         <form class="mt-auto" method="post" action="{% url 'add_to_cart' module.id %}">
             {% csrf_token %}
-            <button class="enrol-btn"><i class="fas fa-graduation-cap"></i> Enrol Today</button>
+            <button class="btn-solid enrol-btn"><i class="fas fa-graduation-cap"></i> Enrol Today</button>
         </form>
         {% endif %}
     </div>
