@@ -7890,11 +7890,13 @@ nav .active a {
   }
 }
 
-.fullstack-btn {
+.btn-transparent {
+  margin: .25em;
   background-color: transparent;
   color: #f2f2f2;
   border: .5px solid;
-  padding: .5em 1em;
+  padding: .75em 1em;
+  font-size: 13px;
   font-weight: 200;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -7903,56 +7905,81 @@ nav .active a {
   transition: all 350ms ease-in-out;
 }
 
-.fullstack-btn:hover {
-  background-color: #f2f2f2;
-  color: #404854;
-  border: .5px solid #f2f2f2;
-  -webkit-transform: translateY(-3px);
-  -ms-transform: translateY(-3px);
-  transform: translateY(-3px);
-  -webkit-box-shadow: 0 10px 50px -7px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 10px 50px -7px rgba(0, 0, 0, 0.25);
-}
-
-.btn-subhero {
-  margin: .25em;
+.btn-transparent:hover {
   color: #f2f2f2;
-  border: .5px solid;
-  padding: 1em 2em;
-  font-weight: 200;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  -webkit-transition: all 350ms ease-in-out;
-  -o-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
-}
-
-.btn-subhero:hover {
-  color: #f2f2f2;
-  border: .5px solid;
   text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .btn-transparent {
+    padding: 1em 2em;
+    font-size: 1em;
+  }
+}
+
+.btn-solid {
+  margin: .25em;
+  background-color: #17a2b8;
+  color: #f2f2f2;
+  font-size: 13px;
+  font-weight: 200;
+  padding: .75em 1em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-transition: all 350ms ease-in-out;
+  -o-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.btn-solid:hover {
+  text-decoration: none;
+  color: #f2f2f2;
+}
+
+@media (min-width: 768px) {
+  .btn-solid {
+    padding: 1em 2em;
+    font-size: 1em;
+  }
+}
+
+.btn-solid-alt {
+  margin: .25em;
+  background-color: #17a2b8;
+  border: 2px solid #17a2b8;
+  color: #f2f2f2;
+  font-size: 13px;
+  font-weight: 400;
+  padding: .75em 1em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-transition: all 350ms ease-in-out;
+  -o-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.btn-solid-alt:hover {
+  text-decoration: none;
+  color: #17a2b8;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .btn-solid-alt {
+    padding: 1em 2em;
+    font-size: 1em;
+  }
 }
 
 .login-required-cta--button {
-  margin: .5em;
   background-color: #0cd29a;
-  color: #f2f2f2;
-  font-size: 1.25em;
+  font-size: 1em;
   font-weight: 400;
-  border: .5px solid #0cd29a;
-  padding: .5em 1em;
-  letter-spacing: 1px;
-  text-transform: uppercase;
   -webkit-box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
   box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 350ms ease-in-out;
-  -o-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
 }
 
 .login-required-cta--button:hover {
-  text-decoration: none;
-  color: #F2F2F2;
   -webkit-transform: translateY(-4px);
   -ms-transform: translateY(-4px);
   transform: translateY(-4px);
@@ -7960,59 +7987,34 @@ nav .active a {
   box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6);
 }
 
-.admin-panel-btn {
-  margin: .25em;
-  color: #63636E;
-  border: .5px solid;
-  padding: 1em 2em;
-  font-weight: 200;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  -webkit-transition: all 350ms ease-in-out;
-  -o-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
+@media (min-width: 768px) {
+  .login-required-cta--button {
+    font-size: 1.25em;
+    padding: 1em 1.5em;
+  }
 }
 
-.admin-panel-btn:hover {
-  color: #ff0000;
-  border: .5px solid;
-  text-decoration: none;
+.btn-admin-panel {
+  padding: .75em 1em;
+  font-weight: 400;
+  color: #fff;
+  border: 2px solid;
 }
 
-.admin-btn {
-  margin: .25em;
-  background: #0cd29a;
-  color: #f2f2f2;
-  border: 1px solid #0cd29a;
-  padding: 1em 2em;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  -webkit-transition: all 350ms ease-in-out;
-  -o-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
-}
-
-.admin-btn:hover {
-  background: transparent;
-  color: #0cd29a;
-  text-decoration: none;
+.btn-admin-panel:hover {
+  background-color: #fff;
+  color: #ea6823;
+  border: 2px solid #fff;
 }
 
 .enrol-btn {
   background-color: #0cd29a;
-  color: #f2f2f2;
-  font-size: 1.25em;
+  font-size: 1em;
   font-weight: 400;
   border: 2px solid #0cd29a;
-  padding: .5em 1em;
-  letter-spacing: 1px;
-  text-transform: uppercase;
   -webkit-box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
   box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
   cursor: pointer;
-  -webkit-transition: all 350ms ease-in-out;
-  -o-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
 }
 
 .enrol-btn:hover {
@@ -8021,12 +8023,19 @@ nav .active a {
   border: 2px solid #0cd29a;
 }
 
+@media (min-width: 768px) {
+  .enrol-btn {
+    font-size: 1.25em;
+    padding: .5em 1em;
+  }
+}
+
 .go-to-course-btn {
   color: #0cd29a;
-  font-size: 1.25em;
+  font-size: 1em;
   font-weight: 400;
   border: 2px solid #0cd29a;
-  padding: .5em 1em;
+  padding: .75em 1em;
   letter-spacing: 1px;
   text-transform: uppercase;
   -webkit-box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
@@ -8043,25 +8052,22 @@ nav .active a {
   background-color: #0cd29a;
 }
 
+@media (min-width: 768px) {
+  .go-to-course-btn {
+    font-size: 1.25em;
+    padding: .5em 1em;
+  }
+}
+
 .btn-cta--home {
   margin-top: 2em;
-  background-color: #17a2b8;
-  color: #f2f2f2;
-  font-size: 1.25em;
+  font-size: 1em;
   font-weight: 400;
-  padding: 1em 1.5em;
-  letter-spacing: 1px;
-  text-transform: uppercase;
   -webkit-box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
   box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 350ms ease-in-out;
-  -o-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
 }
 
 .btn-cta--home:hover {
-  text-decoration: none;
-  color: #F2F2F2;
   -webkit-transform: translateY(-4px);
   -ms-transform: translateY(-4px);
   transform: translateY(-4px);
@@ -8069,25 +8075,25 @@ nav .active a {
   box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6);
 }
 
-.cart-btn {
-  margin: .25em;
+@media (min-width: 768px) {
+  .btn-cta--home {
+    font-size: 1.25em;
+    padding: 1em 1.5em;
+  }
+}
+
+.btn-cart-solid {
+  cursor: pointer;
   text-align: center;
   background-color: #0cd29a;
-  color: #f2f2f2;
-  font-size: 1.25em;
   font-weight: 400;
-  border: .5px solid #0cd29a;
+  border: 2px solid #0cd29a;
   padding: .5em 1em;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  -webkit-transition: all 350ms ease-in-out;
-  -o-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
+  -webkit-box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
 }
 
-.cart-btn:hover {
-  text-decoration: none;
-  color: #F2F2F2;
+.btn-cart-solid:hover {
   -webkit-box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6);
   box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6);
   -webkit-transform: translateY(-4px);
@@ -8095,25 +8101,45 @@ nav .active a {
   transform: translateY(-4px);
 }
 
-.payment-button {
-  margin-top: 3.5em;
-  background: #0cd29a;
-  font-size: 1.25rem;
-  color: #f2f2f2;
-  border: 2px solid #0cd29a;
-  padding: .75em 1.25em;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  -webkit-transition: all 350ms ease-in-out;
-  -o-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
+@media (min-width: 768px) {
+  .btn-cart-solid {
+    font-size: 1em;
+    padding: 1em 2em;
+  }
 }
 
-.payment-button:hover {
-  background: transparent;
+.btn-cart-transparent {
   color: #0cd29a;
-  text-decoration: none;
+  border: 2px solid;
+  padding: .75em 1em;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.btn-cart-transparent:hover {
+  color: #f2f2f2;
+  background-color: #0cd29a;
+  border: 2px solid #0cd29a;
+}
+
+@media (min-width: 768px) {
+  .btn-cart-transparent {
+    padding: 1em 2em;
+    font-size: 1em;
+  }
+}
+
+.btn-pay {
+  margin-top: 5em;
+  font-size: 1rem;
+  padding: .75em 1em;
+  background: #0cd29a;
+  border: 2px solid #0cd29a;
   cursor: pointer;
+}
+
+.btn-pay:hover {
+  color: #0cd29a;
 }
 
 .vote-btn {
@@ -8137,28 +8163,23 @@ nav .active a {
   display: inline-block;
   margin-top: 2em;
   background-color: #0cd29a;
-  color: #f2f2f2;
-  font-size: 1.25em;
   font-weight: 400;
-  border: .5px solid #0cd29a;
-  padding: .5em 1em;
-  letter-spacing: 1px;
-  text-transform: uppercase;
   -webkit-box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
   box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 350ms ease-in-out;
-  -o-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
 }
 
 .courses-cta--button:hover {
-  text-decoration: none;
-  color: #F2F2F2;
   -webkit-transform: translateY(-4px);
   -ms-transform: translateY(-4px);
   transform: translateY(-4px);
   -webkit-box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6);
   box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 768px) {
+  .courses-cta--button {
+    font-size: 1.25em;
+  }
 }
 
 .mk--forms .form-control {
@@ -8366,8 +8387,14 @@ body {
   margin-bottom: 0;
 }
 
+@media (min-width: 768px) {
+  .sub-hero .col {
+    padding: 3%;
+  }
+}
+
 .admin-panel {
-  background: #f2f2f2;
+  background: #ea6823;
 }
 
 .cart-main {

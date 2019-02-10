@@ -1,107 +1,116 @@
-// FULLSTACK BUTTON
-.fullstack-btn
+// TRANSPARENT BUTTON EFFECT
+.btn-transparent
+  margin: .25em
   background-color: transparent
   color: #f2f2f2
   border: .5px solid
-  padding: .5em 1em
-  font-weight: 200
-  letter-spacing: 1px
-  text-transform: uppercase
-  transition: all 350ms ease-in-out
-  &:hover
-    background-color: #f2f2f2
-    color: #404854
-    border: .5px solid #f2f2f2
-    transform: translateY(-3px)
-    box-shadow: 0 10px 50px -7px rgba(0,0,0,0.25)
-
-// SUBHERO BUTTON
-.btn-subhero
-  margin: .25em
-  color: #f2f2f2
-  border: .5px solid
-  padding: 1em 2em
+  padding: .75em 1em
+  font-size: 13px
   font-weight: 200
   letter-spacing: 1px
   text-transform: uppercase
   transition: all 350ms ease-in-out
   &:hover
     color: #f2f2f2
-    border: .5px solid
     text-decoration: none
+
+@media (min-width: 768px)
+  .btn-transparent
+    padding: 1em 2em
+    font-size: 1em
+
+// SOLID BUTTON EFFECT
+.btn-solid
+  margin: .25em
+  background-color: #17a2b8
+  color: #f2f2f2
+  font-size: 13px
+  font-weight: 200
+  padding: .75em 1em
+  letter-spacing: 1px
+  text-transform: uppercase
+  transition: all 350ms ease-in-out
+  &:hover
+    text-decoration: none
+    color: #f2f2f2
+
+@media (min-width: 768px)
+  .btn-solid
+    padding: 1em 2em
+    font-size: 1em
+
+// SOLID-ALT BUTTON EFFECT
+.btn-solid-alt
+  margin: .25em
+  background-color: #17a2b8
+  border: 2px solid #17a2b8
+  color: #f2f2f2
+  font-size: 13px
+  font-weight: 400
+  padding: .75em 1em
+  letter-spacing: 1px
+  text-transform: uppercase
+  transition: all 350ms ease-in-out
+  &:hover
+    text-decoration: none
+    color: #17a2b8
+    background-color: transparent
+
+@media (min-width: 768px)
+  .btn-solid-alt
+    padding: 1em 2em
+    font-size: 1em
 
 // LOGIN REQUIRED BUTTON
 .login-required-cta--button
-  margin: .5em
   background-color: #0cd29a
-  color: #f2f2f2
-  font-size: 1.25em
+  font-size: 1em
   font-weight: 400
-  border: .5px solid #0cd29a
-  padding: .5em 1em
-  letter-spacing: 1px
-  text-transform: uppercase
   box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4)
-  transition: all 350ms ease-in-out
   &:hover
-    text-decoration: none
-    color: #F2F2F2
     transform: translateY(-4px)
     box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6)
 
-// ADMIN BUTTONS
-.admin-panel-btn
-  margin: .25em
-  color: #63636E
-  border: .5px solid
-  padding: 1em 2em
-  font-weight: 200
-  letter-spacing: 1px
-  text-transform: uppercase
-  transition: all 350ms ease-in-out
-  &:hover
-    color: #ff0000
-    border: .5px solid
-    text-decoration: none
+@media (min-width: 768px)
+  .login-required-cta--button
+    font-size: 1.25em
+    padding: 1em 1.5em
 
-.admin-btn
-  margin: .25em
-  background: #0cd29a
-  color: #f2f2f2
-  border: 1px solid #0cd29a
-  padding: 1em 2em
-  letter-spacing: 1px
-  text-transform: uppercase
-  transition: all 350ms ease-in-out
+// ADMIN BUTTONS
+.btn-admin-panel
+  padding: .75em 1em
+  font-weight: 400
+  color: #fff
+  border: 2px solid
   &:hover
-    background: transparent
-    color: #0cd29a
-    text-decoration: none
+    background-color: #fff
+    color: #ea6823
+    border: 2px solid #fff
 
 // COURSES BUTTONS
 .enrol-btn
   background-color: #0cd29a
-  color: #f2f2f2
-  font-size: 1.25em
+  font-size: 1em
   font-weight: 400
   border: 2px solid #0cd29a
-  padding: .5em 1em
-  letter-spacing: 1px
-  text-transform: uppercase
   box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4)
   cursor: pointer
-  transition: all 350ms ease-in-out
   &:hover
     color: #0cd29a
     background-color: transparent
     border: 2px solid #0cd29a
 
+@media (min-width: 768px)
+  .enrol-btn
+    font-size: 1.25em
+    padding: .5em 1em
+
 .go-to-course-btn
   color: #0cd29a
-  font-size: 1.25em
+  font-size: 1em
   font-weight: 400
   border: 2px solid #0cd29a
-  padding: .5em 1em
+  padding: .75em 1em
   letter-spacing: 1px
   text-transform: uppercase
   box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4)
@@ -112,61 +121,71 @@
     color: #f2f2f2
     background-color: #0cd29a
 
-// INDEX CTA BUTTON
+@media (min-width: 768px)
+  .go-to-course-btn
+    font-size: 1.25em
+    padding: .5em 1em
+
+// INDEX CTA BUTTON - DERIVED FROM .btn-solid
 .btn-cta--home
   margin-top: 2em
-  background-color: #17a2b8
-  color: #f2f2f2
-  font-size: 1.25em
+  font-size: 1em
   font-weight: 400
-  padding: 1em 1.5em
-  letter-spacing: 1px
-  text-transform: uppercase
   box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4)
-  transition: all 350ms ease-in-out
   &:hover
-    text-decoration: none
-    color: #F2F2F2
     transform: translateY(-4px)
     box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6)
 
+@media (min-width: 768px)
+  .btn-cta--home
+    font-size: 1.25em
+    padding: 1em 1.5em
 
 // CART BUTTONS
-.cart-btn
-  margin: .25em
+.btn-cart-solid
+  cursor: pointer
   text-align: center
   background-color: #0cd29a
-  color: #f2f2f2
-  font-size: 1.25em
   font-weight: 400
-  border: .5px solid #0cd29a
+  border: 2px solid #0cd29a
   padding: .5em 1em
-  letter-spacing: 1px
-  text-transform: uppercase
-  //box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4)
-  transition: all 350ms ease-in-out
+  box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4)
   &:hover
-    text-decoration: none
-    color: #F2F2F2
     box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6)
     transform: translateY(-4px)
 
-// PAYMENT BUTTON
-.payment-button
-  margin-top: 3.5em
-  background: #0cd29a
-  font-size: 1.25rem
-  color: #f2f2f2
-  border: 2px solid #0cd29a
-  padding: .75em 1.25em
-  letter-spacing: 1px
-  text-transform: uppercase
-  transition: all 350ms ease-in-out
+@media (min-width: 768px)
+  .btn-cart-solid
+    font-size: 1em
+    padding: 1em 2em
+
+.btn-cart-transparent
+  color: #0cd29a
+  border: 2px solid
+  padding: .75em 1em
+  font-size: 13px
+  font-weight: 400
   &:hover
-    background: transparent
+    color: #f2f2f2
+    background-color: #0cd29a
+    border: 2px solid #0cd29a
+
+@media (min-width: 768px)
+  .btn-cart-transparent
+    padding: 1em 2em
+    font-size: 1em
+
+
+// PAYMENT BUTTON
+.btn-pay
+  margin-top: 5em
+  font-size: 1rem
+  padding: .75em 1em
+  background: #0cd29a
+  border: 2px solid #0cd29a
+  cursor: pointer
+  &:hover
     color: #0cd29a
-    text-decoration: none
-    cursor: pointer
 
 // VOTE BTN
 .vote-btn
@@ -186,17 +205,12 @@
   display: inline-block
   margin-top: 2em
   background-color: #0cd29a
-  color: #f2f2f2
-  font-size: 1.25em
   font-weight: 400
-  border: .5px solid #0cd29a
-  padding: .5em 1em
-  letter-spacing: 1px
-  text-transform: uppercase
   box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4)
-  transition: all 350ms ease-in-out
   &:hover
-    text-decoration: none
-    color: #F2F2F2
     transform: translateY(-4px)
     box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6)
+
+@media (min-width: 768px)
+  .courses-cta--button
+    font-size: 1.25em
