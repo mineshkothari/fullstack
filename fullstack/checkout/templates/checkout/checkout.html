@@ -18,14 +18,20 @@
 <section class="sub-hero">
     <div class="row no-gutters">
         <div class="col col-12">
+            {% if cart_items %}
             <h2>Enter payment details</h2>
+            {% else %}
+            <h2>Your cart is empty</h2>
+            {% endif %}
         </div>
     </div>
 </section>
 <section class="checkout-section--main">
     <div class="row no-gutters checkout-section--row">
         <div class="col-12 col-md-6 checkout-section-col cart-list--col">
+            {% if cart_items %}
             <h3 class="cart-item-list-title">Cart Items</h3>
+            {% endif %}
             {% for module in cart_items %}
             <div class="row no-gutters cart-items--row d-flex align-items-center">
                 <div class="col-12 col-sm-8 cart-items--col">
@@ -57,7 +63,7 @@
                     <div class="alert-message block-message error" id="stripe-error-message"></div>
                 </div>
                 {% csrf_token %}
-                <button type="submit" class="payment-button"><i class="fas fa-credit-card"></i> Make Payment</button>
+                <button type="submit" class="btn-solid-alt btn-pay"><i class="fas fa-credit-card"></i> Make Payment</button>
             </form>
         </div>
         {% endif %}
