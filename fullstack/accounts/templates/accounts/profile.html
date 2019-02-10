@@ -26,7 +26,7 @@
                     {% csrf_token %}
                     {{ form | as_bootstrap }}
                     <div class="form-group">
-                        <button type="submit" class="btn btn-lg fullstack-btn form-submit-btn">Update</button>
+                        <button type="submit" class="btn btn-transparent btn-accent--accounts form-submit-btn">Update</button>
                     </div>
                 </form>
             </div>
@@ -50,7 +50,7 @@
                     <div>
                         <p>You're currently not enrolled on any of our courses. Don't worry, once you've enrolled they will show up here.</p>
                         <p class="mb-0">Get started by checking out our courses by clicking the link below?</p>
-                        <a class="courses-cta--button" href="{% url 'courses'%}"><i class="fas fa-graduation-cap"></i> Courses</a>
+                        <a class="btn-solid courses-cta--button" href="{% url 'courses'%}"><i class="fas fa-graduation-cap"></i> Courses</a>
                     </div>
                 </div>
                 {% endfor %}

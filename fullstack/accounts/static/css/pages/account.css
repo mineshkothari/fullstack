@@ -11,6 +11,14 @@
   border-color: #ea6823 !important;
 }
 
+.btn-accent--accounts {
+  padding: .75em 1em;
+}
+
+.btn-accent--accounts:hover {
+  color: #ea6823;
+}
+
 .account-section {
   background: #eaeaea;
 }
