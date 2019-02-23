@@ -33,7 +33,6 @@
 
 .post-image-container
   border-right: .5px solid rgba(0,0,0,.20)
-  //border-right: .5px solid #aaaab3
   overflow: hidden !important
   height: 300px
 
@@ -42,13 +41,21 @@
   height: 100%
 
 .post-detail-container
-  padding: 1.5em 3em !important
+  padding: 1.5em .5em !important
+
+@media (min-width: 768px)
+  .post-detail-container
+    padding: 1.5em 3em !important
 
 .post-title
   color: #333333 !important
-  font-size: 2.5rem
+  font-size: 2rem
   font-weight: 200
   margin-bottom: 1rem
+
+@media (min-width: 768px)
+  .post-title
+    font-size: 2.5rem
 
 .post-details
   font-size: 12px
@@ -86,13 +93,19 @@
 // BLOG SECTIONS
 .blog-section
   background: #FFFFFF
-  padding: 2em
+  padding: 1em
+  font-size: 14px
   color: #63636E
   max-width: 960px
   margin: auto
   border: .5px solid rgba(0,0,0,.15)
   border-radius: 10px
   box-shadow: 0 15px 38px -12px rgba(0, 0, 0, .095)
+
+@media (min-width: 768px)
+  .blog-section
+    padding: 2em
+    font-size: 16px
 
 // POST HEADER
 .blog-header-container
@@ -110,8 +123,11 @@
   object-fit: cover
   object-position: center
 
-.blog-header-title h3
-  color: #63636E
+.blog-header-title
+  padding: 1em
+  h3
+
+    color: #63636E
 
 // ADMIN EDIT CONTAINER
 .blog-section-admin
