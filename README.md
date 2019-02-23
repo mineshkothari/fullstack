@@ -7,9 +7,16 @@
 
 ### About Fullstack
 
+Fullstack is an online hub bringing together web developers of all skillset and backgrounds whether they're a newbie, a hobbyist or a veteran.
+
+The website allows you to share knowledge through the Forum, learn how to code with our extensive Courses and becoming inspired reading through the Blogs.
+
 ### What is it for?
 
+
+
 ### Who is it targeted at?
+
 
 
 <br />
