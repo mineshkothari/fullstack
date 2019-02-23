@@ -93,11 +93,55 @@ Account App (& Admin)
 
 ## Technologies Implemented
 
-- HTML5
+### Languages Used
+
+- HTML
+
+As with every website or web based app, the use of Hypertext Markup Language is paramount. HTML5 has been used as the markup for this project as this would enable use of many of the new semantics to keep the structure of this project clear and in keeping with the latest industry standards.
 
 - CSS
 
+As with markup, Cascading Style Sheets are essential when controlling the layout of the website. Custom CSS was used in this project in conjunction with Bootstrap 4 to style the website, enhancing user interaction and delivering exceptional user experience.
+
 - JavaScript
+
+Custom JavaScript was used on this project as well as other JavaScript libraries such as jQuery for the mobile toggle menu button and responsive design choices.
+
+- [Python](https://www.python.org/)
+
+Python is the Back-end programming language used for this project, working in conjunction with the Django framework and its open library of essential packages. 
+
+### Frameworks & Libraries
+
+- [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction)
+
+The Bootstrap framework was used for this project to utilise various components such as Bootstrap's Navbar, Grid, Variables and many other utilities.
+
+- [Django](https://www.djangoproject.com/)
+
+Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Django was utilised in the development of Fullstack to build various flexible and reusable apps across the site.
+
+### Tools
+
+- [NPM](https://www.npmjs.com/)
+
+Node Package Manager was used to install Bootstrap 4 on this project. This approach is ideal as it allows greater flexibility when overriding Bootstrap's original Sass files.
+
+- [SASS](https://sass-lang.com)
+
+I used **SASS** as my chosen CSS preprocessor. This is a great way to import custom styles and override the original Bootstrap library. I also have the added benefit of using SASS variables along with other cool tricks. 
+
+- [Git](#)
+
+### Database
+
+- [SQLite](https://www.sqlite.org/index.html)
+
+SQLite, included in Python, is a great lightweight database to get you up and running fast during the initial development stages and whilst running the project during the testing stages. Fullstack uses SQLite during the development stages.
+
+- [PostgreSQL](https://www.postgresql.org/)
+
+PostgreSQL, a powerful, open source object-relational database system is used as the database for the live website hosted on Heroku.
 
 <br />
 <br />
