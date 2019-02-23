@@ -13,11 +13,18 @@ The website allows you to share knowledge through the Forum, learn how to code w
 
 ### What is it for?
 
-
+This project has been developed as part of my Stream 3 project for [Code Institute](https://codeinstitute.net/)'s Full Stack Web Development course. Upon completion of the course, I will gain a diploma in Software Development.
 
 ### Who is it targeted at?
 
+This project is targeted at anyone who wants to be kept up-to-date with Web Development. Whether you're a newbie finding your feet with the very first 'Hello, World' application using nothing but HTML, or a 10 year veteran who has what it takes to build the next 'big thing', Fullstack aims to bring the community closer. 
 
+With Fullstack boasting various apps such as:
+- Forum - a platform aimed to ask questions, stay connected and much more
+- Blog - a platform aimed to inspire others and keeping everyone up-to-date with tech
+- Courses - a platform aimed to develop everyone's skillset in web development
+
+Is there really anywhere else you need to be?
 
 <br />
 <br />
