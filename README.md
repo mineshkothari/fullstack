@@ -153,50 +153,6 @@ PostgreSQL, a powerful, open source object-relational database system is used as
 <br />
 <br />
 
-## Contributing
-
-
-**Prerequisites:**
-```
-This portfolio has no prerequisites
-```
-
-### Forking The Repo
-
-1. In order to make changes, you will need to fork the repository. Click on the **Fork** button in the top-right corner of this page.
-2. You will now need a copy of these files on your computer to make changes. To do this, you will need to clone or download the repo you forked in the previous step onto your local computer:
-    - Click on the green **Clone or download** button
-    - Under **Clone with HTTPS**, copy the clone URL for the repository
-    - Open your Git terminal
-    - Type ```git clone``` followed by the URL copied in the second step. This should look something like the following:
-```console
-$ git clone https://github.com/YOUR-USERNAME/fullstack.git
-```
-3. Once you have the file path all written down, go and hit Enter on your keyboard to request the clone.
-
-### Making Changes
-
-Now you're all set to make changes. You can open the project on you preferred text editor or IDE and begin making changes.
-
-### Submitting Pull Requests
-
-Now that you've made changes to the portfolio, you can submit a pull request to the master branch to await approval. To do this:
-1. Navigate to the [original repository](https://github.com/mineshkothari/fullstack "https://github.com/mineshkothari/fullstack")
-2. Click on **New pull request** on the right of the Branch menu
-3. On the compare page, click **compare across forks**
-4. Confirm that the *base fork* is the repository you'd like to merge into
-5. Use the *head fork* drop-down menu to select your fork, then use the compare branch drop-down menu to select the branch you made your changes in
-6. Type a little description for your pull request
-7. If you do not want to allow anyone with push access to the upstream repository to make changes to your PR, unselect **Allow edits from maintainers**
-8. Click **Create pull request**
-
-For further information about forking a repository, please click [here](https://help.github.com/articles/fork-a-repo/).
-
-For further information about creating pull requests, please click [here](https://help.github.com/articles/creating-a-pull-request-from-a-fork/).
-
-<br />
-<br />
-
 ## Testing
 
 This project has undergone rigorous testing with each new implementation to ensure every aspect of this site works robustly.
@@ -234,6 +190,101 @@ Manual tests were carried out at every stage to ensure the user experience stand
 ## Deployment
 
 This project will be deployed to Heroku using AWS S3 to host static and media files.
+
+<br />
+<br />
+
+## Contributing
+
+Fullstack is a personal project created as part of my Full Stack Web Development course. With that being said, it would be amazing to see the community getting involved by making or suggesting, improvements, bug fixes or some really interesting changes to this project.
+
+**Things to consider:**
+
+Fullstack relies on certain languages, tools and packages to be installed in order for it to run properly. A large proportion of these have been configured in such a way that you would not be required to make any additional changes to the files for these to work. However, there are some aspects you will need to be take into consideration when choosing to make changes to this project.
+
+**Prerequisites:**
+```
+Python 2.7.14
+SQLite
+PostgreSQL
+```
+
+### Forking The Repo
+
+1. In order to make changes, you will need to fork the repository. Click on the **Fork** button in the top-right corner of this page.
+2. You will now need a copy of these files on your computer to make changes. To do this, you will need to clone or download the repo you forked in the previous step onto your local computer:
+    - Click on the green **Clone or download** button
+    - Under **Clone with HTTPS**, copy the clone URL for the repository
+    - Open your Git terminal
+    - Type ```git clone``` followed by the URL copied in the second step. This should look something like the following:
+```console
+$ git clone https://github.com/YOUR-USERNAME/fullstack.git
+```
+3. Once you have the file path all written down, go and hit Enter on your keyboard to request the clone.
+
+And we’re done! Well almost.
+
+### Making Changes
+
+Amongst many of the tech, Fullstack uses Python 2.7 to power the website. You will need to ensure you have this version of Python installed on your PC for optimal usability. This project also uses several Python packages and it is strongly recommended having these installed on your local machine using a virtual environment for the project to function and run properly.
+
+**virtualenv:**
+
+You can create your own virtual environment using **_pip_** by running the following command from the project's root folder in your terminal: (please note - you will need to have *pip* installed as a Python package for this to work)
+
+```console
+$ pip install virtualenv
+$ virtualenv env
+```
+
+*Please note: For Mac or Linux, you’ll need to use sudo: sudo pip install virtualenv*
+
+This creates a new folder called *env* with our virtual environment in it. Once created you can go ahead and activate this by running the following command (ensure you are still in the project root folder):
+
+```console
+$ env\Scripts\activate
+```
+
+If the virtual environment is activated correctly, you will see *'(env)'* in front of the project location in the terminal as seen below:
+
+```console
+(env) C:\<ProjectFilePath>\fullstack>
+```
+
+Once activated, you can install the dependencies to the virtual environment using another **_pip_** command from the project's root folder in your terminal:
+
+```console
+$ pip install -r requirements.txt
+```
+
+*Please note: This walkthrough assumes you're installing the requirements which satisfy the final production site, you will need to install requirements in 'requirements/dev.txt' file for local testing*
+
+**Make migrations:**
+
+With a fresh new database, you'll need to run migrations to populate all the tables. In order to to this, you'll need to follow the commands below (ensuring you're in the same folder as 'manage.py' file):
+
+```console
+$ python manage.py makemigrations
+$ python manage.py migrate
+```
+
+And there you have it. Now you're all set to make changes. You can open the project on you preferred text editor or IDE and begin making changes.
+
+### Submitting Pull Requests
+
+Now that you've made changes to the portfolio, you can submit a pull request to the master branch to await approval. To do this:
+1. Navigate to the [original repository](https://github.com/mineshkothari/fullstack "https://github.com/mineshkothari/fullstack")
+2. Click on **New pull request** on the right of the Branch menu
+3. On the compare page, click **compare across forks**
+4. Confirm that the *base fork* is the repository you'd like to merge into
+5. Use the *head fork* drop-down menu to select your fork, then use the compare branch drop-down menu to select the branch you made your changes in
+6. Type a little description for your pull request
+7. If you do not want to allow anyone with push access to the upstream repository to make changes to your PR, unselect **Allow edits from maintainers**
+8. Click **Create pull request**
+
+For further information about forking a repository, please click [here](https://help.github.com/articles/fork-a-repo/).
+
+For further information about creating pull requests, please click [here](https://help.github.com/articles/creating-a-pull-request-from-a-fork/).
 
 <br />
 <br />
