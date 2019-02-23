@@ -199,6 +199,34 @@ Want to learn about some of the known issues/bugs/limitations with this project?
 
 ## Credits
 
+### Courses
+
+The guides from [HTML Dog](https://htmldog.com/guides/) were used as courses for this project
+
+HTML Courses:
+
+- HTML for beginners - [Getting Started](https://htmldog.com/guides/html/beginner/gettingstarted), [Tags, Attributes, and Elements](https://htmldog.com/guides/html/beginner/tags)
+
+- HTML Headings - [Headings](https://htmldog.com/guides/html/beginner/headings/)
+
+- HTML Lists - [Lists](https://htmldog.com/guides/html/beginner/lists/)
+
+- HTML page titles - [Page Titles](https://htmldog.com/guides/html/beginner/titles/)
+
+CSS Courses:
+
+- CSS for beginners - [Applying CSS](https://htmldog.com/guides/css/beginner/applyingcss/)
+
+- CSS Selectors - [Selectors, Properties, and Values](https://htmldog.com/guides/css/beginner/selectors/)
+
+JavaScript Courses:
+
+- Variables and Data - [Variables and Data](https://htmldog.com/guides/javascript/beginner/variables/)
+
+### Blog Posts
+
+
+
 ### Media
 
 Many of the images from this site have been sourced from Unsplash. I created a [collection](https://unsplash.com/collections) which I called using their API https://source.unsplash.com/collection/{COLLECTION ID} during testing. This worked particularly well as it's quick and lightweight. An example of how it was used can be seen below.

@@ -105,7 +105,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-11" />
-    <option name="width" value="1943" />
+    <option name="width" value="1908" />
     <option name="height" value="2102" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -286,7 +286,7 @@
       <workItem from="1548701091611" duration="3648000" />
       <workItem from="1549108573816" duration="28000" />
       <workItem from="1549108781815" duration="18381000" />
-      <workItem from="1549192687360" duration="51171000" />
+      <workItem from="1549192687360" duration="51844000" />
     </task>
     <servers />
   </component>
@@ -296,7 +296,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="569830000" />
+    <option name="totallyTimeSpent" value="570503000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -308,9 +308,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="1110" height="1201" extended-state="0" />
+    <frame x="-6" y="0" width="1090" height="1201" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4982857" visible="true" weight="0.30228138" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4982857" visible="true" weight="0.30813953" />
       <window_info id="Structure" order="1" sideWeight="0.5017143" side_tool="true" weight="0.22243346" />
       <window_info id="Favorites" order="2" sideWeight="0.50179213" side_tool="true" weight="0.22243346" />
       <window_info anchor="bottom" id="Message" order="0" />
