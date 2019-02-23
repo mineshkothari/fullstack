@@ -31,6 +31,61 @@ The website allows you to share knowledge through the Forum, learn how to code w
 
 ### Features Implemented
 
+Homepage
+1. Act as a launchpad to the:
+	- About page
+	- Courses App
+	- Blog App
+	- Forum App
+2. Personalised message if user logged in & link to 'My Profile'
+3. Three featured Languages to choose from the homepage
+4. Latest Blog Post on homepage
+
+Courses App
+1. View available languages and courses
+2. Add a course to the Cart
+3. View course (requires purchase)
+4. Allow Admin to add a new Language
+5. Allow Admin to add a new Module (Course) 
+
+Cart App
+1. Proceed to checkout with cart item(s)
+2. Continue shopping
+3. Remove item(s) from cart
+4. Informative message if cart empty
+
+Checkout App
+1. Purchase item(s) in cart session
+2. Informative message if cart empty
+
+Blog App
+1. View all posts
+2. View 'Top' posts
+3. Comment on blog with Disqus API
+4. Allow Admin to add a new blog post
+5. Allow Admin to edit existing blog post
+
+Forum App (Polls)
+1. View forum subjects
+2. View threads in each subject
+3. Start a new Thread
+4. View existing threads
+5. Comment/reply on thread
+6. Prompt user to register/login in order to contribute on thread
+7. Edit post
+8. Delete post
+
+Account App (& Admin)
+1. Registration - Allowing users to register
+2. Login - Allowing users to login using their registered details
+3. Password Reset - Allowing users to reset their forgotten password
+4. Profile:
+	- Allowing users to manage their profile
+	- Allowing users to view their purchased courses
+	- Allowing Admin to add a new Language
+	- Allowing Admin to add a new Module (Course)
+
+
 ### Features yet to be implemented
 
 <br />
