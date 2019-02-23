@@ -8282,7 +8282,7 @@ body {
   background-color: #f5f5f5;
 }
 
-.alert {
+.alert-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8293,6 +8293,46 @@ body {
   z-index: 99;
   width: 100%;
   padding: 1em 0;
+  -webkit-animation: alertAnim 5s ease-in-out forwards;
+  animation: alertAnim 5s ease-in-out forwards;
+}
+
+@-webkit-keyframes alertAnim {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  20%, 80% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    display: none !important;
+  }
+}
+
+@keyframes alertAnim {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  20%, 80% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    display: none !important;
+  }
 }
 
 .messages {
@@ -8303,44 +8343,6 @@ body {
   background-color: rgba(99, 99, 110, 0.7);
   -webkit-box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.4);
   box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.4);
-  -webkit-animation: alertMessageAnim 5s ease-in-out forwards;
-  animation: alertMessageAnim 5s ease-in-out forwards;
-}
-
-@-webkit-keyframes alertMessageAnim {
-  0% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  20%, 80% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-}
-
-@keyframes alertMessageAnim {
-  0% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  20%, 80% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
 }
 
 @media (max-width: 380px) {

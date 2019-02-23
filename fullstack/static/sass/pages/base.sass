@@ -20,13 +20,26 @@ body
 
 // ERROR/SUCCESS MESSAGE
 
-.alert
+.alert-main
   display: flex
   justify-content: center
   position: fixed
   z-index: 99
   width: 100%
   padding: 1em 0
+  animation: alertAnim 5s ease-in-out forwards
+
+@keyframes alertAnim
+  0%
+    opacity: 0
+    transform: translateX(-100%)
+  20%, 80%
+    opacity: 1
+    transform: translateX(0)
+  100%
+    opacity: 0
+    transform: translateX(100%)
+    display: none !important
 
 .messages
   color: #f2f2f2
@@ -35,18 +48,6 @@ body
   border-radius: 10px
   background-color: rgba(99,99,110,0.7)
   box-shadow: 0 20px 50px -15px rgba(0,0,0,0.4)
-  animation: alertMessageAnim 5s ease-in-out forwards
-
-@keyframes alertMessageAnim
-  0%
-    transform: translateX(-100%)
-    opacity: 0
-  20%, 80%
-    opacity: 1
-    transform: translateX(0)
-  100%
-    opacity: 0
-    transform: translateX(100%)
 
 @media (max-width: 380px)
   .messages
