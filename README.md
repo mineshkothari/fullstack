@@ -154,9 +154,56 @@ PostgreSQL, a powerful, open source object-relational database system is used as
 
 ## Testing
 
-This project has undergone rigorous testing with each new implementation to ensure every aspect of this site works robustly.
+Fullstack has undergone rigorous testing with each new implementation to ensure every aspect of this site works robustly.
 
 *All tests were done on a Windows 10 64-bit PC unless otherwise stated*
+
+### UX/UI Testing
+
+Manual tests were carried out at every stage to ensure the user experience standards remained at consistently high levels with each new implementation, no matter how big or small. This proved an excellent way of identifying and thwarting any issues, reducing the time spent on bug fixes at the end of the project to a small fraction.
+
+I ensured the website was thoroughly tested by people at regular intervals during development process and recieved some useful feedback on where to improve.
+
+**Personal Details**
+
+I used the email address to distinguish the users within the forum app as I knew this would be unique for every user and a quite simple to implement.
+
+I was asked *"What if I don't want other people knowing my email address?"* by one of the testers, and quite rightly so. This was something that was completely overlooked by me initially and to be in-keeping with good data protection practices, especially in light of GDPR, I knew I had a problem which I needed to resolve.
+
+To encourage users from registering to the website and giving them a good user experience during this process, I wanted the registration form to be as short as possible. This implicated matters further as I did not want to include another field for the 'Username' on the regstation form. 
+
+As a result, I included a separate form located on the 'My Profile' page where users are able to update their details and create their Username (with the default being 'Anonnymous') as a way to identify them protecting their privacy.
+
+**Contrast**
+
+In order to achieve a good user experience, clear contrast is needed to ensure the users are able to read all the text on the webpage. Even if this meant a sacrifice to a 'cool' desgin.
+
+Initially, I set transparent backgrounds for all the course items along with a light shade font colour and reduced font weight for the course details and description. Although this effect looked striking on a high-end 4K resolution panel (development machine), the results were less than favourable on a lower end display panel when testing.
+
+After this was pointed out, I ensured that the contrast across the website was improved remarkably such as [here](https://mk-fullstack.herokuapp.com/courses/language/13/).
+
+**Chrome Autofill on forms**
+
+Personally, I was never a fan of Google Chrome's yellow Autofill so I initally set a custom shadow on the input field to hide the default yellow when Chrome autofills the form fields.
+
+However, after some user testing, I recieved valuable feedback where users found it extremely hard to see the mouse cursor on a dark background. This prompted me to revert back to the yellow background as this not only gives users a sense of familiarity, but improved user experience.
+
+**Large Buttons**
+
+One user in particular pointed out that some of the buttons were "Way too large" on mobile screen sizes. This is something I knew during the development process and it was particularly interesting to hear that other people thought the same. I then knew this would need to be looked into with importance and reduced the font-size and padding for buttons on smaller screen sizes.
+
+### Responsive Design
+
+Responsive design is key for any web development project. I ensured with every new implementation made to the Fullstack project, testing was carried out to validate or fix any responsive issues.
+
+Some of the use cases includes:
+1. Ensure the navbar is behaving as I envisioned it
+2. Ensure forms are rendered correctly
+3. Ensure all blog posts have sufficient padding
+
+See the **Report > Responsive Design** section for more details. 
+
+### Cross-Browser Testing
 
 **Desktop Browsers Tested:**
 ```
@@ -168,20 +215,39 @@ Internet Explorer 11
 
 **Mobile Browsers Tested:**
 ```
-None yet
+Samsung Internet (Samsung S8)
+Chrome (Samsung S8, iPhone 6S)
+Safari (iPhone 6S)
 ```
 
-### UX/UI Testing
+Being able to cater the website for all users is important, this includes the operating system they're using to the browser. Browsers have their own unique way of rendering certain HTML elements and CSS styles **_(User Agent Stylesheets)_** and it's important for the developer to ensure the website remains consistant across all platforms.
 
-Manual tests were carried out at every stage to ensure the user experience standards remained at consistently high levels with each new implementation, no matter how big or small. This proved an excellent way of identifying and thwarting any issues, reducing the time spent on bug fixes to a small fraction.
+For this reason, thorough testing was done at regular intervals during the development of Fullstack to focus on ensuring the website behaved similar on the main browsers listed above.
 
-### Responsive Design
+### Error Handling
 
-### Cross-Browser Testing
+Comprehensive testing was undertaken to ensure users recieved clear error messaging in the event something 'went wrong'.
 
-### Testing the Contact Form
+So I tasked individual testers/users to try and force some errors and give me feedback on thier experience.
 
-### Mobile Devices
+This included tasks such as:
+1. Enter an invalid email address during registration (e.g: email.com)
+2. Enter an incorrect password during login
+3. Visit checkout without adding items to the cart
+4. Visit a language in the Courses app which didn't have any courses/modules ([Python](https://mk-fullstack.herokuapp.com/courses/language/16/))
+5. Visit a forum with no threads ([Python](https://mk-fullstack.herokuapp.com/forum/threads/8/))
+6. Enter incorrect details during checkout
+
+Whilst I anticipated these errors, it was important for me to understand the user's experience when something 'goes wrong' and whether they feel there's a clear message explaning the problem and how to either:
+a. **Resolve the issue** 
+	- Entering a valid email address during registration
+	- Entering the correct password when logging in
+	- Creating a new Thread in the forum
+
+b. **Move past the problem**
+	- Find another course from one of the available languages
+
+The feedback was remarkable and the error messaging was well recieved.
 
 <br />
 <br />
@@ -216,7 +282,7 @@ Gunicorn was installed on the virtualenv using ```pip install gunicorn```.
 
 **Procfile**
 
-[*Heroku apps include a Procfile that specifies the commands that are executed by the app on startup.*](https://devcenter.heroku.com/articles/procfile).
+[*Heroku apps include a Procfile that specifies the commands that are executed by the app on startup*](https://devcenter.heroku.com/articles/procfile).
 
 The Procfile is essentially a file that’s named 'Procfile' (without any file extensions) and consists of information which is used by Heroku to tell it where to run the application.
 
@@ -342,7 +408,7 @@ $ python manage.py migrate
 
 *Please note: You will not need to run the makemigrations command as we haven't yet changed our Models*
 
-In order to work on the project locally, you will need an *env.py* file in the project's root folder with your config variables. See below for an example:
+In order to work on the project locally, you will need an **_env.py_** file in the project's root folder with your config variables. See below for an example:
 
 ```python
 import os
