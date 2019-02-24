@@ -453,8 +453,6 @@ Similarly, if you're looking to deploy the project on Heroku, you'll need to set
 
 And there you have it. Now you're all set to make changes. You can open the project on you preferred text editor or IDE and begin making changes.
 
-
-
 ### Submitting Pull Requests
 
 Now that you've made changes to the portfolio, you can submit a pull request to the master branch to await approval. To do this:
@@ -480,7 +478,153 @@ Want to learn about some of the known issues/bugs/limitations with this project?
 
 ### Responsive Design
 
+Using the Bootstrap framework for this project put me in a good place to ensure the website is as responsive as it can be.
 
+However, there were a few decisions I needed to make for improve the user experience for certain screen sizes.
+
+**My Courses on the [Profile](https://mk-fullstack.herokuapp.com/account/profile/) page**
+
+One of my main challenge was to use an intuitive way of presenting the purchased courses on the Profile page for larger displays as it required a bit of trial and error to ensure the breakpoints were sufficient along with the animation effects.
+
+### Preventing Unauthorised Access
+
+It is important to ensure users are only given access to content they're suppose to see.
+
+**Courses**
+
+Fullstack acts as an e-Commerce platform where users can purchase courses. However, it soon became apparent that by entering the URL for any given course directly onto the browser's address bar, then the users had full access to the course material - Free of charge.
+
+This obviously isn't ideal when running an online shop, so in order to tackle this flaw, I needed to ensure an IF/ELSE statement was used to prevent users from accessing content they don't have access to.
+
+```python
+# If the user has purchased the module, display content
+if module in request.user.module_set.all():
+    return render(request, 'courses/module_item.html', {'module': module})
+
+# If user has attempted to view content without a valid purchase, redirect to courses homepage
+else:
+    return redirect(reverse('courses'))
+```
+
+**New Languages/Modules**
+
+Fullstack has a dedicated Admin interface (only visible to admins) where they're able to create new language categories or modules. 
+
+However, a standard user can still access the ```new_language``` or ```new_module``` view by directly entering the URL into the browser address bar. In order to prevent an anauthorised user from accessing these pages, I needed to ensure that the user is of staff status before proceeding.
+
+**Authenticated Users**
+
+Having a dynamic navbar which changes the link options depednding on whether the user is authenticated is particularly useful when improving the user experience. For example, we don't want to give a user an option to register when they are already logged in.
+
+Although very unlikely, users can still access the [registration](https://mk-fullstack.herokuapp.com/account/register/) page when logged in by directly entering the URL into the browser. In order to prevent this, a check is made to identify whether the user is logged in, and if they are, then redirect them to the profile page.
+
+### Closing Loops
+
+A well made website ensures that every situation or scenario is accounted for, as is the case with Fullstack.
+
+I wanted to make sure that the users were given sufficient information when browsing the site and something 'went wrong'.
+
+Even though Fullstack was not intended to be launched without any blog posts / forum topics / courses etc, it was important for me to develop the site with these things in mind. Asking myself questions such as:
+
+- What happens when the user clicks on the [Blog](https://mk-fullstack.herokuapp.com/blog/) link, but there are no blogs?
+- What happens when there are no forum topics?
+- What happens when there are no courses?
+
+This encouraged a 'Defensive' approach to the development and ensures that in the event something 'goes wrong' i.e. no courses available etc, then the user will be given sufficient information on what to do next.
+
+**A good example of this can be seen [here](https://mk-fullstack.herokuapp.com/courses/language/16/) where there are no Python courses.** 
+
+### Admin Area
+
+I'm proud to announce that Fullstack comes with a lightweight 'CMS' where admins can create/edit language catergories, modules/courses, blogs posts and many more - directly accessible from the front end.
+
+When logged in as an admin, certain pages will have an orange menu with buttons/links allowing you to perfom specifc tasks as mentioned above. 
+
+If you're an assessor and would like to try this feature then please use the login credentials below:
+
+Email: **admin@fullstack.com**
+Password: **Password1234**
+
+### Re-usable Apps
+
+It was strongly encouraged to produce re-usable apps for this project. This is good practice when developing Django apps so we can use them across other projects and applications with mimimmun repetition and effort and all you'll need to do is install the app on your current project and you're almost good to go.
+
+Each separate component/app for this project comes bundles with it's own:
+1. Templates folder - Where you'll find HTML files specific to the app
+2. Static files - Where you'll find the SASS/CSS files specific to the app (these static files are linked separately to each app using 'block' tags in the HTML file to reduce the amount of CSS rules being loaded to each app uneccesarily).
+3. urls.py - Where you'll find the URL patterns specific to the app
+
+How I load the CSS:
+
+```python
+
+# home/base.html
+{% block head_css %}{% endblock %}
+
+# courses/courses.html
+{% block head_css %}
+    <link rel="stylesheet" href="{% static "css/pages/courses.css" %}">
+{% endblock %}
+```
+
+And with just a few lines of code to the settings.py file and base urls.py file, you should be able to successfully hook up your existing app to a new project.
+
+### SASS Workflow
+
+SASS is used as a CSS pre-processor for this project. I used SASS to gain a better understanding of how powerful CSS pre-processors are in general. Although I predominantly used SASS for nesting and indentation, I think this is a great place to start.
+
+The SASS files are all kept inside the SASS folder in 'static' (with the exception of the re-usable app files).
+
+Inside the SASS folder, you'll find various subfolders for components such as the navbar, forms, buttons and many more, making it simple to natigate through and find the SASS file to make changes.
+
+There is also one 'stand-alone' SASS file **_style.sass_** within that folder (static/sass) which imports the sass files from all the subfolders acting as a table of contents. The key benefit of setting up the SASS workflow this way is to ensure when the SASS is being compiled to CSS, there will only ever be one CSS file, **_style.css_** I need to refer to in my base.html document.
+
+```sass
+// style.sass
+@import "bootstrap/bootstrap"
+@import "abstracts/variables"
+@import "abstracts/typography"
+@import "navbar/navbar"
+@import "footer/footer"
+@import "buttons/buttons"
+@import "forms/forms"
+@import "pages/base"
+``` 
+
+### Hosting & Deployment
+
+As mentioned throughtout the README documentation, Fullstack:
+
+- Is hosted on Heroku
+- Uses a local 'static' folder for testing
+- Uses AWS S3 for live production
+- Uses SQLite for testing
+- Uses PostgreSQL for live production
+- Has many other differences for improved productivity and better workflow
+
+This process came with a lot of challenges and pitfalls - but was well worth it in the end.
+
+**settings.py**
+
+The main focus was to have a clear separation with in the *settings.py* file for each environments and the best way to do this would be to split the settings.py file into three:
+
+1. **base.py** - This holds all the common settings used with both the test environment and live environment.
+
+2. **dev.py** - This holds any additional settings needed ONLY for the testing/development environment
+
+3. **staging.py** - This holds any additional settings needed ONLY for the live/production environment.
+
+**Development**
+
+The development environment is where I've set ```DEBUG=True``` to ensure clear error messages are presented so I can debug problems quickly. 
+
+This is also where I've connected to the SQLite database.
+
+**Live**
+
+The live environment is where I've set ```DEBUG=False``` to prevent these error messages from being viewed publicly.
+
+This is also where I've connected to the PostgreSQL database using ```dj_database_url``` **AND** configured AWS S3 settings.
 
 ### Known Bugs/Issues
 
