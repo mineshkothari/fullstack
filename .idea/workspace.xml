@@ -4,7 +4,6 @@
     <list default="true" id="49079c82-689c-4a06-838e-f3bc49bf21e3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fullstack/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/fullstack/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +104,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="1907" />
     <option name="width" value="1945" />
     <option name="height" value="2104" />
@@ -316,7 +315,7 @@
       <workItem from="1549108573816" duration="28000" />
       <workItem from="1549108781815" duration="18381000" />
       <workItem from="1549192687360" duration="68321000" />
-      <workItem from="1551029041182" duration="3545000" />
+      <workItem from="1551029041182" duration="4241000" />
     </task>
     <servers />
   </component>
@@ -326,7 +325,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="590525000" />
+    <option name="totallyTimeSpent" value="591221000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -338,7 +337,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1090" y="0" width="1111" height="1202" extended-state="0" />
+    <frame x="1090" y="0" width="1111" height="1202" extended-state="1" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4982857" visible="true" weight="0.30769232" />
       <window_info id="Structure" order="1" sideWeight="0.5017143" side_tool="true" weight="0.22243346" />

@@ -142,7 +142,9 @@ Node Package Manager was used to install Bootstrap 4 on this project. This appro
 
 I used **SASS** as my chosen CSS pre-processor. This is a great way to import custom styles and override the original Bootstrap library. I also have the added benefit of using SASS variables along with other cool tricks. 
 
-- [Git](#)
+- [Git](https://git-scm.com/)
+
+Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Git is easy to learn and has a tiny footprint with lightning fast performance.
 
 ### Database
 
@@ -690,7 +692,7 @@ section.intro {
 }
 ```
 
-[Language/Libraries/Frameworks Logo](https://seeklogo.com/).
+Various Web development logos used in the Courses section were also sourced from [seeklogo.com](https://seeklogo.com/).
 
 ### Acknowledgements
 
