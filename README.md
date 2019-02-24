@@ -11,10 +11,6 @@ Fullstack is an online hub bringing together web developers of all skillset and 
 
 The website allows you to share knowledge through the Forum, learn how to code with our extensive Courses and becoming inspired reading through the Blogs.
 
-### What is it for?
-
-This project has been developed as part of my Stream 3 project for [Code Institute](https://codeinstitute.net/)'s Full Stack Web Development course. Upon completion of the course, I will gain a diploma in Software Development.
-
 ### Who is it targeted at?
 
 This project is targeted at anyone who wants to be kept up-to-date with Web Development. Whether you're a newbie finding your feet with the very first 'Hello, World' application using nothing but HTML, or a 10-year veteran who has what it takes to build the next 'big thing', Fullstack aims to bring the community closer. 
@@ -25,6 +21,18 @@ With Fullstack boasting various apps such as:
 - Courses - a platform aimed to develop everyone's skillset in web development
 
 Is there really anywhere else you need to be?
+
+### Why is there a Github repo for this project?
+
+This project has been developed as part of my Stream 3 project for [Code Institute](https://codeinstitute.net/)'s Full Stack Web Development course. Upon completion of the course, I will gain a diploma in Software Development.
+
+The 'Courses app' for this project uses e-commerce functionality using the Stripe API. The shop is in sandbox mode which means you're more than welcome to test the shop using the default sandbox card details and you wouldn't be charged. ;)
+
+If you'd like to try this out when you've added some items into the cart, proceed to checkout and enter the following details:
+
+Credit card number: **4242424242424242**
+CVV: **Any three digits (e.g 111)**
+Expiry Month & Year: **Any date in the future**
 
 <br />
 <br />
@@ -640,6 +648,20 @@ AttributeError at /forum/thread/<post_id> 'NoneType' object has no attribute 'us
 ```
 
 In light of this known bug - I have had to 'disable' this feature for the time being to ensure the website has no unhandled exceptions. However, this is something I will be looking into outside the scope of this project.
+
+**Disqus API**
+
+Google Chrome's console throws a warning messing in the console when viewing blog posts. I have been unable to debug the exact cause of this but will be looking into this in the near future.
+
+```console
+The resource https://c.disquscdn.com/next/embed/common.bundle.505b628fe4a369d7faa766dd8c23b076.js was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+
+The resource https://disqus.com/next/config.js was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+
+The resource https://c.disquscdn.com/next/embed/lounge.bundle.c9237ca4eec89ddb1320c66204dab595.js was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+
+The resource https://c.disquscdn.com/next/embed/styles/lounge.7881ba4704e5c647ac74c94714fe89c0.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+```
 
 <br />
 <br />
