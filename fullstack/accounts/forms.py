@@ -25,6 +25,20 @@ class UserRegistrationForm(UserCreationForm):
         fields = ['email', 'password1', 'password2']
         exclude = ['username']
 
+    def clean_email(self):
+        # Get the email entered
+        email = self.cleaned_data.get('email')
+
+        # Check to see if users with this email already exists
+        try:
+            match = User.objects.get(email=email)
+        except User.DoesNotExist:
+            # If user does not exist, proceed with registration
+            return email
+
+        # If user exists raise error
+        raise forms.ValidationError('This email is already in use.')
+
     def clean_password2(self):
         password1 = self.cleaned_data.get('password1')
         password2 = self.cleaned_data.get('password2')
