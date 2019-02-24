@@ -22,7 +22,7 @@
     {% if post.user == user or user.is_staff %}
     <div class="mk--col-item post-actions col-12 col-md-2 d-flex justify-content-center justify-content-md-end">
         <a class="post-user-action d-flex justify-content-center align-items-center" href="{% url 'edit_post' thread.id post.id %}"><i class="far fa-edit fa-lg"></i></a>
-        <a class="post-user-action d-flex justify-content-center align-items-center" href="{% url 'delete_post' thread.id post.id %}"><i class="far fa-trash-alt fa-lg"></i></a>
+{#        <a class="post-user-action d-flex justify-content-center align-items-center" href="{% url 'delete_post' thread.id post.id %}"><i class="far fa-trash-alt fa-lg"></i></a>#}
     </div>
     {% endif %}
 </div>

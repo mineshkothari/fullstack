@@ -168,19 +168,19 @@ def edit_post(request, thread_id, post_id):
 
     return render(request, 'forum/post_form.html', args)
 
-
-@login_required
-def delete_post(request, thread_id, post_id):
-    """
-    Delete post
-    """
-    post = get_object_or_404(Post, pk=post_id)
-    thread_id = post.thread.id
-    post.delete()
-
-    messages.success(request, "Your post was deleted!")
-
-    return redirect(reverse('thread', args={thread_id}))
+# NEED TO FIX: SEE README.md > Report > Known Bugs
+# @login_required
+# def delete_post(request, thread_id, post_id):
+#     """
+#     Delete post
+#     """
+#     post = get_object_or_404(Post, pk=post_id)
+#     thread_id = post.thread.id
+#     post.delete()
+#
+#     messages.success(request, "Your post was deleted!")
+#
+#     return redirect(reverse('thread', args={thread_id}))
 
 
 @login_required
