@@ -17,7 +17,7 @@ This project has been developed as part of my Stream 3 project for [Code Institu
 
 ### Who is it targeted at?
 
-This project is targeted at anyone who wants to be kept up-to-date with Web Development. Whether you're a newbie finding your feet with the very first 'Hello, World' application using nothing but HTML, or a 10 year veteran who has what it takes to build the next 'big thing', Fullstack aims to bring the community closer. 
+This project is targeted at anyone who wants to be kept up-to-date with Web Development. Whether you're a newbie finding your feet with the very first 'Hello, World' application using nothing but HTML, or a 10-year veteran who has what it takes to build the next 'big thing', Fullstack aims to bring the community closer. 
 
 With Fullstack boasting various apps such as:
 - Forum - a platform aimed to ask questions, stay connected and much more
@@ -97,7 +97,7 @@ Account App (& Admin)
 ### Features yet to be implemented
 
 Forum App
-1. Delete a Thread post **See Report > Known Bugs/Issues > Deleting thread posts**
+1. Delete a Thread post. **See Report > Known Bugs/Issues > Deleting thread posts**
 
 <br />
 <br />
@@ -140,7 +140,7 @@ Node Package Manager was used to install Bootstrap 4 on this project. This appro
 
 - [SASS](https://sass-lang.com)
 
-I used **SASS** as my chosen CSS preprocessor. This is a great way to import custom styles and override the original Bootstrap library. I also have the added benefit of using SASS variables along with other cool tricks. 
+I used **SASS** as my chosen CSS pre-processor. This is a great way to import custom styles and override the original Bootstrap library. I also have the added benefit of using SASS variables along with other cool tricks. 
 
 - [Git](#)
 
@@ -167,21 +167,21 @@ Fullstack has undergone rigorous testing with each new implementation to ensure 
 
 Manual tests were carried out at every stage to ensure the user experience standards remained at consistently high levels with each new implementation, no matter how big or small. This proved an excellent way of identifying and thwarting any issues, reducing the time spent on bug fixes at the end of the project to a small fraction.
 
-I ensured the website was thoroughly tested by people at regular intervals during development process and recieved some useful feedback on where to improve.
+I ensured the website was thoroughly tested by people at regular intervals during development process and received some useful feedback on where to improve.
 
 **Personal Details**
 
 I used the email address to distinguish the users within the forum app as I knew this would be unique for every user and a quite simple to implement.
 
-I was asked *"What if I don't want other people knowing my email address?"* by one of the testers, and quite rightly so. This was something that was completely overlooked by me initially and to be in-keeping with good data protection practices, especially in light of GDPR, I knew I had a problem which I needed to resolve.
+I was asked *"What if I don't want other people knowing my email address?"* by one of the testers, and quite rightly so. This was completely overlooked by me initially and to be in-keeping with good data protection practices, especially in light of GDPR, I knew I had a problem which I needed to resolve.
 
-To encourage users from registering to the website and giving them a good user experience during this process, I wanted the registration form to be as short as possible. This implicated matters further as I did not want to include another field for the 'Username' on the regstation form. 
+To encourage users from registering to the website and giving them a good user experience during this process, I wanted the registration form to be as short as possible. This implicated matters further as I did not want to include another field for the 'Display name' on the registration form. 
 
-As a result, I included a separate form located on the 'My Profile' page where users are able to update their details and create their Username (with the default being 'Anonnymous') as a way to identify them protecting their privacy.
+As a result, I included a separate form located on the 'My Profile' page where users are able to update their details and create their Username (with the default being 'Anonymous') as a way to identify them protecting their privacy.
 
 **Contrast**
 
-In order to achieve a good user experience, clear contrast is needed to ensure the users are able to read all the text on the webpage. Even if this meant a sacrifice to a 'cool' desgin.
+In order to achieve a good user experience, clear contrast is needed to ensure the users are able to read all the text on the webpage. Even if this meant a sacrifice to a 'cool' design.
 
 Initially, I set transparent backgrounds for all the course items along with a light shade font colour and reduced font weight for the course details and description. Although this effect looked striking on a high-end 4K resolution panel (development machine), the results were less than favourable on a lower end display panel when testing.
 
@@ -189,9 +189,9 @@ After this was pointed out, I ensured that the contrast across the website was i
 
 **Chrome Autofill on forms**
 
-Personally, I was never a fan of Google Chrome's yellow Autofill so I initally set a custom shadow on the input field to hide the default yellow when Chrome autofills the form fields.
+Personally, I was never a fan of Google Chrome's yellow Autofill so I initially set a custom shadow on the input field to hide the default yellow on the Autofill field.
 
-However, after some user testing, I recieved valuable feedback where users found it extremely hard to see the mouse cursor on a dark background. This prompted me to revert back to the yellow background as this not only gives users a sense of familiarity, but improved user experience.
+However, after some user testing, I received valuable feedback where users found it extremely hard to see the mouse cursor on a dark background. This prompted me to revert back to the yellow background as this not only gives users a sense of familiarity, but improved user experience.
 
 **Large Buttons**
 
@@ -225,15 +225,15 @@ Chrome (Samsung S8, iPhone 6S)
 Safari (iPhone 6S)
 ```
 
-Being able to cater the website for all users is important, this includes the operating system they're using to the browser. Browsers have their own unique way of rendering certain HTML elements and CSS styles **_(User Agent Stylesheets)_** and it's important for the developer to ensure the website remains consistant across all platforms.
+Being able to cater the website for all users is important, this includes the operating system they're using to the browser. Browsers have their own unique way of rendering certain HTML elements and CSS styles **_(User Agent Stylesheets)_** and it's important for the developer to ensure the website remains consistent across all platforms.
 
 For this reason, thorough testing was done at regular intervals during the development of Fullstack to focus on ensuring the website behaved similar on the main browsers listed above.
 
 ### Error Handling
 
-Comprehensive testing was undertaken to ensure users recieved clear error messaging in the event something 'went wrong'.
+Comprehensive testing was undertaken to ensure users received clear error messaging in the event something 'went wrong'.
 
-So I tasked individual testers/users to try and force some errors and give me feedback on thier experience.
+So I tasked individual testers/users to try and force some errors and give me feedback on their experience.
 
 This included tasks such as:
 1. Enter an invalid email address during registration (e.g: email.com)
@@ -243,7 +243,7 @@ This included tasks such as:
 5. Visit a forum with no threads ([Python](https://mk-fullstack.herokuapp.com/forum/threads/8/))
 6. Enter incorrect details during checkout
 
-Whilst I anticipated these errors, it was important for me to understand the user's experience when something 'goes wrong' and whether they feel there's a clear message explaning the problem and how to either:
+Whilst I anticipated these errors, it was important for me to understand the user's experience when something 'goes wrong' and whether they feel there's a clear message explaining the problem and how to either:
 
 a. **Resolve the issue** 
 	- Entering a valid email address during registration
@@ -253,7 +253,7 @@ a. **Resolve the issue**
 b. **Move past the problem**
 	- Find another course from one of the available languages
 
-The feedback was remarkable and the error messaging was well recieved. However, there was one notable issue:
+The feedback was remarkable and the error messaging was well received. However, there was one notable issue:
 
 **Registering with the same email**
 
@@ -338,7 +338,7 @@ A package allowing you to connect to Postgres databases.
 
 ### AWS S3
 
-The cloud-based AWS is used to serve static files for Fullstack. In order to achieve this, I created and configured an Amazon S3 bucket to to ensure static images and project files were uploaded to it correctly.
+The cloud-based AWS is used to serve static files for Fullstack. In order to achieve this, I created and configured an Amazon S3 bucket to ensure static images and project files were uploaded to it correctly.
 
 One of the main benefits of using a cloud-based tool such as AWS S3 is that it frees up space on your servers, thus freeing up load times.
 
@@ -412,7 +412,7 @@ $ pip install -r requirements.txt
 
 **Migrating to the database:**
 
-With a fresh new database, you'll need to run migrations to populate all the tables. In order to to this, you'll need to follow the command below (ensuring you're in the same folder as 'manage.py' file):
+With a fresh new database, you'll need to run migrations to populate all the tables. Follow the command below (ensuring you're in the same folder as 'manage.py' file):
 
 ```console
 $ python manage.py migrate
@@ -510,17 +510,17 @@ else:
 
 Fullstack has a dedicated Admin interface (only visible to admins) where they're able to create new language categories or modules. 
 
-However, a standard user can still access the ```new_language``` or ```new_module``` view by directly entering the URL into the browser address bar. In order to prevent an anauthorised user from accessing these pages, I needed to ensure that the user is of staff status before proceeding.
+However, a standard user can still access the ```new_language``` or ```new_module``` view by directly entering the URL into the browser address bar. In order to prevent an unauthorised user from accessing these pages, I needed to ensure that the user is of staff status before proceeding.
 
 **Authenticated Users**
 
-Having a dynamic navbar which changes the link options depednding on whether the user is authenticated is particularly useful when improving the user experience. For example, we don't want to give a user an option to register when they are already logged in.
+Having a dynamic navbar which changes the link options depending on whether the user is authenticated is particularly useful when improving the user experience. For example, we don't want to give a user an option to register when they are already logged in.
 
 Although very unlikely, users can still access the [registration](https://mk-fullstack.herokuapp.com/account/register/) page when logged in by directly entering the URL into the browser. In order to prevent this, a check is made to identify whether the user is logged in, and if they are, then redirect them to the profile page.
 
 ### Closing Loops
 
-A well made website ensures that every situation or scenario is accounted for, as is the case with Fullstack.
+A well-made website ensures that every situation or scenario is accounted for, as is the case with Fullstack.
 
 I wanted to make sure that the users were given sufficient information when browsing the site and something 'went wrong'.
 
@@ -536,22 +536,23 @@ This encouraged a 'Defensive' approach to the development and ensures that in th
 
 ### Admin Area
 
-I'm proud to announce that Fullstack comes with a lightweight 'CMS' where admins can create/edit language catergories, modules/courses, blogs posts and many more - directly accessible from the front end.
+I'm proud to announce that Fullstack comes with a lightweight 'CMS' where admins can create/edit language categories, modules/courses, blogs posts and many more - directly accessible from the front end.
 
-When logged in as an admin, certain pages will have an orange menu with buttons/links allowing you to perfom specifc tasks as mentioned above. 
+When logged in as an admin, certain pages will have an orange menu with buttons/links allowing you to perform specific tasks as mentioned above. 
 
-If you're an assessor and would like to try this feature then please use the login credentials below:
+If you're an assessor and would like to try this feature, then please use the login credentials below:
 
-Email: **admin@fullstack.com**
+Email: **admin@fullstack.com**,
+
 Password: **Password1234**
 
 ### Re-usable Apps
 
-It was strongly encouraged to produce re-usable apps for this project. This is good practice when developing Django apps so we can use them across other projects and applications with mimimmun repetition and effort and all you'll need to do is install the app on your current project and you're almost good to go.
+It was strongly encouraged to produce re-usable apps for this project. This is good practice when developing Django apps so we can use them across other projects and applications with minimum repetition and effort and all you'll need to do is install the app on your current project and you're almost good to go.
 
-Each separate component/app for this project comes bundles with it's own:
+Each separate component/app for this project comes bundles with its own:
 1. Templates folder - Where you'll find HTML files specific to the app
-2. Static files - Where you'll find the SASS/CSS files specific to the app (these static files are linked separately to each app using 'block' tags in the HTML file to reduce the amount of CSS rules being loaded to each app uneccesarily).
+2. Static files - Where you'll find the SASS/CSS files specific to the app (these static files are linked separately to each app using 'block' tags in the HTML file to reduce the amount of CSS rules being loaded to each app unnecessarily).
 3. urls.py - Where you'll find the URL patterns specific to the app
 
 How I load the CSS:
@@ -575,7 +576,7 @@ SASS is used as a CSS pre-processor for this project. I used SASS to gain a bett
 
 The SASS files are all kept inside the SASS folder in 'static' (with the exception of the re-usable app files).
 
-Inside the SASS folder, you'll find various subfolders for components such as the navbar, forms, buttons and many more, making it simple to natigate through and find the SASS file to make changes.
+Inside the SASS folder, you'll find various subfolders for components such as the navbar, forms, buttons and many more, making it simple to navigate through and find the SASS file to make changes.
 
 There is also one 'stand-alone' SASS file **_style.sass_** within that folder (static/sass) which imports the sass files from all the subfolders acting as a table of contents. The key benefit of setting up the SASS workflow this way is to ensure when the SASS is being compiled to CSS, there will only ever be one CSS file, **_style.css_** I need to refer to in my base.html document.
 
@@ -593,7 +594,7 @@ There is also one 'stand-alone' SASS file **_style.sass_** within that folder (s
 
 ### Hosting & Deployment
 
-As mentioned throughtout the README documentation, Fullstack:
+As mentioned throughout the README documentation, Fullstack:
 
 - Is hosted on Heroku
 - Uses a local 'static' folder for testing
@@ -606,7 +607,7 @@ This process came with a lot of challenges and pitfalls - but was well worth it 
 
 **settings.py**
 
-The main focus was to have a clear separation with in the *settings.py* file for each environments and the best way to do this would be to split the settings.py file into three:
+The main focus was to have a clear separation with in the *settings.py* file for each environment and the best way to do this would be to split the settings.py file into three:
 
 1. **base.py** - This holds all the common settings used with both the test environment and live environment.
 
@@ -669,11 +670,19 @@ JavaScript Courses:
 
 ### Blog Posts
 
+- Becoming a Professional Web Developer - [freecodecamp.org](https://medium.freecodecamp.org/the-practical-guide-to-becoming-a-professional-web-developer-2f255bc25c90)
 
+- Basic concepts of flexbox - [mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+
+- 5 Amazing SASS Resourcess - [designshack.net](https://designshack.net/articles/css/30-amazing-resources-for-sass-lovers/)
+
+- HTML vs Body in CSS - [css-tricks.com](https://css-tricks.com/html-vs-body-in-css/)
 
 ### Media
 
-Many of the images from this site have been sourced from Unsplash. I created a [collection](https://unsplash.com/collections) which I called using their API https://source.unsplash.com/collection/{COLLECTION ID} during testing. This worked particularly well as it's quick and lightweight. An example of how it was used can be seen below.
+Free stock photos from [Unsplash](https://unsplash.com/) and [Pexels](https://www.pexels.com/) were used for this project.
+
+Many of the images from this site have been sourced from Unsplash. I created a [collection](https://unsplash.com/collections) which I called using their API https://source.unsplash.com/collection/ {COLLECTION ID} during testing. This worked particularly well as it's quick and lightweight. An example of how it was used can be seen below.
 
 ```css
 section.intro {
@@ -681,4 +690,10 @@ section.intro {
 }
 ```
 
+[Language/Libraries/Frameworks Logo](https://seeklogo.com/).
+
 ### Acknowledgements
+
+- Slack Community - For bug fixes and recommendations
+
+- Solution for **_UNIQUE constraint failed_** error message - [Tredzko's Solution](https://stackoverflow.com/questions/39600784/django-1-9-check-if-email-already-exists)
