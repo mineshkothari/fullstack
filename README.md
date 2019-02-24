@@ -72,7 +72,7 @@ Blog App
 4. Allow Admin to add a new blog post
 5. Allow Admin to edit existing blog post
 
-Forum App (Polls)
+Forum App
 1. View forum subjects
 2. View threads in each subject
 3. Start a new Thread
@@ -80,7 +80,9 @@ Forum App (Polls)
 5. Comment/reply on thread
 6. Prompt user to register/login in order to contribute on thread
 7. Edit post
-8. Delete post
+8. Cast vote for polls
+9. View Poll results
+10. Allowing Admin to add a poll to a new Thread.
 
 Account App (& Admin)
 1. Registration - Allowing users to register
@@ -93,6 +95,9 @@ Account App (& Admin)
 	- Allowing Admin to add a new Module (Course)
 
 ### Features yet to be implemented
+
+Forum App
+1. Delete a Thread post **See Report > Known Bugs/Issues > Deleting thread posts**
 
 <br />
 <br />
@@ -248,9 +253,10 @@ a. **Resolve the issue**
 b. **Move past the problem**
 	- Find another course from one of the available languages
 
-The feedback was remarkable and the error messaging was well recieved. However, there were a few issues:
+The feedback was remarkable and the error messaging was well recieved. However, there was one notable issue:
 
 **Registering with the same email**
+
 When registering a new account with an email address that already exists in the database presented a **_UNIQUE constraint failed_** error message. In other words, a Server 500 error on the live site (which is never a good thing).
 
 After searching to find a fix, I came across a Stack Overflow [thread](https://stackoverflow.com/questions/39600784/django-1-9-check-if-email-already-exists) which seemed to describe the same problem I faced. In *tredzko*'s solution, I found a fix to use ```cleaned_data``` to check if the username is taken.
@@ -475,13 +481,18 @@ Want to learn about some of the known issues/bugs/limitations with this project?
 ### Responsive Design
 
 
+
 ### Known Bugs/Issues
-
-
 
 **Deleting thread posts**
 
+Deleting the last post from a forum thread raised the following exception:
 
+```
+AttributeError at /forum/thread/<post_id> 'NoneType' object has no attribute 'user'
+```
+
+In light of this known bug - I have had to 'disable' this feature for the time being to ensure the website has no unhandled exceptions. However, this is something I will be looking into outside the scope of this project.
 
 <br />
 <br />
