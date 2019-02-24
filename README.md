@@ -239,6 +239,7 @@ This included tasks such as:
 6. Enter incorrect details during checkout
 
 Whilst I anticipated these errors, it was important for me to understand the user's experience when something 'goes wrong' and whether they feel there's a clear message explaning the problem and how to either:
+
 a. **Resolve the issue** 
 	- Entering a valid email address during registration
 	- Entering the correct password when logging in
@@ -247,7 +248,12 @@ a. **Resolve the issue**
 b. **Move past the problem**
 	- Find another course from one of the available languages
 
-The feedback was remarkable and the error messaging was well recieved.
+The feedback was remarkable and the error messaging was well recieved. However, there were a few issues:
+
+**Registering with the same email**
+When registering a new account with an email address that already exists in the database presented a **_UNIQUE constraint failed_** error message. In other words, a Server 500 error on the live site (which is never a good thing).
+
+After searching to find a fix, I came across a Stack Overflow [thread](https://stackoverflow.com/questions/39600784/django-1-9-check-if-email-already-exists) which seemed to describe the same problem I faced. In *tredzko*'s solution, I found a fix to use ```cleaned_data``` to check if the username is taken.
 
 <br />
 <br />
@@ -467,6 +473,14 @@ For further information about creating pull requests, please click [here](https:
 Want to learn about some of the known issues/bugs/limitations with this project? Continue reading to find out more. Perhaps, you will find a solution, or a better solution and if so - feel free to create a pull request with your changes.
 
 ### Responsive Design
+
+
+### Known Bugs/Issues
+
+
+
+**Deleting thread posts**
+
 
 
 <br />
