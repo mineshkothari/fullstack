@@ -31,5 +31,8 @@ class Post(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='posts')
     created_at = models.DateTimeField(default=timezone.now)
 
+    class Meta:
+        ordering = ["created_at"]
+
     def __unicode__(self):
         return 'Post: {0}, Thread: {1}, User: {2}'.format(self.id, self.thread, self.user)
