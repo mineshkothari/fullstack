@@ -92,7 +92,6 @@ Account App (& Admin)
 	- Allowing Admin to add a new Language
 	- Allowing Admin to add a new Module (Course)
 
-
 ### Features yet to be implemented
 
 <br />
@@ -189,7 +188,81 @@ Manual tests were carried out at every stage to ensure the user experience stand
 
 ## Deployment
 
-This project will be deployed to Heroku using AWS S3 to host static and media files.
+Fullstack is deployed to Heroku along with using AWS S3 to host static and media files.
+
+### Heroku
+
+Creating an app on Heroku is relatively easy and can be done in a couple of ways. Either from the terminal or via the online dashboard.
+
+If you'd like to create a new Heroku app from the terminal, you'll need to install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli), once installed on your computer, you can create your new app from within the terminal in just a few commands.
+
+For more information on the Heroku CLI, read the CLI documentation [here](https://devcenter.heroku.com/articles/heroku-cli#getting-started).
+
+Alternatively, you can also create a new Heroku app online from the dashboard by clicking on 'New' then 'Create new app'
+
+Once your new Heroku app has been created, be sure to add the config vars to ensure the app works properly.
+
+### Gunicorn & Procfile
+
+**Gunicorn**
+
+Gunicorn is used to run the application on Heroku. 
+
+Gunicorn 'Green Unicorn' is a Python WSGI HTTP Server for UNIX. It's a pre-fork worker model. The Gunicorn server is broadly compatible with various web frameworks, simply implemented, light on server resources, and fairly speedy.
+
+In other words, this is exactly what we need as Heroku uses Ubuntu Server.
+
+Gunicorn was installed on the virtualenv using ```pip install gunicorn```.
+
+**Procfile**
+
+[*Heroku apps include a Procfile that specifies the commands that are executed by the app on startup.*](https://devcenter.heroku.com/articles/procfile).
+
+The Procfile is essentially a file that’s named 'Procfile' (without any file extensions) and consists of information which is used by Heroku to tell it where to run the application.
+
+Procfile:
+
+```web: cd fullstack && gunicorn fullstack.wsgi:application```
+
+*Please note: Due to the folder structure within the Github repository, there is an extra command to change directory into the project's root folder in order to locate the 'wsgi.py' file.*
+
+In order to run the project locally, I needed to create another file named *Procfile.local*:
+
+```web: cd fullstack && python manage.py runserver```
+
+*Please note: I am using the Windows Operating System. For Mac OS/Linux, it would look something like this 'web: gunicorn fullstack.wsgi:application'*
+
+### PostgreSQL Database
+
+Unlike the SQLite database used for testing, the deployed version of Fullstack uses a more powerful database, PostgreSQL.
+
+In order to use PostgreSQL, I installed an add-on called 'Heroku Postgres' from Heroku's dashboard, adding a new config variable for 'DATABASE_URL' to the app settings on Heroku. 
+
+I then used the new config var within the Django app's settings to ensure we are pointing to the correct database when the project is live, ensuring the SQLite database is still being used during development/testing.
+
+To ensure I connected to the new database correctly, two new packages were required:
+
+**dj-database-url**
+
+```console
+$ pip install dj-database-url
+```
+
+A package to allow you to connect to a database URL (such as the one given to us when installing Heroku Postgres).
+
+**psycopg2**
+
+```console
+$ pip install psycopg2
+```
+
+A package allowing you to connect to Postgres databases.
+
+### AWS S3
+
+The cloud-based AWS is used to serve static files for Fullstack. In order to achieve this, I created and configured an Amazon S3 bucket to to ensure static images and project files were uploaded to it correctly.
+
+One of the main benefits of using a cloud-based tool such as AWS S3 is that it frees up space on your servers, thus freeing up load times.
 
 <br />
 <br />
@@ -259,16 +332,50 @@ $ pip install -r requirements.txt
 
 *Please note: This walkthrough assumes you're installing the requirements which satisfy the final production site, you will need to install requirements in 'requirements/dev.txt' file for local testing*
 
-**Make migrations:**
+**Migrating to the database:**
 
-With a fresh new database, you'll need to run migrations to populate all the tables. In order to to this, you'll need to follow the commands below (ensuring you're in the same folder as 'manage.py' file):
+With a fresh new database, you'll need to run migrations to populate all the tables. In order to to this, you'll need to follow the command below (ensuring you're in the same folder as 'manage.py' file):
 
 ```console
-$ python manage.py makemigrations
 $ python manage.py migrate
 ```
 
+*Please note: You will not need to run the makemigrations command as we haven't yet changed our Models*
+
+In order to work on the project locally, you will need an *env.py* file in the project's root folder with your config variables. See below for an example:
+
+```python
+import os
+
+# SECRET KEY
+os.environ.setdefault('SECRET_KEY', '<SECRET_KEY_GOES_HERE>')
+
+# STRIPE KEYS
+os.environ.setdefault('STRIPE_PUBLISHABLE', '<STRIPE_PUBLISHABLE_GOES_HERE>')
+os.environ.setdefault('STRIPE_SECRET', '<STRIPE_SECRET_GOES_HERE>')
+
+# DATABASE
+os.environ.setdefault('DATABASE_URL', '<DATABASE_URL_GOES_HERE>')
+
+# AWS KEYS
+os.environ.setdefault('AWS_ACCESS_KEY_ID', '<AWS_ACCESS_KEY_ID_GOES_HERE>')
+os.environ.setdefault('AWS_SECRET_ACCESS_KEY', '<AWS_SECRET_ACCESS_KEY_GOES_HERE>')
+
+# GMAIL CREDENTIALS
+os.environ.setdefault('EMAIL_ADDRESS', '<EMAIL_ADDRESS_GOES_HERE>')
+os.environ.setdefault('EMAIL_PASSWORD', '<EMAIL_PASSWORD_GOES_HERE>')
+
+# DISQUS SETTINGS
+os.environ.setdefault('DISQUS_WEBSITE_SHORTNAME', '<DISQUS_WEBSITE_SHORTNAME_GOES_HERE>')
+os.environ.setdefault('DISQUS_API_KEY', '<DISQUS_API_KEY_GOES_HERE>')
+
+```
+
+Similarly, if you're looking to deploy the project on Heroku, you'll need to set the config variables under Heroku settings on the dashboard.
+
 And there you have it. Now you're all set to make changes. You can open the project on you preferred text editor or IDE and begin making changes.
+
+
 
 ### Submitting Pull Requests
 
