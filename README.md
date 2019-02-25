@@ -353,6 +353,26 @@ The cloud-based AWS is used to serve static files for Fullstack. In order to ach
 
 One of the main benefits of using a cloud-based tool such as AWS S3 is that it frees up space on your servers, thus freeing up load times.
 
+### Running Locally
+
+Fullstack uses different environments depending on whether the project is live or in testing. If you're testing the project locally and would like to use the development environment, then you'll need to run the following command:
+
+```console
+$ set DJANGO_SETTINGS_MODULE=settings.dev
+$ heroku local -f Procfile.local
+```
+
+Next, you should open your desired browser and go to your [localhost](http://127.0.0.1:8000/) ensuring you're on port 8000.
+
+Similarly, if you'd like to view test the site using the live/staging settings then ensure you run the following command:
+
+```console
+$ set DJANGO_SETTINGS_MODULE=settings.staging
+$ heroku local -f Procfile.local
+```
+
+For more information and the differences between each of the environments look at **Report > Hosting & Deployment** at the bottom of this README.
+
 <br />
 <br />
 
@@ -652,7 +672,7 @@ In light of this known bug - I have had to 'disable' this feature for the time b
 
 **Disqus API**
 
-Google Chrome's console throws a warning messing in the console when viewing blog posts. I have been unable to debug the exact cause of this but will be looking into this in the near future.
+Google Chrome's console throws a warning message in the console when viewing blog posts. I have been unable to debug the exact cause of this but will be looking into this in the near future.
 
 ```console
 The resource https://c.disquscdn.com/next/embed/common.bundle.505b628fe4a369d7faa766dd8c23b076.js was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
