@@ -7,7 +7,7 @@
 
 ### About Fullstack
 
-Fullstack is an online hub bringing together web developers of all skillset and backgrounds whether they're a newbie, a hobbyist or a veteran.
+Fullstack is an online hub bringing together web developers of all skillset and backgrounds whether they're a newbie, a hobbyist or even a veteran.
 
 The website allows you to share knowledge through the Forum, learn how to code with our extensive Courses and becoming inspired reading through the Blogs.
 
@@ -28,7 +28,7 @@ This project has been developed as part of my Stream 3 project for [Code Institu
 
 The 'Courses app' for this project uses e-commerce functionality using the Stripe API. The shop is in sandbox mode which means you're more than welcome to test the shop using the default sandbox card details and you wouldn't be charged. ;)
 
-If you'd like to try this out when you've added some items into the cart, proceed to checkout and enter the following details:
+If you'd like to try this out then you can add some items into the cart and enter the following details when prompted at checkout:
 
 - Credit card number: **4242424242424242**
 - CVV: **Any three digits (e.g 111)**
@@ -38,6 +38,26 @@ If you'd like to try this out when you've added some items into the cart, procee
 <br />
 
 ## User Experience
+
+Fullstack is designed to give the end user a **_satisfied_** experience with its simplicity. 
+
+Certain design practices inspired the design process of this project, to name a few:
+
+1. Whitespace
+2. Visual Heirachy
+3. Material Design 
+
+Utilise key aspects of some of these 'good' practises helped me build a front end which offers the end user a luxourious visit. A great website starts with a good user interface, and Fullstack is no different.
+
+Fullstack consists of 4 main areas:
+
+1. **Courses** - If a user would like to learn about web design / web development, they can come here to browse through available courses and purchase them at checkout. This will give them access to the course which they can then use to improve their skills and knowledge.
+
+2. **Blog** - If a user would like to keep up-to-date with the latest news, tech, trends and many more in the world of design and development, then the Fullstack Blog will have everyone covered. The user can browse through the list of blogs, read them and leave comments (via the Disqus API).
+
+3. **Forum** - If a user is stuck on a particular problem, they can start a new thread, leave posts or reply to others to find the perfect solution, where someone from the community will be happy to help. Similarly, if you're an individual who thrives on helping others, you may wish to spend some time browsing through the threads replying to others and sharing your wisdom.
+
+4. **Account** - Certain areas of this website requires you to log in. These can include scenarios such as purchasing courses and joining the discussions in the forum. If you'd like to be a part of the future at Fullstack, you can register an account with us through the registration page, login with valid credentials, update you personal details, view purchased courses and also requesting a 'forgot password' email.
 
 <br />
 <br />
@@ -104,9 +124,18 @@ Account App (& Admin)
 
 ### Features yet to be implemented
 
+Generic
+1. Implement Page Not Found 404 (instead of redirect to home)
+
+Courses App
+1. Add a search option to search for courses
+2. Add a filter to filter courses
+
 Forum App
 1. Delete a Thread post. **See Report > Known Bugs/Issues > Deleting thread posts**
-2. Write Content/Subject for forgot password email
+
+Account App
+1. Re-write the 'Forgot Password' email content.
 
 <br />
 <br />
@@ -240,6 +269,8 @@ Being able to cater the website for all users is important, this includes the op
 
 For this reason, thorough testing was done at regular intervals during the development of Fullstack to focus on ensuring the website behaved similar on the main browsers listed above.
 
+When testing the website in Microsoft Edge v.41, I noticed major issues caused in the way the browser was rendering Flexbox. However, this was then tested again on Microsoft Edge v42 which has since resolved the way the browser renders Flexbox.
+
 ### Error Handling
 
 Comprehensive testing was undertaken to ensure users received clear error messaging in the event something 'went wrong'.
@@ -253,6 +284,7 @@ This included tasks such as:
 4. Visit a language in the Courses app which didn't have any courses/modules ([Python](https://mk-fullstack.herokuapp.com/courses/language/16/))
 5. Visit a forum with no threads ([Python](https://mk-fullstack.herokuapp.com/forum/threads/8/))
 6. Enter incorrect details during checkout
+7. Enter an invalid URL in the address bar
 
 Whilst I anticipated these errors, it was important for me to understand the user's experience when something 'goes wrong' and whether they feel there's a clear message explaining the problem and how to either:
 
@@ -271,6 +303,25 @@ The feedback was remarkable and the error messaging was well received. However, 
 When registering a new account with an email address that already exists in the database presented a **_UNIQUE constraint failed_** error message. In other words, a Server 500 error on the live site (which is never a good thing).
 
 After searching to find a fix, I came across a Stack Overflow [thread](https://stackoverflow.com/questions/39600784/django-1-9-check-if-email-already-exists) which seemed to describe the same problem I faced. In *tredzko*'s solution, I found a fix to use ```cleaned_data``` to check if the username is taken.
+
+**Invalid URLs**
+
+Fullstack is set up in a way which redirects users to the homepage if an invalid URL has been entered in the address bar.
+
+This was not only quick and easy, but only required a few lines of code as seen below:
+
+```python
+def my_custom_page_not_found_view(request):
+    """
+    In case page is not found, redirect user back to homepage
+    """
+    return redirect('index')
+
+```
+
+This ensures there are no unhandled exceptions when a user visits a webpage which doesn't exist.
+
+I will be looking to use a dedicated page to view any "page not found 404 error" in future iterations of this project so users have an even clearer understanding about what has happened.
 
 <br />
 <br />
@@ -573,7 +624,7 @@ When logged in as an admin, certain pages will have an orange menu with buttons/
 
 If you're an assessor and would like to try this feature, then please use the login credentials below:
 
-Email: **admin@fullstack.com**,
+Email: **admin@fullstack.com**
 
 Password: **Password1234**
 
@@ -600,6 +651,13 @@ How I load the CSS:
 ```
 
 And with just a few lines of code to the settings.py file and base urls.py file, you should be able to successfully hook up your existing app to a new project.
+
+*Please note: if the re-usable app consists of database tables having been set previously in the **_models.py_** file, you will need to make migrations and run the migrations to ensure the your project's schema has been updated. Type the following command in the terminal from your project's root folder:*
+
+```console
+$ python manage.py makemigrations
+$ python manage.py migrate
+```
 
 ### SASS Workflow
 
@@ -634,7 +692,7 @@ As mentioned throughout the README documentation, Fullstack:
 - Uses PostgreSQL for live production
 - Has many other differences for improved productivity and better workflow
 
-This process came with a lot of challenges and pitfalls - but was well worth it in the end.
+To configure the processes above came with a lot of challenges and pitfalls - but was well worth it in the end.
 
 **settings.py**
 
@@ -650,13 +708,93 @@ The main focus was to have a clear separation with in the *settings.py* file for
 
 The development environment is where I've set ```DEBUG=True``` to ensure clear error messages are presented so I can debug problems quickly. 
 
-This is also where I've connected to the SQLite database.
+This is also where I've connected to the SQLite database using the following:
+
+```python
+# dev.py
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+```
+
+During the testing phase it also made sense to invoke the Email backend through the terminal. This is a quick and easy way to test whether the 'Forgot Password' functionality was working correctly. You'll find how I set up Gmail for the live/staging environment under **Live**.
+
+```python
+# dev.py
+# EMAIL BACKEND
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+```
 
 **Live**
 
 The live environment is where I've set ```DEBUG=False``` to prevent these error messages from being viewed publicly.
 
 This is also where I've connected to the PostgreSQL database using ```dj_database_url``` **AND** configured AWS S3 settings.
+
+```python
+# staging.py
+...
+import dj_database_url
+...
+
+# Load PostgresDB
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+}
+
+# AWS S3 CONFIG
+AWS_S3_OBJECT_PARAMETERS = {
+    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+    'CacheControl': 'max-age=94608000',
+}
+
+AWS_STORAGE_BUCKET_NAME = 'mk-fullstack'
+AWS_S3_REGION_NAME = 'eu-west-2'
+AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+```
+
+As you can see, Config vars are used to protect malicious use of sensitive data. These variables are referenced in **_env.py_** (a file not uploaded to Github) and subsequently imported in the **_base.py_**. The information set on *env.py* is also replicated in Heroku settings config vars to ensure the website works fluently when it is hosted on Heroku.
+
+Other differences in the live environment include the Gmail settings used to send a 'Forgot Password' notification as seen below.
+
+```python
+# staging.py
+
+# GMAIL SETTINGS
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = os.environ.get('EMAIL_ADDRESS')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
+EMAIL_PORT = 587
+```
+
+Lastly, to ensure I'm able to see logs when testing the live environment, I have set all the debug information to the console.
+
+```python
+# staging.py
+
+# Log DEBUG information to the console
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
+        },
+    },
+}
+```
 
 ### Known Bugs/Issues
 
@@ -683,6 +821,23 @@ The resource https://c.disquscdn.com/next/embed/lounge.bundle.c9237ca4eec89ddb13
 
 The resource https://c.disquscdn.com/next/embed/styles/lounge.7881ba4704e5c647ac74c94714fe89c0.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
 ```
+
+**TinyMCE Limitations**
+
+TinyMCE is used across the site to power the forms fields used to create/edit blog posts, courses and forum posts. Although this is a good extension of a standard textfield, I have come across a few limitations.
+
+These limitations include:
+
+- Changing font style
+- Changing font colour
+- Adding hyperlinks*
+- Using emojis
+
+Some of these limitation are less important than others, but one that seems to stand out the most is the inability to add hyperlinks. I have noticed when adding blog posts that you can add hyperlinks, but only when copying and pasting them into the TinyMCE's HTMLFields. This means there are no options to set ```target="_blank"``` to the links either.
+
+This poses a problem as it is good practise to open any hyperlinks to external sites in a new tab.
+
+For the future, I will need to read more into the TinyMCE documentation to see whether I can toggle settings to enable this feature or to find an alternate solution to using TinyMCE altogether.
 
 <br />
 <br />
