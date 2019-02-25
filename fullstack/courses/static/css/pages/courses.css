@@ -1,8 +1,11 @@
 .jumbotron {
-  background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6))), url("https://s3.eu-west-2.amazonaws.com/mk-fullstack/static/assets/backgrounds/Image_9.jpg") center no-repeat/cover;
-  background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("https://s3.eu-west-2.amazonaws.com/mk-fullstack/static/assets/backgrounds/Image_9.jpg") center no-repeat/cover;
-  background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("https://s3.eu-west-2.amazonaws.com/mk-fullstack/static/assets/backgrounds/Image_9.jpg") center no-repeat/cover;
-  background: linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("https://s3.eu-west-2.amazonaws.com/mk-fullstack/static/assets/backgrounds/Image_9.jpg") center no-repeat/cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(#343a40), to(rgba(52, 58, 64, 0.6))), url("https://s3.eu-west-2.amazonaws.com/mk-fullstack/static/assets/backgrounds/Image_9.jpg");
+  background: -webkit-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("https://s3.eu-west-2.amazonaws.com/mk-fullstack/static/assets/backgrounds/Image_9.jpg");
+  background: -o-linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("https://s3.eu-west-2.amazonaws.com/mk-fullstack/static/assets/backgrounds/Image_9.jpg");
+  background: linear-gradient(#343a40, rgba(52, 58, 64, 0.6)), url("https://s3.eu-west-2.amazonaws.com/mk-fullstack/static/assets/backgrounds/Image_9.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   color: #dee2e6;
 }
 
@@ -162,33 +165,6 @@
 
 .module-item--content__full p {
   margin-bottom: 0;
-}
-
-.empty-module-cta--button {
-  margin-top: 2em;
-  background-color: #0cd29a;
-  color: #f2f2f2;
-  font-size: 1.25em;
-  font-weight: 400;
-  border: .5px solid #0cd29a;
-  padding: .5em 1em;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  -webkit-box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 7px 15px -6px rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 350ms ease-in-out;
-  -o-transition: all 350ms ease-in-out;
-  transition: all 350ms ease-in-out;
-}
-
-.empty-module-cta--button:hover {
-  text-decoration: none;
-  color: #F2F2F2;
-  -webkit-transform: translateY(-4px);
-  -ms-transform: translateY(-4px);
-  transform: translateY(-4px);
-  -webkit-box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 11px 19px -8px rgba(0, 0, 0, 0.6);
 }
 
 @media (min-width: 768px) {
