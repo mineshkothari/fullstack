@@ -28,7 +28,7 @@ This project has been developed as part of my Stream 3 project for [Code Institu
 
 The 'Courses app' for this project uses e-commerce functionality using the Stripe API. The shop is in sandbox mode which means you're more than welcome to test the shop using the default sandbox card details and you wouldn't be charged. ;)
 
-If you'd like to try this out then you can add some items into the cart and enter the following details when prompted at checkout:
+If you'd like to try this out, then you can add some items into the cart and enter the following details when prompted at checkout:
 
 - Credit card number: **4242424242424242**
 - CVV: **Any three digits (e.g 111)**
@@ -44,10 +44,10 @@ Fullstack is designed to give the end user a **_satisfied_** experience with its
 Certain design practices inspired the design process of this project, to name a few:
 
 1. Whitespace
-2. Visual Heirachy
+2. Visual Hierarchy
 3. Material Design 
 
-Utilise key aspects of some of these 'good' practises helped me build a front end which offers the end user a luxourious visit. A great website starts with a good user interface, and Fullstack is no different.
+Utilise key aspects of some of these 'good' practises helped me build a front end which offers the end user a luxurious visit. A great website starts with a good user interface, and Fullstack is no different.
 
 Fullstack consists of 4 main areas:
 
@@ -652,7 +652,7 @@ How I load the CSS:
 
 And with just a few lines of code to the settings.py file and base urls.py file, you should be able to successfully hook up your existing app to a new project.
 
-*Please note: if the re-usable app consists of database tables having been set previously in the **_models.py_** file, you will need to make migrations and run the migrations to ensure the your project's schema has been updated. Type the following command in the terminal from your project's root folder:*
+*Please note: if the re-usable app consists of database tables having been set previously in the **_models.py_** file, you will need to make migrations and run the migrations to ensure your project's schema has been updated. Type the following command in the terminal from your project's root folder:*
 
 ```console
 $ python manage.py makemigrations
@@ -720,7 +720,7 @@ DATABASES = {
 }
 ```
 
-During the testing phase it also made sense to invoke the Email backend through the terminal. This is a quick and easy way to test whether the 'Forgot Password' functionality was working correctly. You'll find how I set up Gmail for the live/staging environment under **Live**.
+During the testing phase it also made sense to invoke the email backend through the terminal. This made it quick and to test, debug and configure the 'Forgot Password' functionality by sending the email requests straight through the console. When the project went live, I switched this to use Gmail’s SMTP. You'll find how I set this up under the Live header.
 
 ```python
 # dev.py
@@ -730,9 +730,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 **Live**
 
-The live environment is where I've set ```DEBUG=False``` to prevent these error messages from being viewed publicly.
+The live environment is where I've set ```DEBUG=False``` to prevent error messages from being viewed publicly.
 
-This is also where I've connected to the PostgreSQL database using ```dj_database_url``` **AND** configured AWS S3 settings.
+I also used the staging environment to connect to the PostgreSQL database using ```dj_database_url``` **AND** configure the AWS S3 settings to host my static files.
 
 ```python
 # staging.py
@@ -758,7 +758,20 @@ AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 ```
 
-As you can see, Config vars are used to protect malicious use of sensitive data. These variables are referenced in **_env.py_** (a file not uploaded to Github) and subsequently imported in the **_base.py_**. The information set on *env.py* is also replicated in Heroku settings config vars to ensure the website works fluently when it is hosted on Heroku.
+As you can see, for these config vars, environment variables are used to protect malicious use of sensitive data. These variables are set in **_env.py_** (a file added to the .gitignore and subsequently not uploaded to Github).
+
+The env.py file is imported in the **_base.py_** and designed to be used primarily during testing, regardless of whether we are connected to the development environment or staging.
+
+However, when hosting this project live on Heroku's server, I no longer had access to these environment variables as they weren't uploaded to Github. In order to resolve this, I needed to ensure these config vars were all set under Heroku settings.
+
+I put a *try, except* clause in place to avoid an `ImportError` when Heroku looks for a file which 'doesn't exist' (because env.py is not uploaded to Github):
+
+```python 
+try:
+    import env
+except ImportError:  # RELYING ON ENVIRONMENT VARIABLES
+    pass
+```
 
 Other differences in the live environment include the Gmail settings used to send a 'Forgot Password' notification as seen below.
 
@@ -773,7 +786,7 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
 EMAIL_PORT = 587
 ```
 
-Lastly, to ensure I'm able to see logs when testing the live environment, I have set all the debug information to the console.
+As we've set ```DEBUG=False```, it would still be useful to see logs when testing the stating environment, so I added the following lines of code to output the log to the console.
 
 ```python
 # staging.py
@@ -795,6 +808,26 @@ LOGGING = {
     },
 }
 ```
+
+To help me test a particular environment locally, I run the following set of commands on the terminal:
+
+**Development (dev.py) environment**
+
+```console
+$ set DJANGO_SETTINGS_MODULE=settings.dev
+$ heroku local -f Procfile.local
+```
+
+Then I open [localhost](http://127.0.0.1:8000/) on my browser ensuring it's on port 8000.
+
+**Live (staging.py) environment**
+
+```console
+$ set DJANGO_SETTINGS_MODULE=settings.staging
+$ heroku local -f Procfile.local
+```
+
+Then I open [localhost](http://127.0.0.1:8000/) on my browser ensuring it's on port 8000.
 
 ### Known Bugs/Issues
 
