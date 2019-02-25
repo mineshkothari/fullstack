@@ -30,9 +30,9 @@ The 'Courses app' for this project uses e-commerce functionality using the Strip
 
 If you'd like to try this out when you've added some items into the cart, proceed to checkout and enter the following details:
 
-Credit card number: **4242424242424242**
-CVV: **Any three digits (e.g 111)**
-Expiry Month & Year: **Any date in the future**
+- Credit card number: **4242424242424242**
+- CVV: **Any three digits (e.g 111)**
+- Expiry Month & Year: **Any date in the future**
 
 <br />
 <br />
@@ -106,6 +106,7 @@ Account App (& Admin)
 
 Forum App
 1. Delete a Thread post. **See Report > Known Bugs/Issues > Deleting thread posts**
+2. Write Content/Subject for forgot password email
 
 <br />
 <br />
@@ -222,9 +223,9 @@ See the **Report > Responsive Design** section for more details.
 
 **Desktop Browsers Tested:**
 ```
-Google Chrome
-Firefox
-Microsoft Edge
+Google Chrome 72
+Mozilla Firefox 62.0.2
+Microsoft Edge 42
 Internet Explorer 11
 ```
 
@@ -588,7 +589,7 @@ The SASS files are all kept inside the SASS folder in 'static' (with the excepti
 
 Inside the SASS folder, you'll find various subfolders for components such as the navbar, forms, buttons and many more, making it simple to navigate through and find the SASS file to make changes.
 
-There is also one 'stand-alone' SASS file **_style.sass_** within that folder (static/sass) which imports the sass files from all the subfolders acting as a table of contents. The key benefit of setting up the SASS workflow this way is to ensure when the SASS is being compiled to CSS, there will only ever be one CSS file, **_style.css_** I need to refer to in my base.html document.
+There is also one 'stand-alone' SASS file **_style.sass_** within that folder (static/sass) which imports the sass files from all the subfolders acting as a table of contents. The key benefit of setting up the SASS workflow this way is to ensure when the SASS is being compiled to CSS, there will only ever be one CSS file, **_style.css_**, which I need to refer to in my base.html document.
 
 ```sass
 // style.sass
